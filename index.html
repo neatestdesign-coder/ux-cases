@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UX 商業案例分享</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme:light;
+    --bg:#EEF1F5;
+    --glass:rgba(255,255,255,.62);
+    --glass-strong:rgba(255,255,255,.8);
+    --ink:#1A1E2B; --ink2:#646B7A; --ink3:#9AA1B0;
+    --navy:#171B29;
+    --lime:#D7F16B; --lime-soft:rgba(215,241,107,.32); --lime-ink:#4A5417;
+    --stroke:rgba(23,27,41,.06);
+    --t1-bg:#DCF1E8; --t1-fg:#1E6B54;
+    --t2-bg:#DFE9F6; --t2-fg:#2F5787;
+    --t3-bg:#E9E2F6; --t3-fg:#5D468F;
+    --t4-bg:#F6E9DC; --t4-fg:#8A5A2A;
+    --reject:#A05543;
+    --r-card:28px; --r-inner:16px;
+    --sh-card:0 1px 2px rgba(23,27,41,.04), 0 12px 32px -8px rgba(23,27,41,.10);
+    --sh-hover:0 2px 4px rgba(23,27,41,.05), 0 20px 44px -8px rgba(23,27,41,.14);
+    --ease:180ms cubic-bezier(.2,.7,.3,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    color:var(--ink);
+    font-family:"Inter","Noto Sans TC","PingFang TC",-apple-system,sans-serif;
+    line-height:1.75;-webkit-font-smoothing:antialiased;
+    background:var(--bg);min-height:100vh;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-1;
+    background:
+      radial-gradient(900px 600px at 12% -5%, #DCE6EE 0%, transparent 60%),
+      radial-gradient(800px 640px at 95% 12%, #E7E2F4 0%, transparent 62%),
+      radial-gradient(900px 700px at 55% 108%, #F3E8EC 0%, transparent 60%),
+      var(--bg);
+  }
+  .wrap{width:80%;max-width:1500px;margin:0 auto;padding:56px 0 96px}
+
+  .header-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
+  .header-left{flex:1 1 480px;min-width:280px}
+  h1{font-size:48px;font-weight:900;letter-spacing:-.03em;line-height:1.18}
+  .sub{color:var(--ink2);font-size:15px;margin-top:14px;max-width:560px}
+
+  .stats{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start;margin-top:8px}
+  .stat{
+    background:var(--glass);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+    border:1px solid var(--stroke);box-shadow:var(--sh-card), inset 0 0 0 1px rgba(255,255,255,.65);
+    border-radius:20px;padding:16px 24px;min-width:132px;
+  }
+  .stat b{display:block;font-size:28px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.2}
+  .stat span{font-size:12px;color:var(--ink3);font-weight:500}
+  .stat.hero{position:relative;overflow:hidden}
+  .stat.hero::after{content:"";position:absolute;right:-18px;top:-18px;width:64px;height:64px;border-radius:50%;background:var(--lime-soft)}
+
+  .toolbar{
+    position:sticky;top:16px;z-index:10;
+    display:flex;gap:6px;flex-wrap:wrap;align-items:center;
+    background:var(--glass-strong);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
+    border:1px solid var(--stroke);box-shadow:var(--sh-card), inset 0 0 0 1px rgba(255,255,255,.7);
+    border-radius:999px;padding:8px;margin:40px 0 36px;width:fit-content;
+    transition:margin .2s ease, border-radius .2s ease;
+  }
+  .chip{
+    border:none;background:transparent;border-radius:999px;
+    padding:8px 18px;font-size:13.5px;font-weight:600;color:var(--ink2);
+    cursor:pointer;transition:var(--ease);font-family:inherit;
+  }
+  .chip:hover{color:var(--ink);background:rgba(23,27,41,.05)}
+  .chip.on{background:var(--navy);color:#fff;box-shadow:0 6px 16px -4px rgba(23,27,41,.4)}
+
+  .card{
+    background:var(--glass);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+    border:1px solid var(--stroke);
+    box-shadow:var(--sh-card), inset 0 0 0 1px rgba(255,255,255,.65);
+    border-radius:var(--r-card);padding:30px 34px;margin-bottom:26px;
+    transition:var(--ease);
+  }
+  .card:hover{transform:translateY(-2px);box-shadow:var(--sh-hover), inset 0 0 0 1px rgba(255,255,255,.75)}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .card.enter{animation:rise .45s cubic-bezier(.2,.7,.3,1) both}
+
+  .badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+  .badge{font-size:11.5px;padding:4px 12px;border-radius:999px;font-weight:700;letter-spacing:.02em}
+  .b-cat{background:rgba(255,255,255,.7);border:1px solid var(--stroke);color:var(--ink2);font-weight:600}
+  .b-ind{background:var(--t2-bg);color:var(--t2-fg)}
+
+  .card-top{display:flex;justify-content:space-between;gap:22px;align-items:flex-start;flex-wrap:wrap}
+  h2{font-size:21.5px;font-weight:800;letter-spacing:-.015em;line-height:1.45}
+  h2 a{color:inherit;text-decoration:none;transition:var(--ease)}
+  h2 a:hover{color:var(--t2-fg);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
+  .meta{font-size:12.5px;color:var(--ink3);margin-top:6px;font-weight:500}
+
+  .score{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:4px}
+  .ring{position:relative;width:64px;height:64px}
+  .ring svg{transform:rotate(-90deg)}
+  .ring .track{stroke:rgba(23,27,41,.08)}
+  .ring .val{stroke:var(--navy);stroke-linecap:round}
+  .ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:16.5px;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+  .score small{font-size:10.5px;color:var(--ink3);font-weight:600;letter-spacing:.08em}
+
+  .metrics{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+  .metric{
+    background:rgba(255,255,255,.75);border:1px solid var(--stroke);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.6);
+    border-radius:var(--r-inner);padding:12px 18px;
+  }
+  .metric b{font-size:20px;font-weight:800;display:block;line-height:1.3;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .metric span{font-size:11.5px;color:var(--ink3);font-weight:500}
+
+  .sec{margin-top:20px}
+  .sec-label{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);margin-bottom:5px}
+  .sec p{font-size:14.5px;color:var(--ink)}
+
+  /* story rail：問題→思維→成果 敘事軌 */
+  .story{position:relative;margin-top:28px;max-width:720px}
+  .story::before{content:"";position:absolute;left:5px;top:12px;bottom:12px;width:2px;border-radius:1px;background:linear-gradient(rgba(23,27,41,.16),rgba(23,27,41,.03))}
+  .step{position:relative;padding-left:32px}
+  .step + .step{margin-top:24px}
+  .step::before{content:"";position:absolute;left:0;top:4px;width:12px;height:12px;border-radius:50%;background:#fff;border:2.5px solid var(--navy);box-shadow:0 0 0 3px rgba(255,255,255,.7)}
+  .step.result::before{background:var(--lime);border-color:var(--lime-ink)}
+  .step-label{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+  .step p{font-size:15px;line-height:1.9;color:var(--ink)}
+  .caveat{
+    font-size:12.5px;color:var(--ink3);margin-top:10px;
+    background:rgba(23,27,41,.045);border-radius:10px;padding:10px 14px;line-height:1.65;
+  }
+  .caveat b{color:var(--ink2);font-weight:700}
+  .takeaway{
+    background:linear-gradient(135deg, var(--lime-soft), rgba(215,241,107,.14));
+    border:1px solid rgba(160,180,60,.22);
+    border-radius:var(--r-inner);padding:18px 20px;margin-top:20px;
+  }
+  .takeaway .sec-label{color:var(--lime-ink)}
+  .takeaway p{font-size:14.5px;color:#333a17}
+
+  .prov{font-size:12px;color:var(--ink3);margin-top:20px;font-weight:500;line-height:1.6;padding:16px 0}
+
+  .actions{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;margin-top:12px}
+  .read-btn{
+    display:inline-flex;align-items:center;gap:7px;
+    background:var(--navy);color:#fff;text-decoration:none;
+    border-radius:999px;padding:9px 20px;font-size:13px;font-weight:700;
+    box-shadow:0 8px 20px -6px rgba(23,27,41,.45);
+    transition:var(--ease);white-space:nowrap;
+  }
+  .read-btn:hover{transform:translateY(-1px);box-shadow:0 12px 26px -6px rgba(23,27,41,.5)}
+  .read-btn .src{opacity:.55;font-weight:500}
+  .read-btn.ghost{background:rgba(255,255,255,.7);color:var(--ink2);border:1px solid var(--stroke);box-shadow:none;font-weight:600}
+  .read-btn.ghost:hover{color:var(--ink);box-shadow:var(--sh-card)}
+  details{flex:1;min-width:200px;display:flex;flex-direction:column;align-items:flex-end}
+  summary{
+    list-style:none;cursor:pointer;user-select:none;width:fit-content;
+    font-size:12.5px;font-weight:600;color:var(--ink2);
+    background:rgba(255,255,255,.7);border:1px solid var(--stroke);border-radius:999px;
+    padding:8px 18px;transition:var(--ease);
+  }
+  summary:hover{color:var(--ink);box-shadow:var(--sh-card)}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:" ↓";font-size:11px;color:var(--ink3)}
+  details[open] summary::after{content:" ↑"}
+
+  .radar-wrap{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-top:14px;width:100%}
+  .radar-wrap svg{flex-shrink:0}
+  .rgrid{fill:none;stroke:rgba(23,27,41,.10);stroke-width:1}
+  .raxis{stroke:rgba(23,27,41,.07);stroke-width:1}
+  .rval{fill:rgba(23,27,41,.14);stroke:var(--navy);stroke-width:1.8;stroke-linejoin:round}
+  .rlabel{font-size:10px;font-weight:700;fill:var(--ink2)}
+  .dim-notes{flex:1;min-width:230px;display:flex;flex-direction:column;gap:7px}
+  .dnote{font-size:12px;color:var(--ink3);line-height:1.6;background:rgba(255,255,255,.7);border:1px solid var(--stroke);border-radius:12px;padding:8px 12px}
+  .dnote b{color:var(--ink2);font-weight:700}
+
+  .load-zone{display:flex;flex-direction:column;align-items:center;gap:10px;padding:14px 0 6px}
+  .load-btn{
+    display:inline-flex;align-items:center;gap:9px;
+    background:var(--glass-strong);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+    border:1px solid var(--stroke);box-shadow:var(--sh-card), inset 0 0 0 1px rgba(255,255,255,.7);
+    border-radius:999px;padding:13px 30px;
+    font-size:14px;font-weight:700;color:var(--ink);cursor:pointer;
+    transition:var(--ease);font-family:inherit;
+  }
+  .load-btn:hover{transform:translateY(-2px);box-shadow:var(--sh-hover), inset 0 0 0 1px rgba(255,255,255,.8)}
+  .load-btn .count{background:var(--navy);color:#fff;border-radius:999px;font-size:11.5px;font-weight:700;padding:2px 10px;font-variant-numeric:tabular-nums}
+  .load-done{
+    font-size:13px;color:var(--ink3);font-weight:500;text-align:center;
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--glass);border:1px solid var(--stroke);border-radius:999px;padding:10px 24px;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.65);
+  }
+  .load-done i{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 3px var(--lime-soft);flex-shrink:0}
+
+  .rejected-zone{margin-top:64px}
+  .rejected-zone>h3{font-size:17px;font-weight:800;letter-spacing:-.01em;margin-bottom:6px;color:var(--reject)}
+  .rejected-zone>p{font-size:13.5px;color:var(--ink2);margin-bottom:20px;max-width:560px}
+  .card.rejected{background:rgba(255,255,255,.4);opacity:.92}
+  .card.rejected:hover{transform:none;box-shadow:var(--sh-card), inset 0 0 0 1px rgba(255,255,255,.65)}
+  .card.rejected .ring .val{stroke:var(--reject)}
+  .card.rejected .rval{stroke:var(--reject);fill:rgba(160,85,67,.12)}
+  .reject-reason{font-size:13px;color:var(--reject);margin-top:12px;font-weight:600;line-height:1.6}
+
+  footer{
+    margin-top:72px;font-size:12.5px;color:var(--ink3);line-height:2;
+    background:var(--glass);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+    border:1px solid var(--stroke);box-shadow:inset 0 0 0 1px rgba(255,255,255,.65);
+    border-radius:20px;padding:20px 26px;
+  }
+  footer a{color:var(--ink2);font-weight:700;text-decoration:none;border-bottom:1px solid var(--stroke)}
+  footer a:hover{color:var(--ink)}
+  .powerby{margin-top:2px}
+  .empty{text-align:center;color:var(--ink3);padding:72px 0;font-size:14px;display:none;font-weight:500}
+
+  /* ---------- responsive：平板 ---------- */
+  @media (max-width:1080px){
+    .wrap{width:auto;padding:40px 22px 80px}
+    .stats{width:100%;margin-top:4px}
+  }
+  /* ---------- responsive：手機（Mobile First 指標排列規則）---------- */
+  @media (max-width:640px){
+    .wrap{width:auto;padding:28px 16px 64px}
+    h1{font-size:30px}
+    .sub{font-size:13.5px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%}
+    .stat{min-width:0;padding:12px 12px;border-radius:16px}
+    .stat b{font-size:19px}
+    .stat span{font-size:10px;line-height:1.4;display:block}
+    .card{padding:22px 18px;border-radius:22px}
+    .card-top{gap:14px}
+    h2{font-size:17.5px}
+    /* 指標區塊：3 項→3 欄一列、2 項→2 欄一列、4 項→2x2、1 項→滿版 */
+    .metrics{display:grid;gap:8px}
+    .metrics.m-1{grid-template-columns:max-content}
+    .metrics.m-2{grid-template-columns:repeat(2,1fr)}
+    .metrics.m-3{grid-template-columns:repeat(3,1fr)}
+    .metrics.m-4{grid-template-columns:repeat(2,1fr)}
+    .metric{padding:18px 20px;border-radius:12px}
+    .metric b{font-size:15.5px}
+    .metric span{font-size:10px;line-height:1.4;display:block}
+    /* 行動列：雷達左、閱讀原文右、等寬並排；展開雷達時佔滿整列 */
+    .actions{flex-direction:row;align-items:stretch;gap:10px}
+    .actions .read-btn{order:2;flex:1 1 0;justify-content:center}
+    .actions details{order:1;flex:1 1 0;min-width:0;align-items:stretch}
+    .actions details[open]{flex-basis:100%}
+    .actions summary{width:100%;text-align:center;padding:9px 0}
+    .story{max-width:none}
+    .step{padding-left:26px}
+    .step p{font-size:14.5px;line-height:1.85}
+    h2{font-size:19.5px}
+    /* 吸頂時白底滿版延展，內間距不變 */
+    .toolbar{top:0;border-radius:24px}
+    .toolbar.stuck{margin-left:-16px;margin-right:-16px;width:auto;border-radius:0;padding:8px 16px;box-shadow:0 10px 24px -14px rgba(23,27,41,.25), inset 0 0 0 1px rgba(255,255,255,.7)}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="header-grid">
+  <div class="header-left">
+    <h1>UX 商業案例分享</h1>
+    <p class="sub">每天自動收集全球「看得到商業脈絡、決策過程與量化成果」的真實案例。</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><b id="st-scanned">—</b><span>掃描文章</span></div>
+    <div class="stat"><b id="st-candidates">—</b><span>進入評分</span></div>
+    <div class="stat hero"><b id="st-published">—</b><span>評分通過發佈</span></div>
+  </div>
+</header>
+
+<div id="toolbar-sentinel"></div>
+<nav class="toolbar" id="filters" aria-label="分類篩選"></nav>
+
+<main id="feed"></main>
+<div class="empty" id="empty">此分類今日沒有達標案例——寧缺勿濫。</div>
+<div class="load-zone" id="load-zone"></div>
+
+<section class="rejected-zone">
+  <h3>未達門檻（今日淘汰）</h3>
+  <p>公開淘汰紀錄是品管的一部分：讓你隨時檢驗評分規則的鬆緊，而不是黑箱。</p>
+  <div id="rejected"></div>
+</section>
+
+<footer>
+  <div>評分規則：五維各 0–2 分（商業脈絡・決策過程・量化成果・第一手性・可遷移性）＋ 來源層級加成，總分 ≥ 7.0 發佈。</div>
+  <div class="powerby">Powered by <a href="https://www.threads.com/@meme.design.ai" target="_blank" rel="noopener">@meme.design.ai</a></div>
+</footer>
+</div>
+
+<script>
+const RUN = {
+  date: "2026-07-11",
+  scanned: 28,
+  candidates: 9,
+  batchSize: 4,
+  tierNames: {1:"第一手",2:"深度拆解",3:"商業視角",4:"華文來源"},
+  tierStyle: {
+    1:"background:var(--t1-bg);color:var(--t1-fg)",
+    2:"background:var(--t2-bg);color:var(--t2-fg)",
+    3:"background:var(--t3-bg);color:var(--t3-fg)",
+    4:"background:var(--t4-bg);color:var(--t4-fg)"
+  }
+};
+
+const DIMS = ["商業脈絡","決策過程","量化成果","第一手性","可遷移性"];
+
+let CASES = [
+  {title:"Duolingo 成長模型：DAU 四年成長 4 倍的指標框架",original_title:"Meaningful metrics: How data sharpened the focus of product teams",url:"https://blog.duolingo.com/growth-model-duolingo/",source:"Duolingo Blog",tier:1,date:"2023-02-17",author:"Erin Gustafson, Ph.D.（Duolingo 數據科學團隊）",cats:["國際品牌","經典案例"],industry:"教育學習",
+   why:"2018 年 DAU 成長停滯。Duolingo 不走付費投放路線，成長必須由產品本身驅動——問題變成：該優化哪個指標，才能真正撬動 DAU？",
+   how:"團隊沒有直接對 DAU 下手，而是把用戶拆成七種狀態（新用戶、現有用戶、回流、流失風險⋯），建立 Markov 狀態轉移模型，量化每個狀態轉換對 DAU 的槓桿。分析結果推翻直覺：最大槓桿不是拉新，而是 CURR（現有用戶留存率）。全公司產品團隊據此對焦。",
+   result:"DAU 自 2019 年起成長 4 倍，幾乎全靠自然成長；全公司把目標從「衝 DAU」改押在 CURR 一個指標上，事後驗證這個賭注正確。",
+   caveat:"模型無法解釋所有 DAU 波動，作者坦承分群方式仍在迭代中。",
+   takeaway:"不要直接優化北極星指標，要找到「可操作的中介指標」。用戶狀態轉移模型可直接套用到任何訂閱／內容產品。",
+   metrics:[["4×","DAU 成長（2019–2023）"],["CURR","找出的最高槓桿指標"]],scores:[2,2,2,2,2],
+   score_notes:["成長停滯＋不投廣告的商業約束交代完整","含被推翻的直覺與模型極限的自我批判","4× 有時間區間與歸因","當事數據科學團隊親撰","狀態轉移模型可直接複用"]},
+  {title:"LinkedIn 通知授權率提升 500%：行為觸發器的重新框架",original_title:"How LinkedIn Increased Notification Opt-in Rates by 500%",url:"https://growth.design/case-studies/linkedin-retention-triggers",source:"growth.design",tier:2,date:"2022",author:"growth.design（引用 LinkedIn 公開分享）",cats:["國際品牌"],industry:"職場社群",
+   why:"通知權限一旦被拒，產品就失去最重要的再互動管道，直接影響留存與 LTV。多數產品在錯誤的時機、用產品本位的語言要權限。",
+   how:"LinkedIn 把提示從「產品要什麼」翻轉成「用戶得到什麼」：(1) 在具體互動發生的當下才提示（情境化時機）、(2) 綁定單一真實互動而非泛用通知、(3) 講用戶利益而非功能、(4) 把回應簡化為 yes/no。",
+   result:"改版後通知授權率提升 500%——把拒絕率最高的權限請求，變成了再互動的入口。",
+   caveat:"二手拆解、原始 baseline 未公開，500% 的絕對規模無法驗證。",
+   takeaway:"「權限請求也是一次體驗設計」：時機、框架、利益、摩擦四個變數，可以直接變成任何權限／訂閱請求的檢查清單。",
+   metrics:[["+500%","通知授權率（無公開 baseline）"]],scores:[2,1,1,1,2],
+   score_notes:["有講清楚通知→留存→LTV 的商業鏈路","過程為事後重構，偏線性美化","只有百分比、缺 baseline","二手拆解但有可查的引用來源","四原則高度可遷移"]},
+  {title:"McKinsey：設計力前 25% 的公司，營收成長是同業近 2 倍",original_title:"The Business Value of Design",url:"https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-business-value-of-design",source:"McKinsey Quarterly",tier:3,date:"2018-10",author:"Sheppard, Sarrazin, Kouyoumjian, Dore",cats:["顧問／商業視角","經典案例"],industry:"管理顧問",
+   why:"「設計投資到底值不值得」長期缺乏財務級證據，設計主管在董事會沒有語言跟 CFO 對話。McKinsey 要把設計變成可量測的經營變數。",
+   how:"追蹤 300 家上市公司五年、超過 200 萬筆財務數據與 10 萬項設計行動，建立 McKinsey Design Index（MDI），迴歸出與財務表現最相關的四類行為：把設計當高層指標管理、跨職能而非孤島、快速迭代、極端用戶中心。",
+   result:"MDI 前四分位公司：營收成長約為同業 2 倍、股東總回報（TSR）高出 56%；效果在醫療科技、消費品、零售銀行三個產業全部成立。",
+   caveat:"這是相關性研究而非因果證明——設計做得好的公司，可能本來就經營得好。",
+   takeaway:"對設計顧問最有用的不是結論，而是語言：把「設計好壞」翻譯成 MDI 四類可稽核的經營行為，正是向客戶高層提案時的框架。",
+   metrics:[["≈2×","營收成長 vs 同業"],["+56%","股東總回報（TSR）"],["300 家","上市公司五年追蹤"]],scores:[2,1,2,2,2],
+   score_notes:["直指設計與財務對話斷裂的痛點","研究方法交代清楚，但非單一案例的決策敘事","樣本、期間、對照俱全","原創研究、作者具名","MDI 四行為可直接用於顧問提案"]},
+  {title:"推廣預算被砍後，靠產品迭代把次週留存做到高於同業 20%",original_title:"复盘：如何通过产品迭代做用户增长，留存率提高20%+",url:"https://www.woshipm.com/operate/4039868.html",source:"人人都是產品經理",tier:4,date:"2020-06",author:"當事產品經理（原創復盤）",cats:["更多案例"],industry:"內容平台",
+   why:"內容型產品上線近兩年，推廣經費被大幅削減、日活明顯下滑。OKR 壓力下，成長只能從「買量」轉向「產品自身」。",
+   how:"以 STAR 法則復盤。關鍵決策是先選北極星指標（與內容消費深度掛鉤的關注率），再用數據分析＋用戶調研找留存槓桿，按留存→激活→推薦→營收的優先序拆解目標，逐項做內容與功能實驗。",
+   result:"改版後次週留存率高於同行業同規模 App 約 20%，連續 5 個月沒有回落；北極星指標成為團隊後續迭代的共同語言。",
+   caveat:"baseline 只寫「略低於同行」，提升幅度的起點模糊。",
+   takeaway:"預算被砍反而逼出正確的優先序：先留存、後拉新。北極星指標的選法（找出與長期價值最相關的行為指標）是可複用的方法。",
+   metrics:[["+20%","次週留存 vs 同業（維持 5 個月）"]],scores:[2,2,1,2,2],
+   score_notes:["預算削減→日活下滑的處境交代具體","有目標拆解與實驗過程","相對數據為主、baseline 模糊","當事人第一手復盤","北極星選法＋優先序可複用"]},
+  {title:"Duolingo 的實驗機器：同時跑數百個 A/B 測試怎麼不翻車",original_title:"Improving Duolingo, one experiment at a time",url:"https://blog.duolingo.com/improving-duolingo-one-experiment-at-a-time/",source:"Duolingo Blog",tier:1,date:"2020-01",author:"Lavanya Aprameya（Duolingo 產品團隊）",cats:["國際品牌"],industry:"教育學習",
+   why:"任何改動——小到一顆按鈕、大到排行榜——都可能傷害學習成效或留存。當公司同時跑數百個實驗，怎麼確保每個決策都有據可依，而不是誰大聲聽誰的？",
+   how:"自建實驗平台，強制每個實驗開跑前定義目標、指標與假設。最關鍵的紀律是「守門指標」：先定義什麼不可犧牲（留存），任何實驗傷到它就出局，不管其他數字多好看。",
+   result:"成功的一面：動畫技能圖標、排行榜等核心功能都是實驗產線的產出，上線前各自通過假設驗證。失敗的一面：一個明顯提升營收的實驗，因守門指標顯示傷害留存，直接被否決下線——短期收入讓位給長期用戶價值。",
+   caveat:"文章公開了決策邏輯與成敗案例，但未公開各實驗的具體數字。",
+   takeaway:"實驗制度的價值不在跑得多，而在「否決規則」——先定義什麼指標不可犧牲，才能避免用長期價值換短期數字。守門指標（guardrail metrics）可直接套用到任何改版提案。",
+   metrics:[["100s","同時進行的 A/B 實驗"],["守門指標","營收 vs 留存的否決機制"]],scores:[2,2,1,2,2],
+   score_notes:["實驗與商業決策的關係交代清楚","含被否決的賺錢實驗——真實決策的指紋","有實驗規模但缺具體效果數字","當事產品團隊親撰","守門指標制度高度可遷移"]},
+  {title:"商詳頁轉化率 30% → 36%：用行為數據找出棄購的真正原因",original_title:"垂类电商：提升C端商品详情页转化效率的项目分享",url:"https://www.woshipm.com/pd/6082619.html",source:"人人都是產品經理",tier:4,date:"2023-04",author:"當事產品經理（原創復盤）",cats:["更多案例"],industry:"電商",
+   why:"垂類電商的商品詳情頁轉化率停在 30%，目標拉到 36%——換算約等於每日多 4 萬 GMV。這是少數把設計目標直接寫成營收數字的華文復盤。",
+   how:"先用行為數據找出頁面上真正被消費的內容（商品圖與評論最高），再用棄購調研找出流失原因：價格感知偏高、優惠資訊不清。對策不是全面重設計，而是三刀：減少版面噪音、讓價格與優惠透明化、補足規格與服務資訊。",
+   result:"上線後轉化率從 30% 做到約 37%，超過原定 36% 的目標；三個對策各自對應一個被驗證的流失原因，沒有一刀是「順手改的」。",
+   caveat:"作者自述數據經「借假修真」處理，絕對值可能調整過，但 baseline→目標→結果的推理鏈完整。",
+   takeaway:"改版前先回答兩個問題：用戶實際在消費頁面的哪些部分？棄購的人是卡在哪一步？答案決定你該動哪裡——而不是把整頁重畫一遍。",
+   metrics:[["30%→37%","商詳頁轉化率"],["+4 萬","預估每日 GMV 增量"]],scores:[2,2,1,2,1],
+   score_notes:["目標直接錨定 GMV，商業鏈路清楚","數據分析→調研→對策的過程完整","結構完整但作者自述數字經調整","當事人第一手復盤","方法可複用但提煉度一般"]},
+  {title:"獲客成本壓不下來？一個廣告投放產品轉化率 +50% 的復盤",original_title:"【真实案例】电商广告投放产品如何设计？一个转化率提升50%的项目复盘",url:"https://www.woshipm.com/pd/4455713.html",source:"人人都是產品經理",tier:4,date:"2021-04",author:"當事產品經理（原創復盤）",cats:["更多案例"],industry:"電商",
+   why:"垂直電商新產品線獲客成本居高不下，老闆直接把壓力轉成產品題目：投放的錢一樣多，轉化為什麼上不去？",
+   how:"復盤找出三個結構性問題：投放流量落在泛用頁面而非專屬落地頁、業務團隊沒有深度參與投放策略、數據監控滯後導致調整太慢。對策對應三刀：建專屬落地頁、把業務拉進投放決策、建即時數據監控快速迭代。",
+   result:"廣告轉化率提升 50%、獲客成本明顯下降；三個結構性問題（落地頁、協作、監控）各自有對應的解法與驗證，不是單點優化。",
+   caveat:"文中未提供轉化率絕對值 baseline。",
+   takeaway:"投放轉化差往往不是「廣告素材」問題，而是落地體驗與組織協作問題。「流量進來之後的第一頁」是被多數團隊忽略的轉化槓桿。",
+   metrics:[["+50%","廣告轉化率（無絕對值 baseline）"]],scores:[2,2,1,2,1],
+   score_notes:["獲客成本壓力的商業處境具體","問題診斷→對策的對應關係清楚","只有相對提升、缺絕對值","當事人第一手復盤","診斷思路可複用但未提煉成框架"]}
+];
+
+let REJECTED = [
+  {title:"GOV.UK：用 Design Crits 改善跨職能協作",url:"https://designnotes.blog.gov.uk/2017/11/27/using-design-crits-to-improve-collaboration/",source:"GOV.UK Design Notes",tier:1,scores:[1,1,0,2,1],
+   reason:"全文無任何量化成果（量化成果 0 分）。第一手且主題有價值，但總分 5＋加成 1.0 = 6.0，未達 7.0 門檻。"},
+  {title:"Zapier：改善升級體驗的 9 個方法",url:"https://growth.design/case-studies/zapier-upgrade",source:"growth.design",tier:2,scores:[1,0,0,1,2],
+   reason:"建議清單型內容，不是單一案例：沒有決策過程、沒有任何成效數據。總分 4＋加成 0.5 = 4.5。tier 2 來源也會被刷掉——評分看內容，不看出身。"}
+];
+
+/* ---- logic ---- */
+const tierBonus = {1:1.0, 2:0.5, 3:0.5, 4:0};
+const MAXSCORE = 11;
+const total = c => c.scores.reduce((a,b)=>a+b,0) + tierBonus[c.tier];
+
+function esc(s){ return String(s??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+function ringHtml(score, published){
+  const R = 27, C = 2*Math.PI*R;
+  const off = C * (1 - Math.min(score, MAXSCORE)/MAXSCORE);
+  return `<div class="score"><div class="ring">
+    <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+      <circle class="track" cx="32" cy="32" r="${R}" fill="none" stroke-width="5"/>
+      <circle class="val" cx="32" cy="32" r="${R}" fill="none" stroke-width="5" stroke-dasharray="${C.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}"/>
+    </svg><b>${score.toFixed(1)}</b></div>
+    <small>${published ? "已發佈" : "未發佈"}</small></div>`;
+}
+
+function radarSvg(scores){
+  const cx=100, cy=90, R=54, LR=R+21;
+  const pt=(i,r)=>{const a=-Math.PI/2 + i*2*Math.PI/5; return [cx+r*Math.cos(a), cy+r*Math.sin(a)];};
+  const poly=r=>Array.from({length:5},(_,i)=>pt(i,r).map(v=>v.toFixed(1)).join(",")).join(" ");
+  const val=Array.from({length:5},(_,i)=>pt(i, Math.max(scores[i]/2,0.06)*R).map(v=>v.toFixed(1)).join(",")).join(" ");
+  const axes=Array.from({length:5},(_,i)=>{const[x,y]=pt(i,R);return `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" class="raxis"/>`;}).join("");
+  const labels=DIMS.map((d,i)=>{const[x,y]=pt(i,LR);return `<text x="${x.toFixed(1)}" y="${(y+3).toFixed(1)}" text-anchor="middle" class="rlabel">${d}</text>`;}).join("");
+  return `<svg width="200" height="182" viewBox="0 0 200 182" role="img" aria-label="五維品質雷達圖">
+    <polygon points="${poly(R)}" class="rgrid"/>
+    <polygon points="${poly(R*0.5)}" class="rgrid"/>
+    ${axes}
+    <polygon points="${val}" class="rval"/>
+    ${labels}
+  </svg>`;
+}
+
+function dimHtml(c, notes){
+  const noteList = notes ? `<div class="dim-notes">${c.scores.map((s,i)=>
+    `<div class="dnote"><b>${DIMS[i]} ${s}/2</b> — ${esc(notes[i]||"")}</div>`).join("")}</div>` : "";
+  return `<div class="radar-wrap">${radarSvg(c.scores)}${noteList}</div>`;
+}
+
+const extIcon = `<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 1.5h7v7M10.5 1.5 1.5 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+function cardHtml(c, animate){
+  const prov = [c.source, c.date].filter(Boolean).map(esc).join("・");
+  return `
+    <article class="card${animate ? " enter" : ""}">
+      <div class="badges">
+        ${c.industry?`<span class="badge b-ind">${esc(c.industry)}</span>`:""}
+        ${c.cats.filter(x=>x!=="更多案例").map(x=>`<span class="badge b-cat">${esc(x)}</span>`).join("")}
+        <span class="badge b-cat">${esc(c.source)}</span>
+      </div>
+      <div class="card-top">
+        <div style="flex:1;min-width:250px">
+          <h2><a href="${esc(c.url)}" target="_blank" rel="noopener" title="閱讀原文">${esc(c.title)}</a></h2>
+        </div>
+        ${ringHtml(total(c), true)}
+      </div>
+      <div class="metrics m-${Math.min(c.metrics.length,4)}">${c.metrics.map(m=>`<div class="metric"><b>${esc(m[0])}</b><span>${esc(m[1])}</span></div>`).join("")}</div>
+      <div class="takeaway"><div class="sec-label">核心觀點</div><p>${esc(c.takeaway)}</p></div>
+      <div class="story">
+        <div class="step"><div class="step-label">問題／目標</div><p>${esc(c.why)}</p></div>
+        <div class="step"><div class="step-label">思維與作法</div><p>${esc(c.how)}</p></div>
+        <div class="step result"><div class="step-label">成果</div><p>${esc(c.result)}</p>
+          ${c.caveat?`<div class="caveat"><b>保留意見</b>　${esc(c.caveat)}</div>`:""}</div>
+      </div>
+      ${prov?`<div class="prov">原文出處：${prov}</div>`:""}
+      <div class="actions">
+        <a class="read-btn" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a>
+        <details><summary>五維品質雷達</summary>${dimHtml(c, c.score_notes)}</details>
+      </div>
+    </article>`;
+}
+
+let active = "全部";
+let visibleCount = 4;
+const CHIP_LABELS = {"顧問／商業視角":"顧問／商業", "更多案例":"更多"};
+
+function buildChips(){
+  const fbox = document.getElementById("filters");
+  fbox.innerHTML = "";
+  const allCats = ["全部", ...new Set(CASES.flatMap(c=>c.cats))];
+  allCats.forEach(cat=>{
+  const b = document.createElement("button");
+  b.className = "chip" + (cat===active?" on":"");
+  b.textContent = CHIP_LABELS[cat] || cat;
+  b.onclick = ()=>{
+    active = cat;
+    visibleCount = RUN.batchSize;
+    document.querySelectorAll(".chip").forEach(x=>x.classList.remove("on"));
+    b.classList.add("on");
+    render();
+  };
+  fbox.appendChild(b);
+  });
+}
+
+function filteredList(){
+  return CASES.filter(c => active==="全部" || c.cats.includes(active))
+              .sort((a,b)=>total(b)-total(a));
+}
+
+function render(newFrom = -1){
+  const feed = document.getElementById("feed");
+  const list = filteredList();
+  const shown = list.slice(0, visibleCount);
+  document.getElementById("empty").style.display = shown.length ? "none":"block";
+  feed.innerHTML = shown.map((c,i)=>cardHtml(c, newFrom >= 0 && i >= newFrom)).join("");
+  renderLoadZone(list.length);
+}
+
+function renderLoadZone(totalLen){
+  const zone = document.getElementById("load-zone");
+  const remaining = totalLen - visibleCount;
+  if(totalLen === 0){ zone.innerHTML = ""; return; }
+  if(remaining > 0){
+    zone.innerHTML = `
+      <button class="load-btn" id="load-more">
+        載入更多案例 <span class="count">還有 ${remaining} 則</span>
+      </button>`;
+    document.getElementById("load-more").onclick = ()=>{
+      const from = visibleCount;
+      visibleCount += RUN.batchSize;
+      render(from);
+      const cards = document.querySelectorAll("#feed .card");
+      if(cards[from]) cards[from].scrollIntoView({behavior:"smooth", block:"start"});
+    };
+  } else {
+    zone.innerHTML = `
+      <div class="load-done"><i></i>已瀏覽本輪全部 ${totalLen} 則・明日自動收集新一批</div>`;
+  }
+}
+
+function renderRejected(){
+  document.getElementById("rejected").innerHTML = REJECTED.map(c=>`
+  <article class="card rejected">
+    <div class="card-top">
+      <div style="flex:1;min-width:250px">
+        <h2 style="font-size:18.5px"><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.title)}</a></h2>
+        <div class="meta">${esc(c.source)}</div>
+        <div class="reject-reason">${esc(c.reason)}</div>
+      </div>
+      ${ringHtml(c.scores.reduce((a,b)=>a+b,0)+tierBonus[c.tier], false)}
+    </div>
+    <div class="actions">
+      <a class="read-btn ghost" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a>
+      <details><summary>五維品質雷達</summary>${dimHtml(c)}</details>
+    </div>
+  </article>`).join("");
+}
+
+function init(){
+  visibleCount = RUN.batchSize || 4;
+  buildChips();
+  renderRejected();
+  render();
+}
+
+async function boot(){
+  try{
+    const r = await fetch("cases.json", {cache:"no-store"});
+    if(r.ok){
+      const j = await r.json();
+      if(j && Array.isArray(j.cases)){
+        CASES = j.cases;
+        REJECTED = Array.isArray(j.rejected) ? j.rejected : [];
+        if(j.updated) RUN.date = j.updated;
+        if(j.run){ if(j.run.scanned!=null) RUN.scanned=j.run.scanned; if(j.run.candidates!=null) RUN.candidates=j.run.candidates; }
+      }
+    }
+  }catch(e){ /* 本機 file:// 或離線：改用內建 fallback 資料 */ }
+  document.getElementById("st-scanned").textContent = RUN.scanned;
+  document.getElementById("st-candidates").textContent = RUN.candidates;
+  document.getElementById("st-published").textContent = CASES.length;
+  init();
+  const sentinel = document.getElementById("toolbar-sentinel");
+  if(window.IntersectionObserver && sentinel){
+    new IntersectionObserver(([e])=>{
+      document.getElementById("filters").classList.toggle("stuck", !e.isIntersecting);
+    }, {threshold:0}).observe(sentinel);
+  }
+}
+boot();
+</script>
+</body>
+</html>

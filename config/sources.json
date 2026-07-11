@@ -1,0 +1,83 @@
+{
+  "description": "商業+UX 案例收集白名單。tier 1 = 當事團隊第一手；tier 2 = 高品質拆解聚合；tier 3 = 商業視角/顧問業；tier 4 = 中文來源（需嚴格過濾）。每日收集只從此清單抓取，平台搜尋僅作每週探索新來源用。",
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "當事團隊第一手",
+      "trust_bonus": 1.0,
+      "sources": [
+        { "name": "Airbnb Design", "domain": "airbnb.design", "lang": "en" },
+        { "name": "Spotify Design", "domain": "spotify.design", "lang": "en" },
+        { "name": "Booking.com Design", "domain": "booking.design", "lang": "en" },
+        { "name": "Shopify UX", "domain": "ux.shopify.com", "lang": "en" },
+        { "name": "Intercom Blog", "domain": "intercom.com/blog", "lang": "en" },
+        { "name": "Dropbox Design", "domain": "dropbox.design", "lang": "en" },
+        { "name": "Figma Blog", "domain": "figma.com/blog", "lang": "en" },
+        { "name": "GOV.UK Design Notes", "domain": "designnotes.blog.gov.uk", "lang": "en" },
+        { "name": "Duolingo Blog", "domain": "blog.duolingo.com", "lang": "en" },
+        { "name": "Grab Design", "domain": "design.grab.com", "lang": "en", "region": "東南亞" },
+        { "name": "Gojek Blog", "domain": "blog.gojek.io", "lang": "en", "region": "東南亞" }
+      ]
+    },
+    {
+      "tier": 2,
+      "name": "高品質拆解與聚合",
+      "trust_bonus": 0.5,
+      "sources": [
+        { "name": "growth.design", "domain": "growth.design", "lang": "en" },
+        { "name": "Built for Mars", "domain": "builtformars.com", "lang": "en" },
+        { "name": "Nielsen Norman Group", "domain": "nngroup.com", "lang": "en" },
+        { "name": "Baymard Institute", "domain": "baymard.com", "lang": "en" },
+        { "name": "Lenny's Newsletter", "domain": "lennysnewsletter.com", "lang": "en" },
+        { "name": "UX Collective", "domain": "uxdesign.cc", "lang": "en", "note": "Medium 出版物中少數有編輯把關的" }
+      ]
+    },
+    {
+      "tier": 3,
+      "name": "商業視角與顧問業",
+      "trust_bonus": 0.5,
+      "sources": [
+        { "name": "McKinsey Design", "domain": "mckinsey.com", "path_hint": "business value of design", "lang": "en" },
+        { "name": "Harvard Business Review", "domain": "hbr.org", "path_hint": "design / customer experience", "lang": "en" },
+        { "name": "IDEO Journal", "domain": "ideo.com/journal", "lang": "en" },
+        { "name": "Forrester Blog", "domain": "forrester.com/blogs", "path_hint": "CX ROI", "lang": "en" },
+        { "name": "ustwo", "domain": "ustwo.com/work", "lang": "en" },
+        { "name": "Work & Co", "domain": "work.co", "lang": "en" }
+      ]
+    },
+    {
+      "tier": 4,
+      "name": "在地案例：華文・日本・東南亞（嚴格過濾）",
+      "trust_bonus": 0.0,
+      "sources": [
+        { "name": "人人都是產品經理", "domain": "woshipm.com", "lang": "zh", "filter": "僅收原創標記且文內有具體 baseline→成果數據者" },
+        { "name": "AAPD (Medium)", "domain": "medium.com/as-a-product-designer", "lang": "zh", "region": "台灣" },
+        { "name": "UX 四神湯 (Medium)", "domain": "medium.com/uxeastmeetswest", "lang": "zh", "region": "台灣" },
+        { "name": "note.com（UX/事業改善タグ）", "domain": "note.com", "lang": "ja", "region": "日本", "filter": "UGC 平台，僅收當事團隊復盤且有數據者" },
+        { "name": "Goodpatch Blog", "domain": "goodpatch.com", "lang": "ja", "region": "日本" }
+      ]
+    }
+  ],
+  "discovery": {
+    "description": "每週一次的探索搜尋，用於發現新來源，通過品質門檻的來源才加入白名單",
+    "queries_en": [
+      "\"how we increased\" conversion redesign case study",
+      "\"how we reduced\" churn UX case study",
+      "design ROI \"case study\" metrics",
+      "product redesign \"A/B test\" \"lessons learned\""
+    ],
+    "queries_zh": [
+      "改版 轉化率 復盤 案例",
+      "體驗設計 營收 案例",
+      "用戶體驗 商業成果 拆解",
+      "台灣 UX 改版 轉換率 案例"
+    ],
+    "queries_ja": [
+      "UX改善 事例 コンバージョン 数値 成果",
+      "デザイン 事業成果 リニューアル 事例"
+    ],
+    "queries_sea": [
+      "UX case study conversion (Grab OR Gojek OR Shopee OR \"southeast asia\")"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Frosted Minimalism — Case Journal Design System",
+  "analysis": "參考三組 UI（Planner、NFT Dashboard、Intellecta）共同語言：冷灰藍→薰衣草漸層環境光、半透明玻璃面板、超大圓角、多層柔陰影＋內側白描邊、深 navy 墨色作唯一深色錨點、萊姆綠高亮、藥丸形互動元件、極大留白、小型字距放寬的 label。",
+  "color": {
+    "bg-base": "#EEF1F5",
+    "bg-mesh": ["#DCE6EE (radial, 左上)", "#E7E2F4 (radial, 右)", "#F3E8EC (radial, 下)"],
+    "surface-glass": "rgba(255,255,255,0.62) + blur(24px)",
+    "surface-solid": "#FFFFFF",
+    "ink": "#1A1E2B",
+    "ink-2": "#646B7A",
+    "ink-3": "#9AA1B0",
+    "navy": "#171B29",
+    "lime": "#D7F16B",
+    "lime-ink": "#4A5417",
+    "tier-tints": {
+      "1": {"bg": "#DCF1E8", "fg": "#1E6B54"},
+      "2": {"bg": "#DFE9F6", "fg": "#2F5787"},
+      "3": {"bg": "#E9E2F6", "fg": "#5D468F"},
+      "4": {"bg": "#F6E9DC", "fg": "#8A5A2A"}
+    },
+    "reject": {"fg": "#A05543", "bg": "rgba(255,255,255,0.4)"}
+  },
+  "typography": {
+    "family": "Inter + Noto Sans TC（幾何無襯線，全站統一，不用襯線體）",
+    "display": "40–52px / 800 / tracking -0.03em",
+    "card-title": "19px / 700",
+    "body": "14.5px / 400 / line-height 1.75",
+    "label": "11px / 700 / tracking .16em / uppercase",
+    "numeric": "tabular-nums, 700"
+  },
+  "shape": {
+    "radius-card": "28px",
+    "radius-inner": "16px",
+    "radius-pill": "999px"
+  },
+  "elevation": {
+    "card": "0 1px 2px rgba(23,27,41,.04), 0 12px 32px -8px rgba(23,27,41,.10)",
+    "hover": "0 2px 4px rgba(23,27,41,.05), 0 20px 44px -8px rgba(23,27,41,.14)",
+    "inner-stroke": "inset 0 0 0 1px rgba(255,255,255,.65) 疊加 border 1px rgba(23,27,41,.05)"
+  },
+  "motion": "180ms cubic-bezier(.2,.7,.3,1)；卡片 hover 上浮 2px、陰影加深；chips 即時切換",
+  "principles": [
+    "深色只出現在墨色文字與 active 元件，整個畫面只有一個深色錨點層",
+    "萊姆綠只用於『帶走的框架』與關鍵數字高亮——高亮色出現頻率決定它的價值",
+    "評分用環形進度（donut）呈現，呼應參考圖的柔和數據視覺化",
+    "資訊密度靠留白與階層解決，不靠框線"
+  ]
+}
