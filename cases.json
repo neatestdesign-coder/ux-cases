@@ -1,10 +1,140 @@
 {
   "updated": "2026-07-11",
   "run": {
-    "scanned": 28,
-    "candidates": 9
+    "scanned": 31,
+    "candidates": 5
   },
   "cases": [
+    {
+      "title": "課程分銷轉換率 35% → 52%：四個可複製的精細化運營方法",
+      "original_title": "案例复盘：可复制的4个精细化运营方法，让课程转化率提升至52%",
+      "url": "https://www.woshipm.com/operate/4197488.html",
+      "source": "人人都是產品經理",
+      "tier": 4,
+      "date": "2020-09",
+      "author": "當事運營（原創復盤）",
+      "cats": [
+        "更多案例"
+      ],
+      "industry": "教育學習",
+      "why": "教育低價引流活動，先前分銷轉換率只有 35%——問題出在課程包裝、用戶觸點動線、推廣策略三處。目標：把轉換率做上去。",
+      "how": "不套模板、拆方法論，四招：(1) 用戶洞察（分時段理解需求）、(2) 優化關鍵觸點體驗、(3) 用現金獎勵刺激用戶自發分銷、(4) 用 MVP 快速迭代、以數據修正。",
+      "result": "四天推廣期內，分銷轉換率從 35% 拉到 52%、總銷量 1.5 萬單；四個方法被作者明確框架化為「可複製」。",
+      "caveat": "屬活動型分銷數據，轉換率定義與長期留存未交代。",
+      "takeaway": "裂變別背模板、要背方法論：洞察→觸點→自發分銷→數據迭代。有 baseline（35%）、有結果（52%）、有絕對量（1.5萬單），是華文案例裡少見完整的推理鏈。",
+      "metrics": [
+        [
+          "35%→52%",
+          "分銷轉換率"
+        ],
+        [
+          "1.5 萬單",
+          "四天總銷量"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "score_notes": [
+        "教育引流的商業目標與痛點具體",
+        "診斷三處問題→四招對策，含 MVP 迭代",
+        "35%→52% baseline 與結果俱全＋絕對量",
+        "當事運營第一手復盤",
+        "四個方法明確框架化、可複製"
+      ]
+    },
+    {
+      "title": "Blinkist 付費牆 A/B：用「消除訂閱焦慮」把試用轉換拉高 23%",
+      "original_title": "How Blinkist Increased Trial Conversions by 23% (Ethically)",
+      "url": "https://growth.design/case-studies/trial-paywall-challenge",
+      "source": "growth.design",
+      "tier": 2,
+      "date": "2022",
+      "author": "growth.design（Blinkist A/B 拆解）",
+      "cats": [
+        "國際品牌"
+      ],
+      "industry": "訂閱媒體",
+      "why": "訂閱制 App 的試用轉換率直接等於營收。多數付費牆用「功能羅列＋製造急迫」逼轉換，反而觸發用戶的心理抗拒（reactance）。",
+      "how": "把兩版付費牆做 A/B。勝出的 B 版關鍵不是加功能，而是正面回應用戶最大的恐懼——「忘記取消被扣款」：主動講清楚計費與取消方式、用戶利益優先於功能表列，降低抗拒。",
+      "result": "B 版試用轉換率比對照組高 23%，且退訂率更低——把「怕被坑」的防備心，轉成願意試用的信任。",
+      "caveat": "growth.design 第三方拆解，23% 為相對於對照組的提升，未公開絕對基準轉換率。",
+      "takeaway": "付費牆先回答用戶的恐懼，而不是先展示功能。透明化計費與取消，是降低轉換摩擦最被低估的一招。",
+      "metrics": [
+        [
+          "+23%",
+          "試用轉換 vs 對照組"
+        ],
+        [
+          "退訂↓",
+          "取消率下降"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "訂閱轉換直接=營收，脈絡清楚",
+        "A/B 雙版對照＋心理機制解釋",
+        "相對提升有對照但缺絕對基準",
+        "第三方拆解、非當事團隊",
+        "付費牆四原則高度可複用"
+      ]
+    },
+    {
+      "title": "Trello 新手引導的 7 個戰術：延後註冊讓啟用率翻倍",
+      "original_title": "Trello User Onboarding: 7 Tactics To Inspire You",
+      "url": "https://growth.design/case-studies/trello-user-onboarding",
+      "source": "growth.design",
+      "tier": 2,
+      "date": "2021",
+      "author": "growth.design（Trello onboarding 拆解）",
+      "cats": [
+        "國際品牌"
+      ],
+      "industry": "SaaS 協作",
+      "why": "新手引導決定用戶有沒有走到「啊哈時刻」。註冊頁的每個干擾、每次過早要 email，都是轉換的漏水點。",
+      "how": "拆解 Trello 七戰術：關鍵頁移除導覽列減少分心、延後帳號建立讓用戶先體驗價值、依角色客製引導、幫用戶從既有心智模型（待辦清單）遷移、稟賦效應讓用戶客製化、magic link 降摩擦、用看板命名推薦功能。",
+      "result": "延後帳號建立讓「註冊→首個關鍵動作」轉換翻倍；角色化引導帶來約 36% 啟用提升；關鍵頁移除導覽提升約 28% 轉換。",
+      "caveat": "第三方拆解、清單型結構；各數字為 growth.design 引用的分散統計，非單一實驗的 baseline→結果。",
+      "takeaway": "新手引導的槓桿常在「移除」而非「增加」：少一個連結、晚一步要註冊，反而讓更多人走到價值點。",
+      "metrics": [
+        [
+          "翻倍",
+          "註冊→關鍵動作"
+        ],
+        [
+          "+36%",
+          "角色化啟用"
+        ],
+        [
+          "+28%",
+          "移除導覽轉換"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "onboarding→啟用→轉換脈絡清楚",
+        "清單型、缺單一決策敘事",
+        "多個數字但分散、非單一 baseline→結果",
+        "第三方拆解",
+        "七戰術可複用性高"
+      ]
+    },
     {
       "title": "Duolingo 成長模型：DAU 四年成長 4 倍的指標框架",
       "original_title": "Meaningful metrics: How data sharpened the focus of product teams",
@@ -295,6 +425,20 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Chase：為什麼彩帶慶祝會適得其反",
+      "url": "https://builtformars.com/case-studies/chase",
+      "source": "builtformars.com",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "拆解型觀點文，全文無任何量化成果（量化 0 分）。有可用的慶祝時機原則，但缺 baseline→結果與決策數據。總分 4＋加成 0.5 = 4.5，未達 7.0。"
+    },
     {
       "title": "GOV.UK：用 Design Crits 改善跨職能協作",
       "url": "https://designnotes.blog.gov.uk/2017/11/27/using-design-crits-to-improve-collaboration/",
