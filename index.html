@@ -76,6 +76,27 @@
   }
   .chip:hover{color:var(--ink);background:rgba(23,27,41,.05)}
   .chip.on{background:var(--navy);color:#fff;box-shadow:0 6px 16px -4px rgba(23,27,41,.4)}
+  .chip.more{display:inline-flex;align-items:center;gap:4px}
+  .chip.more .caret{font-size:10px;opacity:.7;transition:transform var(--ease)}
+  .chip.more[aria-expanded="true"] .caret{transform:rotate(180deg)}
+
+  /* 產業次選單：單列可橫向捲動的 hashtag（Mobile First，仿 YouTube 分類列）*/
+  .submenu-wrap{margin:-24px 0 32px}
+  .submenu{
+    display:flex;gap:8px;overflow-x:auto;padding:6px 2px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;scroll-snap-type:x proximity;
+  }
+  .submenu::-webkit-scrollbar{display:none}
+  .subchip{
+    flex:0 0 auto;white-space:nowrap;scroll-snap-align:start;
+    border:1px solid var(--stroke);
+    background:var(--glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.6);
+    border-radius:999px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--ink2);
+    cursor:pointer;font-family:inherit;transition:var(--ease);
+  }
+  .subchip:hover{color:var(--ink);background:rgba(23,27,41,.05)}
+  .subchip.on{background:var(--navy);color:#fff;border-color:transparent;box-shadow:0 6px 16px -4px rgba(23,27,41,.4)}
 
   .card{
     background:var(--glass);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
@@ -92,6 +113,10 @@
   .badge{font-size:11.5px;padding:4px 12px;border-radius:999px;font-weight:700;letter-spacing:.02em}
   .b-cat{background:rgba(255,255,255,.7);border:1px solid var(--stroke);color:var(--ink2);font-weight:600}
   .b-ind{background:var(--t2-bg);color:var(--t2-fg)}
+  .b-src{background:rgba(255,255,255,.55);border:1px solid var(--stroke);color:var(--ink3);font-weight:600}
+  .badge.tag{cursor:pointer;font-family:inherit;line-height:1.75;transition:var(--ease)}
+  .b-ind.tag:hover{filter:brightness(.97);box-shadow:0 4px 12px -4px rgba(47,87,135,.4)}
+  .b-cat.tag:hover{color:var(--ink);box-shadow:var(--sh-card)}
 
   .card-top{display:flex;justify-content:space-between;gap:22px;align-items:flex-start;flex-wrap:wrap}
   h2{font-size:21.5px;font-weight:800;letter-spacing:-.015em;line-height:1.45}
@@ -265,7 +290,7 @@
 <header class="header-grid">
   <div class="header-left">
     <h1>UX 商業案例分享</h1>
-    <p class="sub">每天自動收集全球「看得到商業脈絡、決策過程與量化成果」的真實案例。</p>
+    <p class="sub">每天自動收集全球「看得到商業脈絡、決策過程與質量化成果」的真實案例。</p>
   </div>
   <div class="stats">
     <div class="stat"><b id="st-scanned">—</b><span>掃描文章</span></div>
@@ -276,6 +301,9 @@
 
 <div id="toolbar-sentinel"></div>
 <nav class="toolbar" id="filters" aria-label="分類篩選"></nav>
+<div class="submenu-wrap" id="submenu-wrap" hidden>
+  <div class="submenu" id="submenu" aria-label="產業篩選"></div>
+</div>
 
 <main id="feed"></main>
 <div class="empty" id="empty">此分類今日沒有達標案例——寧缺勿濫。</div>
@@ -311,75 +339,76 @@ const RUN = {
 const DIMS = ["商業脈絡","決策過程","量化成果","第一手性","可遷移性"];
 
 let CASES = [
-  {title:"Duolingo 成長模型：DAU 四年成長 4 倍的指標框架",original_title:"Meaningful metrics: How data sharpened the focus of product teams",url:"https://blog.duolingo.com/growth-model-duolingo/",source:"Duolingo Blog",tier:1,date:"2023-02-17",author:"Erin Gustafson, Ph.D.（Duolingo 數據科學團隊）",cats:["國際品牌","經典案例"],industry:"教育學習",
-   why:"2018 年 DAU 成長停滯。Duolingo 不走付費投放路線，成長必須由產品本身驅動——問題變成：該優化哪個指標，才能真正撬動 DAU？",
-   how:"團隊沒有直接對 DAU 下手，而是把用戶拆成七種狀態（新用戶、現有用戶、回流、流失風險⋯），建立 Markov 狀態轉移模型，量化每個狀態轉換對 DAU 的槓桿。分析結果推翻直覺：最大槓桿不是拉新，而是 CURR（現有用戶留存率）。全公司產品團隊據此對焦。",
+  {title:"Duolingo 成長模型：日活躍用戶（DAU）四年成長 4 倍的指標框架",original_title:"Meaningful metrics: How data sharpened the focus of product teams",url:"https://blog.duolingo.com/growth-model-duolingo/",source:"Duolingo Blog",tier:1,date:"2023-02-17",author:"Erin Gustafson, Ph.D.（Duolingo 數據科學團隊）",cats:["國際品牌","經典案例"],industry:"教育",
+   why:"2018 年日活躍用戶（DAU）成長停滯。Duolingo 不走付費投放路線，成長必須由產品本身驅動——問題變成：該優化哪個指標，才能真正撬動 DAU？",
+   how:"團隊沒有直接對 DAU 下手，而是把用戶拆成七種狀態（新用戶、現有用戶、回流、流失風險⋯），建立 馬可夫（Markov）狀態轉移模型，量化每個狀態轉換對 DAU 的槓桿。分析結果推翻直覺：最大槓桿不是拉新，而是 CURR（現有用戶留存率）。全公司產品團隊據此對焦。",
    result:"DAU 自 2019 年起成長 4 倍，幾乎全靠自然成長；全公司把目標從「衝 DAU」改押在 CURR 一個指標上，事後驗證這個賭注正確。",
    caveat:"模型無法解釋所有 DAU 波動，作者坦承分群方式仍在迭代中。",
    takeaway:"不要直接優化北極星指標，要找到「可操作的中介指標」。用戶狀態轉移模型可直接套用到任何訂閱／內容產品。",
    metrics:[["4×","DAU 成長（2019–2023）"],["CURR","找出的最高槓桿指標"]],scores:[2,2,2,2,2],
    score_notes:["成長停滯＋不投廣告的商業約束交代完整","含被推翻的直覺與模型極限的自我批判","4× 有時間區間與歸因","當事數據科學團隊親撰","狀態轉移模型可直接複用"]},
-  {title:"LinkedIn 通知授權率提升 500%：行為觸發器的重新框架",original_title:"How LinkedIn Increased Notification Opt-in Rates by 500%",url:"https://growth.design/case-studies/linkedin-retention-triggers",source:"growth.design",tier:2,date:"2022",author:"growth.design（引用 LinkedIn 公開分享）",cats:["國際品牌"],industry:"職場社群",
-   why:"通知權限一旦被拒，產品就失去最重要的再互動管道，直接影響留存與 LTV。多數產品在錯誤的時機、用產品本位的語言要權限。",
-   how:"LinkedIn 把提示從「產品要什麼」翻轉成「用戶得到什麼」：(1) 在具體互動發生的當下才提示（情境化時機）、(2) 綁定單一真實互動而非泛用通知、(3) 講用戶利益而非功能、(4) 把回應簡化為 yes/no。",
+  {title:"LinkedIn 通知授權率提升 500%：行為觸發器的重新框架",original_title:"How LinkedIn Increased Notification Opt-in Rates by 500%",url:"https://growth.design/case-studies/linkedin-retention-triggers",source:"growth.design",tier:2,date:"2022",author:"growth.design（引用 LinkedIn 公開分享）",cats:["國際品牌"],industry:"社群",
+   why:"通知權限一旦被拒，產品就失去最重要的再互動管道，直接影響留存與顧客終身價值（LTV）。多數產品在錯誤的時機、用產品本位的語言要權限。",
+   how:"LinkedIn 把提示從「產品要什麼」翻轉成「用戶得到什麼」：(1) 在具體互動發生的當下才提示（情境化時機）、(2) 綁定單一真實互動而非泛用通知、(3) 講用戶利益而非功能、(4) 把回應簡化為是／否。",
    result:"改版後通知授權率提升 500%——把拒絕率最高的權限請求，變成了再互動的入口。",
-   caveat:"二手拆解、原始 baseline 未公開，500% 的絕對規模無法驗證。",
+   caveat:"二手拆解、原始基準值（baseline）未公開，500% 的絕對規模無法驗證。",
    takeaway:"「權限請求也是一次體驗設計」：時機、框架、利益、摩擦四個變數，可以直接變成任何權限／訂閱請求的檢查清單。",
-   metrics:[["+500%","通知授權率（無公開 baseline）"]],scores:[2,1,1,1,2],
-   score_notes:["有講清楚通知→留存→LTV 的商業鏈路","過程為事後重構，偏線性美化","只有百分比、缺 baseline","二手拆解但有可查的引用來源","四原則高度可遷移"]},
-  {title:"McKinsey：設計力前 25% 的公司，營收成長是同業近 2 倍",original_title:"The Business Value of Design",url:"https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-business-value-of-design",source:"McKinsey Quarterly",tier:3,date:"2018-10",author:"Sheppard, Sarrazin, Kouyoumjian, Dore",cats:["顧問／商業視角","經典案例"],industry:"管理顧問",
-   why:"「設計投資到底值不值得」長期缺乏財務級證據，設計主管在董事會沒有語言跟 CFO 對話。McKinsey 要把設計變成可量測的經營變數。",
-   how:"追蹤 300 家上市公司五年、超過 200 萬筆財務數據與 10 萬項設計行動，建立 McKinsey Design Index（MDI），迴歸出與財務表現最相關的四類行為：把設計當高層指標管理、跨職能而非孤島、快速迭代、極端用戶中心。",
+   metrics:[["+500%","通知授權率（無公開基準值）"]],scores:[2,1,1,1,2],
+   score_notes:["有講清楚通知→留存→顧客終身價值（LTV） 的商業鏈路","過程為事後重構，偏線性美化","只有百分比、缺基準值","二手拆解但有可查的引用來源","四原則高度可遷移"]},
+  {title:"McKinsey：設計力前 25% 的公司，營收成長是同業近 2 倍",original_title:"The Business Value of Design",url:"https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-business-value-of-design",source:"McKinsey Quarterly",tier:3,date:"2018-10",author:"Sheppard, Sarrazin, Kouyoumjian, Dore",cats:["顧問／商業視角","經典案例"],industry:"顧問",
+   why:"「設計投資到底值不值得」長期缺乏財務級證據，設計主管在董事會沒有語言跟財務長（CFO）對話。McKinsey 要把設計變成可量測的經營變數。",
+   how:"追蹤 300 家上市公司五年、超過 200 萬筆財務數據與 10 萬項設計行動，建立 麥肯錫設計指數（McKinsey Design Index，MDI），迴歸出與財務表現最相關的四類行為：把設計當高層指標管理、跨職能而非孤島、快速迭代、極端用戶中心。",
    result:"MDI 前四分位公司：營收成長約為同業 2 倍、股東總回報（TSR）高出 56%；效果在醫療科技、消費品、零售銀行三個產業全部成立。",
    caveat:"這是相關性研究而非因果證明——設計做得好的公司，可能本來就經營得好。",
    takeaway:"對設計顧問最有用的不是結論，而是語言：把「設計好壞」翻譯成 MDI 四類可稽核的經營行為，正是向客戶高層提案時的框架。",
-   metrics:[["≈2×","營收成長 vs 同業"],["+56%","股東總回報（TSR）"],["300 家","上市公司五年追蹤"]],scores:[2,1,2,2,2],
+   metrics:[["≈2×","營收成長 對比 同業"],["+56%","股東總回報（TSR）"],["300 家","上市公司五年追蹤"]],scores:[2,1,2,2,2],
    score_notes:["直指設計與財務對話斷裂的痛點","研究方法交代清楚，但非單一案例的決策敘事","樣本、期間、對照俱全","原創研究、作者具名","MDI 四行為可直接用於顧問提案"]},
   {title:"推廣預算被砍後，靠產品迭代把次週留存做到高於同業 20%",original_title:"复盘：如何通过产品迭代做用户增长，留存率提高20%+",url:"https://www.woshipm.com/operate/4039868.html",source:"人人都是產品經理",tier:4,date:"2020-06",author:"當事產品經理（原創復盤）",cats:["更多案例"],industry:"內容平台",
-   why:"內容型產品上線近兩年，推廣經費被大幅削減、日活明顯下滑。OKR 壓力下，成長只能從「買量」轉向「產品自身」。",
-   how:"以 STAR 法則復盤。關鍵決策是先選北極星指標（與內容消費深度掛鉤的關注率），再用數據分析＋用戶調研找留存槓桿，按留存→激活→推薦→營收的優先序拆解目標，逐項做內容與功能實驗。",
-   result:"改版後次週留存率高於同行業同規模 App 約 20%，連續 5 個月沒有回落；北極星指標成為團隊後續迭代的共同語言。",
-   caveat:"baseline 只寫「略低於同行」，提升幅度的起點模糊。",
+   why:"內容型產品上線近兩年，推廣經費被大幅削減、日活明顯下滑。目標與關鍵成果（OKR）壓力下，成長只能從「買量」轉向「產品自身」。",
+   how:"以 STAR 復盤法（情境-任務-行動-結果）梳理。關鍵決策是先選北極星指標（與內容消費深度掛鉤的關注率），再用數據分析＋用戶調研找留存槓桿，按留存→激活→推薦→營收的優先序拆解目標，逐項做內容與功能實驗。",
+   result:"改版後次週留存率高於同行業同規模應用程式約 20%，連續 5 個月沒有回落；北極星指標成為團隊後續迭代的共同語言。",
+   caveat:"基準值（baseline）只寫「略低於同行」，提升幅度的起點模糊。",
    takeaway:"預算被砍反而逼出正確的優先序：先留存、後拉新。北極星指標的選法（找出與長期價值最相關的行為指標）是可複用的方法。",
-   metrics:[["+20%","次週留存 vs 同業（維持 5 個月）"]],scores:[2,2,1,2,2],
-   score_notes:["預算削減→日活下滑的處境交代具體","有目標拆解與實驗過程","相對數據為主、baseline 模糊","當事人第一手復盤","北極星選法＋優先序可複用"]},
-  {title:"Duolingo 的實驗機器：同時跑數百個 A/B 測試怎麼不翻車",original_title:"Improving Duolingo, one experiment at a time",url:"https://blog.duolingo.com/improving-duolingo-one-experiment-at-a-time/",source:"Duolingo Blog",tier:1,date:"2020-01",author:"Lavanya Aprameya（Duolingo 產品團隊）",cats:["國際品牌"],industry:"教育學習",
+   metrics:[["+20%","次週留存 對比 同業（維持 5 個月）"]],scores:[2,2,1,2,2],
+   score_notes:["預算削減→日活下滑的處境交代具體","有目標拆解與實驗過程","相對數據為主、基準值模糊","當事人第一手復盤","北極星選法＋優先序可複用"]},
+  {title:"Duolingo 的實驗機器：同時跑數百個 A/B 測試怎麼不翻車",original_title:"Improving Duolingo, one experiment at a time",url:"https://blog.duolingo.com/improving-duolingo-one-experiment-at-a-time/",source:"Duolingo Blog",tier:1,date:"2020-01",author:"Lavanya Aprameya（Duolingo 產品團隊）",cats:["國際品牌"],industry:"教育",
    why:"任何改動——小到一顆按鈕、大到排行榜——都可能傷害學習成效或留存。當公司同時跑數百個實驗，怎麼確保每個決策都有據可依，而不是誰大聲聽誰的？",
    how:"自建實驗平台，強制每個實驗開跑前定義目標、指標與假設。最關鍵的紀律是「守門指標」：先定義什麼不可犧牲（留存），任何實驗傷到它就出局，不管其他數字多好看。",
    result:"成功的一面：動畫技能圖標、排行榜等核心功能都是實驗產線的產出，上線前各自通過假設驗證。失敗的一面：一個明顯提升營收的實驗，因守門指標顯示傷害留存，直接被否決下線——短期收入讓位給長期用戶價值。",
    caveat:"文章公開了決策邏輯與成敗案例，但未公開各實驗的具體數字。",
    takeaway:"實驗制度的價值不在跑得多，而在「否決規則」——先定義什麼指標不可犧牲，才能避免用長期價值換短期數字。守門指標（guardrail metrics）可直接套用到任何改版提案。",
-   metrics:[["100s","同時進行的 A/B 實驗"],["守門指標","營收 vs 留存的否決機制"]],scores:[2,2,1,2,2],
+   metrics:[["數百","同時進行的 A/B 實驗"],["守門指標","營收 對比 留存的否決機制"]],scores:[2,2,1,2,2],
    score_notes:["實驗與商業決策的關係交代清楚","含被否決的賺錢實驗——真實決策的指紋","有實驗規模但缺具體效果數字","當事產品團隊親撰","守門指標制度高度可遷移"]},
   {title:"商詳頁轉化率 30% → 36%：用行為數據找出棄購的真正原因",original_title:"垂类电商：提升C端商品详情页转化效率的项目分享",url:"https://www.woshipm.com/pd/6082619.html",source:"人人都是產品經理",tier:4,date:"2023-04",author:"當事產品經理（原創復盤）",cats:["更多案例"],industry:"電商",
-   why:"垂類電商的商品詳情頁轉化率停在 30%，目標拉到 36%——換算約等於每日多 4 萬 GMV。這是少數把設計目標直接寫成營收數字的華文復盤。",
+   why:"垂類電商的商品詳情頁轉化率停在 30%，目標拉到 36%——換算約等於每日多 4 萬商品交易總額（GMV）。這是少數把設計目標直接寫成營收數字的華文復盤。",
    how:"先用行為數據找出頁面上真正被消費的內容（商品圖與評論最高），再用棄購調研找出流失原因：價格感知偏高、優惠資訊不清。對策不是全面重設計，而是三刀：減少版面噪音、讓價格與優惠透明化、補足規格與服務資訊。",
    result:"上線後轉化率從 30% 做到約 37%，超過原定 36% 的目標；三個對策各自對應一個被驗證的流失原因，沒有一刀是「順手改的」。",
-   caveat:"作者自述數據經「借假修真」處理，絕對值可能調整過，但 baseline→目標→結果的推理鏈完整。",
+   caveat:"作者自述數據經「借假修真」處理，絕對值可能調整過，但 基準值（baseline）→目標→結果的推理鏈完整。",
    takeaway:"改版前先回答兩個問題：用戶實際在消費頁面的哪些部分？棄購的人是卡在哪一步？答案決定你該動哪裡——而不是把整頁重畫一遍。",
-   metrics:[["30%→37%","商詳頁轉化率"],["+4 萬","預估每日 GMV 增量"]],scores:[2,2,1,2,1],
-   score_notes:["目標直接錨定 GMV，商業鏈路清楚","數據分析→調研→對策的過程完整","結構完整但作者自述數字經調整","當事人第一手復盤","方法可複用但提煉度一般"]},
+   metrics:[["30%→37%","商詳頁轉化率"],["+4 萬","預估每日商品交易總額（GMV）增量"]],scores:[2,2,1,2,1],
+   score_notes:["目標直接錨定商品交易總額（GMV），商業鏈路清楚","數據分析→調研→對策的過程完整","結構完整但作者自述數字經調整","當事人第一手復盤","方法可複用但提煉度一般"]},
   {title:"獲客成本壓不下來？一個廣告投放產品轉化率 +50% 的復盤",original_title:"【真实案例】电商广告投放产品如何设计？一个转化率提升50%的项目复盘",url:"https://www.woshipm.com/pd/4455713.html",source:"人人都是產品經理",tier:4,date:"2021-04",author:"當事產品經理（原創復盤）",cats:["更多案例"],industry:"電商",
    why:"垂直電商新產品線獲客成本居高不下，老闆直接把壓力轉成產品題目：投放的錢一樣多，轉化為什麼上不去？",
    how:"復盤找出三個結構性問題：投放流量落在泛用頁面而非專屬落地頁、業務團隊沒有深度參與投放策略、數據監控滯後導致調整太慢。對策對應三刀：建專屬落地頁、把業務拉進投放決策、建即時數據監控快速迭代。",
    result:"廣告轉化率提升 50%、獲客成本明顯下降；三個結構性問題（落地頁、協作、監控）各自有對應的解法與驗證，不是單點優化。",
-   caveat:"文中未提供轉化率絕對值 baseline。",
+   caveat:"文中未提供轉化率絕對值基準（baseline）。",
    takeaway:"投放轉化差往往不是「廣告素材」問題，而是落地體驗與組織協作問題。「流量進來之後的第一頁」是被多數團隊忽略的轉化槓桿。",
-   metrics:[["+50%","廣告轉化率（無絕對值 baseline）"]],scores:[2,2,1,2,1],
+   metrics:[["+50%","廣告轉化率（無絕對值基準）"]],scores:[2,2,1,2,1],
    score_notes:["獲客成本壓力的商業處境具體","問題診斷→對策的對應關係清楚","只有相對提升、缺絕對值","當事人第一手復盤","診斷思路可複用但未提煉成框架"]}
 ];
 
 let REJECTED = [
-  {title:"GOV.UK：用 Design Crits 改善跨職能協作",url:"https://designnotes.blog.gov.uk/2017/11/27/using-design-crits-to-improve-collaboration/",source:"GOV.UK Design Notes",tier:1,scores:[1,1,0,2,1],
+  {title:"GOV.UK：用設計評審（Design Crits）改善跨職能協作",url:"https://designnotes.blog.gov.uk/2017/11/27/using-design-crits-to-improve-collaboration/",source:"GOV.UK Design Notes",tier:1,scores:[1,1,0,2,1],
    reason:"全文無任何量化成果（量化成果 0 分）。第一手且主題有價值，但總分 5＋加成 1.0 = 6.0，未達 7.0 門檻。"},
   {title:"Zapier：改善升級體驗的 9 個方法",url:"https://growth.design/case-studies/zapier-upgrade",source:"growth.design",tier:2,scores:[1,0,0,1,2],
-   reason:"建議清單型內容，不是單一案例：沒有決策過程、沒有任何成效數據。總分 4＋加成 0.5 = 4.5。tier 2 來源也會被刷掉——評分看內容，不看出身。"}
+   reason:"建議清單型內容，不是單一案例：沒有決策過程、沒有任何成效數據。總分 4＋加成 0.5 = 4.5。第二層（tier 2）來源也會被刷掉——評分看內容，不看出身。"}
 ];
 
 /* ---- logic ---- */
-const tierBonus = {1:1.0, 2:0.5, 3:0.5, 4:0};
+const tierBonus = {0:0, 1:1.0, 2:0.5, 3:0.5, 4:0};
 const MAXSCORE = 11;
-const total = c => c.scores.reduce((a,b)=>a+b,0) + tierBonus[c.tier];
+const bonusOf = c => (tierBonus[c.tier] != null ? tierBonus[c.tier] : 0);
+const total = c => c.scores.reduce((a,b)=>a+b,0) + bonusOf(c);
 
 function esc(s){ return String(s??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
 
@@ -423,9 +452,9 @@ function cardHtml(c, animate){
   return `
     <article class="card${animate ? " enter" : ""}">
       <div class="badges">
-        ${c.industry?`<span class="badge b-ind">${esc(c.industry)}</span>`:""}
-        ${c.cats.filter(x=>x!=="更多案例").map(x=>`<span class="badge b-cat">${esc(x)}</span>`).join("")}
-        <span class="badge b-cat">${esc(c.source)}</span>
+        ${c.industry?`<button type="button" class="badge b-ind tag" data-ind="${esc(c.industry)}">#${esc(c.industry)}</button>`:""}
+        ${c.cats.filter(x=>x!=="更多案例").map(x=>`<button type="button" class="badge b-cat tag" data-cat="${esc(x)}">${esc(x)}</button>`).join("")}
+        <span class="badge b-src">${esc(c.source)}</span>
       </div>
       <div class="card-top">
         <div style="flex:1;min-width:250px">
@@ -449,32 +478,78 @@ function cardHtml(c, animate){
     </article>`;
 }
 
-let active = "全部";
+let filter = {mode:"all", value:null};   // mode: all | cat | ind
+let subOpen = false;
 let visibleCount = 4;
-const CHIP_LABELS = {"顧問／商業視角":"顧問／商業", "更多案例":"更多"};
+const CHIP_LABELS = {"顧問／商業視角":"顧問／商業"};
+const CAT_ORDER = ["國際品牌","顧問／商業視角","經典案例"];
+const IND_ORDER = ["電商","SaaS","生產力","教育","媒體","內容平台","社群","工業","顧問"];
+
+function industryList(){
+  const present = [...new Set(CASES.map(c=>c.industry).filter(Boolean))];
+  const ordered = IND_ORDER.filter(x=>present.includes(x));
+  present.forEach(x=>{ if(!ordered.includes(x)) ordered.push(x); });
+  return ordered;
+}
+
+function mkChip(label, on, onclick){
+  const b = document.createElement("button");
+  b.className = "chip" + (on ? " on" : "");
+  b.textContent = label;
+  b.onclick = onclick;
+  return b;
+}
 
 function buildChips(){
   const fbox = document.getElementById("filters");
   fbox.innerHTML = "";
-  const allCats = ["全部", ...new Set(CASES.flatMap(c=>c.cats))];
-  allCats.forEach(cat=>{
-  const b = document.createElement("button");
-  b.className = "chip" + (cat===active?" on":"");
-  b.textContent = CHIP_LABELS[cat] || cat;
-  b.onclick = ()=>{
-    active = cat;
-    visibleCount = RUN.batchSize;
-    document.querySelectorAll(".chip").forEach(x=>x.classList.remove("on"));
-    b.classList.add("on");
-    render();
-  };
-  fbox.appendChild(b);
+  fbox.appendChild(mkChip("全部", filter.mode==="all", ()=>{ subOpen=false; setFilter("all",null); }));
+  const present = new Set(CASES.flatMap(c=>c.cats));
+  CAT_ORDER.filter(x=>present.has(x)).forEach(cat=>{
+    fbox.appendChild(mkChip(CHIP_LABELS[cat]||cat, filter.mode==="cat"&&filter.value===cat, ()=>{ subOpen=false; setFilter("cat",cat); }));
   });
+  // 「更多」永久保持在最後一個，點擊展開產業次選單
+  const more = mkChip("更多", subOpen||filter.mode==="ind", toggleSub);
+  more.classList.add("more");
+  more.setAttribute("aria-expanded", subOpen ? "true" : "false");
+  more.innerHTML = '更多<span class="caret" aria-hidden="true">▾</span>';
+  fbox.appendChild(more);
+  buildSubmenu();
+}
+
+function buildSubmenu(){
+  const wrap = document.getElementById("submenu-wrap");
+  const box = document.getElementById("submenu");
+  box.innerHTML = "";
+  industryList().forEach(ind=>{
+    const b = document.createElement("button");
+    b.className = "subchip" + (filter.mode==="ind"&&filter.value===ind ? " on" : "");
+    b.textContent = "#" + ind;
+    b.onclick = ()=>{ subOpen=true; setFilter("ind",ind); };
+    box.appendChild(b);
+  });
+  wrap.hidden = !subOpen;
+}
+
+function toggleSub(){
+  // 收合時若正處於產業篩選，回到「全部」，避免隱藏中的作用中篩選
+  if(subOpen && filter.mode==="ind"){ subOpen=false; setFilter("all",null); return; }
+  subOpen = !subOpen;
+  buildChips();
+}
+
+function setFilter(mode, value){
+  filter = {mode, value};
+  visibleCount = RUN.batchSize;
+  buildChips();
+  render();
 }
 
 function filteredList(){
-  return CASES.filter(c => active==="全部" || c.cats.includes(active))
-              .sort((a,b)=>total(b)-total(a));
+  let list = CASES.slice();
+  if(filter.mode==="cat") list = list.filter(c=>c.cats.includes(filter.value));
+  else if(filter.mode==="ind") list = list.filter(c=>c.industry===filter.value);
+  return list.sort((a,b)=>total(b)-total(a));
 }
 
 function render(newFrom = -1){
@@ -493,7 +568,7 @@ function renderLoadZone(totalLen){
   if(remaining > 0){
     zone.innerHTML = `
       <button class="load-btn" id="load-more">
-        載入更多案例 <span class="count">還有 ${remaining} 則</span>
+        載入更多案例 <span class="count">${remaining}</span>
       </button>`;
     document.getElementById("load-more").onclick = ()=>{
       const from = visibleCount;
@@ -508,6 +583,17 @@ function renderLoadZone(totalLen){
   }
 }
 
+function wireBadgeFilter(){
+  document.getElementById("feed").addEventListener("click", e=>{
+    const t = e.target.closest("[data-ind],[data-cat]");
+    if(!t) return;
+    if(t.dataset.ind != null){ subOpen=true; setFilter("ind", t.dataset.ind); }
+    else if(t.dataset.cat != null){ subOpen=false; setFilter("cat", t.dataset.cat); }
+    const s = document.getElementById("toolbar-sentinel");
+    if(s) s.scrollIntoView({behavior:"smooth", block:"start"});
+  });
+}
+
 function renderRejected(){
   document.getElementById("rejected").innerHTML = REJECTED.map(c=>`
   <article class="card rejected">
@@ -517,7 +603,7 @@ function renderRejected(){
         <div class="meta">${esc(c.source)}</div>
         <div class="reject-reason">${esc(c.reason)}</div>
       </div>
-      ${ringHtml(c.scores.reduce((a,b)=>a+b,0)+tierBonus[c.tier], false)}
+      ${ringHtml(c.scores.reduce((a,b)=>a+b,0)+bonusOf(c), false)}
     </div>
     <div class="actions">
       <a class="read-btn ghost" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a>
@@ -531,6 +617,7 @@ function init(){
   buildChips();
   renderRejected();
   render();
+  wireBadgeFilter();
 }
 
 async function boot(){
