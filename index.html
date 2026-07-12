@@ -98,6 +98,41 @@
   .subchip:hover{color:var(--ink);background:rgba(23,27,41,.05)}
   .subchip.on{background:var(--navy);color:#fff;border-color:transparent;box-shadow:0 6px 16px -4px rgba(23,27,41,.4)}
 
+  /* ---------- 進階篩選 icon 按鈕 ---------- */
+  .chip.adv-btn{display:inline-flex;align-items:center;gap:6px}
+  .chip.adv-btn svg{display:block}
+  .chip-div{width:1px;height:20px;background:var(--stroke);margin:0 3px;align-self:center;flex:0 0 auto}
+  .advbadge{background:var(--lime);color:var(--lime-ink);border-radius:999px;font-size:11px;font-weight:800;min-width:17px;height:17px;display:inline-flex;align-items:center;justify-content:center;padding:0 5px;font-variant-numeric:tabular-nums}
+  .chip.adv-btn.on .advbadge{background:#fff;color:var(--navy)}
+
+  /* ---------- 進階篩選面板 ---------- */
+  .adv-wrap{margin:-20px 0 30px}
+  .adv{
+    background:var(--glass-strong);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
+    border:1px solid var(--stroke);box-shadow:var(--sh-card), inset 0 0 0 1px rgba(255,255,255,.7);
+    border-radius:22px;padding:20px 22px;display:flex;flex-direction:column;gap:18px;
+  }
+  .adv-h{font-size:13px;font-weight:800;letter-spacing:.02em;color:var(--ink);margin-bottom:12px}
+  .adv-sub{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin-bottom:10px}
+  .adv-sub-h{font-size:11.5px;font-weight:700;color:var(--ink3);min-width:34px;letter-spacing:.06em}
+  .adv-chips{display:flex;flex-wrap:wrap;gap:8px}
+  .adv-chip{
+    display:inline-flex;align-items:center;gap:6px;cursor:pointer;font-family:inherit;
+    border:1px solid var(--stroke);background:rgba(255,255,255,.6);
+    border-radius:999px;padding:7px 13px;font-size:12.5px;font-weight:600;color:var(--ink2);transition:var(--ease);
+  }
+  .adv-chip:hover{color:var(--ink);background:rgba(255,255,255,.9);box-shadow:var(--sh-card)}
+  .adv-chip.on{background:var(--navy);color:#fff;border-color:transparent;box-shadow:0 6px 16px -4px rgba(23,27,41,.4)}
+  .adv-chip .cnt{font-size:10.5px;font-weight:800;color:var(--ink3);background:rgba(23,27,41,.06);border-radius:999px;padding:1px 6px;font-variant-numeric:tabular-nums}
+  .adv-chip.on .cnt{color:#fff;background:rgba(255,255,255,.22)}
+  .adv-chip.zero{opacity:.42}
+  .adv-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--stroke);padding-top:16px;flex-wrap:wrap}
+  .adv-count{font-size:12px;color:var(--ink3);font-weight:600}
+  .adv-clear{cursor:pointer;font-family:inherit;border:1px solid var(--stroke);background:rgba(255,255,255,.7);border-radius:999px;padding:7px 16px;font-size:12.5px;font-weight:700;color:var(--ink2);transition:var(--ease)}
+  .adv-clear:hover:not([disabled]){color:var(--ink);box-shadow:var(--sh-card)}
+  .adv-clear[disabled]{opacity:.4;cursor:default}
+  @media (max-width:640px){ .chip.adv-btn .adv-btn-t{display:none} .adv{padding:16px 16px} }
+
   .card{
     background:var(--glass);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
     border:1px solid var(--stroke);
@@ -304,6 +339,9 @@
 <div class="submenu-wrap" id="submenu-wrap" hidden>
   <div class="submenu" id="submenu" aria-label="產業篩選"></div>
 </div>
+<div class="adv-wrap" id="adv-wrap" hidden>
+  <div class="adv" id="adv" aria-label="進階篩選"></div>
+</div>
 
 <main id="feed"></main>
 <div class="empty" id="empty">此分類今日沒有達標案例——寧缺勿濫。</div>
@@ -478,12 +516,19 @@ function cardHtml(c, animate){
     </article>`;
 }
 
-let filter = {mode:"all", value:null};   // mode: all | cat | ind
+let NAV = {type:"all", value:null};      // 主選單：all | cat | ind
+let ADV = {goal:null, product:null, industry:null};  // 進階篩選：各大項單選
 let subOpen = false;
+let advOpen = false;
 let visibleCount = 4;
-const CHIP_LABELS = {"顧問／商業視角":"顧問／商業"};
-const CAT_ORDER = ["國際品牌","顧問／商業視角","經典案例"];
+let FACETS = [];
+const CHIP_LABELS = {};
+const CAT_ORDER = ["國際品牌","經典案例"];   // 「顧問／商業」不出現於主選單
 const IND_ORDER = ["電商","SaaS","生產力","教育","媒體","內容平台","社群","工業","顧問"];
+const ADV_KEYS = ["goal","product","industry"];
+const advActiveCount = ()=> ADV_KEYS.filter(k=>ADV[k]).length;
+
+const FILTER_ICON = `<svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 4.5h6M11.5 4.5h2M2.5 11.5h2M7.5 11.5h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="10" cy="4.5" r="2" fill="#fff" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="11.5" r="2" fill="#fff" stroke="currentColor" stroke-width="1.6"/></svg>`;
 
 function industryList(){
   const present = [...new Set(CASES.map(c=>c.industry).filter(Boolean))];
@@ -494,6 +539,7 @@ function industryList(){
 
 function mkChip(label, on, onclick){
   const b = document.createElement("button");
+  b.type = "button";
   b.className = "chip" + (on ? " on" : "");
   b.textContent = label;
   b.onclick = onclick;
@@ -503,13 +549,26 @@ function mkChip(label, on, onclick){
 function buildChips(){
   const fbox = document.getElementById("filters");
   fbox.innerHTML = "";
-  fbox.appendChild(mkChip("全部", filter.mode==="all", ()=>{ subOpen=false; setFilter("all",null); }));
+  // 進階篩選 icon（置於最前，與主選單以分隔線區隔）
+  const n = advActiveCount();
+  const adv = document.createElement("button");
+  adv.type = "button";
+  adv.className = "chip adv-btn" + (advOpen||n ? " on" : "");
+  adv.setAttribute("aria-expanded", advOpen ? "true" : "false");
+  adv.title = "進階篩選";
+  adv.innerHTML = FILTER_ICON + '<span class="adv-btn-t">進階篩選</span>' + (n ? `<span class="advbadge">${n}</span>` : "");
+  adv.onclick = ()=>{ advOpen = !advOpen; syncUI(); };
+  fbox.appendChild(adv);
+  const div = document.createElement("span"); div.className = "chip-div"; div.setAttribute("aria-hidden","true");
+  fbox.appendChild(div);
+  // 主選單
+  fbox.appendChild(mkChip("全部", NAV.type==="all", ()=>{ subOpen=false; setNav("all",null); }));
   const present = new Set(CASES.flatMap(c=>c.cats));
   CAT_ORDER.filter(x=>present.has(x)).forEach(cat=>{
-    fbox.appendChild(mkChip(CHIP_LABELS[cat]||cat, filter.mode==="cat"&&filter.value===cat, ()=>{ subOpen=false; setFilter("cat",cat); }));
+    fbox.appendChild(mkChip(CHIP_LABELS[cat]||cat, NAV.type==="cat"&&NAV.value===cat, ()=>{ subOpen=false; setNav("cat",cat); }));
   });
   // 「更多」永久保持在最後一個，點擊展開產業次選單
-  const more = mkChip("更多", subOpen||filter.mode==="ind", toggleSub);
+  const more = mkChip("更多", subOpen||NAV.type==="ind", toggleSub);
   more.classList.add("more");
   more.setAttribute("aria-expanded", subOpen ? "true" : "false");
   more.innerHTML = '更多<span class="caret" aria-hidden="true">▾</span>';
@@ -523,32 +582,79 @@ function buildSubmenu(){
   box.innerHTML = "";
   industryList().forEach(ind=>{
     const b = document.createElement("button");
-    b.className = "subchip" + (filter.mode==="ind"&&filter.value===ind ? " on" : "");
+    b.type = "button";
+    b.className = "subchip" + (NAV.type==="ind"&&NAV.value===ind ? " on" : "");
     b.textContent = "#" + ind;
-    b.onclick = ()=>{ subOpen=true; setFilter("ind",ind); };
+    b.onclick = ()=>{ subOpen=true; setNav("ind",ind); };
     box.appendChild(b);
   });
   wrap.hidden = !subOpen;
 }
 
 function toggleSub(){
-  // 收合時若正處於產業篩選，回到「全部」，避免隱藏中的作用中篩選
-  if(subOpen && filter.mode==="ind"){ subOpen=false; setFilter("all",null); return; }
+  if(subOpen && NAV.type==="ind"){ subOpen=false; setNav("all",null); return; }
   subOpen = !subOpen;
-  buildChips();
+  syncUI();
 }
 
-function setFilter(mode, value){
-  filter = {mode, value};
+function renderAdvanced(){
+  const box = document.getElementById("adv");
+  const wrap = document.getElementById("adv-wrap");
+  box.innerHTML = "";
+  FACETS.forEach(facet=>{
+    const cur = ADV[facet.key];
+    const chip = (item)=>{
+      const n = CASES.filter(c=>(c["f_"+facet.key]||[]).includes(item)).length;
+      const on = cur===item;
+      return `<button type="button" class="adv-chip${on?" on":""}${n===0?" zero":""}" data-facet="${esc(facet.key)}" data-item="${esc(item)}">${esc(item)}<span class="cnt">${n}</span></button>`;
+    };
+    let body;
+    if(facet.groups){
+      body = facet.groups.map(g=>`<div class="adv-sub"><span class="adv-sub-h">${esc(g.label)}</span><div class="adv-chips">${g.items.map(chip).join("")}</div></div>`).join("");
+    } else {
+      body = `<div class="adv-chips">${(facet.items||[]).map(chip).join("")}</div>`;
+    }
+    const sec = document.createElement("div");
+    sec.className = "adv-group";
+    sec.innerHTML = `<div class="adv-h">${esc(facet.label)}</div>${body}`;
+    box.appendChild(sec);
+  });
+  const n = advActiveCount();
+  const foot = document.createElement("div");
+  foot.className = "adv-foot";
+  foot.innerHTML = `<span class="adv-count">${n ? ("已套用 "+n+" 項篩選") : "各大項內單選、大項間可組合"}</span>`
+    + `<button type="button" class="adv-clear" id="adv-clear"${n?"":" disabled"}>清除篩選</button>`;
+  box.appendChild(foot);
+  box.querySelectorAll(".adv-chip").forEach(b=>{
+    b.onclick = ()=>{ const f=b.dataset.facet, it=b.dataset.item; ADV[f] = ADV[f]===it ? null : it; visibleCount=RUN.batchSize; syncUI(); };
+  });
+  const clr = document.getElementById("adv-clear");
+  if(clr) clr.onclick = ()=>{ ADV={goal:null,product:null,industry:null}; visibleCount=RUN.batchSize; syncUI(); };
+  wrap.hidden = !advOpen;
+}
+
+function setNav(type, value){
+  NAV = {type, value};
+  if(type==="all"){ ADV = {goal:null, product:null, industry:null}; }  // 全部＝完整重設
   visibleCount = RUN.batchSize;
+  syncUI();
+}
+
+function syncUI(){
   buildChips();
+  renderAdvanced();
   render();
 }
 
 function filteredList(){
-  let list = CASES.slice();
-  if(filter.mode==="cat") list = list.filter(c=>c.cats.includes(filter.value));
-  else if(filter.mode==="ind") list = list.filter(c=>c.industry===filter.value);
+  const list = CASES.filter(c=>{
+    if(NAV.type==="cat" && !(c.cats||[]).includes(NAV.value)) return false;
+    if(NAV.type==="ind" && c.industry!==NAV.value) return false;
+    if(ADV.goal && !(c.f_goal||[]).includes(ADV.goal)) return false;
+    if(ADV.product && !(c.f_product||[]).includes(ADV.product)) return false;
+    if(ADV.industry && !(c.f_industry||[]).includes(ADV.industry)) return false;
+    return true;
+  });
   return list.sort((a,b)=>total(b)-total(a));
 }
 
@@ -587,10 +693,10 @@ function wireBadgeFilter(){
   document.getElementById("feed").addEventListener("click", e=>{
     const t = e.target.closest("[data-ind],[data-cat]");
     if(!t) return;
-    if(t.dataset.ind != null){ subOpen=true; setFilter("ind", t.dataset.ind); }
-    else if(t.dataset.cat != null){ subOpen=false; setFilter("cat", t.dataset.cat); }
+    if(t.dataset.ind != null){ subOpen=true; setNav("ind", t.dataset.ind); }
+    else if(t.dataset.cat != null){ subOpen=false; setNav("cat", t.dataset.cat); }
     const s = document.getElementById("toolbar-sentinel");
-    if(s) s.scrollIntoView({behavior:"smooth", block:"start"});
+    if(s && s.scrollIntoView) s.scrollIntoView({behavior:"smooth", block:"start"});
   });
 }
 
@@ -615,6 +721,7 @@ function renderRejected(){
 function init(){
   visibleCount = RUN.batchSize || 4;
   buildChips();
+  renderAdvanced();
   renderRejected();
   render();
   wireBadgeFilter();
@@ -630,6 +737,7 @@ async function boot(){
         REJECTED = Array.isArray(j.rejected) ? j.rejected : [];
         if(j.updated) RUN.date = j.updated;
         if(j.run){ if(j.run.scanned!=null) RUN.scanned=j.run.scanned; if(j.run.candidates!=null) RUN.candidates=j.run.candidates; }
+        FACETS = Array.isArray(j.facets) ? j.facets : [];
       }
     }
   }catch(e){ /* 本機 file:// 或離線：改用內建 fallback 資料 */ }
