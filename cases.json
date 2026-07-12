@@ -53,7 +53,11 @@
       "f_product": [
         "電商"
       ],
-      "f_industry": []
+      "f_industry": [
+        "工業"
+      ],
+      "image": "https://media.nngroup.com/media/articles/opengraph_images/Quantifying-UX-Improvements_Social-Media-Posts_2021-97.png",
+      "blurb": "客戶老找不到規格，重建資訊架構讓找得到率提升 85%"
     },
     {
       "title": "B2B SaaS 月流失率 12%→3%：用成長換留存的取捨",
@@ -103,7 +107,9 @@
         "SaaS",
         "企業級"
       ],
-      "f_industry": []
+      "f_industry": [],
+      "image": "https://substackcdn.com/image/fetch/$s_!V5Mt!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc8e2ef5c-09d8-4c9e-b1f6-7d094e636ab4_2244x798.png",
+      "blurb": "成長卻狂流失，改往上市場換留存，月流失 12% 砍到 3%"
     },
     {
       "title": "SaaS 退訂率 40%→5%（-87.5%）：用同群分析找出退訂前兆",
@@ -160,7 +166,9 @@
       ],
       "f_industry": [
         "醫療健康"
-      ]
+      ],
+      "image": "",
+      "blurb": "退訂率高到 40%，用同群分析揪出退訂前兆，砍到 5%"
     },
     {
       "title": "課程分銷轉換率 35% → 52%：四個可複製的精細化運營方法",
@@ -212,7 +220,9 @@
       ],
       "f_industry": [
         "教育"
-      ]
+      ],
+      "image": "",
+      "blurb": "課程賣不動，四招精細化運營把分銷轉換 35% 拉到 52%"
     },
     {
       "title": "Blinkist 付費牆 A/B：用「消除訂閱焦慮」把試用轉換拉高 23%",
@@ -262,8 +272,11 @@
         "行動 App"
       ],
       "f_industry": [
+        "媒體",
         "教育"
-      ]
+      ],
+      "image": "https://s3.amazonaws.com/files.growth.design/cms/ckx7wqs4k000j0tmod9l975qs.png",
+      "blurb": "付費牆先解「怕被扣款」的焦慮，試用轉換多了 23%"
     },
     {
       "title": "Trello 新手引導的 7 個戰術：延後註冊讓啟用率翻倍",
@@ -319,7 +332,9 @@
       ],
       "f_industry": [
         "生產力"
-      ]
+      ],
+      "image": "https://s3.amazonaws.com/files.growth.design/cms/cktj61ov300030ull97tafqlp.png",
+      "blurb": "延後註冊、先讓你玩，Trello 把啟用率直接翻倍"
     },
     {
       "title": "Duolingo 成長模型：日活躍用戶（DAU）四年成長 4 倍的指標框架",
@@ -372,7 +387,9 @@
       ],
       "f_industry": [
         "教育"
-      ]
+      ],
+      "image": "https://storage.ghost.io/c/7a/33/7a33d0f4-927d-4fe8-a6bf-96131b5e76d4/content/images/2024/05/cover_ds-growth-model.png",
+      "blurb": "不硬衝 DAU，改押留存指標，四年讓活躍用戶成長 4 倍"
     },
     {
       "title": "LinkedIn 通知授權率提升 500%：行為觸發器的重新框架",
@@ -420,7 +437,9 @@
       ],
       "f_industry": [
         "社群"
-      ]
+      ],
+      "image": "https://s3.amazonaws.com/files.growth.design/cms/cl3l5sadb000h0umu76291bai.gif",
+      "blurb": "換個時機與說法要權限，通知授權率暴衝 500%"
     },
     {
       "title": "McKinsey：設計力前 25% 的公司，營收成長是同業近 2 倍",
@@ -472,7 +491,11 @@
       "f_product": [
         "企業級"
       ],
-      "f_industry": []
+      "f_industry": [
+        "顧問"
+      ],
+      "image": "",
+      "blurb": "把設計好壞量成指數，前段班公司營收是同業近 2 倍"
     },
     {
       "title": "推廣預算被砍後，靠產品迭代把次週留存做到高於同業 20%",
@@ -520,7 +543,9 @@
       ],
       "f_industry": [
         "社群"
-      ]
+      ],
+      "image": "",
+      "blurb": "預算被砍，改拚產品與留存，次週留存高出同業 20%"
     },
     {
       "title": "Duolingo 的實驗機器：同時跑數百個 A/B 測試怎麼不翻車",
@@ -571,7 +596,9 @@
       ],
       "f_industry": [
         "教育"
-      ]
+      ],
+      "image": "https://storage.ghost.io/c/7a/33/7a33d0f4-927d-4fe8-a6bf-96131b5e76d4/content/images/2024/06/cover_Improving-Duolingo-one-experiment-at-a-time-1.png",
+      "blurb": "同時跑數百個實驗，靠「守門指標」擋住傷留存的好數字"
     },
     {
       "title": "商詳頁轉化率 30% → 36%：用行為數據找出棄購的真正原因",
@@ -620,9 +647,9 @@
       "f_product": [
         "電商"
       ],
-      "f_industry": [
-        "零售"
-      ]
+      "f_industry": [],
+      "image": "",
+      "blurb": "用行為數據找棄購真因，商詳頁轉換從 30% 做到 37%"
     },
     {
       "title": "獲客成本壓不下來？一個廣告投放產品轉化率 +50% 的復盤",
@@ -668,9 +695,9 @@
       "f_product": [
         "電商"
       ],
-      "f_industry": [
-        "零售"
-      ]
+      "f_industry": [],
+      "image": "",
+      "blurb": "轉換上不去不是素材問題，補落地頁讓廣告轉換 +50%"
     },
     {
       "title": "Syfe Trade 用假設驅動設計，把投資產品轉換率拉高近 25%",
@@ -722,7 +749,9 @@
       ],
       "f_industry": [
         "金融科技"
-      ]
+      ],
+      "image": "https://miro.medium.com/v2/resize:fit:1200/1*XQpPrwITU0QyHvUrLnYkCQ.png",
+      "blurb": "用戶看不懂就不開通，補一段引導讓轉換多了近 25%"
     },
     {
       "title": "麥當勞自助點餐機：用行為心理學把全球營收推高 15%",
@@ -773,9 +802,9 @@
         "系統工具",
         "行動 App"
       ],
-      "f_industry": [
-        "零售"
-      ]
+      "f_industry": [],
+      "image": "https://s3.amazonaws.com/files.growth.design/cms/cm18280pu002x0tlce36f5kef.png",
+      "blurb": "移除櫃檯的評價感，自助點餐機把全球營收推高 15%"
     }
   ],
   "rejected": [
@@ -859,10 +888,12 @@
         "金融科技",
         "醫療健康",
         "教育",
-        "零售",
-        "旅遊",
+        "媒體",
         "社群",
-        "生產力"
+        "生產力",
+        "工業",
+        "顧問",
+        "旅遊"
       ]
     },
     {
