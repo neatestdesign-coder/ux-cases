@@ -61,7 +61,15 @@
   .stat.hero{position:relative;overflow:hidden}
   .stat.hero::after{content:"";position:absolute;right:-18px;top:-18px;width:64px;height:64px;border-radius:50%;background:var(--lime-soft)}
 
-  .toolbar-row{position:sticky;top:16px;z-index:20;display:flex;align-items:flex-start;gap:12px;margin:40px 0 36px}
+  /* 吸頂區：主選單＋次選單一起置頂，底緣做漸隱模糊 */
+  .sticky-head{position:sticky;top:16px;z-index:20;margin:40px 0 30px}
+  .sticky-head::after{content:"";position:absolute;left:0;right:0;top:100%;height:22px;pointer-events:none;
+    backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
+    -webkit-mask-image:linear-gradient(to bottom,#000 80%,transparent);mask-image:linear-gradient(to bottom,#000 80%,transparent)}
+  .toolbar-row{display:flex;align-items:flex-start;gap:12px}
+  /* 進階篩選開啟時：popup 外半透明模糊遮罩，點擊即取消返回 */
+  .adv-backdrop{position:fixed;inset:0;z-index:15;background:rgba(238,241,245,.4);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+  .adv-backdrop[hidden]{display:none}
   .toolbar{
     display:flex;gap:6px;flex-wrap:wrap;align-items:center;
     background:var(--glass-strong);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
@@ -110,7 +118,7 @@
   .chip.more[aria-expanded="true"] .caret{transform:rotate(180deg)}
 
   /* 產業次選單：單列可橫向捲動的 hashtag（Mobile First，仿 YouTube 分類列）*/
-  .submenu-wrap{margin:-24px 0 32px}
+  .submenu-wrap{margin:10px 0 0}
   .submenu{
     display:flex;gap:8px;overflow-x:auto;padding:10px 4px 20px;
     -webkit-overflow-scrolling:touch;scrollbar-width:none;scroll-snap-type:x proximity;
@@ -139,7 +147,7 @@
   .adv{
     background:#fff;
     border:1px solid var(--stroke);box-shadow:0 8px 20px -6px rgba(23,27,41,.16), 0 28px 60px -20px rgba(23,27,41,.4), inset 0 0 0 1px rgba(255,255,255,.7);
-    border-radius:22px;padding:20px 22px;display:flex;flex-direction:column;gap:18px;
+    border-radius:22px;padding:20px 22px 0;display:flex;flex-direction:column;gap:18px;
     max-height:min(70vh,620px);overflow-y:auto;
   }
   .adv-h{font-size:13px;font-weight:800;letter-spacing:.02em;color:var(--ink);margin-bottom:12px}
@@ -156,7 +164,7 @@
   .adv-chip .cnt{font-size:10.5px;font-weight:800;color:var(--ink3);background:rgba(23,27,41,.06);border-radius:999px;padding:1px 6px;font-variant-numeric:tabular-nums}
   .adv-chip.on .cnt{color:#fff;background:rgba(255,255,255,.22)}
   .adv-chip.zero{opacity:.42}
-  .adv-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid var(--stroke);padding-top:16px;position:sticky;bottom:-20px;background:#fff}
+  .adv-foot{position:sticky;bottom:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#fff;border-top:1px solid var(--stroke);margin:8px -22px 0;padding:14px 22px 18px;border-radius:0 0 22px 22px}
   .adv-foot-r{display:flex;gap:10px;align-items:center;margin-left:auto}
   .adv-clear-mini{display:inline-flex;align-items:center;gap:6px;cursor:pointer;font-family:inherit;border:none;background:transparent;color:var(--ink3);font-size:12.5px;font-weight:700;padding:6px 4px;transition:var(--ease)}
   .adv-clear-mini:hover{color:var(--ink2)}
@@ -179,27 +187,33 @@
     border-radius:var(--r-card);padding:30px 34px;margin-bottom:26px;
     transition:var(--ease);
   }
-  .card:hover{transform:translateY(-2px);box-shadow:var(--sh-hover), inset 0 0 0 1px rgba(255,255,255,.75)}
+  .card:hover{box-shadow:var(--sh-card), inset 0 0 0 1px rgba(255,255,255,.65)}
   @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
   .card.enter{animation:rise .45s cubic-bezier(.2,.7,.3,1) both}
 
-  /* ---------- 精簡故事卡（預設排版：圖＋標題＋指標＋摘要）---------- */
+  /* ---------- 圖片：精簡故事卡 & 完整卡頂圖 ---------- */
   .card.sc{padding:0;overflow:hidden;display:flex;align-items:stretch;gap:0}
-  .sc-media{flex:0 0 260px;position:relative;min-height:200px;background:linear-gradient(135deg,#dfe9f6,#e7e2f4);overflow:hidden}
+  .sc-media{flex:0 0 264px;position:relative;min-height:210px;overflow:hidden}
+  .card-hero{position:relative;height:212px;margin:-30px -34px 22px;overflow:hidden;border-radius:var(--r-card) var(--r-card) 0 0}
   .sc-img{width:100%;height:100%;object-fit:cover;display:block}
-  .sc-fallback{display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;background:linear-gradient(135deg,#dfe9f6,#e7e2f4)}
-  .sc-fallback b{font-size:32px;font-weight:800;letter-spacing:-.02em;color:var(--navy);line-height:1.15;font-variant-numeric:tabular-nums}
-  .sc-fallback span{font-size:12px;color:var(--ink2);font-weight:600;margin-top:6px}
-  .sc-media.noimg .sc-img{display:none}
-  .sc-media.noimg .sc-fallback{display:flex}
+  .sc-fallback{display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;background:linear-gradient(140deg,#dfe9f6,#e7e2f4 55%,#f3e8ec)}
+  .sc-fallback .sc-fav{width:34px;height:34px;border-radius:9px;margin-bottom:12px;box-shadow:0 3px 10px -3px rgba(23,27,41,.3);background:#fff}
+  .sc-fallback b{font-size:34px;font-weight:800;letter-spacing:-.02em;color:var(--navy);line-height:1.1;font-variant-numeric:tabular-nums}
+  .sc-fallback span{font-size:12px;color:var(--ink2);font-weight:600;margin-top:7px;max-width:82%;line-height:1.5}
+  .noimg > .sc-img{display:none}
+  .noimg > .sc-fallback{display:flex}
   .sc-body{flex:1;min-width:0;padding:24px 28px;display:flex;flex-direction:column;gap:13px}
+  .sc-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}
+  .sc-headmain{flex:1;min-width:0;display:flex;flex-direction:column;gap:10px}
   .sc-body h2{font-size:19.5px}
-  .sc-blurb{font-size:14.5px;line-height:1.75;color:var(--ink);font-weight:600}
+  .sc-blurb{font-size:15px;line-height:1.8;color:var(--ink);font-weight:600}
+  .sc-actions{margin-top:4px}
   .card.sc .metrics{margin-top:2px}
   @media (max-width:640px){
     .card.sc{flex-direction:column}
-    .sc-media{flex-basis:auto;min-height:168px}
+    .sc-media{flex-basis:auto;min-height:172px}
     .sc-body{padding:18px 18px}
+    .card-hero{height:172px;margin:-22px -18px 18px}
   }
 
   .badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
@@ -375,17 +389,18 @@
     .step{padding-left:26px}
     .step p{font-size:14.5px;line-height:1.85}
     h2{font-size:19.5px}
-    /* 手機工具列：主選單水平不斷行（可橫向捲動），三顆工具鈕釘右側同一列 */
-    .toolbar-row{top:0;flex-wrap:nowrap;gap:8px;align-items:center}
+    /* 手機：兩列。第一列＝主選單整條滿版橫捲；第二列＝三顆工具鈕靠右 */
+    .sticky-head{top:0}
+    .toolbar-row{flex-direction:column;align-items:stretch;gap:8px}
     .toolbar{
-      flex:1 1 auto;min-width:0;flex-wrap:nowrap;overflow-x:auto;
+      width:100%;flex-wrap:nowrap;overflow-x:auto;
       -webkit-overflow-scrolling:touch;scrollbar-width:none;border-radius:24px;
-      -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 20px),transparent);
-      mask-image:linear-gradient(to right,#000 calc(100% - 20px),transparent);
+      -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 22px),transparent);
+      mask-image:linear-gradient(to right,#000 calc(100% - 22px),transparent);
     }
     .toolbar::-webkit-scrollbar{display:none}
     .toolbar .chip{flex:0 0 auto;white-space:nowrap}
-    .tools{flex:0 0 auto;gap:6px;align-items:center}
+    .tools{align-self:flex-end;gap:8px;align-items:center;margin-left:0}
     .adv-toggle{width:42px;height:42px;padding:0;justify-content:center;position:relative}
     .adv-toggle .advbadge{position:absolute;top:-4px;right:-4px}
     .icon-btn{width:42px;height:42px}
@@ -408,6 +423,7 @@
 </header>
 
 <div id="toolbar-sentinel"></div>
+<div class="sticky-head" id="sticky-head">
 <div class="toolbar-row" id="toolbar-row">
   <nav class="toolbar" id="filters" aria-label="分類篩選"></nav>
   <div class="tools">
@@ -427,6 +443,8 @@
 <div class="submenu-wrap" id="submenu-wrap" hidden>
   <div class="submenu" id="submenu" aria-label="產業篩選"></div>
 </div>
+</div>
+<div class="adv-backdrop" id="adv-backdrop" hidden></div>
 
 <main id="feed"></main>
 <div class="empty" id="empty">此分類今日沒有達標案例——寧缺勿濫。</div>
@@ -570,10 +588,22 @@ function dimHtml(c, notes){
 
 const extIcon = `<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 1.5h7v7M10.5 1.5 1.5 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
+function domainOf(u){ try{ return new URL(u).hostname.replace(/^www\./,""); }catch(e){ return ""; } }
+function mediaInner(c){
+  const m0 = (c.metrics && c.metrics[0]) || ["",""];
+  const dom = domainOf(c.url);
+  const fav = dom ? `<img class="sc-fav" src="https://www.google.com/s2/favicons?domain=${esc(dom)}&sz=64" alt="" loading="lazy">` : "";
+  const fb = `<div class="sc-fallback">${fav}<b>${esc(m0[0])}</b><span>${esc(m0[1])}</span></div>`;
+  const img = c.image ? `<img class="sc-img" src="${esc(c.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('noimg')">` : "";
+  return { inner: img + fb, noimg: !c.image };
+}
+
 function cardHtml(c, animate){
   const prov = [c.source, c.date].filter(Boolean).map(esc).join("・");
+  const m = mediaInner(c);
   return `
-    <article class="card${animate ? " enter" : ""}">
+    <article class="card has-hero${animate ? " enter" : ""}">
+      <div class="card-hero${m.noimg ? " noimg" : ""}">${m.inner}</div>
       <div class="badges">
         ${c.industry?`<button type="button" class="badge b-ind tag" data-ind="${esc(c.industry)}">#${esc(c.industry)}</button>`:""}
         ${c.cats.filter(x=>x!=="更多案例").map(x=>`<button type="button" class="badge b-cat tag" data-cat="${esc(x)}">${esc(x)}</button>`).join("")}
@@ -726,23 +756,25 @@ function renderTools(){
 }
 
 function storyHtml(c, animate){
-  const m0 = (c.metrics && c.metrics[0]) || ["",""];
-  const fb = `<div class="sc-fallback"><b>${esc(m0[0])}</b><span>${esc(m0[1])}</span></div>`;
-  const media = c.image
-    ? `<div class="sc-media"><img class="sc-img" src="${esc(c.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.sc-media').classList.add('noimg')">${fb}</div>`
-    : `<div class="sc-media noimg">${fb}</div>`;
+  const m = mediaInner(c);
   return `
     <article class="card sc${animate ? " enter" : ""}">
-      ${media}
+      <div class="sc-media${m.noimg ? " noimg" : ""}">${m.inner}</div>
       <div class="sc-body">
-        <div class="badges">
-          ${c.industry?`<button type="button" class="badge b-ind tag" data-ind="${esc(c.industry)}">#${esc(c.industry)}</button>`:""}
-          ${c.cats.filter(x=>x!=="更多案例").map(x=>`<button type="button" class="badge b-cat tag" data-cat="${esc(x)}">${esc(x)}</button>`).join("")}
-          <span class="badge b-src">${esc(c.source)}</span>
+        <div class="sc-head">
+          <div class="sc-headmain">
+            <div class="badges">
+              ${c.industry?`<button type="button" class="badge b-ind tag" data-ind="${esc(c.industry)}">#${esc(c.industry)}</button>`:""}
+              ${c.cats.filter(x=>x!=="更多案例").map(x=>`<button type="button" class="badge b-cat tag" data-cat="${esc(x)}">${esc(x)}</button>`).join("")}
+              <span class="badge b-src">${esc(c.source)}</span>
+            </div>
+            <h2><a href="${esc(c.url)}" target="_blank" rel="noopener" title="閱讀原文">${esc(c.title)}</a></h2>
+          </div>
+          ${ringHtml(total(c), true)}
         </div>
-        <h2><a href="${esc(c.url)}" target="_blank" rel="noopener" title="閱讀原文">${esc(c.title)}</a></h2>
-        <div class="metrics m-${Math.min(c.metrics.length,4)}">${c.metrics.map(m=>`<div class="metric"><b>${esc(m[0])}</b><span>${esc(m[1])}</span></div>`).join("")}</div>
+        <div class="metrics m-${Math.min(c.metrics.length,4)}">${c.metrics.map(mm=>`<div class="metric"><b>${esc(mm[0])}</b><span>${esc(mm[1])}</span></div>`).join("")}</div>
         <p class="sc-blurb">${esc(c.blurb || c.takeaway)}</p>
+        <div class="sc-actions"><a class="read-btn" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a></div>
       </div>
     </article>`;
 }
@@ -800,6 +832,8 @@ function renderAdvanced(){
   const ap = document.getElementById("adv-apply");
   if(ap && !applyDisabled) ap.onclick = applyAdv;
   wrap.hidden = !advOpen;
+  const bd = document.getElementById("adv-backdrop");
+  if(bd) bd.hidden = !advOpen;
 }
 
 function setNav(type, value){
@@ -907,6 +941,8 @@ function init(){
   renderRejected();
   render();
   wireBadgeFilter();
+  const bd = document.getElementById("adv-backdrop");
+  if(bd) bd.onclick = cancelAdv;
 }
 
 async function boot(){
@@ -930,7 +966,7 @@ async function boot(){
   const sentinel = document.getElementById("toolbar-sentinel");
   if(window.IntersectionObserver && sentinel){
     new IntersectionObserver(([e])=>{
-      document.getElementById("toolbar-row").classList.toggle("stuck", !e.isIntersecting);
+      document.getElementById("sticky-head").classList.toggle("stuck", !e.isIntersecting);
     }, {threshold:0}).observe(sentinel);
   }
 }
