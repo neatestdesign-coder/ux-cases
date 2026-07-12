@@ -32,7 +32,7 @@
   body{
     color:var(--ink);
     font-family:"Inter","Noto Sans TC","PingFang TC",-apple-system,sans-serif;
-    line-height:1.75;-webkit-font-smoothing:antialiased;letter-spacing:6px;
+    line-height:1.75;-webkit-font-smoothing:antialiased;letter-spacing:1px;
     background:var(--bg);min-height:100vh;
   }
   body::before{
@@ -47,7 +47,7 @@
 
   .header-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
   .header-left{flex:1 1 480px;min-width:280px}
-  h1{font-size:48px;font-weight:900;letter-spacing:-.03em;line-height:1.18}
+  h1{font-size:40px;font-weight:900;letter-spacing:4px;line-height:1.2}
   .sub{color:var(--ink2);font-size:15px;margin-top:14px;max-width:560px}
 
   .stats{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start;margin-top:8px}
@@ -63,9 +63,8 @@
 
   /* 吸頂區：主選單＋次選單一起置頂，底緣做漸隱模糊 */
   .sticky-head{position:sticky;top:16px;z-index:20;margin:40px 0 30px}
-  .sticky-head::after{content:"";position:absolute;left:0;right:0;top:100%;height:26px;pointer-events:none;
-    backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
-    -webkit-mask-image:linear-gradient(to bottom,transparent 80%,#000 100%);mask-image:linear-gradient(to bottom,transparent 80%,#000 100%)}
+  .sticky-head::after{content:"";position:absolute;left:0;right:0;top:100%;height:20px;pointer-events:none;
+    background:rgba(238,241,245,.3);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
   .toolbar-row{display:flex;align-items:flex-start;gap:12px}
   /* 進階篩選開啟時：popup 外半透明模糊遮罩，點擊即取消返回 */
   .adv-backdrop{position:fixed;inset:0;z-index:15;background:rgba(238,241,245,.4);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
@@ -205,7 +204,7 @@
   .sc-body{flex:1;min-width:0;padding:24px 28px;display:flex;flex-direction:column;gap:13px}
   .sc-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}
   .sc-headmain{flex:1;min-width:0;display:flex;flex-direction:column;gap:10px}
-  .sc-body h2{font-size:40px}
+  .sc-body h2{font-size:24px}
   .sc-blurb{font-size:15px;line-height:1.8;color:var(--ink);font-weight:600}
   .sc-actions{margin-top:4px}
   .card.sc .metrics{margin-top:2px}
@@ -226,7 +225,7 @@
   .b-cat.tag:hover{color:var(--ink);box-shadow:var(--sh-card)}
 
   .card-top{display:flex;justify-content:space-between;gap:22px;align-items:flex-start;flex-wrap:wrap}
-  h2{font-size:40px;font-weight:800;letter-spacing:-.02em;line-height:1.28}
+  h2{font-size:24px;font-weight:800;letter-spacing:2px;line-height:1.4}
   h2 a{color:inherit;text-decoration:none;transition:var(--ease)}
   h2 a:hover{color:var(--t2-fg);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
   .meta{font-size:12.5px;color:var(--ink3);margin-top:6px;font-weight:500}
@@ -369,7 +368,7 @@
     .stat span{font-size:10px;line-height:1.4;display:block}
     .card{padding:22px 18px;border-radius:22px}
     .card-top{gap:14px}
-    h2,.sc-body h2{font-size:27px;line-height:1.3}
+    h2,.sc-body h2{font-size:22px;line-height:1.35}
     /* 指標區塊：3 項→3 欄一列、2 項→2 欄一列、4 項→2x2、1 項→滿版 */
     .metrics{display:grid;gap:8px}
     .metrics.m-1{grid-template-columns:max-content}
@@ -388,16 +387,17 @@
     .story{max-width:none}
     .step{padding-left:26px}
     .step p{font-size:14.5px;line-height:1.85}
-    /* 手機：兩列。第一列＝主選單整條滿版橫捲；第二列＝三顆工具鈕靠右 */
-    .sticky-head{top:8px;margin-top:18px}
-    .toolbar-row{flex-direction:column;align-items:stretch;gap:8px}
+    /* 手機：主選單（滿版橫捲）→ 次選單 → 三顆工具鈕靠右，由上而下 */
+    .sticky-head{top:8px;margin-top:18px;display:flex;flex-direction:column;gap:8px}
+    .toolbar-row{display:contents}
     .toolbar{
-      width:100%;flex-wrap:nowrap;overflow-x:auto;
+      order:1;width:100%;flex-wrap:nowrap;overflow-x:auto;
       -webkit-overflow-scrolling:touch;scrollbar-width:none;border-radius:24px;
     }
     .toolbar::-webkit-scrollbar{display:none}
     .toolbar .chip{flex:0 0 auto;white-space:nowrap}
-    .tools{align-self:flex-end;gap:8px;align-items:center;margin-left:0}
+    .submenu-wrap{order:2;margin:0}
+    .tools{order:3;align-self:flex-end;gap:8px;align-items:center;margin-left:0}
     .adv-toggle{width:42px;height:42px;padding:0;justify-content:center;position:relative}
     .adv-toggle .advbadge{position:absolute;top:-4px;right:-4px}
     .icon-btn{width:42px;height:42px}
