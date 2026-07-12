@@ -98,57 +98,6 @@
   .subchip:hover{color:var(--ink);background:rgba(23,27,41,.05)}
   .subchip.on{background:var(--navy);color:#fff;border-color:transparent;box-shadow:0 6px 16px -4px rgba(23,27,41,.4)}
 
-  /* ---------- 意圖入口 hero ---------- */
-  .intent{margin:36px 0 20px}
-  .intent-h{font-size:19px;font-weight:800;letter-spacing:-.01em;margin-bottom:14px}
-  .intent-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:12px}
-  .intent-card{
-    text-align:left;cursor:pointer;font-family:inherit;
-    background:var(--glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-    border:1px solid var(--stroke);box-shadow:var(--sh-card), inset 0 0 0 1px rgba(255,255,255,.65);
-    border-radius:18px;padding:16px 18px;transition:var(--ease);display:flex;flex-direction:column;gap:5px;
-  }
-  .intent-card:hover{transform:translateY(-2px);box-shadow:var(--sh-hover), inset 0 0 0 1px rgba(255,255,255,.8)}
-  .intent-card.on{border-color:var(--navy);box-shadow:0 8px 22px -8px rgba(23,27,41,.4), inset 0 0 0 1px rgba(255,255,255,.8)}
-  .intent-card .q{font-size:15px;font-weight:800;color:var(--ink);line-height:1.5;letter-spacing:-.01em}
-  .intent-card .q::before{content:"\201C";opacity:.35}
-  .intent-card .q::after{content:"\201D";opacity:.35}
-  .intent-card .hint{font-size:12.5px;color:var(--ink3);font-weight:500;line-height:1.5}
-  .intent-card .n{margin-top:3px;font-size:11px;font-weight:700;color:var(--t2-fg);letter-spacing:.03em}
-
-  .fw-block{margin-top:16px}
-  .fw-lead{font-size:12.5px;font-weight:700;color:var(--ink2);margin-bottom:8px}
-  .fw-row{display:flex;gap:8px;overflow-x:auto;padding:4px 2px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-  .fw-row::-webkit-scrollbar{display:none}
-  .fw-chip{
-    flex:0 0 auto;white-space:nowrap;cursor:pointer;font-family:inherit;
-    border:1px dashed rgba(23,27,41,.2);background:rgba(255,255,255,.5);
-    border-radius:12px;padding:8px 14px;font-size:12.5px;font-weight:700;color:var(--ink2);transition:var(--ease);
-  }
-  .fw-chip:hover{color:var(--ink);border-color:var(--navy);background:rgba(255,255,255,.85)}
-  .fw-chip.on{background:var(--navy);color:#fff;border-style:solid;border-color:transparent}
-
-  /* ---------- feedbar：作用中合輯 + 檢視切換 ---------- */
-  .feedbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:8px 0 18px}
-  .collection{display:flex;align-items:center;gap:10px;flex:1;min-width:220px;
-    background:var(--lime-soft);border:1px solid rgba(160,180,60,.28);border-radius:14px;padding:10px 14px}
-  .collection .c-title{font-size:14px;font-weight:800;color:#333a17}
-  .collection .c-desc{font-size:12px;color:var(--lime-ink);font-weight:600}
-  .collection .c-clear{margin-left:auto;flex-shrink:0;cursor:pointer;font-family:inherit;border:none;
-    background:rgba(255,255,255,.75);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700;color:var(--ink2)}
-  .collection .c-clear:hover{color:var(--ink)}
-  .viewtoggle{display:inline-flex;gap:2px;background:rgba(23,27,41,.05);border-radius:999px;padding:3px;flex-shrink:0}
-  .vt{border:none;background:transparent;border-radius:999px;padding:7px 16px;font-size:12.5px;font-weight:700;
-    color:var(--ink2);cursor:pointer;font-family:inherit;transition:var(--ease)}
-  .vt.on{background:#fff;color:var(--ink);box-shadow:var(--sh-card)}
-
-  /* ---------- 精簡卡（只看觀點）---------- */
-  .card.compact{padding:18px 22px;margin-bottom:12px}
-  .card.compact .ctop{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
-  .card.compact h2{font-size:16.5px;line-height:1.4}
-  .card.compact .ctk{font-size:14px;color:var(--ink);margin-top:8px;line-height:1.7}
-  .card.compact .cbadges{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
-
   .card{
     background:var(--glass);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
     border:1px solid var(--stroke);
@@ -350,27 +299,10 @@
   </div>
 </header>
 
-<section class="intent" id="intent" aria-label="意圖入口" hidden>
-  <h2 class="intent-h">你現在想解決什麼？</h2>
-  <div class="intent-grid" id="intent-grid"></div>
-  <div class="fw-block" id="fw-block">
-    <div class="fw-lead">或從一個可複用的思考框架切入 →</div>
-    <div class="fw-row" id="fw-row" aria-label="框架索引"></div>
-  </div>
-</section>
-
 <div id="toolbar-sentinel"></div>
 <nav class="toolbar" id="filters" aria-label="分類篩選"></nav>
 <div class="submenu-wrap" id="submenu-wrap" hidden>
   <div class="submenu" id="submenu" aria-label="產業篩選"></div>
-</div>
-
-<div class="feedbar">
-  <div class="collection" id="collection" hidden></div>
-  <div class="viewtoggle" id="viewtoggle" role="tablist" aria-label="檢視模式">
-    <button class="vt on" type="button" data-view="full" role="tab">完整</button>
-    <button class="vt" type="button" data-view="compact" role="tab">只看觀點</button>
-  </div>
 </div>
 
 <main id="feed"></main>
@@ -546,12 +478,9 @@ function cardHtml(c, animate){
     </article>`;
 }
 
-let filter = {mode:"all", value:null};   // mode: all | cat | ind | set
+let filter = {mode:"all", value:null};   // mode: all | cat | ind
 let subOpen = false;
 let visibleCount = 4;
-let VIEW = "full";                       // full | compact
-let INTENTS = [];
-let FRAMEWORKS = [];
 const CHIP_LABELS = {"顧問／商業視角":"顧問／商業"};
 const CAT_ORDER = ["國際品牌","顧問／商業視角","經典案例"];
 const IND_ORDER = ["電商","SaaS","生產力","教育","媒體","內容平台","社群","工業","顧問"];
@@ -609,87 +538,14 @@ function toggleSub(){
   buildChips();
 }
 
-function syncUI(){
-  buildChips();
-  renderIntents();
-  renderFrameworks();
-  renderCollection();
-  render();
-}
-
 function setFilter(mode, value){
   filter = {mode, value};
   visibleCount = RUN.batchSize;
-  syncUI();
-}
-
-function setCollection(title, desc, urls, kind){
-  subOpen = false;
-  filter = {mode:"set", value:{title, desc, urls, kind}};
-  visibleCount = RUN.batchSize;
-  syncUI();
-}
-
-function clearCollection(){ setFilter("all", null); }
-
-function scrollFeed(){
-  const s = document.getElementById("toolbar-sentinel");
-  if(s && s.scrollIntoView) s.scrollIntoView({behavior:"smooth", block:"start"});
-}
-
-function renderIntents(){
-  const sec = document.getElementById("intent");
-  const grid = document.getElementById("intent-grid");
-  if(!INTENTS.length){ sec.hidden = true; return; }
-  sec.hidden = false;
-  grid.innerHTML = "";
-  INTENTS.forEach(it=>{
-    const on = filter.mode==="set" && filter.value.kind==="intent" && filter.value.title===it.q;
-    const b = document.createElement("button");
-    b.type = "button";
-    b.className = "intent-card" + (on ? " on" : "");
-    b.innerHTML = `<span class="q">${esc(it.q)}</span><span class="hint">${esc(it.hint)}</span><span class="n">${it.urls.length} 則案例 →</span>`;
-    b.onclick = ()=>{ on ? clearCollection() : (setCollection(it.q, it.hint, it.urls, "intent"), scrollFeed()); };
-    grid.appendChild(b);
-  });
-  const fwBlock = document.getElementById("fw-block");
-  if(fwBlock) fwBlock.hidden = !FRAMEWORKS.length;
-}
-
-function renderFrameworks(){
-  const row = document.getElementById("fw-row");
-  if(!FRAMEWORKS.length){ return; }
-  row.innerHTML = "";
-  FRAMEWORKS.forEach(f=>{
-    const on = filter.mode==="set" && filter.value.kind==="fw" && filter.value.title===f.name;
-    const b = document.createElement("button");
-    b.type = "button";
-    b.className = "fw-chip" + (on ? " on" : "");
-    b.textContent = f.name;
-    b.title = f.gist || "";
-    b.onclick = ()=>{ on ? clearCollection() : (setCollection(f.name, f.gist, f.urls, "fw"), scrollFeed()); };
-    row.appendChild(b);
-  });
-}
-
-function renderCollection(){
-  const el = document.getElementById("collection");
-  if(filter.mode==="set"){
-    el.hidden = false;
-    el.innerHTML = `<span class="c-title">${filter.value.kind==="fw"?"框架":"意圖"}：${esc(filter.value.title)}</span>`
-      + (filter.value.desc ? `<span class="c-desc">${esc(filter.value.desc)}</span>` : "")
-      + `<button class="c-clear" type="button" id="c-clear">清除 ✕</button>`;
-    document.getElementById("c-clear").onclick = clearCollection;
-  } else {
-    el.hidden = true; el.innerHTML = "";
-  }
+  buildChips();
+  render();
 }
 
 function filteredList(){
-  if(filter.mode==="set"){
-    const order = filter.value.urls;
-    return CASES.filter(c=>order.includes(c.url)).sort((a,b)=>order.indexOf(a.url)-order.indexOf(b.url));
-  }
   let list = CASES.slice();
   if(filter.mode==="cat") list = list.filter(c=>c.cats.includes(filter.value));
   else if(filter.mode==="ind") list = list.filter(c=>c.industry===filter.value);
@@ -701,40 +557,8 @@ function render(newFrom = -1){
   const list = filteredList();
   const shown = list.slice(0, visibleCount);
   document.getElementById("empty").style.display = shown.length ? "none":"block";
-  feed.innerHTML = shown.map((c,i)=>
-    VIEW==="compact" ? compactHtml(c) : cardHtml(c, newFrom >= 0 && i >= newFrom)
-  ).join("");
+  feed.innerHTML = shown.map((c,i)=>cardHtml(c, newFrom >= 0 && i >= newFrom)).join("");
   renderLoadZone(list.length);
-}
-
-function compactHtml(c){
-  return `
-    <article class="card compact">
-      <div class="ctop">
-        <div style="flex:1;min-width:0">
-          <h2><a href="${esc(c.url)}" target="_blank" rel="noopener" title="閱讀原文">${esc(c.title)}</a></h2>
-          <p class="ctk">${esc(c.takeaway)}</p>
-          <div class="cbadges">
-            ${c.industry?`<button type="button" class="badge b-ind tag" data-ind="${esc(c.industry)}">#${esc(c.industry)}</button>`:""}
-            <span class="badge b-src">${esc(c.source)}</span>
-          </div>
-        </div>
-        ${ringHtml(total(c), true)}
-      </div>
-    </article>`;
-}
-
-function initView(){
-  try{ const v = localStorage.getItem("uxc-view"); if(v==="compact"||v==="full") VIEW = v; }catch(e){}
-  document.querySelectorAll(".vt").forEach(btn=>{
-    btn.classList.toggle("on", btn.dataset.view===VIEW);
-    btn.onclick = ()=>{
-      VIEW = btn.dataset.view;
-      try{ localStorage.setItem("uxc-view", VIEW); }catch(e){}
-      document.querySelectorAll(".vt").forEach(x=>x.classList.toggle("on", x.dataset.view===VIEW));
-      render();
-    };
-  });
 }
 
 function renderLoadZone(totalLen){
@@ -790,11 +614,7 @@ function renderRejected(){
 
 function init(){
   visibleCount = RUN.batchSize || 4;
-  initView();
   buildChips();
-  renderIntents();
-  renderFrameworks();
-  renderCollection();
   renderRejected();
   render();
   wireBadgeFilter();
@@ -810,8 +630,6 @@ async function boot(){
         REJECTED = Array.isArray(j.rejected) ? j.rejected : [];
         if(j.updated) RUN.date = j.updated;
         if(j.run){ if(j.run.scanned!=null) RUN.scanned=j.run.scanned; if(j.run.candidates!=null) RUN.candidates=j.run.candidates; }
-        INTENTS = Array.isArray(j.intents) ? j.intents : [];
-        FRAMEWORKS = Array.isArray(j.frameworks) ? j.frameworks : [];
       }
     }
   }catch(e){ /* 本機 file:// 或離線：改用內建 fallback 資料 */ }
