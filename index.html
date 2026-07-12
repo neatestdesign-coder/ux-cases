@@ -32,7 +32,7 @@
   body{
     color:var(--ink);
     font-family:"Inter","Noto Sans TC","PingFang TC",-apple-system,sans-serif;
-    line-height:1.75;-webkit-font-smoothing:antialiased;
+    line-height:1.75;-webkit-font-smoothing:antialiased;letter-spacing:6px;
     background:var(--bg);min-height:100vh;
   }
   body::before{
@@ -63,9 +63,9 @@
 
   /* 吸頂區：主選單＋次選單一起置頂，底緣做漸隱模糊 */
   .sticky-head{position:sticky;top:16px;z-index:20;margin:40px 0 30px}
-  .sticky-head::after{content:"";position:absolute;left:0;right:0;top:100%;height:22px;pointer-events:none;
+  .sticky-head::after{content:"";position:absolute;left:0;right:0;top:100%;height:26px;pointer-events:none;
     backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
-    -webkit-mask-image:linear-gradient(to bottom,#000 80%,transparent);mask-image:linear-gradient(to bottom,#000 80%,transparent)}
+    -webkit-mask-image:linear-gradient(to bottom,transparent 80%,#000 100%);mask-image:linear-gradient(to bottom,transparent 80%,#000 100%)}
   .toolbar-row{display:flex;align-items:flex-start;gap:12px}
   /* 進階篩選開啟時：popup 外半透明模糊遮罩，點擊即取消返回 */
   .adv-backdrop{position:fixed;inset:0;z-index:15;background:rgba(238,241,245,.4);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
@@ -114,7 +114,7 @@
   .chip:hover{color:var(--ink);background:rgba(23,27,41,.05)}
   .chip.on{background:var(--navy);color:#fff;box-shadow:0 6px 16px -4px rgba(23,27,41,.4)}
   .chip.more{display:inline-flex;align-items:center;gap:4px}
-  .chip.more .caret{font-size:10px;opacity:.7;transition:transform var(--ease)}
+  .chip.more .caret{font-size:20px;line-height:1;opacity:.7;transition:transform var(--ease)}
   .chip.more[aria-expanded="true"] .caret{transform:rotate(180deg)}
 
   /* 產業次選單：單列可橫向捲動的 hashtag（Mobile First，仿 YouTube 分類列）*/
@@ -193,8 +193,8 @@
 
   /* ---------- 圖片：精簡故事卡 & 完整卡頂圖 ---------- */
   .card.sc{padding:0;overflow:hidden;display:flex;align-items:stretch;gap:0}
-  .sc-media{flex:0 0 264px;position:relative;min-height:210px;overflow:hidden}
-  .card-hero{position:relative;height:212px;margin:-30px -34px 22px;overflow:hidden;border-radius:var(--r-card) var(--r-card) 0 0}
+  .sc-media{flex:0 0 264px;position:relative;min-height:210px;overflow:hidden;background:linear-gradient(135deg,#e2e8f2,#e9e4f2)}
+  .card-hero{position:relative;height:212px;margin:-30px -34px 22px;overflow:hidden;border-radius:var(--r-card) var(--r-card) 0 0;background:linear-gradient(135deg,#e2e8f2,#e9e4f2)}
   .sc-img{width:100%;height:100%;object-fit:cover;display:block}
   .sc-fallback{display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;background:linear-gradient(140deg,#dfe9f6,#e7e2f4 55%,#f3e8ec)}
   .sc-fallback .sc-fav{width:34px;height:34px;border-radius:9px;margin-bottom:12px;box-shadow:0 3px 10px -3px rgba(23,27,41,.3);background:#fff}
@@ -205,7 +205,7 @@
   .sc-body{flex:1;min-width:0;padding:24px 28px;display:flex;flex-direction:column;gap:13px}
   .sc-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}
   .sc-headmain{flex:1;min-width:0;display:flex;flex-direction:column;gap:10px}
-  .sc-body h2{font-size:19.5px}
+  .sc-body h2{font-size:40px}
   .sc-blurb{font-size:15px;line-height:1.8;color:var(--ink);font-weight:600}
   .sc-actions{margin-top:4px}
   .card.sc .metrics{margin-top:2px}
@@ -226,7 +226,7 @@
   .b-cat.tag:hover{color:var(--ink);box-shadow:var(--sh-card)}
 
   .card-top{display:flex;justify-content:space-between;gap:22px;align-items:flex-start;flex-wrap:wrap}
-  h2{font-size:21.5px;font-weight:800;letter-spacing:-.015em;line-height:1.45}
+  h2{font-size:40px;font-weight:800;letter-spacing:-.02em;line-height:1.28}
   h2 a{color:inherit;text-decoration:none;transition:var(--ease)}
   h2 a:hover{color:var(--t2-fg);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
   .meta{font-size:12.5px;color:var(--ink3);margin-top:6px;font-weight:500}
@@ -297,7 +297,7 @@
   }
   summary:hover{color:var(--ink);box-shadow:var(--sh-card)}
   summary::-webkit-details-marker{display:none}
-  summary::after{content:"▾";display:inline-block;margin-left:4px;font-size:11px;color:var(--ink3);transition:transform var(--ease)}
+  summary::after{content:"▾";display:inline-block;margin-left:5px;font-size:22px;line-height:1;color:var(--ink3);transition:transform var(--ease)}
   details[open] summary::after{transform:rotate(180deg)}
 
   .radar-wrap{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-top:14px;width:100%}
@@ -369,7 +369,7 @@
     .stat span{font-size:10px;line-height:1.4;display:block}
     .card{padding:22px 18px;border-radius:22px}
     .card-top{gap:14px}
-    h2{font-size:17.5px}
+    h2,.sc-body h2{font-size:27px;line-height:1.3}
     /* 指標區塊：3 項→3 欄一列、2 項→2 欄一列、4 項→2x2、1 項→滿版 */
     .metrics{display:grid;gap:8px}
     .metrics.m-1{grid-template-columns:max-content}
@@ -388,15 +388,12 @@
     .story{max-width:none}
     .step{padding-left:26px}
     .step p{font-size:14.5px;line-height:1.85}
-    h2{font-size:19.5px}
     /* 手機：兩列。第一列＝主選單整條滿版橫捲；第二列＝三顆工具鈕靠右 */
-    .sticky-head{top:0}
+    .sticky-head{top:8px;margin-top:18px}
     .toolbar-row{flex-direction:column;align-items:stretch;gap:8px}
     .toolbar{
       width:100%;flex-wrap:nowrap;overflow-x:auto;
       -webkit-overflow-scrolling:touch;scrollbar-width:none;border-radius:24px;
-      -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 22px),transparent);
-      mask-image:linear-gradient(to right,#000 calc(100% - 22px),transparent);
     }
     .toolbar::-webkit-scrollbar{display:none}
     .toolbar .chip{flex:0 0 auto;white-space:nowrap}
@@ -588,22 +585,18 @@ function dimHtml(c, notes){
 
 const extIcon = `<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 1.5h7v7M10.5 1.5 1.5 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
-function domainOf(u){ try{ return new URL(u).hostname.replace(/^www\./,""); }catch(e){ return ""; } }
+function seedOf(c){ let h=0,s=(c.url||c.title||"ux"); for(let i=0;i<s.length;i++){ h=(h*31 + s.charCodeAt(i))>>>0; } return "ux"+(h%100000); }
 function mediaInner(c){
-  const m0 = (c.metrics && c.metrics[0]) || ["",""];
-  const dom = domainOf(c.url);
-  const fav = dom ? `<img class="sc-fav" src="https://www.google.com/s2/favicons?domain=${esc(dom)}&sz=64" alt="" loading="lazy">` : "";
-  const fb = `<div class="sc-fallback">${fav}<b>${esc(m0[0])}</b><span>${esc(m0[1])}</span></div>`;
-  const img = c.image ? `<img class="sc-img" src="${esc(c.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('noimg')">` : "";
-  return { inner: img + fb, noimg: !c.image };
+  const floor = `https://picsum.photos/seed/${seedOf(c)}/1200/800`;   // 保底：一定載得到的真實照片
+  const src = c.image || floor;
+  return `<img class="sc-img" src="${esc(src)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${floor}'">`;
 }
 
 function cardHtml(c, animate){
   const prov = [c.source, c.date].filter(Boolean).map(esc).join("・");
-  const m = mediaInner(c);
   return `
     <article class="card has-hero${animate ? " enter" : ""}">
-      <div class="card-hero${m.noimg ? " noimg" : ""}">${m.inner}</div>
+      <div class="card-hero">${mediaInner(c)}</div>
       <div class="badges">
         ${c.industry?`<button type="button" class="badge b-ind tag" data-ind="${esc(c.industry)}">#${esc(c.industry)}</button>`:""}
         ${c.cats.filter(x=>x!=="更多案例").map(x=>`<button type="button" class="badge b-cat tag" data-cat="${esc(x)}">${esc(x)}</button>`).join("")}
@@ -756,10 +749,9 @@ function renderTools(){
 }
 
 function storyHtml(c, animate){
-  const m = mediaInner(c);
   return `
     <article class="card sc${animate ? " enter" : ""}">
-      <div class="sc-media${m.noimg ? " noimg" : ""}">${m.inner}</div>
+      <div class="sc-media">${mediaInner(c)}</div>
       <div class="sc-body">
         <div class="sc-head">
           <div class="sc-headmain">

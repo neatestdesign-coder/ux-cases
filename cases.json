@@ -57,7 +57,7 @@
         "工業"
       ],
       "image": "https://media.nngroup.com/media/articles/opengraph_images/Quantifying-UX-Improvements_Social-Media-Posts_2021-97.png",
-      "blurb": "業務員天天被問「規格在哪」——重建資訊架構後客戶自己找得到，找得到率飆升 85%。"
+      "blurb": "把「不好用」翻成可量測的「找得到率」分數——先能量化，改版才有前後可比的準星。"
     },
     {
       "title": "B2B SaaS 月流失率 12%→3%：用成長換留存的取捨",
@@ -109,7 +109,7 @@
       ],
       "f_industry": [],
       "image": "https://substackcdn.com/image/fetch/$s_!V5Mt!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc8e2ef5c-09d8-4c9e-b1f6-7d094e636ab4_2244x798.png",
-      "blurb": "越成長越流失？他們索性把定價往上調、鎖定更成熟的客戶，用成長速度換來月流失 12%→3%。"
+      "blurb": "留不住，有時不是產品問題而是客群問題——把定價往上調，用它篩掉一開始就不對的人。"
     },
     {
       "title": "SaaS 退訂率 40%→5%（-87.5%）：用同群分析找出退訂前兆",
@@ -167,8 +167,8 @@
       "f_industry": [
         "醫療健康"
       ],
-      "image": "",
-      "blurb": "退訂率高到 40% 快撐不住——同群分析揪出「第 61 天」這個退訂前兆，對症下藥砍到 5%。"
+      "image": "https://loremflickr.com/1200/800/gym,fitness/all?lock=67",
+      "blurb": "退訂不是用猜的——比對「退訂 vs 留存」兩群人的行為差異，才找得到真正的前兆。"
     },
     {
       "title": "課程分銷轉換率 35% → 52%：四個可複製的精細化運營方法",
@@ -221,8 +221,8 @@
       "f_industry": [
         "教育"
       ],
-      "image": "",
-      "blurb": "同一批課程賣不動，靠四招精細化運營重排觸點與分銷，四天把轉換率從 35% 拉到 52%。"
+      "image": "https://loremflickr.com/1200/800/online,course,study/all?lock=12",
+      "blurb": "裂變別背模板、要背方法論——先洞察用戶、再修觸點，讓分享成為用戶自發的動作。"
     },
     {
       "title": "Blinkist 付費牆 A/B：用「消除訂閱焦慮」把試用轉換拉高 23%",
@@ -276,7 +276,7 @@
         "教育"
       ],
       "image": "https://s3.amazonaws.com/files.growth.design/cms/ckx7wqs4k000j0tmod9l975qs.png",
-      "blurb": "付費牆別急著炫功能——先講清楚「怎麼取消、不會被偷扣」，消焦慮反而讓試用轉換多 23%。"
+      "blurb": "轉換的敵人常是恐懼而非功能——先把「怕被偷扣」的防備心拆掉，信任自然帶動購買。"
     },
     {
       "title": "Trello 新手引導的 7 個戰術：延後註冊讓啟用率翻倍",
@@ -334,7 +334,7 @@
         "生產力"
       ],
       "image": "https://s3.amazonaws.com/files.growth.design/cms/cktj61ov300030ull97tafqlp.png",
-      "blurb": "少要一次 email、晚一步註冊，先讓你把看板玩起來——Trello 用「延後」把啟用率直接翻倍。"
+      "blurb": "新手引導的槓桿常在「移除」而非增加——晚一步要註冊，先讓人嚐到價值再談承諾。"
     },
     {
       "title": "Duolingo 成長模型：日活躍用戶（DAU）四年成長 4 倍的指標框架",
@@ -389,7 +389,7 @@
         "教育"
       ],
       "image": "https://storage.ghost.io/c/7a/33/7a33d0f4-927d-4fe8-a6bf-96131b5e76d4/content/images/2024/05/cover_ds-growth-model.png",
-      "blurb": "與其硬衝日活，不如找到真正撬得動它的槓桿——押注留存指標，四年把 DAU 做大 4 倍。"
+      "blurb": "別直接優化終極指標——先找到真正能撬動它的中介行為，再讓全公司對焦上去。"
     },
     {
       "title": "LinkedIn 通知授權率提升 500%：行為觸發器的重新框架",
@@ -439,7 +439,7 @@
         "社群"
       ],
       "image": "https://s3.amazonaws.com/files.growth.design/cms/cl3l5sadb000h0umu76291bai.gif",
-      "blurb": "同一句要權限的話，換個時機與說法就從被拒變被接受——通知授權率暴衝 500%。"
+      "blurb": "要權限也是一次體驗設計——挑對時機、講用戶的利益、把回應簡化成一個動作。"
     },
     {
       "title": "McKinsey：設計力前 25% 的公司，營收成長是同業近 2 倍",
@@ -494,8 +494,8 @@
       "f_industry": [
         "顧問"
       ],
-      "image": "",
-      "blurb": "設計到底值不值錢？追蹤 300 家公司五年，設計力前段班的營收成長是同業的近 2 倍。"
+      "image": "https://loremflickr.com/1200/800/business,office,strategy/all?lock=56",
+      "blurb": "想跟老闆談設計價值，先給它一把尺——把「設計好壞」翻成可稽核的經營行為。"
     },
     {
       "title": "推廣預算被砍後，靠產品迭代把次週留存做到高於同業 20%",
@@ -544,8 +544,8 @@
       "f_industry": [
         "社群"
       ],
-      "image": "",
-      "blurb": "推廣預算被砍、日活直落，他們改拚產品本身與留存優先序，把次週留存做到高同業 20%。"
+      "image": "https://loremflickr.com/1200/800/reading,mobile,app/all?lock=23",
+      "blurb": "預算被砍反而逼出正確優先序——先留存後拉新，關鍵是選對那個北極星指標。"
     },
     {
       "title": "Duolingo 的實驗機器：同時跑數百個 A/B 測試怎麼不翻車",
@@ -598,7 +598,7 @@
         "教育"
       ],
       "image": "https://storage.ghost.io/c/7a/33/7a33d0f4-927d-4fe8-a6bf-96131b5e76d4/content/images/2024/06/cover_Improving-Duolingo-one-experiment-at-a-time-1.png",
-      "blurb": "同時跑數百個實驗會不會失控？靠一條「守門指標」，再賺錢的版本只要傷留存一律砍掉。"
+      "blurb": "實驗的價值不在跑得多，而在否決規則——先定義哪個指標「絕不可被犧牲」。"
     },
     {
       "title": "商詳頁轉化率 30% → 36%：用行為數據找出棄購的真正原因",
@@ -648,8 +648,8 @@
         "電商"
       ],
       "f_industry": [],
-      "image": "",
-      "blurb": "與其整頁重畫，不如先看用戶在消費什麼、卡在哪——三刀下去，商詳頁轉換 30% 做到 37%。"
+      "image": "https://loremflickr.com/1200/800/shopping,ecommerce/all?lock=34",
+      "blurb": "改版前先問兩件事：用戶真正在看頁面哪裡？又在哪一步放棄？答案決定你該動哪。"
     },
     {
       "title": "獲客成本壓不下來？一個廣告投放產品轉化率 +50% 的復盤",
@@ -696,8 +696,8 @@
         "電商"
       ],
       "f_industry": [],
-      "image": "",
-      "blurb": "轉換上不去，老闆以為是素材問題——真正的破口是落地頁與協作，補完廣告轉換 +50%。"
+      "image": "https://loremflickr.com/1200/800/marketing,advertising/all?lock=45",
+      "blurb": "投放轉換差，破口常不在素材——而在「流量進來後的第一頁」與跨團隊的協作。"
     },
     {
       "title": "Syfe Trade 用假設驅動設計，把投資產品轉換率拉高近 25%",
@@ -751,7 +751,7 @@
         "金融科技"
       ],
       "image": "https://miro.medium.com/v2/resize:fit:1200/1*XQpPrwITU0QyHvUrLnYkCQ.png",
-      "blurb": "從理財被導來的用戶就是不開通——不是功能不夠，是看不懂；補一段引導讓轉換多近 25%。"
+      "blurb": "卡關常是「看不懂、沒動機」而非功能不足——用假設驅動設計，把資訊型引導當槓桿。"
     },
     {
       "title": "麥當勞自助點餐機：用行為心理學把全球營收推高 15%",
@@ -804,7 +804,7 @@
       ],
       "f_industry": [],
       "image": "https://s3.amazonaws.com/files.growth.design/cms/cm18280pu002x0tlce36f5kef.png",
-      "blurb": "把「被店員看著點餐」的壓力拿掉，自助點餐機讓人更敢加點，一路把全球營收推高 15%。"
+      "blurb": "介面能改變真實購買行為——把「被店員盯著點餐」的社會壓力拿掉，人就更敢加點。"
     }
   ],
   "rejected": [
