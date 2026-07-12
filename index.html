@@ -61,14 +61,25 @@
   .stat.hero{position:relative;overflow:hidden}
   .stat.hero::after{content:"";position:absolute;right:-18px;top:-18px;width:64px;height:64px;border-radius:50%;background:var(--lime-soft)}
 
+  .toolbar-row{position:sticky;top:16px;z-index:20;display:flex;align-items:flex-start;gap:12px;margin:40px 0 36px}
   .toolbar{
-    position:sticky;top:16px;z-index:10;
     display:flex;gap:6px;flex-wrap:wrap;align-items:center;
     background:var(--glass-strong);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
     border:1px solid var(--stroke);box-shadow:var(--sh-card), inset 0 0 0 1px rgba(255,255,255,.7);
-    border-radius:999px;padding:8px;margin:40px 0 36px;width:fit-content;
-    transition:margin .2s ease, border-radius .2s ease;
+    border-radius:999px;padding:8px;
+    transition:border-radius .2s ease;
   }
+  /* 進階篩選：獨立於主選單、置於最右側 */
+  .adv-anchor{position:relative;flex:0 0 auto;margin-left:auto}
+  .adv-toggle{
+    display:inline-flex;align-items:center;gap:6px;cursor:pointer;font-family:inherit;white-space:nowrap;
+    background:var(--glass-strong);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
+    border:1px solid var(--stroke);box-shadow:var(--sh-card), inset 0 0 0 1px rgba(255,255,255,.7);
+    border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:700;color:var(--ink2);transition:var(--ease);
+  }
+  .adv-toggle svg{display:block}
+  .adv-toggle:hover{color:var(--ink)}
+  .adv-toggle.on{background:var(--navy);color:#fff;border-color:transparent;box-shadow:0 6px 16px -4px rgba(23,27,41,.4)}
   .chip{
     border:none;background:transparent;border-radius:999px;
     padding:8px 18px;font-size:13.5px;font-weight:600;color:var(--ink2);
@@ -105,12 +116,13 @@
   .advbadge{background:var(--lime);color:var(--lime-ink);border-radius:999px;font-size:11px;font-weight:800;min-width:17px;height:17px;display:inline-flex;align-items:center;justify-content:center;padding:0 5px;font-variant-numeric:tabular-nums}
   .chip.adv-btn.on .advbadge{background:#fff;color:var(--navy)}
 
-  /* ---------- 進階篩選面板 ---------- */
-  .adv-wrap{margin:-20px 0 30px}
+  /* ---------- 進階篩選面板（懸浮，不推擠文章）---------- */
+  .adv-wrap{position:absolute;top:calc(100% + 10px);right:0;width:min(600px,86vw);z-index:60}
   .adv{
-    background:var(--glass-strong);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
-    border:1px solid var(--stroke);box-shadow:var(--sh-card), inset 0 0 0 1px rgba(255,255,255,.7);
+    background:#fff;
+    border:1px solid var(--stroke);box-shadow:0 8px 20px -6px rgba(23,27,41,.16), 0 28px 60px -20px rgba(23,27,41,.4), inset 0 0 0 1px rgba(255,255,255,.7);
     border-radius:22px;padding:20px 22px;display:flex;flex-direction:column;gap:18px;
+    max-height:min(70vh,620px);overflow-y:auto;
   }
   .adv-h{font-size:13px;font-weight:800;letter-spacing:.02em;color:var(--ink);margin-bottom:12px}
   .adv-sub{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin-bottom:10px}
@@ -126,15 +138,20 @@
   .adv-chip .cnt{font-size:10.5px;font-weight:800;color:var(--ink3);background:rgba(23,27,41,.06);border-radius:999px;padding:1px 6px;font-variant-numeric:tabular-nums}
   .adv-chip.on .cnt{color:#fff;background:rgba(255,255,255,.22)}
   .adv-chip.zero{opacity:.42}
-  .adv-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--stroke);padding-top:16px;flex-wrap:wrap}
-  .adv-count{font-size:12px;color:var(--ink3);font-weight:600}
-  .adv-clear{cursor:pointer;font-family:inherit;border:1px solid var(--stroke);background:rgba(255,255,255,.7);border-radius:999px;padding:7px 16px;font-size:12.5px;font-weight:700;color:var(--ink2);transition:var(--ease)}
-  .adv-clear:hover:not([disabled]){color:var(--ink);box-shadow:var(--sh-card)}
-  .adv-clear[disabled]{opacity:.4;cursor:default}
-  @media (max-width:640px){ .chip.adv-btn .adv-btn-t{display:none} .adv{padding:16px 16px} }
+  .adv-foot{display:flex;justify-content:flex-end;align-items:center;gap:10px;border-top:1px solid var(--stroke);padding-top:16px;position:sticky;bottom:-20px;background:#fff}
+  .adv-cancel{cursor:pointer;font-family:inherit;border:1px solid var(--stroke);background:rgba(255,255,255,.7);border-radius:999px;padding:9px 18px;font-size:13px;font-weight:700;color:var(--ink2);transition:var(--ease)}
+  .adv-cancel:hover{color:var(--ink);box-shadow:var(--sh-card)}
+  .adv-apply{cursor:pointer;font-family:inherit;border:none;background:var(--navy);color:#fff;border-radius:999px;padding:9px 20px;font-size:13px;font-weight:700;box-shadow:0 6px 16px -4px rgba(23,27,41,.4);transition:var(--ease);font-variant-numeric:tabular-nums}
+  .adv-apply:hover:not([disabled]){transform:translateY(-1px)}
+  .adv-apply[disabled]{opacity:.38;cursor:default;box-shadow:none}
+  @media (max-width:640px){
+    .adv-toggle .adv-btn-t{display:none}
+    .adv-wrap{position:fixed;left:12px;right:12px;bottom:12px;top:auto;width:auto}
+    .adv{padding:16px 16px;max-height:76vh}
+  }
 
   .card{
-    background:var(--glass);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+    background:rgba(255,255,255,.86);
     border:1px solid var(--stroke);
     box-shadow:var(--sh-card), inset 0 0 0 1px rgba(255,255,255,.65);
     border-radius:var(--r-card);padding:30px 34px;margin-bottom:26px;
@@ -258,8 +275,13 @@
   .load-done i{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 3px var(--lime-soft);flex-shrink:0}
 
   .rejected-zone{margin-top:64px}
-  .rejected-zone>h3{font-size:17px;font-weight:800;letter-spacing:-.01em;margin-bottom:6px;color:var(--reject)}
-  .rejected-zone>p{font-size:13.5px;color:var(--ink2);margin-bottom:20px;max-width:560px}
+  .rej-summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;user-select:none}
+  .rej-summary::-webkit-details-marker{display:none}
+  .rz-h{font-size:17px;font-weight:800;letter-spacing:-.01em;color:var(--reject)}
+  .rz-count{font-size:12.5px;font-weight:800;color:var(--reject);background:rgba(160,85,67,.1);border:1px solid rgba(160,85,67,.2);border-radius:999px;padding:2px 10px;font-variant-numeric:tabular-nums}
+  .rz-caret{margin-left:2px;font-size:11px;color:var(--reject);opacity:.7;transition:transform var(--ease)}
+  .rejected-zone[open] .rz-caret{transform:rotate(180deg)}
+  .rejected-zone>p{font-size:13.5px;color:var(--ink2);margin:14px 0 20px;max-width:560px}
   .card.rejected{background:rgba(255,255,255,.4);opacity:.92}
   .card.rejected:hover{transform:none;box-shadow:var(--sh-card), inset 0 0 0 1px rgba(255,255,255,.65)}
   .card.rejected .ring .val{stroke:var(--reject)}
@@ -314,8 +336,8 @@
     .step p{font-size:14.5px;line-height:1.85}
     h2{font-size:19.5px}
     /* 吸頂時白底滿版延展，內間距不變 */
-    .toolbar{top:0;border-radius:24px}
-    .toolbar.stuck{margin-left:-16px;margin-right:-16px;width:auto;border-radius:0;padding:8px 16px;box-shadow:0 10px 24px -14px rgba(23,27,41,.25), inset 0 0 0 1px rgba(255,255,255,.7)}
+    .toolbar-row{top:0}
+    .toolbar{border-radius:24px}
   }
 </style>
 </head>
@@ -335,23 +357,28 @@
 </header>
 
 <div id="toolbar-sentinel"></div>
-<nav class="toolbar" id="filters" aria-label="分類篩選"></nav>
+<div class="toolbar-row" id="toolbar-row">
+  <nav class="toolbar" id="filters" aria-label="分類篩選"></nav>
+  <div class="adv-anchor">
+    <button class="adv-toggle" id="adv-toggle" type="button" aria-expanded="false" aria-label="進階篩選" title="進階篩選"></button>
+    <div class="adv-wrap" id="adv-wrap" hidden>
+      <div class="adv" id="adv" aria-label="進階篩選"></div>
+    </div>
+  </div>
+</div>
 <div class="submenu-wrap" id="submenu-wrap" hidden>
   <div class="submenu" id="submenu" aria-label="產業篩選"></div>
-</div>
-<div class="adv-wrap" id="adv-wrap" hidden>
-  <div class="adv" id="adv" aria-label="進階篩選"></div>
 </div>
 
 <main id="feed"></main>
 <div class="empty" id="empty">此分類今日沒有達標案例——寧缺勿濫。</div>
 <div class="load-zone" id="load-zone"></div>
 
-<section class="rejected-zone">
-  <h3>未達門檻（今日淘汰）</h3>
+<details class="rejected-zone" id="rejzone">
+  <summary class="rej-summary"><span class="rz-h">未達門檻（今日淘汰）</span><span class="rz-count" id="rej-count">0</span><span class="rz-caret" aria-hidden="true">▾</span></summary>
   <p>公開淘汰紀錄是品管的一部分：讓你隨時檢驗評分規則的鬆緊，而不是黑箱。</p>
   <div id="rejected"></div>
-</section>
+</details>
 
 <footer>
   <div>評分規則：五維各 0–2 分（商業脈絡・決策過程・量化成果・第一手性・可遷移性）＋ 來源層級加成，總分 ≥ 7.0 發佈。</div>
@@ -517,7 +544,8 @@ function cardHtml(c, animate){
 }
 
 let NAV = {type:"all", value:null};      // 主選單：all | cat | ind
-let ADV = {goal:null, product:null, industry:null};  // 進階篩選：各大項單選
+let ADV = {goal:null, product:null, industry:null};      // 已套用的進階篩選
+let PENDING = {goal:null, product:null, industry:null};  // 面板內的草稿（按下「篩選出 n 筆」才套用）
 let subOpen = false;
 let advOpen = false;
 let visibleCount = 4;
@@ -549,19 +577,6 @@ function mkChip(label, on, onclick){
 function buildChips(){
   const fbox = document.getElementById("filters");
   fbox.innerHTML = "";
-  // 進階篩選 icon（置於最前，與主選單以分隔線區隔）
-  const n = advActiveCount();
-  const adv = document.createElement("button");
-  adv.type = "button";
-  adv.className = "chip adv-btn" + (advOpen||n ? " on" : "");
-  adv.setAttribute("aria-expanded", advOpen ? "true" : "false");
-  adv.title = "進階篩選";
-  adv.innerHTML = FILTER_ICON + '<span class="adv-btn-t">進階篩選</span>' + (n ? `<span class="advbadge">${n}</span>` : "");
-  adv.onclick = ()=>{ advOpen = !advOpen; syncUI(); };
-  fbox.appendChild(adv);
-  const div = document.createElement("span"); div.className = "chip-div"; div.setAttribute("aria-hidden","true");
-  fbox.appendChild(div);
-  // 主選單
   fbox.appendChild(mkChip("全部", NAV.type==="all", ()=>{ subOpen=false; setNav("all",null); }));
   const present = new Set(CASES.flatMap(c=>c.cats));
   CAT_ORDER.filter(x=>present.has(x)).forEach(cat=>{
@@ -574,6 +589,17 @@ function buildChips(){
   more.innerHTML = '更多<span class="caret" aria-hidden="true">▾</span>';
   fbox.appendChild(more);
   buildSubmenu();
+}
+
+// 進階篩選按鈕（獨立於主選單、位於最右側）
+function renderAdvToggle(){
+  const btn = document.getElementById("adv-toggle");
+  if(!btn) return;
+  const n = advActiveCount();
+  btn.className = "adv-toggle" + (advOpen||n ? " on" : "");
+  btn.setAttribute("aria-expanded", advOpen ? "true" : "false");
+  btn.innerHTML = FILTER_ICON + '<span class="adv-btn-t">進階篩選</span>' + (n ? `<span class="advbadge">${n}</span>` : "");
+  btn.onclick = ()=>{ advOpen ? cancelAdv() : openAdv(); };
 }
 
 function buildSubmenu(){
@@ -597,14 +623,35 @@ function toggleSub(){
   syncUI();
 }
 
+// 依一組 facet 選擇計算符合筆數（獨立於主選單 tab）
+function countWith(sel){
+  return CASES.filter(c=>{
+    if(sel.goal && !(c.f_goal||[]).includes(sel.goal)) return false;
+    if(sel.product && !(c.f_product||[]).includes(sel.product)) return false;
+    if(sel.industry && !(c.f_industry||[]).includes(sel.industry)) return false;
+    return true;
+  }).length;
+}
+
+function openAdv(){ PENDING = {...ADV}; advOpen = true; syncUI(); }   // 開啟：載入已套用值為草稿
+function cancelAdv(){ advOpen = false; syncUI(); }                    // 取消：丟棄草稿
+function applyAdv(){
+  if(countWith(PENDING) === 0) return;                               // 0 筆不可套用
+  ADV = {...PENDING};
+  NAV = {type:"all", value:null};                                    // 進階篩選獨立、不與主選單 tab 關聯
+  advOpen = false;
+  visibleCount = RUN.batchSize;
+  syncUI();
+}
+
 function renderAdvanced(){
   const box = document.getElementById("adv");
   const wrap = document.getElementById("adv-wrap");
   box.innerHTML = "";
   FACETS.forEach(facet=>{
-    const cur = ADV[facet.key];
+    const cur = PENDING[facet.key];
     const chip = (item)=>{
-      const n = CASES.filter(c=>(c["f_"+facet.key]||[]).includes(item)).length;
+      const n = countWith({...PENDING, [facet.key]: item});   // 情境數量：加選這項會有幾筆
       const on = cur===item;
       return `<button type="button" class="adv-chip${on?" on":""}${n===0?" zero":""}" data-facet="${esc(facet.key)}" data-item="${esc(item)}">${esc(item)}<span class="cnt">${n}</span></button>`;
     };
@@ -619,40 +666,47 @@ function renderAdvanced(){
     sec.innerHTML = `<div class="adv-h">${esc(facet.label)}</div>${body}`;
     box.appendChild(sec);
   });
-  const n = advActiveCount();
+  const nRes = countWith(PENDING);
   const foot = document.createElement("div");
   foot.className = "adv-foot";
-  foot.innerHTML = `<span class="adv-count">${n ? ("已套用 "+n+" 項篩選") : "各大項內單選、大項間可組合"}</span>`
-    + `<button type="button" class="adv-clear" id="adv-clear"${n?"":" disabled"}>清除篩選</button>`;
+  foot.innerHTML = `<button type="button" class="adv-cancel" id="adv-cancel">取消</button>`
+    + `<button type="button" class="adv-apply" id="adv-apply"${nRes===0?" disabled":""}>篩選出 ${nRes} 筆</button>`;
   box.appendChild(foot);
   box.querySelectorAll(".adv-chip").forEach(b=>{
-    b.onclick = ()=>{ const f=b.dataset.facet, it=b.dataset.item; ADV[f] = ADV[f]===it ? null : it; visibleCount=RUN.batchSize; syncUI(); };
+    b.onclick = ()=>{ const f=b.dataset.facet, it=b.dataset.item; PENDING[f] = PENDING[f]===it ? null : it; renderAdvanced(); };  // 只更新草稿，不動文章
   });
-  const clr = document.getElementById("adv-clear");
-  if(clr) clr.onclick = ()=>{ ADV={goal:null,product:null,industry:null}; visibleCount=RUN.batchSize; syncUI(); };
+  document.getElementById("adv-cancel").onclick = cancelAdv;
+  const ap = document.getElementById("adv-apply");
+  if(ap) ap.onclick = applyAdv;
   wrap.hidden = !advOpen;
 }
 
 function setNav(type, value){
   NAV = {type, value};
-  if(type==="all"){ ADV = {goal:null, product:null, industry:null}; }  // 全部＝完整重設
+  ADV = {goal:null, product:null, industry:null};   // 主選單與進階篩選互斥、獨立
+  advOpen = false;
   visibleCount = RUN.batchSize;
   syncUI();
 }
 
 function syncUI(){
   buildChips();
+  renderAdvToggle();
   renderAdvanced();
   render();
 }
 
 function filteredList(){
+  const useAdv = advActiveCount() > 0;   // 進階篩選一旦套用，就獨立於主選單 tab
   const list = CASES.filter(c=>{
-    if(NAV.type==="cat" && !(c.cats||[]).includes(NAV.value)) return false;
-    if(NAV.type==="ind" && c.industry!==NAV.value) return false;
-    if(ADV.goal && !(c.f_goal||[]).includes(ADV.goal)) return false;
-    if(ADV.product && !(c.f_product||[]).includes(ADV.product)) return false;
-    if(ADV.industry && !(c.f_industry||[]).includes(ADV.industry)) return false;
+    if(useAdv){
+      if(ADV.goal && !(c.f_goal||[]).includes(ADV.goal)) return false;
+      if(ADV.product && !(c.f_product||[]).includes(ADV.product)) return false;
+      if(ADV.industry && !(c.f_industry||[]).includes(ADV.industry)) return false;
+    } else {
+      if(NAV.type==="cat" && !(c.cats||[]).includes(NAV.value)) return false;
+      if(NAV.type==="ind" && c.industry!==NAV.value) return false;
+    }
     return true;
   });
   return list.sort((a,b)=>total(b)-total(a));
@@ -701,6 +755,8 @@ function wireBadgeFilter(){
 }
 
 function renderRejected(){
+  const rc = document.getElementById("rej-count");
+  if(rc) rc.textContent = REJECTED.length;
   document.getElementById("rejected").innerHTML = REJECTED.map(c=>`
   <article class="card rejected">
     <div class="card-top">
@@ -721,6 +777,7 @@ function renderRejected(){
 function init(){
   visibleCount = RUN.batchSize || 4;
   buildChips();
+  renderAdvToggle();
   renderAdvanced();
   renderRejected();
   render();
@@ -748,7 +805,7 @@ async function boot(){
   const sentinel = document.getElementById("toolbar-sentinel");
   if(window.IntersectionObserver && sentinel){
     new IntersectionObserver(([e])=>{
-      document.getElementById("filters").classList.toggle("stuck", !e.isIntersecting);
+      document.getElementById("toolbar-row").classList.toggle("stuck", !e.isIntersecting);
     }, {threshold:0}).observe(sentinel);
   }
 }

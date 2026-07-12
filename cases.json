@@ -1,8 +1,8 @@
 {
   "updated": "2026-07-12",
   "run": {
-    "scanned": 16,
-    "candidates": 3
+    "scanned": 34,
+    "candidates": 4
   },
   "cases": [
     {
@@ -51,7 +51,6 @@
         "站內搜尋"
       ],
       "f_product": [
-        "網頁 App",
         "電商"
       ],
       "f_industry": []
@@ -517,8 +516,7 @@
         "習慣養成"
       ],
       "f_product": [
-        "行動 App",
-        "網頁 App"
+        "行動 App"
       ],
       "f_industry": [
         "社群"
@@ -673,6 +671,111 @@
       "f_industry": [
         "零售"
       ]
+    },
+    {
+      "title": "Syfe Trade 用假設驅動設計，把投資產品轉換率拉高近 25%",
+      "original_title": "Designing for FinTech: A case study for increasing conversion rates",
+      "url": "https://medium.com/@adityatells/designing-for-fintech-a-case-study-for-increasing-conversion-rates-b599fbb942b6",
+      "source": "Aditya Singh（Medium）",
+      "tier": 0,
+      "date": "2022-09",
+      "author": "Aditya Singh（Syfe 產品設計師，第一手）",
+      "cats": [
+        "更多案例"
+      ],
+      "industry": "SaaS",
+      "why": "投資理財平台 Syfe 想把既有 Syfe Wealth 的用戶導流到新產品 Syfe Trade，卻發現多數人被導過來後不願開通——問題不在功能，而在用戶看不懂、也沒動機。目標：把開通轉換率做上去。",
+      "how": "改用假設驅動設計（hypothesis-driven design）：先假設「用戶缺的是理解與動機」，設計一段資訊型的引導旅程解釋 Syfe Trade 的好處，再用可用性測試與 A/B 測試逐一驗證假設、砍掉沒效果的版本。",
+      "result": "新版把中途流失明顯降低、開通轉換率提升近 25%；驗證了「把相關資訊講清楚」比堆功能更能推動轉換。惟為相對百分比、未公開絕對基準值。",
+      "caveat": "僅有相對提升（約 25%），未公開開通率的絕對基準值與樣本規模。",
+      "takeaway": "金融產品的轉換卡點常是「看不懂、沒動機」，不是功能不夠。用假設驅動設計＋A/B 驗證，把資訊型引導當成轉換槓桿，是可直接複用的作法。",
+      "metrics": [
+        [
+          "+約 25%",
+          "開通轉換率"
+        ],
+        [
+          "A/B 驗證",
+          "假設驅動設計"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "score_notes": [
+        "商業脈絡明確：Wealth 導流到 Trade 卻不開通，目標拉高轉換",
+        "假設驅動＋可用性與 A/B 驗證，含砍掉無效版本",
+        "有相對提升（約 25%）但缺絕對基準值",
+        "當事產品設計師具名第一手撰寫",
+        "假設驅動＋資訊型引導的作法可複用"
+      ],
+      "f_goal": [
+        "新手引導",
+        "第一印象"
+      ],
+      "f_product": [
+        "行動 App"
+      ],
+      "f_industry": [
+        "金融科技"
+      ]
+    },
+    {
+      "title": "麥當勞自助點餐機：用行為心理學把全球營收推高 15%",
+      "original_title": "The Psychology Behind McDonald's $2 Billion Self-Serve Kiosks",
+      "url": "https://growth.design/case-studies/mcdonalds-self-serve-ux",
+      "source": "growth.design",
+      "tier": 2,
+      "date": "2024",
+      "author": "growth.design（麥當勞自助點餐機拆解）",
+      "cats": [
+        "國際品牌"
+      ],
+      "industry": "電商",
+      "why": "速食業要在不加價的前提下拉高客單與營收。麥當勞把賭注押在自助點餐機——用介面設計改變點餐行為，而不是靠人力。",
+      "how": "growth.design 拆解機台背後的行為心理學：以待辦任務（JTBD）安排菜單、用大圖觸發直覺（System 1）、用框架效應淡化熱量資訊、以及移除櫃檯人員的「被評價感」讓人更敢加點；同時綁定 App 做個人化與回訪。",
+      "result": "自助機被連結到約 15% 的營收成長、量級達 20 億美元，主要來自更大的訂單。惟屬第三方拆解、15% 為總體宣稱而非受控對照，部分手法（淡化熱量）在倫理上有爭議。",
+      "caveat": "第三方拆解、非麥當勞團隊親述；15% 為總體宣稱、無受控 baseline；淡化熱量等手法涉及倫理爭議。",
+      "takeaway": "介面能改變真實世界的購買行為：移除摩擦與社會評價感、用視覺與框架推動加點，是零售點餐與自助結帳可借鏡的槓桿——但要留意「淡化資訊」的倫理界線。",
+      "metrics": [
+        [
+          "+15%",
+          "全球營收成長"
+        ],
+        [
+          "20 億美元",
+          "自助機帶動營收量級"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "商業脈絡明確：不加價卻要拉高客單與營收",
+        "第三方原理拆解、非團隊決策日誌，缺被推翻方案（扣1）",
+        "15% 為總體宣稱、無受控對照 baseline（扣1）",
+        "growth.design 第三方拆解（扣1）",
+        "行為心理原則高度可複用"
+      ],
+      "f_goal": [
+        "結帳",
+        "個人化"
+      ],
+      "f_product": [
+        "系統工具",
+        "行動 App"
+      ],
+      "f_industry": [
+        "零售"
+      ]
     }
   ],
   "rejected": [
@@ -717,12 +820,65 @@
         2
       ],
       "reason": "建議清單型內容，不是單一案例：沒有決策過程、沒有任何成效數據。總分 4＋加成 0.5 = 4.5。第二層（tier 2）來源也會被刷掉——評分看內容，不看出身。"
+    },
+    {
+      "title": "Adobe：訂閱取消流程的心理學（使用者離場設計）",
+      "url": "https://growth.design/case-studies/adobe-cancel-subscription",
+      "source": "growth.design",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "reason": "整篇為取消流程的心理學拆解，全文無任何量化成果（量化 0 分）。有同理式離場的可用原則，但缺 baseline→結果與決策數據。總分 5＋加成 0.5 = 5.5，未達 7.0。"
+    },
+    {
+      "title": "Drift：重新設計銷售團隊共用收件匣",
+      "url": "https://uxdesign.cc/drift-conversations-redesigning-a-shared-inbox-for-sales-teams-a29120554dbc",
+      "source": "UX Collective（Medium）",
+      "tier": 2,
+      "scores": [
+        1,
+        2,
+        0,
+        2,
+        1
+      ],
+      "reason": "第一手且含被捨棄方案的決策過程，品質不錯，但全文無任何量化成果（量化 0 分）。總分 6＋加成 0.5 = 6.5，未達 7.0——補上數據就會過。"
     }
   ],
   "facets": [
     {
+      "key": "industry",
+      "label": "產業",
+      "items": [
+        "AI",
+        "金融科技",
+        "醫療健康",
+        "教育",
+        "零售",
+        "旅遊",
+        "社群",
+        "生產力"
+      ]
+    },
+    {
+      "key": "product",
+      "label": "類型",
+      "items": [
+        "SaaS",
+        "行動 App",
+        "電商",
+        "企業級",
+        "系統工具"
+      ]
+    },
+    {
       "key": "goal",
-      "label": "使用者目標",
+      "label": "體驗目標",
       "groups": [
         {
           "label": "獲取",
@@ -767,33 +923,6 @@
             "再互動"
           ]
         }
-      ]
-    },
-    {
-      "key": "product",
-      "label": "產品類型",
-      "items": [
-        "SaaS",
-        "行動 App",
-        "網頁 App",
-        "電商",
-        "平台市集",
-        "企業級",
-        "系統工具"
-      ]
-    },
-    {
-      "key": "industry",
-      "label": "產業",
-      "items": [
-        "AI",
-        "金融科技",
-        "醫療健康",
-        "教育",
-        "零售",
-        "旅遊",
-        "社群",
-        "生產力"
       ]
     }
   ]
