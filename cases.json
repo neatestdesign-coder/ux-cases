@@ -599,5 +599,135 @@
       ],
       "reason": "建議清單型內容，不是單一案例：沒有決策過程、沒有任何成效數據。總分 4＋加成 0.5 = 4.5。第二層（tier 2）來源也會被刷掉——評分看內容，不看出身。"
     }
+  ],
+  "intents": [
+    {
+      "q": "把設計、體驗講成商業語言",
+      "hint": "讓老闆、CFO 聽得懂的設計價值",
+      "urls": [
+        "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-business-value-of-design",
+        "https://blog.duolingo.com/growth-model-duolingo/",
+        "https://www.woshipm.com/pd/6082619.html"
+      ]
+    },
+    {
+      "q": "改版前，先找對診斷方法",
+      "hint": "別急著重畫，先鎖定真正的問題",
+      "urls": [
+        "https://www.woshipm.com/pd/6082619.html",
+        "https://www.trialtopaid.com/articles/how-we-reduced-churn-by-87-point-5-percent",
+        "https://www.nngroup.com/articles/quantifying-case-study/",
+        "https://www.woshipm.com/pd/4455713.html"
+      ]
+    },
+    {
+      "q": "降低流失、把人留下來",
+      "hint": "留存與退訂的診斷和取捨",
+      "urls": [
+        "https://kevinyun.substack.com/p/how-we-reduced-churn-by-200-for-our",
+        "https://www.trialtopaid.com/articles/how-we-reduced-churn-by-87-point-5-percent",
+        "https://www.woshipm.com/operate/4039868.html",
+        "https://blog.duolingo.com/growth-model-duolingo/"
+      ]
+    },
+    {
+      "q": "把試用與新手變成付費、啟用",
+      "hint": "付費牆、新手引導、分銷轉換",
+      "urls": [
+        "https://growth.design/case-studies/trial-paywall-challenge",
+        "https://growth.design/case-studies/trello-user-onboarding",
+        "https://www.woshipm.com/operate/4197488.html"
+      ]
+    },
+    {
+      "q": "看別人怎麼用實驗與指標做決策",
+      "hint": "北極星、守門指標、假設驗證的紀律",
+      "urls": [
+        "https://blog.duolingo.com/improving-duolingo-one-experiment-at-a-time/",
+        "https://blog.duolingo.com/growth-model-duolingo/",
+        "https://growth.design/case-studies/linkedin-retention-triggers"
+      ]
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "北極星／可操作的中介指標",
+      "gist": "別直接優化終極指標，找能撬動它的中介指標",
+      "urls": [
+        "https://blog.duolingo.com/growth-model-duolingo/",
+        "https://www.woshipm.com/operate/4039868.html"
+      ]
+    },
+    {
+      "name": "守門指標（guardrail）",
+      "gist": "先定義什麼不可犧牲，再談其他數字好不好看",
+      "urls": [
+        "https://blog.duolingo.com/improving-duolingo-one-experiment-at-a-time/"
+      ]
+    },
+    {
+      "name": "同群分析找流失前兆",
+      "gist": "比對退訂與留存兩群的行為分界，對症下藥",
+      "urls": [
+        "https://www.trialtopaid.com/articles/how-we-reduced-churn-by-87-point-5-percent"
+      ]
+    },
+    {
+      "name": "行為數據＋棄購調研做診斷",
+      "gist": "先問用戶在消費什麼、又卡在哪一步",
+      "urls": [
+        "https://www.woshipm.com/pd/6082619.html",
+        "https://www.woshipm.com/pd/4455713.html"
+      ]
+    },
+    {
+      "name": "找得到率量化資訊架構",
+      "gist": "把「不好用」變成可前後對照的分數",
+      "urls": [
+        "https://www.nngroup.com/articles/quantifying-case-study/"
+      ]
+    },
+    {
+      "name": "付費牆先回應恐懼",
+      "gist": "先解訂閱焦慮，再展示功能",
+      "urls": [
+        "https://growth.design/case-studies/trial-paywall-challenge"
+      ]
+    },
+    {
+      "name": "權限請求四變數",
+      "gist": "時機、框架、利益、摩擦",
+      "urls": [
+        "https://growth.design/case-studies/linkedin-retention-triggers"
+      ]
+    },
+    {
+      "name": "新手引導用「移除」降摩擦",
+      "gist": "少一個連結、晚一步註冊，反而更多人到價值點",
+      "urls": [
+        "https://growth.design/case-studies/trello-user-onboarding"
+      ]
+    },
+    {
+      "name": "用成長換留存的取捨",
+      "gist": "往上市場、篩掉不對的客群",
+      "urls": [
+        "https://kevinyun.substack.com/p/how-we-reduced-churn-by-200-for-our"
+      ]
+    },
+    {
+      "name": "設計商業價值語言（MDI 四行為）",
+      "gist": "把設計好壞翻成可稽核的經營行為",
+      "urls": [
+        "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-business-value-of-design"
+      ]
+    },
+    {
+      "name": "分銷／裂變方法論",
+      "gist": "洞察→觸點→自發分銷→數據迭代",
+      "urls": [
+        "https://www.woshipm.com/operate/4197488.html"
+      ]
+    }
   ]
 }
