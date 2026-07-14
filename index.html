@@ -61,10 +61,22 @@
   .stat.hero{position:relative;overflow:hidden}
   .stat.hero::after{content:"";position:absolute;right:-18px;top:-18px;width:64px;height:64px;border-radius:50%;background:var(--lime-soft)}
 
-  /* 吸頂區：主選單＋次選單一起置頂，底緣做漸隱模糊 */
-  .sticky-head{position:sticky;top:16px;z-index:20;margin:40px 0 30px}
-  .sticky-head::after{content:"";position:absolute;left:0;right:0;top:100%;height:20px;pointer-events:none;
-    background:rgba(238,241,245,.3);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  /* 吸頂區：主選單＋次選單一起置頂。吸頂時，背景延伸至視窗頂部與左右邊界。 */
+  .sticky-head{
+    --sticky-top:16px;
+    position:sticky;top:var(--sticky-top);z-index:20;isolation:isolate;
+    margin:40px 0 30px;
+  }
+  .sticky-head::before{content:none}
+  .sticky-head.stuck::before{
+    content:"";position:absolute;z-index:-1;pointer-events:none;
+    top:calc(-1 * var(--sticky-top));bottom:-14px;
+    left:calc((100vw - 100%) / -2);right:calc((100vw - 100%) / -2);
+    background:rgba(238,241,245,.78);
+    backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+    border-bottom:1px solid rgba(23,27,41,.06);
+    box-shadow:0 10px 26px -18px rgba(23,27,41,.24);
+  }
   .toolbar-row{display:flex;align-items:flex-start;gap:12px}
   /* 進階篩選開啟時：popup 外半透明模糊遮罩，點擊即取消返回 */
   .adv-backdrop{position:fixed;inset:0;z-index:15;background:rgba(238,241,245,.4);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
@@ -388,7 +400,7 @@
     .step{padding-left:26px}
     .step p{font-size:14.5px;line-height:1.85}
     /* 手機：主選單（滿版橫捲）→ 次選單 → 三顆工具鈕靠右，由上而下 */
-    .sticky-head{top:8px;margin-top:18px;display:flex;flex-direction:column;gap:8px}
+    .sticky-head{--sticky-top:8px;top:var(--sticky-top);margin-top:18px;display:flex;flex-direction:column;gap:8px}
     .toolbar-row{display:contents}
     .toolbar{
       order:1;width:100%;flex-wrap:nowrap;overflow-x:auto;
