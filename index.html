@@ -68,6 +68,8 @@
     margin:30px 0 30px;
   }
   .sticky-head::before{content:none}
+  /* 僅在手機吸頂狀態顯示，避免桌機／平板誤出現在主選單內。 */
+  .mobile-sticky-filter{display:none}
   .sticky-head.stuck::before{
     content:"";position:absolute;z-index:-1;pointer-events:none;
     top:calc(-1 * var(--sticky-top));bottom:calc(-1 * var(--sticky-top));
@@ -427,6 +429,7 @@
     .mobile-sticky-filter:hover{background:rgba(23,27,41,.12);color:var(--ink)}
     .sticky-head.stuck .toolbar{overflow:hidden;padding-left:8px;padding-right:8px}
     .sticky-head.stuck .toolbar .chip{padding-left:8px;padding-right:8px;transform:translateX(-2px)}
+    .sticky-head.stuck .toolbar .chip.on{padding-left:16px;padding-right:16px}
     .sticky-head.stuck .mobile-sticky-filter{display:inline-flex;opacity:1;transform:translateX(0) scale(1);animation:filterIn .22s cubic-bezier(.2,.7,.3,1) both}
     .sticky-head.stuck .tools{display:none}
     .submenu-wrap{order:2;margin:0}
@@ -459,9 +462,6 @@
   <div class="tools">
     <div class="adv-anchor">
       <button class="adv-toggle" id="adv-toggle" type="button" aria-expanded="false" aria-label="進階篩選" title="進階篩選"></button>
-      <div class="adv-wrap" id="adv-wrap" hidden>
-        <div class="adv" id="adv" aria-label="進階篩選"></div>
-      </div>
     </div>
     <div class="sort-anchor">
       <button class="icon-btn" id="sort-btn" type="button" aria-label="排序" title="排序"></button>
@@ -469,6 +469,9 @@
     </div>
     <button class="icon-btn" id="layout-btn" type="button" aria-label="排版方式" title="排版方式"></button>
   </div>
+</div>
+<div class="adv-wrap" id="adv-wrap" hidden>
+  <div class="adv" id="adv" aria-label="進階篩選"></div>
 </div>
 <div class="submenu-wrap" id="submenu-wrap" hidden>
   <div class="submenu" id="submenu" aria-label="產業篩選"></div>
