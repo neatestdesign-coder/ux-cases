@@ -227,11 +227,11 @@
   .sc-blurb{font-size:15px;line-height:1.8;color:var(--ink);font-weight:600}
   .sc-actions{margin-top:4px}
   .sc-summary{
-    background:linear-gradient(135deg,rgba(223,233,246,.90),rgba(231,238,250,.55));
-    border:1px solid rgba(63,100,148,.18);border-radius:var(--r-inner);padding:18px 20px;
+    background:linear-gradient(135deg,rgba(220,239,255,.98),rgba(242,248,255,.92));
+    border:1px solid rgba(73,137,205,.24);border-radius:var(--r-inner);padding:18px 20px;
   }
-  .sc-summary .sec-label{color:var(--t2-fg)}
-  .sc-summary p{font-size:14.5px;line-height:1.75;color:#2b3b52;font-weight:600}
+  .sc-summary .sec-label{color:var(--t2-fg);letter-spacing:.1em}
+  .sc-summary p{font-size:14.5px;line-height:1.75;color:#2b3b52;font-weight:400}
   @media (max-width:640px){
     .card.sc{flex-direction:column}
     .sc-media{width:100%;flex-basis:auto;aspect-ratio:auto;min-height:172px}
@@ -302,7 +302,7 @@
     border:1px solid rgba(160,180,60,.22);
     border-radius:var(--r-inner);padding:18px 20px;margin-top:20px;
   }
-  .takeaway .sec-label{color:var(--lime-ink)}
+  .takeaway .sec-label{color:var(--lime-ink);letter-spacing:.1em}
   .takeaway p{font-size:14.5px;color:#333a17}
 
   .prov{font-size:12px;color:var(--ink3);margin-top:20px;font-weight:500;line-height:1.6;padding:16px 0}
@@ -435,6 +435,8 @@
       opacity:0;transform:translateX(10px) scale(.88);transition:opacity var(--ease),transform var(--ease),background var(--ease);
     }
     .mobile-sticky-filter:hover{background:rgba(23,27,41,.12);color:var(--ink)}
+    .mobile-sticky-filter.on{position:relative;background:var(--navy);color:#fff;box-shadow:0 6px 16px -4px rgba(23,27,41,.4)}
+    .mobile-advbadge{position:absolute;top:-5px;right:-5px;min-width:19px;height:19px;padding:0 5px;border-radius:999px;background:var(--lime);color:var(--lime-ink);font-size:11px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums}
     .sticky-head.stuck .toolbar{overflow:hidden;padding-left:8px;padding-right:8px}
     .sticky-head.stuck .toolbar .chip{padding-left:8px;padding-right:8px;transform:translateX(-2px)}
     .sticky-head.stuck .toolbar .chip.on{padding-left:16px;padding-right:16px}
@@ -704,7 +706,7 @@ const IND_ORDER = ["電商","SaaS","生產力","教育","媒體","內容平台",
 const ADV_KEYS = ["goal","product","industry"];
 const advActiveCount = ()=> ADV_KEYS.filter(k=>ADV[k]).length;
 
-const FILTER_ICON = `<svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 4.5h6M11.5 4.5h2M2.5 11.5h2M7.5 11.5h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="10" cy="4.5" r="2" fill="#fff" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="11.5" r="2" fill="#fff" stroke="currentColor" stroke-width="1.6"/></svg>`;
+const FILTER_ICON = `<svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.5 2.25h3v10.1h2.85L5 17.75.65 12.35H3.5V2.25Z" fill="currentColor"/><path d="M13.5 17.75h-3V7.65H7.65L12 2.25l4.35 5.4H13.5v10.1Z" fill="currentColor"/></svg>`;
 const SORT_ICON = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4.5 2.5v11M4.5 13.5 2.5 11M4.5 2.5 6.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5 13.5v-11M11.5 2.5 9.5 5M11.5 13.5 13.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 const LAYOUT_BRIEF_ICON = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2.5" y="3" width="4.5" height="4.5" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M9.5 4h4M9.5 6.5h3M2.5 10.5h11M2.5 13h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>`;
 const LAYOUT_FULL_ICON = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 3.5h11M2.5 6.5h11M2.5 9.5h11M2.5 12.5h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>`;
@@ -730,25 +732,25 @@ function mkChip(label, on, onclick){
 
 function buildChips(){
   const fbox = document.getElementById("filters");
+  const hasAdv = advActiveCount() > 0;
   fbox.innerHTML = "";
-  fbox.appendChild(mkChip("全部", NAV.type==="all", ()=>{ subOpen=false; setNav("all",null); }));
+  // 進階篩選生效時，保留既有主選單狀態但不顯示任何已選取項。
+  fbox.appendChild(mkChip("全部", !hasAdv && NAV.type==="all", ()=>{ subOpen=false; setNav("all",null); }));
   const present = new Set(CASES.flatMap(c=>c.cats));
   CAT_ORDER.filter(x=>present.has(x)).forEach(cat=>{
-    fbox.appendChild(mkChip(CHIP_LABELS[cat]||cat, NAV.type==="cat"&&NAV.value===cat, ()=>{ subOpen=false; setNav("cat",cat); }));
+    fbox.appendChild(mkChip(CHIP_LABELS[cat]||cat, !hasAdv && NAV.type==="cat"&&NAV.value===cat, ()=>{ subOpen=false; setNav("cat",cat); }));
   });
-  // 「更多」永久保持在最後一個，點擊展開產業次選單
-  const more = mkChip("更多", subOpen||NAV.type==="ind", toggleSub);
+  const more = mkChip("更多", !hasAdv && (subOpen||NAV.type==="ind"), toggleSub);
   more.classList.add("more");
   more.setAttribute("aria-expanded", subOpen ? "true" : "false");
   more.innerHTML = '更多<span class="caret" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="m3 5.25 4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
   fbox.appendChild(more);
-  // 手機吸頂時顯示：與主選單同列的進階篩選入口。
   const mobileFilter = document.createElement("button");
   mobileFilter.type = "button";
-  mobileFilter.className = "mobile-sticky-filter";
-  mobileFilter.setAttribute("aria-label", "進階篩選");
+  mobileFilter.className = "mobile-sticky-filter" + (hasAdv ? " on" : "");
+  mobileFilter.setAttribute("aria-label", hasAdv ? `進階篩選（已套用 ${advActiveCount()} 項）` : "進階篩選");
   mobileFilter.title = "進階篩選";
-  mobileFilter.innerHTML = FILTER_ICON;
+  mobileFilter.innerHTML = FILTER_ICON + (hasAdv ? `<span class="mobile-advbadge">${advActiveCount()}</span>` : "");
   mobileFilter.onclick = ()=>{ advOpen ? cancelAdv() : openAdv(); };
   fbox.appendChild(mobileFilter);
   buildSubmenu();
@@ -772,7 +774,7 @@ function buildSubmenu(){
   industryList().forEach(ind=>{
     const b = document.createElement("button");
     b.type = "button";
-    b.className = "subchip" + (NAV.type==="ind"&&NAV.value===ind ? " on" : "");
+    b.className = "subchip" + (advActiveCount()===0 && NAV.type==="ind"&&NAV.value===ind ? " on" : "");
     b.textContent = "#" + ind;
     b.onclick = ()=>{ subOpen=true; setNav("ind",ind); };
     box.appendChild(b);
@@ -822,6 +824,7 @@ function renderTools(){
 }
 
 function storyHtml(c, animate){
+  const prov = [c.source, c.date].filter(Boolean).map(esc).join("・");
   return `
     <article class="card sc${animate ? " enter" : ""}">
       <div class="sc-media">${mediaInner(c)}</div>
@@ -838,6 +841,7 @@ function storyHtml(c, animate){
           ${ringHtml(c)}
         </div>
         <div class="sc-summary"><div class="sec-label">重點摘要</div><p>${esc(c.blurb || c.takeaway)}</p></div>
+        ${prov?`<div class="prov">原文出處：${prov}</div>`:""}
         <div class="sc-actions"><a class="read-btn" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a></div>
       </div>
     </article>`;
@@ -846,7 +850,7 @@ function cancelAdv(){ advOpen = false; syncUI(); }                    // 取消�
 function applyAdv(){
   if(countWith(PENDING) === 0) return;                               // 0 筆不可套用
   ADV = {...PENDING};
-  NAV = {type:"all", value:null};                                    // 進階篩選獨立、不與主選單 tab 關聯
+  // 保留原主選單狀態；篩選清除後可無縫回復該選取項。
   advOpen = false;
   visibleCount = RUN.batchSize;
   syncUI();
@@ -877,8 +881,9 @@ function renderAdvanced(){
   const hasPending = ADV_KEYS.some(k=>PENDING[k]);
   const nRes = countWith(PENDING);
   const CLR_ICON = `<svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 3.5A6 6 0 1 0 14 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M13.5 1.5v3h-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-  const applyLabel = !hasPending ? "尚未篩選" : ("篩選出 " + nRes + " 筆");
-  const applyDisabled = (!hasPending || nRes===0);
+  const hasApplied = advActiveCount() > 0;
+  const applyLabel = !hasPending ? (hasApplied ? "清除篩選" : "尚未篩選") : ("篩選出 " + nRes + " 筆");
+  const applyDisabled = ((!hasPending && !hasApplied) || nRes===0);
   const foot = document.createElement("div");
   foot.className = "adv-foot";
   foot.innerHTML = (hasPending ? `<button type="button" class="adv-clear-mini" id="adv-clear">${CLR_ICON}清除篩選</button>` : `<span></span>`)
