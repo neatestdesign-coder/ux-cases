@@ -81,6 +81,9 @@
     box-shadow:0 10px 26px -18px rgba(23,27,41,.24);
   }
   .toolbar-row{display:flex;align-items:center;gap:12px}
+  /* 開啟進階篩選時，讓篩選本身成為唯一焦點；其他導覽／工具退場。 */
+  .sticky-head.adv-open .toolbar{display:none}
+  .sticky-head.adv-open .tools > :not(.adv-anchor){display:none}
   /* 進階篩選開啟時：popup 外半透明模糊遮罩，點擊即取消返回 */
   .adv-backdrop{position:fixed;inset:0;z-index:15;background:rgba(238,241,245,.4);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
   .adv-backdrop[hidden]{display:none}
@@ -221,9 +224,9 @@
   .sc-fallback span{font-size:12px;color:var(--ink2);font-weight:600;margin-top:7px;max-width:82%;line-height:1.5}
   .noimg > .sc-img{display:none}
   .noimg > .sc-fallback{display:flex}
-  .sc-body{flex:1;min-width:0;padding:24px 28px;display:flex;flex-direction:column;gap:13px}
+  .sc-body{--story-space:16px;flex:1;min-width:0;padding:24px 28px;display:flex;flex-direction:column;gap:var(--story-space)}
   .sc-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}
-  .sc-headmain{flex:1;min-width:0;display:flex;flex-direction:column;gap:10px}
+  .sc-headmain{flex:1;min-width:0;display:flex;flex-direction:column;gap:var(--story-space)}
   .sc-body h2{font-size:24px}
   .sc-blurb{font-size:15px;line-height:1.8;color:var(--ink);font-weight:600}
 
@@ -241,7 +244,7 @@
     .card-hero{height:172px;aspect-ratio:auto;margin:0 0 18px;border-radius:var(--r-inner)}
   }
 
-  .badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+  .badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0}
   .badge{font-size:11.5px;padding:4px 12px;border-radius:999px;font-weight:700;letter-spacing:.02em}
   .b-cat{background:rgba(255,255,255,.7);border:1px solid var(--stroke);color:var(--ink2);font-weight:600}
   .b-ind{background:rgba(255,255,255,.55);border:1px solid var(--stroke);color:var(--ink2);font-weight:600}
@@ -308,7 +311,8 @@
 
   .prov{font-size:12px;color:var(--ink3);margin:0 0 0 auto;padding:0;max-width:58%;font-weight:500;line-height:1.55;text-align:right}
 
-  .actions,.sc-actions{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:nowrap;margin-top:12px}
+  .actions,.sc-actions{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:nowrap}
+  .actions{margin-top:12px}
   .read-btn{
     display:inline-flex;align-items:center;gap:7px;
     background:var(--navy);color:#fff;text-decoration:none;
@@ -361,9 +365,10 @@
   }
   .load-done i{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 3px var(--lime-soft);flex-shrink:0}
 
-  .rejected-zone{margin-top:64px;background:rgba(255,255,255,.74);border:1px solid var(--stroke);border-radius:28px;padding:18px 20px 26px;box-shadow:var(--sh-card),inset 0 0 0 1px rgba(255,255,255,.7)}
+  .rejected-zone{margin-top:64px;background:rgba(255,255,255,.74);border:1px solid var(--stroke);border-radius:28px;padding:18px 20px 18px;box-shadow:var(--sh-card),inset 0 0 0 1px rgba(255,255,255,.7)}
   .rej-summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;user-select:none;width:100%;background:transparent;border:0;border-radius:16px;padding:6px 4px 12px;box-shadow:none}
   .rej-summary::-webkit-details-marker{display:none}
+  .rej-summary:hover{color:inherit;box-shadow:none}
   .rej-summary::after{margin-left:auto;color:var(--reject)}
   .rz-h{font-size:16px;font-weight:800;letter-spacing:-.01em;color:var(--reject)}
   .rz-count{font-size:12.5px;font-weight:800;color:var(--reject);background:rgba(160,85,67,.1);border:1px solid rgba(160,85,67,.2);border-radius:999px;padding:2px 10px;font-variant-numeric:tabular-nums}
@@ -396,7 +401,8 @@
     h1{font-size:30px}
     .sub{font-size:13.5px}
     .eyebrow{font-size:10px;padding:5px 9px}
-    .actions,.sc-actions{gap:10px;margin-top:10px}
+    .actions,.sc-actions{gap:10px}
+    .actions{margin-top:10px}
     .prov{font-size:10.5px;max-width:60%}
     .rejected-zone{margin-top:42px;padding:14px 12px 18px;border-radius:22px}
     .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%}
@@ -448,6 +454,8 @@
       -webkit-overflow-scrolling:touch;scrollbar-width:none;border-radius:24px;
       transition:padding var(--ease),background var(--ease);
     }
+    .sticky-head.adv-open .tools{order:1}
+    .sticky-head.adv-open .submenu-wrap{display:none}
     .toolbar::-webkit-scrollbar{display:none}
     .toolbar .chip{flex:0 0 auto;white-space:nowrap;padding-top:6px;padding-bottom:6px;transition:padding var(--ease),transform var(--ease),font-size var(--ease)}
     .mobile-sticky-filter{
@@ -477,8 +485,8 @@
 <header class="header-grid">
   <div class="header-left">
     <div class="eyebrow">每日更新</div>
-    <h1>UX 商業案例分享</h1>
-    <p class="sub">學習與借鏡全球真實案例，增長你的產品思維與競爭力</p>
+    <h1>全球 UX 商業案例</h1>
+    <p class="sub">增長 Product Sense 與營收</p>
   </div>
   <div class="stats">
     <div class="stat"><b id="st-scanned">—</b><span>掃描文章</span></div>
@@ -885,6 +893,7 @@ function applyAdv(){
 function renderAdvanced(){
   const box = document.getElementById("adv");
   const wrap = document.getElementById("adv-wrap");
+  document.getElementById("sticky-head").classList.toggle("adv-open", advOpen);
   box.innerHTML = "";
   FACETS.forEach(facet=>{
     const cur = PENDING[facet.key];
