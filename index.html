@@ -440,7 +440,8 @@
     .metric span{font-size:10px;line-height:1.4;display:block;overflow-wrap:anywhere;word-break:break-word}
     /* 行動列：雷達左、閱讀原文右、等寬並排；展開雷達時佔滿整列 */
     .actions{flex-direction:row;align-items:stretch;gap:10px}
-    .actions .read-btn{order:2;flex:1 1 0;justify-content:center}
+    .actions .read-btn,.sc-actions .read-btn{order:2;flex:0 0 auto;margin-left:auto;justify-content:center}
+    .actions .prov,.sc-actions .prov{order:1;margin:0 auto 0 0;max-width:58%;text-align:left}
     .actions details{order:1;flex:1 1 0;min-width:0;align-items:stretch}
     .actions details[open]{flex-basis:100%}
     .actions summary{width:100%;text-align:center;padding:9px 0}
@@ -717,7 +718,7 @@ function cardHtml(c, animate){
           ${c.caveat?`<div class="caveat"><b>保留意見</b>　${esc(c.caveat)}</div>`:""}</div>
       </div>
       <div class="actions">
-        <a class="read-btn" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a>${prov?`<div class="prov">原文出處：${prov}</div>`:""}
+        <a class="read-btn" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a>${prov?`<div class="prov">${prov}</div>`:""}
       </div>
     </article>`;
 }
@@ -879,7 +880,7 @@ function storyHtml(c, animate){
           ${ringHtml(c)}
         </div>
         <div class="sc-summary"><div class="sec-label">重點摘要</div><p>${esc(c.blurb || c.takeaway)}</p></div>
-        <div class="sc-actions"><a class="read-btn" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a>${prov?`<div class="prov">原文出處：${prov}</div>`:""}</div>
+        <div class="sc-actions"><a class="read-btn" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a>${prov?`<div class="prov">${prov}</div>`:""}</div>
       </div>
     </article>`;
 }
