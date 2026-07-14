@@ -1,10 +1,68 @@
 {
-  "updated": "2026-07-12",
+  "updated": "2026-07-14",
   "run": {
-    "scanned": 34,
+    "scanned": 54,
     "candidates": 4
   },
   "cases": [
+    {
+      "title": "Duolingo Android 效能改善：啟動成功率 91%→94.7%，直接帶回數十萬 DAU",
+      "original_title": "How we boosted Android app performance (and DAUs!)",
+      "url": "https://blog.duolingo.com/android-app-performance/",
+      "source": "Duolingo Blog",
+      "tier": 1,
+      "date": "2025-06",
+      "author": "Chenglai Huang、Michael Huang（Duolingo）",
+      "cats": [
+        "國際品牌",
+        "經典案例"
+      ],
+      "industry": "教育",
+      "why": "入門級 Android 裝置的學習者因啟動太慢而離開：2024 年初，39% 使用者要等超過 5 秒才開得起 App。這不只傷害體驗，也直接限制 Duolingo 在新興市場擴大 DAU 的能力。",
+      "how": "團隊沒有只追啟動秒數，而是把「成功進入首頁」定為 App open conversion，並列為全公司防止效能倒退的護欄指標。2024 年跑超過 200 個 A/B 測試：延後非必要廣告初始化、把大型課程資料切段按需載入、移除阻塞網路請求，並在結束課程時先呈現完成畫面、把資料提交移到背景。",
+      "result": "入門機 App open conversion 從 91% 升至 94.7%；等待超過 5 秒的比例從 39% 降至 8%；效能改善直接帶來數十萬 DAU 增量。單是延後廣告載入，就縮短約 1.5 秒啟動時間、每天少流失約 2 萬名學習者。",
+      "caveat": "文章由當事團隊撰寫、數據與方法透明，但未逐項公開每個 A/B 測試的樣本量與顯著性；「數十萬 DAU」未給精確值。",
+      "takeaway": "效能不是技術 KPI，而是轉換漏斗：別只量 latency，要量「使用者是否成功走到下一個價值節點」。把它設成護欄指標，才不會讓其他產品實驗默默損害體驗。",
+      "metrics": [
+        [
+          "91%→94.7%",
+          "入門機 App open conversion"
+        ],
+        [
+          "39%→8%",
+          "啟動逾 5 秒的使用者"
+        ],
+        [
+          "200+",
+          "2024 年效能 A/B 測試"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "score_notes": [
+        "效能問題明確連到新興市場留存與 DAU 成長",
+        "有指標選擇、技術取捨、A/B 測試與跨職能執行過程",
+        "有 baseline→結果、多項指標與每日流失估算",
+        "Duolingo 當事工程團隊親撰、作者具名",
+        "App open conversion 作為護欄指標可套用到任何效能／體驗改版"
+      ],
+      "f_goal": [
+        "再互動"
+      ],
+      "f_product": [
+        "行動 App"
+      ],
+      "f_industry": [
+        "教育"
+      ],
+      "image": "https://storage.ghost.io/c/7a/33/7a33d0f4-927d-4fe8-a6bf-96131b5e76d4/content/images/size/w1200/2025/06/Screenshot-2025-06-11-at-3.55.48-PM.png",
+      "blurb": "把「啟動速度」改寫成「能不能成功進入首頁」；效能一旦綁定行為轉換，才會成為真正的成長槓桿。"
+    },
     {
       "title": "B2B 機械網站找得到率 4→7.4 分（+85%）：質性研究驅動的資訊架構重建",
       "original_title": "Quantifying UX Improvements: A Case Study",
