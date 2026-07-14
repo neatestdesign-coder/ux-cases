@@ -47,7 +47,7 @@
 
   .header-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
   .header-left{flex:1 1 480px;min-width:280px}
-  h1{font-size:40px;font-weight:900;letter-spacing:4px;line-height:1.2}
+  h1{font-size:40px;font-weight:900;letter-spacing:2px;line-height:1.2}
   .sub{color:var(--ink2);font-size:15px;margin-top:14px;max-width:560px}
 
   .stats{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start;margin-top:8px}
@@ -65,7 +65,7 @@
   .sticky-head{
     --sticky-top:16px;
     position:sticky;top:var(--sticky-top);z-index:20;isolation:isolate;
-    margin:40px 0 30px;
+    margin:30px 0 30px;
   }
   .sticky-head::before{content:none}
   .sticky-head.stuck::before{
@@ -77,7 +77,7 @@
     border-bottom:1px solid rgba(23,27,41,.06);
     box-shadow:0 10px 26px -18px rgba(23,27,41,.24);
   }
-  .toolbar-row{display:flex;align-items:flex-start;gap:12px}
+  .toolbar-row{display:flex;align-items:center;gap:12px}
   /* 進階篩選開啟時：popup 外半透明模糊遮罩，點擊即取消返回 */
   .adv-backdrop{position:fixed;inset:0;z-index:15;background:rgba(238,241,245,.4);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
   .adv-backdrop[hidden]{display:none}
@@ -89,7 +89,7 @@
     transition:border-radius .2s ease;
   }
   /* 右側工具列：進階篩選 / 排序 / 排版方式 */
-  .tools{display:flex;gap:8px;align-items:flex-start;margin-left:auto}
+  .tools{display:flex;gap:8px;align-items:center;margin-left:auto}
   .adv-anchor,.sort-anchor{position:relative;flex:0 0 auto}
   .icon-btn{
     display:inline-flex;align-items:center;justify-content:center;width:41px;height:41px;cursor:pointer;font-family:inherit;
@@ -125,13 +125,14 @@
   .chip:hover{color:var(--ink);background:rgba(23,27,41,.05)}
   .chip.on{background:var(--navy);color:#fff;box-shadow:0 6px 16px -4px rgba(23,27,41,.4)}
   .chip.more{display:inline-flex;align-items:center;gap:4px}
-  .chip.more .caret{font-size:20px;line-height:1;opacity:.7;transition:transform var(--ease)}
+  .chip.more .caret{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;opacity:.72;line-height:0;transition:transform var(--ease)}
+  .chip.more .caret svg{display:block}
   .chip.more[aria-expanded="true"] .caret{transform:rotate(180deg)}
 
   /* 產業次選單：單列可橫向捲動的 hashtag（Mobile First，仿 YouTube 分類列）*/
   .submenu-wrap{margin:10px 0 0}
   .submenu{
-    display:flex;gap:8px;overflow-x:auto;padding:10px 4px 20px;
+    display:flex;gap:8px;overflow-x:auto;padding:10px 4px 10px;
     -webkit-overflow-scrolling:touch;scrollbar-width:none;scroll-snap-type:x proximity;
   }
   .submenu::-webkit-scrollbar{display:none}
@@ -203,9 +204,11 @@
   .card.enter{animation:rise .45s cubic-bezier(.2,.7,.3,1) both}
 
   /* ---------- 圖片：精簡故事卡 & 完整卡頂圖 ---------- */
-  .card.sc{padding:0;overflow:hidden;display:flex;align-items:stretch;gap:0}
-  .sc-media{flex:0 0 264px;position:relative;min-height:210px;overflow:hidden;background:linear-gradient(135deg,#e2e8f2,#e9e4f2)}
-  .card-hero{position:relative;height:212px;margin:-30px -34px 22px;overflow:hidden;border-radius:var(--r-card) var(--r-card) 0 0;background:linear-gradient(135deg,#e2e8f2,#e9e4f2)}
+  .card.sc{padding:0;overflow:hidden;display:flex;align-items:flex-start;gap:0}
+  .sc-media{flex:0 0 clamp(250px,24vw,340px);aspect-ratio:1;position:relative;min-height:0;overflow:hidden;background:linear-gradient(135deg,#e2e8f2,#e9e4f2)}
+  .full-intro{display:grid;grid-template-columns:clamp(250px,24vw,340px) minmax(0,1fr);gap:28px;align-items:start}
+  .full-summary{min-width:0}
+  .card-hero{position:relative;aspect-ratio:1;overflow:hidden;border-radius:var(--r-inner);background:linear-gradient(135deg,#e2e8f2,#e9e4f2)}
   .sc-img{width:100%;height:100%;object-fit:cover;display:block}
   .sc-fallback{display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;background:linear-gradient(140deg,#dfe9f6,#e7e2f4 55%,#f3e8ec)}
   .sc-fallback .sc-fav{width:34px;height:34px;border-radius:9px;margin-bottom:12px;box-shadow:0 3px 10px -3px rgba(23,27,41,.3);background:#fff}
@@ -219,12 +222,18 @@
   .sc-body h2{font-size:24px}
   .sc-blurb{font-size:15px;line-height:1.8;color:var(--ink);font-weight:600}
   .sc-actions{margin-top:4px}
-  .card.sc .metrics{margin-top:2px}
+  .sc-summary{
+    background:linear-gradient(135deg,rgba(223,233,246,.90),rgba(231,238,250,.55));
+    border:1px solid rgba(63,100,148,.18);border-radius:var(--r-inner);padding:18px 20px;
+  }
+  .sc-summary .sec-label{color:var(--t2-fg)}
+  .sc-summary p{font-size:14.5px;line-height:1.75;color:#2b3b52;font-weight:600}
   @media (max-width:640px){
     .card.sc{flex-direction:column}
-    .sc-media{flex-basis:auto;min-height:172px}
+    .sc-media{width:100%;flex-basis:auto;aspect-ratio:auto;min-height:172px}
     .sc-body{padding:18px 18px}
-    .card-hero{height:172px;margin:-22px -18px 18px}
+    .full-intro{display:block}
+    .card-hero{height:172px;aspect-ratio:auto;margin:0 0 18px;border-radius:var(--r-inner)}
   }
 
   .badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
@@ -237,7 +246,7 @@
   .b-cat.tag:hover{color:var(--ink);box-shadow:var(--sh-card)}
 
   .card-top{display:flex;justify-content:space-between;gap:22px;align-items:flex-start;flex-wrap:wrap}
-  h2{font-size:24px;font-weight:800;letter-spacing:2px;line-height:1.4}
+  h2{font-size:24px;font-weight:800;letter-spacing:1px;line-height:1.4}
   h2 a{color:inherit;text-decoration:none;transition:var(--ease)}
   h2 a:hover{color:var(--t2-fg);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
   .meta{font-size:12.5px;color:var(--ink3);margin-top:6px;font-weight:500}
@@ -608,20 +617,24 @@ function cardHtml(c, animate){
   const prov = [c.source, c.date].filter(Boolean).map(esc).join("・");
   return `
     <article class="card has-hero${animate ? " enter" : ""}">
-      <div class="card-hero">${mediaInner(c)}</div>
-      <div class="badges">
-        ${c.industry?`<button type="button" class="badge b-ind tag" data-ind="${esc(c.industry)}">#${esc(c.industry)}</button>`:""}
-        ${c.cats.filter(x=>x!=="更多案例").map(x=>`<button type="button" class="badge b-cat tag" data-cat="${esc(x)}">${esc(x)}</button>`).join("")}
-        <span class="badge b-src">${esc(c.source)}</span>
-      </div>
-      <div class="card-top">
-        <div style="flex:1;min-width:250px">
-          <h2><a href="${esc(c.url)}" target="_blank" rel="noopener" title="閱讀原文">${esc(c.title)}</a></h2>
+      <div class="full-intro">
+        <div class="card-hero">${mediaInner(c)}</div>
+        <div class="full-summary">
+        <div class="badges">
+          ${c.industry?`<button type="button" class="badge b-ind tag" data-ind="${esc(c.industry)}">#${esc(c.industry)}</button>`:""}
+          ${c.cats.filter(x=>x!=="更多案例").map(x=>`<button type="button" class="badge b-cat tag" data-cat="${esc(x)}">${esc(x)}</button>`).join("")}
+          <span class="badge b-src">${esc(c.source)}</span>
         </div>
-        ${ringHtml(total(c), true)}
+        <div class="card-top">
+          <div style="flex:1;min-width:250px">
+            <h2><a href="${esc(c.url)}" target="_blank" rel="noopener" title="閱讀原文">${esc(c.title)}</a></h2>
+          </div>
+          ${ringHtml(total(c), true)}
+        </div>
+        <div class="metrics m-${Math.min(c.metrics.length,4)}">${c.metrics.map(m=>`<div class="metric"><b>${esc(m[0])}</b><span>${esc(m[1])}</span></div>`).join("")}</div>
+        <div class="takeaway"><div class="sec-label">核心觀點</div><p>${esc(c.takeaway)}</p></div>
+        </div>
       </div>
-      <div class="metrics m-${Math.min(c.metrics.length,4)}">${c.metrics.map(m=>`<div class="metric"><b>${esc(m[0])}</b><span>${esc(m[1])}</span></div>`).join("")}</div>
-      <div class="takeaway"><div class="sec-label">核心觀點</div><p>${esc(c.takeaway)}</p></div>
       <div class="story">
         <div class="step"><div class="step-label">問題／目標</div><p>${esc(c.why)}</p></div>
         <div class="step"><div class="step-label">思維與作法</div><p>${esc(c.how)}</p></div>
@@ -688,7 +701,7 @@ function buildChips(){
   const more = mkChip("更多", subOpen||NAV.type==="ind", toggleSub);
   more.classList.add("more");
   more.setAttribute("aria-expanded", subOpen ? "true" : "false");
-  more.innerHTML = '更多<span class="caret" aria-hidden="true">▾</span>';
+  more.innerHTML = '更多<span class="caret" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="m3 5.25 4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
   fbox.appendChild(more);
   buildSubmenu();
 }
@@ -776,8 +789,7 @@ function storyHtml(c, animate){
           </div>
           ${ringHtml(total(c), true)}
         </div>
-        <div class="metrics m-${Math.min(c.metrics.length,4)}">${c.metrics.map(mm=>`<div class="metric"><b>${esc(mm[0])}</b><span>${esc(mm[1])}</span></div>`).join("")}</div>
-        <p class="sc-blurb">${esc(c.blurb || c.takeaway)}</p>
+        <div class="sc-summary"><div class="sec-label">重點摘要</div><p>${esc(c.blurb || c.takeaway)}</p></div>
         <div class="sc-actions"><a class="read-btn" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a></div>
       </div>
     </article>`;
