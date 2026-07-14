@@ -49,8 +49,7 @@
   .header-left{flex:1 1 480px;min-width:280px}
   .eyebrow{display:inline-flex;align-items:center;background:rgba(255,255,255,.72);border:1px solid var(--stroke);box-shadow:inset 0 0 0 1px rgba(255,255,255,.65);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--t2-fg);line-height:1}
   h1{font-size:40px;font-weight:900;letter-spacing:2px;line-height:1.2;margin-top:10px}
-  .sub{color:var(--ink2);font-size:15px;margin-top:14px;max-width:560px;line-height:1.7}
-  .sub span{display:block}
+  .sub{color:var(--ink2);font-size:15px;margin-top:14px;max-width:760px;line-height:1.7}
 
   .stats{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start;margin-top:8px}
   .stat{
@@ -479,7 +478,7 @@
   <div class="header-left">
     <div class="eyebrow">每日更新</div>
     <h1>UX 商業案例分享</h1>
-    <p class="sub"><span>學習與借鏡全球真實案例</span><span>增長你的產品思維與競爭力</span></p>
+    <p class="sub">學習與借鏡全球真實案例，增長你的產品思維與競爭力</p>
   </div>
   <div class="stats">
     <div class="stat"><b id="st-scanned">—</b><span>掃描文章</span></div>
@@ -723,10 +722,18 @@ let SORT = "score";      // score（評分）| date（最新，依原文發布�
 let visibleCount = 15;
 let FACETS = [];
 const CHIP_LABELS = {};
-const CAT_ORDER = ["國際品牌","經典案例"];   // 「顧問／商業」不出現於主選單
+const CAT_ORDER = ["國際品牌","經典案例"];   // 兩個導覽分流，避免同一文章重複出現在兩個 tab
 const IND_ORDER = ["電商","SaaS","生產力","教育","媒體","內容平台","社群","工業","顧問"];
 const ADV_KEYS = ["goal","product","industry"];
 const advActiveCount = ()=> ADV_KEYS.filter(k=>ADV[k]).length;
+
+// 「經典案例」優先收納該領域的必讀案例；即使案例也來自國際品牌，
+// 在主選單中仍只歸到一個目的地，避免使用者跨 tab 看到同一篇文章。
+function navCategoryOf(c){
+  if((c.cats||[]).includes("經典案例")) return "經典案例";
+  if((c.cats||[]).includes("國際品牌")) return "國際品牌";
+  return null;
+}
 
 const FILTER_ICON = `<svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.5 2.25h3v10.1h2.85L5 17.75.65 12.35H3.5V2.25Z" fill="currentColor"/><path d="M13.5 17.75h-3V7.65H7.65L12 2.25l4.35 5.4H13.5v10.1Z" fill="currentColor"/></svg>`;
 const SORT_ICON = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4.5 2.5v11M4.5 13.5 2.5 11M4.5 2.5 6.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5 13.5v-11M11.5 2.5 9.5 5M11.5 13.5 13.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
@@ -827,12 +834,11 @@ function renderTools(){
   if(sb){
     sb.className = "icon-btn" + ((sortOpen || SORT!=="score") ? " on" : "");
     sb.innerHTML = SORT_ICON;
-    sb.onclick = ()=>{ sortOpen = !sortOpen; advOpen = false; syncUI(); };
+    sb.setAttribute("aria-expanded", String(sortOpen));
     const pop = document.getElementById("sort-pop");
     if(pop){
       pop.innerHTML = [["date","最新","依原文發布時間"],["score","評分","依五維總分"]]
         .map(([k,l,s])=>`<button type="button" class="pop-item${SORT===k?' on':''}" data-sort="${k}">${l}<span class="pi-sub">${s}</span></button>`).join("");
-      pop.querySelectorAll(".pop-item").forEach(b=> b.onclick = ()=>{ SORT = b.dataset.sort; sortOpen = false; visibleCount = RUN.batchSize; syncUI(); });
       pop.hidden = !sortOpen;
     }
   }
@@ -841,7 +847,6 @@ function renderTools(){
     lb.className = "icon-btn" + (VIEW==="full" ? " on" : "");
     lb.innerHTML = VIEW==="brief" ? LAYOUT_BRIEF_ICON : LAYOUT_FULL_ICON;
     lb.title = VIEW==="brief" ? "切換為完整排版" : "切換為精簡排版";
-    lb.onclick = ()=>{ VIEW = VIEW==="brief" ? "full" : "brief"; syncUI(); };
   }
 }
 
@@ -950,7 +955,7 @@ function filteredList(){
       if(ADV.product && !(c.f_product||[]).includes(ADV.product)) return false;
       if(ADV.industry && !(c.f_industry||[]).includes(ADV.industry)) return false;
     } else {
-      if(NAV.type==="cat" && !(c.cats||[]).includes(NAV.value)) return false;
+      if(NAV.type==="cat" && navCategoryOf(c)!==NAV.value) return false;
       if(NAV.type==="ind" && c.industry!==NAV.value) return false;
     }
     return true;
@@ -1002,6 +1007,39 @@ function wireBadgeFilter(){
   });
 }
 
+// 工具列採事件委派：render/syncUI 會重繪按鈕內容，若將 click handler
+// 綁在每一次重繪的節點上，快速點擊或版面切換時可能遺失事件。
+function wireToolbarInteractions(){
+  const row = document.getElementById("toolbar-row");
+  row.addEventListener("click", e=>{
+    const sortBtn = e.target.closest("#sort-btn");
+    if(sortBtn){
+      e.preventDefault();
+      e.stopPropagation();
+      sortOpen = !sortOpen;
+      advOpen = false;
+      syncUI();
+      return;
+    }
+    const sortItem = e.target.closest("#sort-pop .pop-item");
+    if(sortItem){
+      e.preventDefault();
+      e.stopPropagation();
+      SORT = sortItem.dataset.sort;
+      sortOpen = false;
+      visibleCount = RUN.batchSize;
+      syncUI();
+      return;
+    }
+    const layoutBtn = e.target.closest("#layout-btn");
+    if(layoutBtn){
+      e.preventDefault();
+      VIEW = VIEW==="brief" ? "full" : "brief";
+      syncUI();
+    }
+  });
+}
+
 function renderRejected(){
   const rc = document.getElementById("rej-count");
   if(rc) rc.textContent = REJECTED.length;
@@ -1030,9 +1068,10 @@ function init(){
   renderRejected();
   render();
   wireBadgeFilter();
+  wireToolbarInteractions();
   const bd = document.getElementById("adv-backdrop");
   if(bd) bd.onclick = cancelAdv;
-  document.addEventListener("click", e=>{
+  document.addEventListener("pointerdown", e=>{
     const target = e.target;
     if(sortOpen && !target.closest(".sort-anchor")){ sortOpen = false; syncUI(); }
     const score = target.closest(".score[data-radar-key]");
