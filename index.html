@@ -47,8 +47,10 @@
 
   .header-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
   .header-left{flex:1 1 480px;min-width:280px}
-  h1{font-size:40px;font-weight:900;letter-spacing:2px;line-height:1.2}
-  .sub{color:var(--ink2);font-size:15px;margin-top:14px;max-width:560px}
+  .eyebrow{display:inline-flex;align-items:center;background:rgba(255,255,255,.72);border:1px solid var(--stroke);box-shadow:inset 0 0 0 1px rgba(255,255,255,.65);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--t2-fg);line-height:1}
+  h1{font-size:40px;font-weight:900;letter-spacing:2px;line-height:1.2;margin-top:10px}
+  .sub{color:var(--ink2);font-size:15px;margin-top:14px;max-width:560px;line-height:1.7}
+  .sub span{display:block}
 
   .stats{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start;margin-top:8px}
   .stat{
@@ -225,7 +227,7 @@
   .sc-headmain{flex:1;min-width:0;display:flex;flex-direction:column;gap:10px}
   .sc-body h2{font-size:24px}
   .sc-blurb{font-size:15px;line-height:1.8;color:var(--ink);font-weight:600}
-  .sc-actions{margin-top:4px}
+
   .sc-summary{
     background:linear-gradient(135deg,rgba(220,239,255,.98),rgba(242,248,255,.92));
     border:1px solid rgba(73,137,205,.24);border-radius:var(--r-inner);padding:18px 20px;
@@ -305,9 +307,9 @@
   .takeaway .sec-label{color:var(--lime-ink);letter-spacing:.1em}
   .takeaway p{font-size:14.5px;color:#333a17}
 
-  .prov{font-size:12px;color:var(--ink3);margin-top:10px;font-weight:500;line-height:1.6;padding:8px 0}
+  .prov{font-size:12px;color:var(--ink3);margin:0 0 0 auto;padding:0;max-width:58%;font-weight:500;line-height:1.55;text-align:right}
 
-  .actions{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;margin-top:12px}
+  .actions,.sc-actions{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:nowrap;margin-top:12px}
   .read-btn{
     display:inline-flex;align-items:center;gap:7px;
     background:var(--navy);color:#fff;text-decoration:none;
@@ -360,13 +362,13 @@
   }
   .load-done i{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 3px var(--lime-soft);flex-shrink:0}
 
-  .rejected-zone{margin-top:64px}
-  .rej-summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;user-select:none;width:100%;background:rgba(255,255,255,.5);border:1px solid var(--stroke);border-radius:16px;padding:15px 22px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.6)}
+  .rejected-zone{margin-top:64px;background:rgba(255,255,255,.74);border:1px solid var(--stroke);border-radius:28px;padding:18px 20px 26px;box-shadow:var(--sh-card),inset 0 0 0 1px rgba(255,255,255,.7)}
+  .rej-summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;user-select:none;width:100%;background:transparent;border:0;border-radius:16px;padding:6px 4px 12px;box-shadow:none}
   .rej-summary::-webkit-details-marker{display:none}
   .rej-summary::after{margin-left:auto;color:var(--reject)}
   .rz-h{font-size:16px;font-weight:800;letter-spacing:-.01em;color:var(--reject)}
   .rz-count{font-size:12.5px;font-weight:800;color:var(--reject);background:rgba(160,85,67,.1);border:1px solid rgba(160,85,67,.2);border-radius:999px;padding:2px 10px;font-variant-numeric:tabular-nums}
-  .rejected-zone>p{font-size:13.5px;color:var(--ink2);margin:16px 0 20px;max-width:560px}
+  .rejected-zone>p{font-size:13.5px;color:var(--ink2);margin:2px 4px 20px;max-width:560px}
   .card.rejected{background:rgba(255,255,255,.4);opacity:.92}
   .card.rejected:hover{transform:none;box-shadow:var(--sh-card), inset 0 0 0 1px rgba(255,255,255,.65)}
   .card.rejected .ring .val{stroke:var(--reject)}
@@ -394,6 +396,10 @@
     .wrap{width:auto;padding:28px 16px 64px}
     h1{font-size:30px}
     .sub{font-size:13.5px}
+    .eyebrow{font-size:10px;padding:5px 9px}
+    .actions,.sc-actions{gap:10px;margin-top:10px}
+    .prov{font-size:10.5px;max-width:60%}
+    .rejected-zone{margin-top:42px;padding:14px 12px 18px;border-radius:22px}
     .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%}
     .stat{min-width:0;padding:12px 12px;border-radius:16px}
     .stat b{font-size:19px}
@@ -471,8 +477,9 @@
 
 <header class="header-grid">
   <div class="header-left">
+    <div class="eyebrow">每日更新</div>
     <h1>UX 商業案例分享</h1>
-    <p class="sub">每天自動收集全球「看得到商業脈絡、決策過程與質量化成果」的真實案例。</p>
+    <p class="sub"><span>學習與借鏡全球真實案例</span><span>增長你的產品思維與競爭力</span></p>
   </div>
   <div class="stats">
     <div class="stat"><b id="st-scanned">—</b><span>掃描文章</span></div>
@@ -533,7 +540,7 @@ const RUN = {
   date: "2026-07-11",
   scanned: 28,
   candidates: 9,
-  batchSize: 4,
+  batchSize: 15,
   tierNames: {1:"第一手",2:"深度拆解",3:"商業視角",4:"華文來源"},
   tierStyle: {
     1:"background:var(--t1-bg);color:var(--t1-fg)",
@@ -699,9 +706,8 @@ function cardHtml(c, animate){
         <div class="step result"><div class="step-label">成果</div><p>${esc(c.result)}</p>
           ${c.caveat?`<div class="caveat"><b>保留意見</b>　${esc(c.caveat)}</div>`:""}</div>
       </div>
-      ${prov?`<div class="prov">原文出處：${prov}</div>`:""}
       <div class="actions">
-        <a class="read-btn" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a>
+        <a class="read-btn" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a>${prov?`<div class="prov">原文出處：${prov}</div>`:""}
       </div>
     </article>`;
 }
@@ -714,7 +720,7 @@ let advOpen = false;
 let sortOpen = false;
 let VIEW = "brief";      // brief（圖＋標題＋指標＋摘要，預設）| full（完整）
 let SORT = "score";      // score（評分）| date（最新，依原文發布時間）
-let visibleCount = 4;
+let visibleCount = 15;
 let FACETS = [];
 const CHIP_LABELS = {};
 const CAT_ORDER = ["國際品牌","經典案例"];   // 「顧問／商業」不出現於主選單
@@ -857,8 +863,7 @@ function storyHtml(c, animate){
           ${ringHtml(c)}
         </div>
         <div class="sc-summary"><div class="sec-label">重點摘要</div><p>${esc(c.blurb || c.takeaway)}</p></div>
-        ${prov?`<div class="prov">原文出處：${prov}</div>`:""}
-        <div class="sc-actions"><a class="read-btn" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a></div>
+        <div class="sc-actions"><a class="read-btn" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a>${prov?`<div class="prov">原文出處：${prov}</div>`:""}</div>
       </div>
     </article>`;
 }
@@ -971,7 +976,7 @@ function renderLoadZone(totalLen){
   if(remaining > 0){
     zone.innerHTML = `
       <button class="load-btn" id="load-more">
-        載入更多案例 <span class="count">${remaining}</span>
+        展開更多案例 <span class="count">${Math.min(RUN.batchSize, remaining)}</span>
       </button>`;
     document.getElementById("load-more").onclick = ()=>{
       const from = visibleCount;
@@ -1017,7 +1022,7 @@ function renderRejected(){
 }
 
 function init(){
-  visibleCount = RUN.batchSize || 4;
+  visibleCount = RUN.batchSize || 15;
   buildChips();
   renderAdvToggle();
   renderTools();

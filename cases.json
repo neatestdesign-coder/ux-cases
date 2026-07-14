@@ -1,8 +1,8 @@
 {
   "updated": "2026-07-14",
   "run": {
-    "scanned": 54,
-    "candidates": 4
+    "scanned": 60,
+    "candidates": 10
   },
   "cases": [
     {
@@ -863,6 +863,355 @@
       "f_industry": [],
       "image": "https://s3.amazonaws.com/files.growth.design/cms/cm18280pu002x0tlce36f5kef.png",
       "blurb": "介面能改變真實購買行為——把「被店員盯著點餐」的社會壓力拿掉，人就更敢加點。"
+    },
+    {
+      "title": "Intercom Product Tours：互動式教學讓新用戶啟用率達既有流程 4 倍",
+      "original_title": "Announcing Product Tours: A new way to create powerful, personalized user onboarding",
+      "url": "https://www.intercom.com/blog/announcing-product-tours-for-onboarding/",
+      "source": "Intercom Blog",
+      "tier": 1,
+      "date": "2019-04",
+      "author": "Brian Donohue、Patrick Andrews（Intercom）",
+      "cats": [
+        "國際品牌",
+        "經典案例"
+      ],
+      "industry": "SaaS",
+      "why": "Intercom 發現許多新註冊者尚未體驗核心價值就流失；對訂閱制產品而言，低啟用直接傷害留存與續約。",
+      "how": "團隊把導覽設計為可點擊前進的互動流程，依使用者資料與行為分眾，在正確情境觸發；同時讓客戶不需工程資源即可快速建立、修正多頁導覽。",
+      "result": "Beta 使用者的導覽第二步互動率平均 64%；相較 Email 高 7 倍、相較一般站內訊息高 6 倍；其中客戶 Hike SEO 回報，完成導覽的新用戶啟用率是既有流程的 4 倍。",
+      "caveat": "4 倍啟用率為客戶個案；64% 為 Beta 客戶平均第二步互動率，兩者不可直接視為全體長期留存因果。",
+      "takeaway": "教學導覽不是功能說明書；先定義使用者真正感到價值的 aha moment，再把引導放在行為需要發生的當下。",
+      "metrics": [
+        [
+          "64%",
+          "導覽第二步互動率"
+        ],
+        [
+          "7×",
+          "相對 Email 的互動提升"
+        ],
+        [
+          "4×",
+          "客戶回報的新用戶啟用率"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "score_notes": [
+        "低啟用明確連到訂閱制留存風險",
+        "有分眾、觸發時機、互動設計與建置取捨",
+        "提供平均互動率、對照比較及客戶結果",
+        "Intercom 當事產品團隊發布",
+        "aha moment＋情境觸發可跨產品複用"
+      ],
+      "f_goal": [
+        "教學導覽",
+        "第一印象",
+        "新手引導"
+      ],
+      "f_product": [
+        "SaaS"
+      ],
+      "f_industry": [
+        "SaaS"
+      ],
+      "blurb": "把導覽設計成使用者親手完成價值步驟，而不是被動看提示；啟用才是新手體驗真正該追的成果。"
+    },
+    {
+      "title": "Intercom Resolution Bot：把機器學習做成可被客服團隊採用的 AI 產品",
+      "original_title": "Building Resolution Bot: How to apply machine learning in product development",
+      "url": "https://www.intercom.com/blog/building-resolution-bot-machine-learning-in-product-development/",
+      "source": "Intercom Blog",
+      "tier": 1,
+      "date": "2020-10",
+      "author": "Fergal Reid（Intercom）",
+      "cats": [
+        "國際品牌",
+        "更多案例"
+      ],
+      "industry": "AI",
+      "why": "客服團隊需要更快回覆重複問題，但直接套用機器學習容易產生不可控、難被信任的回答，反而傷害客戶體驗。",
+      "how": "Intercom 以可逐步交付的『cupcake』方式設計 Resolution Bot：先用人工整理的知識與回饋建立可用答案，再把低信心情境交給人員、持續從對話資料校正模型與產品介面。",
+      "result": "Resolution Bot 與 Custom Bots 已服務數千家企業；案例重點不是宣稱單一魔法準確率，而是建立可觀測、可人工介入、可逐步擴大的 AI 客服工作流。",
+      "caveat": "文章未公開單一客戶的前後量化成效；『數千家企業』是產品採用規模，不等同每個客戶的解決率。",
+      "takeaway": "AI 體驗的競爭力不只在模型能力，而是能否把不確定性設計成：知道何時回答、何時交接、如何讓團隊修正。",
+      "metrics": [
+        [
+          "數千家",
+          "已使用 Bot 的企業"
+        ],
+        [
+          "人機交接",
+          "低信心情境保護機制"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "score_notes": [
+        "AI 自動化與客服體驗、商業效率直接相連",
+        "交代漸進交付、人工介入與回饋迴路",
+        "有採用規模但缺單一前後 baseline",
+        "Intercom 當事團隊發布",
+        "人機協作與低信心交接可跨 AI 產品套用"
+      ],
+      "f_goal": [
+        "到達頁",
+        "個人化"
+      ],
+      "f_product": [
+        "SaaS",
+        "系統工具"
+      ],
+      "f_industry": [
+        "AI"
+      ],
+      "blurb": "AI 功能不該只追求『會回答』；先設計可觀測、可交接、可修正的工作流，團隊才敢把它放進真實服務。"
+    },
+    {
+      "title": "VeryChic：用旅程分析讓旅遊平台轉換率提升 6.31%、跳出率下降 12%",
+      "original_title": "How VeryChic improved engagement and conversions by understanding user journeys",
+      "url": "https://contentsquare.com/wp-content/uploads/2022/04/CaseStudy-VeryChic-US-V8.pdf",
+      "source": "Contentsquare",
+      "tier": 2,
+      "date": "2022",
+      "author": "VeryChic × Contentsquare",
+      "cats": [
+        "更多案例",
+        "國際品牌"
+      ],
+      "industry": "旅遊",
+      "why": "會員制旅遊平台 VeryChic 發現 Email 導入飯店頁的使用者有 52% 直接離開，產品頁跳出率也達 47%；近半訂單來自手機，流失直接壓縮預訂收入。",
+      "how": "團隊用行為旅程分析定位猶豫與離開節點，發現旅程開頭缺少繼續探索的誘因與選項；再以 mobile-first 的方式調整頁面引導與下一步推薦。",
+      "result": "桌機與平板的每次點擊轉換率提升 6.31%，跳出率下降 12%，流量增加 2.3%。",
+      "caveat": "公開案例未完整揭露實驗分組、樣本數與手機端個別提升幅度；應視為行為分析帶動優化的可參考案例。",
+      "takeaway": "旅遊決策不是單一頁面成交；先看使用者從信件、飯店頁到下一個選項的整段旅程，才能找到真正造成離開的斷點。",
+      "metrics": [
+        [
+          "+6.31%",
+          "每次點擊轉換率"
+        ],
+        [
+          "−12%",
+          "跳出率"
+        ],
+        [
+          "52%",
+          "Email 導入飯店頁後離開"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "跳出直接連到預訂與轉換",
+        "有旅程分析、問題定位與 mobile-first 優化方向",
+        "有 baseline 與前後 KPI",
+        "合作方案例，非 VeryChic 一手工程復盤",
+        "旅程而非單頁的診斷方法可複用"
+      ],
+      "f_goal": [
+        "到達頁",
+        "結帳"
+      ],
+      "f_product": [
+        "電商",
+        "行動 App"
+      ],
+      "f_industry": [
+        "旅遊"
+      ],
+      "blurb": "別只優化旅遊商品頁本身；先找出使用者在整段探索旅程中失去下一步動機的地方。"
+    },
+    {
+      "title": "Lancôme 登入頁優化：重排帳號入口後，營收提升 15%",
+      "original_title": "Lancôme Increases Revenue by 15% With Login Page Optimization",
+      "url": "https://www.abtasty.com/resources/lancome-increases-revenue/",
+      "source": "AB Tasty",
+      "tier": 2,
+      "date": "2024",
+      "author": "Lancôme × AB Tasty",
+      "cats": [
+        "國際品牌",
+        "更多案例"
+      ],
+      "industry": "電商",
+      "why": "Lancôme 的登入頁跳出率異常高；顧客面對會員登入、訪客結帳、建立帳號等多條路徑，越多選項反而製造離開點。",
+      "how": "團隊先以行為資料定位多入口造成的摩擦，再以 A/B test 把『建立帳號』移到頁面中央、把訪客登入移到右側，測試更清楚的決策層級。",
+      "result": "建立帳號點擊增加 30%，交易量提升 17%，總營收增加 15%。",
+      "caveat": "案例未公開樣本數、實驗期間與各市場差異；結果適合用來學習決策架構，而非直接假設所有登入頁都應把註冊置中。",
+      "takeaway": "登入／註冊頁的任務不是把所有選項平等展示，而是依使用者最可能完成的商業任務，降低下一步決策成本。",
+      "metrics": [
+        [
+          "+30%",
+          "建立帳號點擊"
+        ],
+        [
+          "+17%",
+          "交易量"
+        ],
+        [
+          "+15%",
+          "總營收"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "登入摩擦直接連到交易與營收",
+        "有資料診斷、假設與 A/B test",
+        "提供多項前後成果",
+        "合作方發表，非 Lancôme 自行復盤",
+        "入口排序與測試思路可複用"
+      ],
+      "f_goal": [
+        "登入",
+        "註冊"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_industry": [
+        "電商"
+      ],
+      "blurb": "選項越多不一定越友善；登入頁要先判斷哪一條路最接近使用者的交易目標，再讓它成為最清楚的下一步。"
+    },
+    {
+      "title": "Triggle：把旅宿夥伴儀表板改成決策工具，採用率提升 96%",
+      "original_title": "Transforming an underused dashboard into a decision-making tool with a +96% adoption lift",
+      "url": "https://www.educabellos.com/en/portfolio/triggle-hotels-dashboard-b2b-ux-case-study/",
+      "source": "Edu Cabellos",
+      "tier": 4,
+      "date": "2024",
+      "author": "Edu Cabellos（Triggle Product Design Lead）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "旅遊",
+      "why": "旅宿 SaaS 的報表儀表板使用率低，飯店夥伴看不到可行動的收入與預訂訊號；產品存在卻沒有進入日常決策流程。",
+      "how": "設計負責人訪談旅宿夥伴、舉辦 co-design 工作坊，與 BI、PM 與技術團隊共同重排 KPI 階層、篩選與期間比較，讓資訊從『資料展示』變成『下一步決策』。",
+      "result": "重新設計後的儀表板採用率提升 96%，成為旅宿夥伴檢視預訂、營收與產品表現的日常工具。",
+      "caveat": "為設計師個人作品集，採用率定義與樣本未公開；但問題、過程、跨職能參與與成果鏈路具體。",
+      "takeaway": "儀表板的價值不是多顯示幾張圖，而是讓每個 KPI 都能回答：我現在該採取什麼行動？",
+      "metrics": [
+        [
+          "+96%",
+          "儀表板採用率"
+        ],
+        [
+          "3 sprints",
+          "設計與交付週期"
+        ],
+        [
+          "跨 4 職能",
+          "旅宿、BI、產品、技術協作"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "低採用直接影響 B2B SaaS 價值交付",
+        "有訪談、co-design、資料與跨職能過程",
+        "有採用率成果但缺樣本定義",
+        "當事設計負責人第一人稱作品集",
+        "決策導向 KPI 階層可複用"
+      ],
+      "f_goal": [
+        "儀表板",
+        "站內搜尋"
+      ],
+      "f_product": [
+        "SaaS",
+        "企業級"
+      ],
+      "f_industry": [
+        "旅遊"
+      ],
+      "blurb": "儀表板不該只是報表；每個數字都應該幫使用者更快判斷下一步，而不是增加閱讀負擔。"
+    },
+    {
+      "title": "Nygen Analytics：在使用者碰到價值限制時提示升級，付費轉換提升 15%",
+      "original_title": "Driving Self-Serve Growth",
+      "url": "https://www.romanedesigns.com/case-studies/driving-self-serve-growth",
+      "source": "Romane Braun",
+      "tier": 4,
+      "date": "2025",
+      "author": "Romane Braun（Nygen UX Lead）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "SaaS",
+      "why": "生技 SaaS 的免費方案讓使用者能反覆使用進階功能卻未意識到方案價值；升級流程人工、隱藏且容易中斷，造成營收漏斗斷裂。",
+      "how": "UX Lead 與產品、工程重做 self-serve 升級：在使用者試圖使用進階功能時呈現情境式提示，讓人能在產品內選方案、輸入付款並立即解鎖，不再跳離工作流。",
+      "result": "3 個月內付費轉換率提升 15%，啟用率提升 10%，每月因自助升級與減少支援節省 25 小時。",
+      "caveat": "作者明示數字為依內部洞察估算、並非公司正式公開數據；適合作為產品內升級節點的設計參考。",
+      "takeaway": "升級 CTA 最有效的時機不是隨機推銷，而是使用者已經在完成任務、剛好遇到限制的那一刻。",
+      "metrics": [
+        [
+          "+15%",
+          "付費轉換率"
+        ],
+        [
+          "+10%",
+          "啟用率"
+        ],
+        [
+          "25 小時/月",
+          "自助升級節省的支援時間"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "免費到付費漏斗直接連到營收",
+        "有情境觸發、產品內付款與跨職能過程",
+        "提供期間與三項量化結果",
+        "當事 UX Lead 作品集，數字為估算",
+        "限制觸發的升級設計高度可複用"
+      ],
+      "f_goal": [
+        "升級",
+        "付款",
+        "到達頁"
+      ],
+      "f_product": [
+        "SaaS"
+      ],
+      "f_industry": [
+        "SaaS"
+      ],
+      "blurb": "把升級放在使用者已經感受到價值、但剛遇到限制的節點；它才像解除阻礙，而不是打斷工作。"
     }
   ],
   "rejected": [

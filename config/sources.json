@@ -29,6 +29,8 @@
         { "name": "Nielsen Norman Group", "domain": "nngroup.com", "lang": "en" },
         { "name": "Baymard Institute", "domain": "baymard.com", "lang": "en" },
         { "name": "Lenny's Newsletter", "domain": "lennysnewsletter.com", "lang": "en" },
+        { "name": "AB Tasty Case Studies", "domain": "abtasty.com", "lang": "en", "note": "僅收具實驗設計與可驗證成果的案例" },
+        { "name": "Contentsquare Case Studies", "domain": "contentsquare.com", "lang": "en", "note": "僅收具行為洞察、改動與成果鏈路的案例" },
         { "name": "UX Collective", "domain": "uxdesign.cc", "lang": "en", "note": "Medium 出版物中少數有編輯把關的" }
       ]
     },
@@ -53,6 +55,8 @@
         { "name": "人人都是產品經理", "domain": "woshipm.com", "lang": "zh", "filter": "僅收原創標記且文內有具體 baseline→成果數據者" },
         { "name": "AAPD (Medium)", "domain": "medium.com/as-a-product-designer", "lang": "zh", "region": "台灣" },
         { "name": "UX 四神湯 (Medium)", "domain": "medium.com/uxeastmeetswest", "lang": "zh", "region": "台灣" },
+        { "name": "Edu Cabellos UX Case Studies", "domain": "educabellos.com", "lang": "en", "region": "歐洲", "filter": "個人顧問案例，僅收具體研究、設計過程與可驗證成果者" },
+        { "name": "Romane Designs Case Studies", "domain": "romanedesigns.com", "lang": "en", "region": "歐洲", "filter": "個人顧問案例，僅收客戶背景、策略與成果清楚揭露者" },
         { "name": "note.com（UX/事業改善タグ）", "domain": "note.com", "lang": "ja", "region": "日本", "filter": "UGC 平台，僅收當事團隊復盤且有數據者" },
         { "name": "Goodpatch Blog", "domain": "goodpatch.com", "lang": "ja", "region": "日本" }
       ]
