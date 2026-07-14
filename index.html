@@ -305,7 +305,7 @@
   .takeaway .sec-label{color:var(--lime-ink);letter-spacing:.1em}
   .takeaway p{font-size:14.5px;color:#333a17}
 
-  .prov{font-size:12px;color:var(--ink3);margin-top:20px;font-weight:500;line-height:1.6;padding:16px 0}
+  .prov{font-size:12px;color:var(--ink3);margin-top:10px;font-weight:500;line-height:1.6;padding:8px 0}
 
   .actions{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;margin-top:12px}
   .read-btn{
@@ -399,17 +399,27 @@
     .stat b{font-size:19px}
     .stat span{font-size:10px;line-height:1.4;display:block}
     .card{padding:22px 18px;border-radius:22px}
-    .card-top{gap:14px}
-    h2,.sc-body h2{font-size:22px;line-height:1.35}
-    /* 指標區塊：3 項→3 欄一列、2 項→2 欄一列、4 項→2x2、1 項→滿版 */
-    .metrics{display:grid;gap:8px}
+    h2,.sc-body h2{font-size:clamp(21px,6vw,24px);line-height:1.35;overflow-wrap:anywhere}
+    /* 完整卡：標題與評分分列，避免窄螢幕擠壓或換行失序。 */
+    .card-top{display:block}
+    .card-top>div{min-width:0!important}
+    .card-top>.score{margin:12px 0 0 auto}
+    /* 精簡卡：評分固定在標籤區右側；標題取得完整可用寬度。 */
+    .sc-head{display:block;position:relative}
+    .sc-headmain{display:block}
+    .sc-head .badges{min-height:64px;padding-right:76px;align-content:flex-start}
+    .sc-head>.score{position:absolute;top:0;right:0}
+    .sc-head h2{width:100%}
+    /* 指標：3 項維持一列，但每格可在窄螢幕安全換行，杜絕橫向溢出。 */
+    .metrics{display:grid;gap:8px;width:100%;min-width:0}
     .metrics.m-1{grid-template-columns:max-content}
-    .metrics.m-2{grid-template-columns:repeat(2,1fr)}
-    .metrics.m-3{grid-template-columns:repeat(3,1fr)}
-    .metrics.m-4{grid-template-columns:repeat(2,1fr)}
-    .metric{padding:18px 20px;border-radius:12px}
-    .metric b{font-size:15.5px}
-    .metric span{font-size:10px;line-height:1.4;display:block}
+    .metrics.m-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .metrics.m-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .metrics.m-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .metric{min-width:0;padding:16px 14px;border-radius:12px;overflow:hidden}
+    .metrics.m-3 .metric{padding:14px 10px}
+    .metric b{font-size:clamp(13px,4vw,15.5px);overflow-wrap:anywhere;word-break:break-word}
+    .metric span{font-size:10px;line-height:1.4;display:block;overflow-wrap:anywhere;word-break:break-word}
     /* 行動列：雷達左、閱讀原文右、等寬並排；展開雷達時佔滿整列 */
     .actions{flex-direction:row;align-items:stretch;gap:10px}
     .actions .read-btn{order:2;flex:1 1 0;justify-content:center}
@@ -419,18 +429,24 @@
     .story{max-width:none}
     .step{padding-left:26px}
     .step p{font-size:14.5px;line-height:1.85}
+    /* 雷達彈窗：窄螢幕改為單欄，圖表與說明不再溢出。 */
+    .radar-modal{padding:12px}
+    .radar-dialog{padding:18px;max-height:90vh}
+    .radar-dialog .radar-wrap{display:block}
+    .radar-dialog .radar-wrap svg{display:block;width:min(200px,100%);height:auto;margin:0 auto}
+    .radar-dialog .dim-notes{min-width:0;margin-top:14px}
     /* 手機：主選單（滿版橫捲）→ 次選單 → 三顆工具鈕靠右，由上而下 */
     .sticky-head{--sticky-top:8px;top:var(--sticky-top);margin-top:18px;display:flex;flex-direction:column;gap:8px}
     .toolbar-row{display:contents}
     .toolbar{
-      order:1;width:100%;flex-wrap:nowrap;overflow-x:auto;justify-content:space-between;gap:0;
+      order:1;width:100%;flex-wrap:nowrap;overflow-x:auto;justify-content:space-between;gap:0;padding:6px;
       -webkit-overflow-scrolling:touch;scrollbar-width:none;border-radius:24px;
       transition:padding var(--ease),background var(--ease);
     }
     .toolbar::-webkit-scrollbar{display:none}
-    .toolbar .chip{flex:0 0 auto;white-space:nowrap;transition:padding var(--ease),transform var(--ease),font-size var(--ease)}
+    .toolbar .chip{flex:0 0 auto;white-space:nowrap;padding-top:6px;padding-bottom:6px;transition:padding var(--ease),transform var(--ease),font-size var(--ease)}
     .mobile-sticky-filter{
-      display:none;flex:0 0 42px;width:42px;height:42px;align-items:center;justify-content:center;
+      display:none;flex:0 0 38px;width:38px;height:38px;align-items:center;justify-content:center;
       border:none;border-radius:50%;background:rgba(23,27,41,.07);color:var(--ink2);cursor:pointer;
       opacity:0;transform:translateX(10px) scale(.88);transition:opacity var(--ease),transform var(--ease),background var(--ease);
     }
