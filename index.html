@@ -178,7 +178,7 @@
   .adv-chip .cnt{font-size:10.5px;font-weight:800;color:var(--ink3);background:rgba(23,27,41,.06);border-radius:999px;padding:1px 6px;font-variant-numeric:tabular-nums}
   .adv-chip.on .cnt{color:#fff;background:rgba(255,255,255,.22)}
   .adv-chip.zero{opacity:.42}
-  .adv-foot{position:sticky;bottom:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#fff;border-top:1px solid var(--stroke);margin:8px -22px 0;padding:14px 22px 18px;border-radius:0 0 22px 22px}
+  .adv-foot{position:sticky;bottom:0;z-index:2;flex:0 0 auto;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#fff;border-top:1px solid var(--stroke);box-shadow:0 -10px 16px rgba(255,255,255,.96);margin:8px -22px 0;padding:14px 22px 18px;border-radius:0 0 22px 22px}
   .adv-foot-r{display:flex;gap:10px;align-items:center;margin-left:auto}
   .adv-clear-mini{display:inline-flex;align-items:center;gap:6px;cursor:pointer;font-family:inherit;border:none;background:transparent;color:var(--ink3);font-size:12.5px;font-weight:700;padding:6px 4px;transition:var(--ease)}
   .adv-clear-mini:hover{color:var(--ink2)}
@@ -191,7 +191,8 @@
   @media (max-width:640px){
     .adv-toggle .adv-btn-t{display:none}
     .adv-wrap{position:fixed;left:12px;right:12px;bottom:12px;top:auto;width:auto}
-    .adv{padding:16px 16px;max-height:76vh}
+    .adv{padding:16px 16px 0;max-height:76vh;overscroll-behavior:contain}
+    .adv-foot{margin:8px -16px 0;padding:14px 16px calc(18px + env(safe-area-inset-bottom));border-radius:0 0 22px 22px}
   }
 
   .card{
@@ -254,13 +255,20 @@
   h2 a:hover{color:var(--t2-fg);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
   .meta{font-size:12.5px;color:var(--ink3);margin-top:6px;font-weight:500}
 
-  .score{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:4px}
+  .score{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:4px;border:0;background:transparent;padding:0;color:inherit;font:inherit;cursor:pointer;transition:transform var(--ease)}
+  .score:hover{transform:translateY(-2px)}
+  .score:focus-visible{outline:2px solid var(--ink2);outline-offset:5px;border-radius:50%}
   .ring{position:relative;width:64px;height:64px}
   .ring svg{transform:rotate(-90deg)}
   .ring .track{stroke:rgba(23,27,41,.08)}
   .ring .val{stroke:var(--navy);stroke-linecap:round}
   .ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:16.5px;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-  .score small{font-size:10.5px;color:var(--ink3);font-weight:600;letter-spacing:.08em}
+  .radar-modal{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:20px;background:rgba(23,27,41,.34);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .radar-modal[hidden]{display:none}
+  .radar-dialog{position:relative;width:min(460px,100%);max-height:min(720px,88vh);overflow:auto;background:#fff;border:1px solid var(--stroke);border-radius:24px;padding:24px;box-shadow:0 28px 70px -24px rgba(23,27,41,.5)}
+  .radar-title{font-size:16px;font-weight:800;line-height:1.45;padding-right:42px}
+  .radar-close{position:absolute;top:14px;right:14px;width:34px;height:34px;border:1px solid var(--stroke);border-radius:50%;background:#fff;color:var(--ink2);font:inherit;font-size:22px;line-height:1;cursor:pointer}
+  .radar-dialog .radar-wrap{margin-top:12px}
 
   .metrics{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
   .metric{
@@ -478,6 +486,13 @@
 </div>
 </div>
 <div class="adv-backdrop" id="adv-backdrop" hidden></div>
+<div class="radar-modal" id="radar-modal" hidden role="dialog" aria-modal="true" aria-labelledby="radar-title">
+  <div class="radar-dialog" role="document">
+    <button class="radar-close" id="radar-close" type="button" aria-label="關閉">×</button>
+    <div class="radar-title" id="radar-title"></div>
+    <div id="radar-content"></div>
+  </div>
+</div>
 
 <main id="feed"></main>
 <div class="empty" id="empty">此分類今日沒有達標案例——寧缺勿濫。</div>
@@ -586,17 +601,16 @@ const total = c => c.scores.reduce((a,b)=>a+b,0) + bonusOf(c);
 
 function esc(s){ return String(s??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
 
-function ringHtml(score, published){
-  const R = 27, C = 2*Math.PI*R;
+function ringHtml(c){
+  const score = total(c), R = 27, C = 2*Math.PI*R;
   const off = C * (1 - Math.min(score, MAXSCORE)/MAXSCORE);
-  return `<div class="score"><div class="ring">
+  const key = c.url || c.title;
+  return `<button type="button" class="score" data-radar-key="${esc(key)}" aria-label="查看五維品質雷達：${esc(c.title)}"><div class="ring">
     <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
       <circle class="track" cx="32" cy="32" r="${R}" fill="none" stroke-width="5"/>
       <circle class="val" cx="32" cy="32" r="${R}" fill="none" stroke-width="5" stroke-dasharray="${C.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}"/>
-    </svg><b>${score.toFixed(1)}</b></div>
-    <small>${published ? "已發佈" : "未發佈"}</small></div>`;
+    </svg><b>${score.toFixed(1)}</b></div></button>`;
 }
-
 function radarSvg(scores){
   const cx=100, cy=90, R=54, LR=R+21;
   const pt=(i,r)=>{const a=-Math.PI/2 + i*2*Math.PI/5; return [cx+r*Math.cos(a), cy+r*Math.sin(a)];};
@@ -618,6 +632,17 @@ function dimHtml(c, notes){
     `<div class="dnote"><b>${DIMS[i]} ${s}/2</b> — ${esc(notes[i]||"")}</div>`).join("")}</div>` : "";
   return `<div class="radar-wrap">${radarSvg(c.scores)}${noteList}</div>`;
 }
+
+function openRadar(key){
+  const c = [...CASES, ...REJECTED].find(item => (item.url || item.title) === key);
+  if(!c) return;
+  const modal = document.getElementById("radar-modal");
+  document.getElementById("radar-title").textContent = c.title;
+  document.getElementById("radar-content").innerHTML = dimHtml(c, c.score_notes);
+  modal.hidden = false;
+  document.getElementById("radar-close").focus();
+}
+function closeRadar(){ document.getElementById("radar-modal").hidden = true; }
 
 const extIcon = `<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 1.5h7v7M10.5 1.5 1.5 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
@@ -644,7 +669,7 @@ function cardHtml(c, animate){
           <div style="flex:1;min-width:250px">
             <h2><a href="${esc(c.url)}" target="_blank" rel="noopener" title="閱讀原文">${esc(c.title)}</a></h2>
           </div>
-          ${ringHtml(total(c), true)}
+          ${ringHtml(c)}
         </div>
         <div class="metrics m-${Math.min(c.metrics.length,4)}">${c.metrics.map(m=>`<div class="metric"><b>${esc(m[0])}</b><span>${esc(m[1])}</span></div>`).join("")}</div>
         <div class="takeaway"><div class="sec-label">核心觀點</div><p>${esc(c.takeaway)}</p></div>
@@ -659,7 +684,6 @@ function cardHtml(c, animate){
       ${prov?`<div class="prov">原文出處：${prov}</div>`:""}
       <div class="actions">
         <a class="read-btn" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a>
-        <details><summary>五維品質雷達</summary>${dimHtml(c, c.score_notes)}</details>
       </div>
     </article>`;
 }
@@ -811,7 +835,7 @@ function storyHtml(c, animate){
             </div>
             <h2><a href="${esc(c.url)}" target="_blank" rel="noopener" title="閱讀原文">${esc(c.title)}</a></h2>
           </div>
-          ${ringHtml(total(c), true)}
+          ${ringHtml(c)}
         </div>
         <div class="sc-summary"><div class="sec-label">重點摘要</div><p>${esc(c.blurb || c.takeaway)}</p></div>
         <div class="sc-actions"><a class="read-btn" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a></div>
@@ -963,11 +987,10 @@ function renderRejected(){
         <div class="meta">${esc(c.source)}</div>
         <div class="reject-reason">${esc(c.reason)}</div>
       </div>
-      ${ringHtml(c.scores.reduce((a,b)=>a+b,0)+bonusOf(c), false)}
+      ${ringHtml(c)}
     </div>
     <div class="actions">
       <a class="read-btn ghost" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a>
-      <details><summary>五維品質雷達</summary>${dimHtml(c)}</details>
     </div>
   </article>`).join("");
 }
@@ -983,6 +1006,15 @@ function init(){
   wireBadgeFilter();
   const bd = document.getElementById("adv-backdrop");
   if(bd) bd.onclick = cancelAdv;
+  document.addEventListener("click", e=>{
+    const target = e.target;
+    if(sortOpen && !target.closest(".sort-anchor")){ sortOpen = false; syncUI(); }
+    const score = target.closest(".score[data-radar-key]");
+    if(score){ openRadar(score.dataset.radarKey); return; }
+    if(target === document.getElementById("radar-modal")) closeRadar();
+  });
+  document.getElementById("radar-close").onclick = closeRadar;
+  document.addEventListener("keydown", e=>{ if(e.key === "Escape"){ if(!document.getElementById("radar-modal").hidden) closeRadar(); else if(sortOpen){ sortOpen=false; syncUI(); } } });
 }
 
 async function boot(){
