@@ -70,7 +70,7 @@
   .sticky-head::before{content:none}
   .sticky-head.stuck::before{
     content:"";position:absolute;z-index:-1;pointer-events:none;
-    top:calc(-1 * var(--sticky-top));bottom:-14px;
+    top:calc(-1 * var(--sticky-top));bottom:calc(-1 * var(--sticky-top));
     left:calc((100vw - 100%) / -2);right:calc((100vw - 100%) / -2);
     background:rgba(238,241,245,.78);
     backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
@@ -201,6 +201,7 @@
   }
   .card:hover{box-shadow:var(--sh-card), inset 0 0 0 1px rgba(255,255,255,.65)}
   @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes filterIn{from{opacity:0;transform:translateX(10px) scale(.88)}to{opacity:1;transform:translateX(0) scale(1)}}
   .card.enter{animation:rise .45s cubic-bezier(.2,.7,.3,1) both}
 
   /* ---------- 圖片：精簡故事卡 & 完整卡頂圖 ---------- */
@@ -412,11 +413,22 @@
     .sticky-head{--sticky-top:8px;top:var(--sticky-top);margin-top:18px;display:flex;flex-direction:column;gap:8px}
     .toolbar-row{display:contents}
     .toolbar{
-      order:1;width:100%;flex-wrap:nowrap;overflow-x:auto;
+      order:1;width:100%;flex-wrap:nowrap;overflow-x:auto;justify-content:space-between;gap:0;
       -webkit-overflow-scrolling:touch;scrollbar-width:none;border-radius:24px;
+      transition:padding var(--ease),background var(--ease);
     }
     .toolbar::-webkit-scrollbar{display:none}
-    .toolbar .chip{flex:0 0 auto;white-space:nowrap}
+    .toolbar .chip{flex:0 0 auto;white-space:nowrap;transition:padding var(--ease),transform var(--ease),font-size var(--ease)}
+    .mobile-sticky-filter{
+      display:none;flex:0 0 42px;width:42px;height:42px;align-items:center;justify-content:center;
+      border:none;border-radius:50%;background:rgba(23,27,41,.07);color:var(--ink2);cursor:pointer;
+      opacity:0;transform:translateX(10px) scale(.88);transition:opacity var(--ease),transform var(--ease),background var(--ease);
+    }
+    .mobile-sticky-filter:hover{background:rgba(23,27,41,.12);color:var(--ink)}
+    .sticky-head.stuck .toolbar{overflow:hidden;padding-left:8px;padding-right:8px}
+    .sticky-head.stuck .toolbar .chip{padding-left:8px;padding-right:8px;transform:translateX(-2px)}
+    .sticky-head.stuck .mobile-sticky-filter{display:inline-flex;opacity:1;transform:translateX(0) scale(1);animation:filterIn .22s cubic-bezier(.2,.7,.3,1) both}
+    .sticky-head.stuck .tools{display:none}
     .submenu-wrap{order:2;margin:0}
     .tools{order:3;align-self:flex-end;gap:8px;align-items:center;margin-left:0}
     .adv-toggle{width:42px;height:42px;padding:0;justify-content:center;position:relative}
@@ -703,6 +715,15 @@ function buildChips(){
   more.setAttribute("aria-expanded", subOpen ? "true" : "false");
   more.innerHTML = '更多<span class="caret" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="m3 5.25 4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
   fbox.appendChild(more);
+  // 手機吸頂時顯示：與主選單同列的進階篩選入口。
+  const mobileFilter = document.createElement("button");
+  mobileFilter.type = "button";
+  mobileFilter.className = "mobile-sticky-filter";
+  mobileFilter.setAttribute("aria-label", "進階篩選");
+  mobileFilter.title = "進階篩選";
+  mobileFilter.innerHTML = FILTER_ICON;
+  mobileFilter.onclick = ()=>{ advOpen ? cancelAdv() : openAdv(); };
+  fbox.appendChild(mobileFilter);
   buildSubmenu();
 }
 
