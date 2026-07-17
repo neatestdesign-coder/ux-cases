@@ -1326,6 +1326,48 @@
         1
       ],
       "reason": "代理商以自家改版做內容行銷式流程教學，無任何量化成果、帶宣傳性質。"
+    },
+    {
+      "title": "Lessons Learned in Becoming a Product-Centric Organization",
+      "url": "https://agilealliance.org/resources/experience-reports/lessons-learned-in-becoming-a-product-centric-organization/",
+      "source": "Agile Alliance",
+      "tier": 0,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "組織轉型（走向 product-centric）的反思報告，非單一 UX 商業案；企業匿名（BigFin）、全篇無任何量化成果。量化 0 分觸下限，總分 4.0<6.0。"
+    },
+    {
+      "title": "CVRを改善したUI/UX成功事例5選｜株式会社blue",
+      "url": "https://note.com/blueteam/n/na09dfe79e43a",
+      "source": "note.com / 株式会社blue",
+      "tier": 4,
+      "scores": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "reason": "代理商『5選』清單稿＋CVR 檢查表導購，非單一案例；數字為多案彙整、匿名不可溯源。決策與第一手皆 0 觸下限，總分 3.0<6.0。"
+    },
+    {
+      "title": "データで実証！UIUX改善で驚異のコンバージョン率向上を実現した事例と実践ガイド",
+      "url": "https://picks-design.com/blog/4541/",
+      "source": "picks design",
+      "tier": 0,
+      "scores": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "reason": "代理商 SEO 內容行銷『5つの実例』清單，『9,900% ROI』式誇大、匿名二手。決策與第一手皆 0 觸下限，總分 3.0<6.0。"
     }
   ],
   "facets": [
