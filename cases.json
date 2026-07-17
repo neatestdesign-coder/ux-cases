@@ -1,10 +1,157 @@
 {
   "updated": "2026-07-17",
   "run": {
-    "scanned": 16,
-    "candidates": 3
+    "scanned": 40,
+    "candidates": 11
   },
   "cases": [
+    {
+      "title": "Air Europa 行動優先實驗：一年 500 次 A/B，CSAT 81%→87%、訂票漏斗 +9%",
+      "original_title": "The Sky’s the Limit: Air Europa’s Experimentation Success Story",
+      "url": "https://www.abtasty.com/resources/air-europa-experimentation-success-story/",
+      "source": "AB Tasty",
+      "tier": 2,
+      "date": "2026-02",
+      "author": "AB Tasty（Air Europa 客戶案例）",
+      "cats": [
+        "國際品牌",
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "航空旅遊",
+      "why": "進入快速成長期，行動裝置成為訂票與行程管理主場。Air Europa 把「行動優先」訂為策略優先，要在規模化的同時提升轉換、客單價與客戶滿意度。",
+      "how": "與 AB Tasty 合作建立實驗方法論：先做使用者訪談、熱圖、moderated testing 與原型，轉成假設後依商業 KPI 排序，一年跑約 500 個 A/B（常態同時 18 檔）。重點改動包括精簡訂票表單（減步驟、重排、改欄位樣式）與重做航班摘要頁（明列行李額度與票種、可直接改航班）。並用互斥實驗讓多測試同時跑不互相干擾，實作速度提升約 5 倍。",
+      "result": "航班摘要→乘客資料步驟轉換 +9%、乘客資料頁 +5%，客戶滿意度自 81% 升至 87%；航班摘要頁改版在測試中達「100% 勝出機率」。方法面：光搜尋結果頁就跑了 120 個測試。文章未逐一揭露每個實驗的樣本量與顯著性，整體屬工具商自述。",
+      "caveat": "資料來源為實驗工具商 AB Tasty 自行發佈的客戶成功故事，屬單一來源、可能偏正面選樣，數字未經第三方獨立驗證；+9%/+5% 為漏斗個別步驟的相對提升，CSAT 81%→87% 未說明樣本與量測方式。",
+      "takeaway": "把實驗當成營運系統而非一次性專案：研究→依 KPI 排序的 backlog→高頻測試→用互斥實驗換取速度，再加上主管支持與團隊自主，才是讓 500 次／年得以成立的底層機制。",
+      "metrics": [
+        [
+          "81%→87%",
+          "客戶滿意度(CSAT)"
+        ],
+        [
+          "+9%",
+          "航班摘要→乘客資料轉換"
+        ],
+        [
+          "+5%",
+          "乘客資料頁轉換"
+        ],
+        [
+          "500",
+          "一年 A/B 實驗數"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "營運處境明確：快速成長期、行動優先受眾，把行動轉換與客單價列為策略優先",
+        "研究→假設→依 KPI 排序→測試的完整循環，一年 500 實驗、互斥測試提速 5 倍",
+        "CSAT 有 81%→87% baseline，並有 +9%/+5% 漏斗轉換與絕對實驗數",
+        "AB Tasty（廠商）自述之客戶案例，具名但非當事團隊親撰，封頂 1",
+        "提煉出可複用框架：優先序 backlog、主管支持、團隊自主、高頻測試"
+      ]
+    },
+    {
+      "title": "Attraction Tickets 自適應搜尋：轉換率 +41%、加購 +22%（惟為「有用 vs 沒用」比較）",
+      "original_title": "Search That Inspires: How Adaptive Search Turned Queries into Conversions at Attraction Tickets",
+      "url": "https://www.abtasty.com/resources/adaptivecx-search-conversions-attraction-tickets/",
+      "source": "AB Tasty",
+      "tier": 2,
+      "date": "2026-02",
+      "author": "AB Tasty（Attraction Tickets 客戶案例）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "票務旅遊",
+      "why": "已售出逾 1,500 萬張票，但站內搜尋在使用者開始打字前不給任何建議，對首訪、無搜尋史的顧客缺乏引導，可能壓抑商品發現與轉換。",
+      "how": "導入 AB Tasty Adaptive Search：從輸入第一個字元起就給關鍵字建議，並依 in-session 親和度（最近／最常搜尋）排序，Attraction Tickets 選擇突出「最近搜尋」；再用「最近瀏覽商品圖」強化視覺。以 A/B 檢驗成效。",
+      "result": "「有用 vs 沒用 Adaptive Search」比較：轉換率 +41.46%、加入購物籃 +21.98%、平均頁面瀏覽 +39.70%，功能採用率 11.24%。需注意：此為自我選擇比較而非乾淨 Test vs Control；文中稱 Test vs Control 亦有提升但未給數字。",
+      "caveat": "AB Tasty 自述客戶案例，單一來源。關鍵數字（+41.46% 轉換等）為「有用 vs 沒用 Adaptive Search」的自我選擇比較，含選樣偏誤，非乾淨的 Test vs Control；文中稱 Test vs Control 亦有提升但未給數字。數字未經第三方驗證。",
+      "takeaway": "站內搜尋不只是找東西，而是發現與導購引擎：把「第一個字元就給建議＋依 session 親和度排序＋視覺化最近瀏覽」組合起來，可把查詢變成轉換。但評估成效要盯乾淨的 Test vs Control，別被「有用 vs 沒用」的選樣偏誤放大數字。",
+      "metrics": [
+        [
+          "+41.46%",
+          "轉換率(用過 vs 沒用)"
+        ],
+        [
+          "+21.98%",
+          "加入購物籃率"
+        ],
+        [
+          "+39.70%",
+          "平均頁面瀏覽"
+        ],
+        [
+          "11.24%",
+          "功能採用率"
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "商業脈絡集中在搜尋體驗與商品發現，較局部、非全局營運壓力",
+        "診斷搜尋缺口→Adaptive Search→加商品圖強化，單線改動、未見被推翻方案",
+        "多指標 A/B 成果(+41.46% 轉換/+21.98% 加購/+39.70% 瀏覽)，惟比較基準有偏誤",
+        "AB Tasty 自述客戶案例，封頂 1",
+        "「站內搜尋即發現引擎」可複用，但未深度提煉成框架"
+      ]
+    },
+    {
+      "title": "Kurt Geiger 首頁即時個人化輪播：首頁→商品頁轉換 +23%",
+      "original_title": "From Static to Sales: Kurt Geiger’s AdaptiveCX Carousel Wins",
+      "url": "https://www.abtasty.com/resources/kurt-geiger-adaptive-homepage-personalization-case-study/",
+      "source": "AB Tasty",
+      "tier": 2,
+      "date": "2025-12",
+      "author": "AB Tasty（Kurt Geiger 客戶案例，含具名高管引言）",
+      "cats": [
+        "國際品牌",
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "時尚電商",
+      "why": "到 2024 年，行銷成本上升、報酬遞減，且缺乏即時使用者意圖洞察，首頁只是靜態櫥窗、無法規模化個人化，造成錯失營收與較高獲客成本。",
+      "how": "選用 AdaptiveCX（快速上線、少依賴內部開發、以 session 資料即時個人化），在首頁上線「Suggested For You」自適應輪播，依每位訪客的品類親和度（鞋／包等）即時生成推薦；以 A/B 檢驗。",
+      "result": "A/B 結果：首頁→商品頁轉換率 +23.28%、整體點閱率絕對值 +0.32、帶商品瀏覽的 session 顯著成長。營收潛力、留存、行銷成本下降屬定性宣稱，未給數字。",
+      "caveat": "AB Tasty 自述客戶案例，單一來源、可能偏正面。僅揭露 23.28% 相對轉換提升與 0.32 絕對點閱，營收成長與行銷成本下降為定性宣稱、未量化；數字未經第三方驗證。",
+      "takeaway": "把首頁從靜態櫥窗改成「即時意圖驅動」的自適應版位，是用站內體驗取代部分付費投放的槓桿；關鍵在能否即時讀取 session 意圖並據以改版面，而非只做粗略分眾。",
+      "metrics": [
+        [
+          "+23.28%",
+          "首頁→商品頁轉換率(A/B)"
+        ],
+        [
+          "+0.32",
+          "整體點閱率絕對提升"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "商業壓力明確：行銷成本上升、報酬遞減、無法規模化個人化",
+        "選 AdaptiveCX→上線自適應輪播，單一 A/B，未揭露被推翻方案",
+        "23.28% 首頁→商品頁轉換 A/B 提升，另有 0.32 絕對點閱提升",
+        "AB Tasty 自述客戶案例（含具名高管引言），封頂 1",
+        "即時 session 親和度個人化為可複用槓桿，提煉度中等"
+      ]
+    },
     {
       "title": "Duolingo Android 效能改善：啟動成功率 91%→94.7%，直接帶回數十萬 DAU",
       "original_title": "How we boosted Android app performance (and DAUs!)",
