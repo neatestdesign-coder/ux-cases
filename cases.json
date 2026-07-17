@@ -2,9 +2,162 @@
   "updated": "2026-07-17",
   "run": {
     "scanned": 12,
-    "candidates": 4
+    "candidates": 3
   },
   "cases": [
+    {
+      "title": "Orange Belgium『hey!』改版：即時行為監測攔下結帳崩盤，轉換 +67%、CSAT +15 分",
+      "original_title": "How Orange Belgium tripled web conversions with Contentsquare",
+      "url": "https://contentsquare.com/customers/orange/",
+      "source": "Contentsquare",
+      "tier": 2,
+      "date": "2026",
+      "author": "Contentsquare（Orange Belgium／hey! 案例；team：Matthieu Bachely、Lise Wurmser-Ott、Viktoriia Pankevych）",
+      "cats": [
+        "國際品牌",
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "電信",
+      "why": "Orange Belgium 的純數位子品牌 hey! 沒有門市與電話銷售，eshop 是唯一購買入口——結帳任何一步壞掉都是直接營收損失，沒有實體通路可緩衝。",
+      "how": "八年逐步把行為數據變成決策：先取得 journey／session replay 的可視性，再用 Voice of Customer 搞懂「為什麼」（發現促銷帶量卻在購買點製造猶豫），接著在 App 發現三分之一顧客根本登不進。最關鍵一役：eshop 換平台前先做 11 場 moderated usability test，再只對 5% 流量做軟啟動、即時監測 funnel。",
+      "result": "軟啟動時 funnel 工具抓到某結帳步驟轉換從 3.13% 崩到 1.53%（改版硬塞了商品設定器）——團隊當場移除、依商品類型分流結帳，才全量上線。成果：轉換 +67%（尖峰 +160%）、CSAT +15 分、保住約半數銷售；八年間全站轉換成長 3 倍、團隊從 1 人擴到 8 人。",
+      "caveat": "Contentsquare 發佈之案例，單一來源、可能偏正面；+67%／+160% 為 hey! eshop 重啟後數字，未逐一揭露樣本量與統計顯著性；3 倍成長橫跨 2018–2024、期間含多重因素。數字未經第三方驗證。",
+      "takeaway": "別等全量上線才讓使用者告訴你哪裡壞了：先做可用性測試、再對小流量軟啟動並即時盯 funnel，把「改版好意反而害了轉換」（硬塞設定器）這種坑在傷害擴大前攔下。行為數據＋顧客心聲要放同一畫面看，才看得出促銷「帶量卻傷成交」的矛盾。",
+      "metrics": [
+        [
+          "+67%",
+          "hey! 重啟後轉換率(尖峰+160%)"
+        ],
+        [
+          "+15 分",
+          "CSAT"
+        ],
+        [
+          "3.13%→1.53%",
+          "軟啟動攔下的結帳崩跌"
+        ],
+        [
+          "3x",
+          "2018–2024 全站轉換成長"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "純數位品牌、eshop 是唯一入口，結帳崩即直接失血——商業處境極明確",
+        "四階段演進＋軟啟動抓到 3.13%→1.53% 崩跌並修正，含真實失敗",
+        "+67%/+160%/+15 CSAT/3.13%→1.53% baseline，數據紮實",
+        "Contentsquare 發佈、具名團隊但非親撰，封頂 1",
+        "可視性→意義→規模→連結四階段＋軟啟動監測為可複用框架"
+      ]
+    },
+    {
+      "title": "CompTIA 電商收回自營：省下 $2M 廠商費、轉換 +25%、客單價 +15–20%",
+      "original_title": "Opti Commerce saves CompTIA $2M, boosts conversions 25%",
+      "url": "https://www.optimizely.com/field-notes/customer-stories/comptia",
+      "source": "Optimizely",
+      "tier": 2,
+      "date": "2026",
+      "author": "Optimizely（CompTIA 案例；CEO Todd Thibodeaux 具名）",
+      "cats": [
+        "國際品牌",
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "教育科技",
+      "why": "CompTIA 八成營收來自電商，卻外包第三方七年，簡單改動都要漫長審批、無法掌控核心平台。CEO 決定收回自營。",
+      "how": "改用 Optimizely One 整合套件（商務／內容／實驗／分析），把電商搬回內部；推 Commerce Connect 讓小型 B2B 帳戶自助下單（選付款方式、拿會員價），並把商品從預先打包折扣改為讓顧客自組 bundle（全價）。",
+      "result": "省下每年逾 $2M 廠商／交易費、轉換 +25%、客單價 +15–20%、跳出率 -5 分、停留時間 +1 分 20 秒。決策上也做了取捨分析（換 Shopify 只是把費用換一家、CRM 是 Microsoft Dynamics 而非 Salesforce 的整合考量）。",
+      "caveat": "Optimizely 發佈之案例，且該廠商正在賣自家平台，單一來源、偏正面；把轉換／AOV 成長全歸因於換平台屬相關非因果；原文夾雜大量 CEO 對 AI／歷史的離題評論。數字未經第三方驗證。",
+      "takeaway": "當核心營收（八成）壓在外包平台上、連小改都要排隊，收回自營的 ROI 常被低估：光省下的交易費就給了投資新能力的跑道。平台選型別只看標價——要看整合（CRM／付款方式）與能不能快速迭代。",
+      "metrics": [
+        [
+          "$2M+",
+          "每年省下的廠商/交易費"
+        ],
+        [
+          "+25%",
+          "轉換率"
+        ],
+        [
+          "+15–20%",
+          "客單價(AOV)"
+        ],
+        [
+          "-5 分",
+          "跳出率"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "八成營收靠電商、外包七年的掌控痛點明確",
+        "有平台選型取捨(Shopify 只換費用、CRM 整合)，但屬線性成功敘事、無失敗迭代",
+        "$2M 絕對值＋25% 轉換＋15–20% AOV＋-5 分跳出，數據多",
+        "Optimizely 自售平台之發佈案例，封頂 1",
+        "收回自營＋整合套件的商業判斷可借鏡，但情境特定"
+      ]
+    },
+    {
+      "title": "Robinson Club 反直覺實驗：9 步結帳反而更好、秀『訂不到的房』賺進 €2.5M",
+      "original_title": "From clicks to check-ins: The science behind Robinson Club’s travel experience",
+      "url": "https://www.optimizely.com/field-notes/customer-stories/robinson-club2",
+      "source": "Optimizely",
+      "tier": 2,
+      "date": "2026",
+      "author": "Optimizely（Robinson Club／TUI 案例；Michael Richter 具名）",
+      "cats": [
+        "國際品牌",
+        "更多案例",
+        "顧問／商業視角",
+        "經典案例"
+      ],
+      "industry": "旅遊",
+      "why": "旅遊決策牽涉情感與時間投入、不只是錢；Robinson Club（TUI 集團）要用實驗證明體驗優化的商業價值。",
+      "how": "用 RICE 框架排優先序、Optimizely 的 Experiment Collaboration 管理點子並記名貢獻者；盯貼近使用者行為的指標（點閱）同時以宏觀轉換（進入結帳）為主、設 guardrail 防傷業務。靠顧客訪談找缺口。",
+      "result": "兩個反直覺勝仗：(1) 把結帳拉長到 9 步反而提升轉換 +13%——關鍵是降低單步認知負荷、「做完 6 步就會做完 9 步」；(2) 在網站顯示「目前訂不到的家庭房」（來自顧客訪談洞察），帶來 €2.5M 增額營收。並在一場兩天 hackathon 跑了 41 個實驗。文中明講「失敗也是學習」。",
+      "caveat": "Optimizely 發佈之案例，單一來源、可能偏正面；+13% 與 €2.5M 未揭露基準期間、樣本量與統計顯著性，€2.5M 之歸因區間不明。數字未經第三方驗證。",
+      "takeaway": "別靠直覺：更多步驟不一定更差（重點是每步認知負荷），連「秀出訂不到的房」這種看似不合理的點子，只要來自顧客訪談就可能是大贏。用 RICE 排序、設 guardrail、把失敗當學習，是讓實驗文化規模化的底盤。",
+      "metrics": [
+        [
+          "+13%",
+          "結帳轉換(降認知負荷)"
+        ],
+        [
+          "€2.5M",
+          "顯示缺貨房型帶來增額營收"
+        ],
+        [
+          "41",
+          "兩天 hackathon 實驗數"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "用實驗證明體驗商業價值、旅遊高投入的處境清楚",
+        "RICE＋guardrail＋兩個反直覺且被驗證的賭注，含失敗即學習",
+        "+13% 轉換與 €2.5M 絕對營收",
+        "Optimizely 發佈、Michael Richter 具名但非親撰，封頂 1",
+        "反直覺實驗＋RICE＋顧客訪談驅動為高可複用框架"
+      ]
+    },
     {
       "title": "Taylor & Hart 用 NPS 當北極星：四年年營收翻倍至 €4.5M",
       "original_title": "NPS® Case Study: How To Double Revenue with Net Promoter® Score",
