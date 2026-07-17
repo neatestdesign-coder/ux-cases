@@ -1,10 +1,57 @@
 {
   "updated": "2026-07-17",
   "run": {
-    "scanned": 8,
+    "scanned": 27,
     "candidates": 3
   },
   "cases": [
+    {
+      "title": "ConversionWise 用「三角驗證」重排保健品 PDP：賣點與份量拉到首圖，購買轉換 5.27%→5.74%",
+      "original_title": "Here's How ConversionWise Improved Purchases for a Wellness Brand by 8.93% & Helped Prospective Buyers Trust It",
+      "url": "https://www.convert.com/case-studies/convert-case-study-conversionwise/",
+      "source": "Convert.com",
+      "tier": 2,
+      "date": "2024",
+      "author": "Convert.com（ConversionWise 代理商案例；具名 Boris Bicanic／Kyle Foster；廠商＋代理商自述）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "電商保健",
+      "why": "一個保健品牌把 Meta 廣告的「冷流量」直接導到產品頁，但這些人對品牌與產品都不熟、缺乏信任，難以有信心下單——付費流量進來卻轉不動，等於廣告預算在漏。",
+      "how": "不靠單一數據或直覺下手，而是三路交叉驗證（triangulation）再立假設：跑購買後問卷了解買家在意什麼、看捲動深度發現多數人根本沒滑到關鍵資訊區、再做使用者測試確認。三者指向同一問題後才動手：把「份量／賣點／適用對象（健康意識女性）」從被埋沒的描述區，用明顯圖示拉到首圖與摺線以上。測試設定嚴謹：95% 顯著、80% power、50/50 分流、跑 14 天。",
+      "result": "購買轉換率從對照組 5.27% 提升到變體 5.74%（+8.93%）。次要指標全數同向：結帳啟動 +7%、加入購物車事件 +6.6%、購買後多看 18% 頁面。多個主／次指標一致上升，代表改動真的改變了買家行為，而非雜訊。",
+      "caveat": "二手來源（firsthand=1）：本案為 A/B 測試工具商 Convert.com 與其合作代理商 ConversionWise 共同發佈的行銷案例，屬單一來源、可能偏正面選樣，數字未經第三方驗證。品牌名未公開（僅稱「保健品牌」），無法向當事品牌回溯核對；關鍵數字（5.27%→5.74%、14 天、95% 顯著）已核對原文測試參數表。引用時宜註明來源為廠商案例。",
+      "takeaway": "別用單一數據點就立假設——用「三角驗證」（問卷＋行為數據＋使用者測試）三方指向同一結論再動手，能大幅降低把偏見當洞察的風險。且經過扎實研究的改動，往往連帶拉動整條旅程的次要指標，而非只動一個數字。",
+      "metrics": [
+        [
+          "5.27%→5.74%",
+          "購買轉換率（+8.93%，含 baseline）"
+        ],
+        [
+          "+7%",
+          "結帳啟動率"
+        ],
+        [
+          "14 天／95%",
+          "測試時長與顯著水準（80% power、50/50 分流）"
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "商業脈絡=1：點出冷付費流量信任不足的痛點，但未量化到營收／GMV 層級，屬有目標但非硬指標。",
+        "決策過程=1：三角驗證＋明確假設驗證流程紮實，但全案為線性成功、未見被推翻的方案或失敗迭代。",
+        "量化成果=2：對照組 5.27%→變體 5.74% baseline 與成果俱全，另附多個次要指標，量化最完整。",
+        "第一手性=1：廠商＋代理商自述、品牌匿名，可具名但非當事品牌親撰，封頂 1 並強制 caveat。",
+        "可遷移性=2：明確提煉出「三角驗證」方法與「研究扎實則全旅程受益」兩條可複用準則。"
+      ]
+    },
     {
       "title": "Country Road Group 從「瀑布」到「敢弄壞」：實驗文化帶動購買轉換 +2%、營收 +5%",
       "original_title": "The Country Road Group gets 65% of revenue from mobile",
@@ -2076,6 +2123,34 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Sparify 行動站四組實驗：重排 PDP＋FOMO 購物車，營收 +51.77%",
+      "url": "https://vwo.com/success-stories/sparify-convertpolo-revenue/",
+      "source": "VWO",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "gate 未過（min_total 5.5 < 6）：四組實驗流程完整但皆只給 uplift%、無 baseline 絕對值（量化=1）；全為成功案、無被推翻方案（決策=1）；目標為通用 CRO 目標（脈絡=1）；VWO＋ConvertPolo 廠商／代理商自述（第一手=1）；收斂原則偏通用（可遷移=1）。品質不足，列入淘汰供檢驗。"
+    },
+    {
+      "title": "YNAB 產品導覽頁改版：改用大圖縮圖＋首屏證言，下載 +85%",
+      "url": "https://vwo.com/success-stories/ynab/",
+      "source": "VWO",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "gate 未過（min_total 5.5 < 6）：85% 下載提升無 baseline 絕對值（量化=1）；單一測試線性成功（決策=1）；目標僅「增加試用下載」（脈絡=1）；VWO 廠商自述且為 2019 舊案（第一手=1）；洞察未提煉成框架（可遷移=1）。"
+    },
     {
       "title": "Zoopla used personalization to improve buyer’s experience",
       "url": "https://www.optimizely.com/field-notes/customer-stories/zoopla/",
