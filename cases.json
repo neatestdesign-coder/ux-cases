@@ -2,9 +2,159 @@
   "updated": "2026-07-17",
   "run": {
     "scanned": 8,
-    "candidates": 2
+    "candidates": 3
   },
   "cases": [
+    {
+      "title": "Country Road Group 從「瀑布」到「敢弄壞」：實驗文化帶動購買轉換 +2%、營收 +5%",
+      "original_title": "The Country Road Group gets 65% of revenue from mobile",
+      "url": "https://www.optimizely.com/field-notes/customer-stories/the-country-road-group",
+      "source": "Optimizely",
+      "tier": 2,
+      "date": "2026",
+      "author": "Optimizely（Country Road Group 案例；Matthew Horn 具名；partner New Republique）",
+      "cats": [
+        "國際品牌",
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "時尚零售",
+      "why": "澳洲最大時尚零售集團之一（Country Road／Mimco／Trenery／Witchery／Politix），每週 150 萬訪客、行動佔 65% 營收；疫情加速數位轉型，連小幅轉換提升都是大影響，但需要更好的實驗方法。",
+      "how": "與 Optimizely 及實驗顧問 New Republique 合作，把保守的「瀑布式」文化改成快速 test-and-learn；跑多個假設：把「加入購物袋」移到商品文案上方、Politix 站加倒數計時器製造急迫、Witchery 50 週年可客製皮包活動。",
+      "result": "「加入購物袋」上移：願望清單點擊 +19%、加購 +6%、購買轉換 +2%、營收 +5%。倒數計時器：加購 +4%、購買轉換 +9%。Witchery 活動：首頁區塊點擊 +210%、內容片段 +155%、購買 +77%。文化上從「不敢冒險」變成「敢弄壞、把建設性失敗當進步代價」。",
+      "caveat": "Optimizely 發佈之案例，單一來源、可能偏正面；各實驗未揭露樣本量與統計顯著性；活動型大數字（如 +77%／+210%）為特定促銷情境、外推需謹慎。數字未經第三方驗證。",
+      "takeaway": "實驗的最大障礙常是文化不是工具：把「瀑布、不敢冒險」改成「敢弄壞、把失敗當進步代價」才跑得快。具體戰術上，把主 CTA 上移、用急迫感（倒數）、活動頁客製化，都是可複用的轉換槓桿。",
+      "metrics": [
+        [
+          "+2%",
+          "購買轉換(加購上移)"
+        ],
+        [
+          "+5%",
+          "營收(加購上移)"
+        ],
+        [
+          "+9%",
+          "購買轉換(倒數計時)"
+        ],
+        [
+          "65%",
+          "行動佔營收"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "150 萬週訪、行動 65% 營收、小幅提升即大影響，脈絡清楚",
+        "多假設實驗＋從瀑布到「敢弄壞」的文化轉變，含建設性失敗",
+        "+2%/+5%/+9% 等多指標",
+        "Optimizely 發佈、Matthew Horn 具名但非親撰，封頂 1",
+        "「文化先於工具」＋CTA 上移/急迫感/活動客製為可複用"
+      ]
+    },
+    {
+      "title": "Modibodi 重排 PLP 篩選器：把高互動卻被埋的「尺寸」往上移，每月多賺約 $10K",
+      "original_title": "This 5-minute filter optimization update earned Modibodi an additional $10K a month",
+      "url": "https://contentsquare.com/customers/modibodi/",
+      "source": "Contentsquare",
+      "tier": 2,
+      "date": "2026",
+      "author": "Contentsquare（Modibodi 案例）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "永續服飾電商",
+      "why": "澳洲永續吸收式內褲品牌 Modibodi 商品款式／尺寸／顏色多，篩選器好不好用直接影響顧客能否找到想要的、進而轉換。",
+      "how": "用 Contentsquare 一週內在 PLP 篩選器找到 4 個洞察：『排序』每次點擊轉換 16.7% 但用的人少；『尺寸』互動最高卻排在第 4、曝光低；『類型』5.25% 但用量不到尺寸一半；『吸收力』常被用卻不帶轉換。並用 Impact Quantification 估：每多 10% 顧客用篩選器約多 $1,789。對策：依「互動×轉換力」重排、把尺寸往上移。",
+      "result": "尺寸篩選器每次點擊營收 +122%；『套用篩選』CTA 每次點擊營收從 $5.80 翻倍到 $11.90；全站所有 PLP／篩選器行動端 +23%、桌機 +5%；合計每月多賺行動 $4.4K＋桌機 $5.4K（約 $10K）。",
+      "caveat": "Contentsquare 發佈之案例，單一來源、可能偏正面；金額為澳幣、單月估算，未揭露統計顯著性與期間；數字未經第三方驗證。",
+      "takeaway": "導覽／篩選器的排序別照習慣，要照「互動×轉換力」：一個高互動卻被埋在下面的元素（這裡是尺寸），把它往上移常是幾乎零成本的大贏。改動前先用影響量化估算，能說服團隊值不值得做。",
+      "metrics": [
+        [
+          "$5.80→$11.90",
+          "『套用篩選』每次點擊營收"
+        ],
+        [
+          "+122%",
+          "尺寸篩選器每次點擊營收"
+        ],
+        [
+          "+23%",
+          "行動端全站 PLP/篩選"
+        ],
+        [
+          "~$10K/月",
+          "增額營收(AUD)"
+        ]
+      ],
+      "scores": [
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "篩選器 UX 影響商品發現的脈絡明確但偏局部",
+        "四洞察→依互動×轉換重排，並先做影響量化估算，分析扎實",
+        "$5.80→$11.90 有基準，另 +122%/+23% 多指標",
+        "Contentsquare 發佈，封頂 1",
+        "「依互動×轉換排序、把被埋的高互動元素上移」可複用"
+      ]
+    },
+    {
+      "title": "OppLoans 用行為分析揪出漏斗第 4 步壞掉：轉換 +5%、年營收七位數增長",
+      "original_title": "OppLoans increases conversion by +5%",
+      "url": "https://contentsquare.com/customers/opploans/",
+      "source": "Contentsquare",
+      "tier": 2,
+      "date": "2026",
+      "author": "Contentsquare／Heap（OppLoans 案例；CMO John O’Reilly、Matt Gomes 具名）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "金融科技",
+      "why": "OppLoans 為次級信用族群提供比發薪日貸款更安全的替代方案；成長期新創、工程團隊精簡，行銷想優化歸因與漏斗，卻缺乏內部即時細緻的數據，又不能讓工程去自建追蹤。",
+      "how": "改用免寫碼的 Heap（現屬 Contentsquare）行為分析取得即時歸因與漏斗可視性；分析明確指出漏斗第 4 步壞掉，團隊據此改善 pre-pop 體驗；後續把標準化 API 用到夥伴通路。",
+      "result": "直效郵件通路轉換 +5%、年度新核發本金七位數增長；夥伴通路因更快 onboarding，每個夥伴多帶進逾 2,000 件申請。工程負擔也降低。",
+      "caveat": "Heap／Contentsquare 發佈之案例（原載於 Heap.io 後遷移），單一來源、可能偏正面；「七位數」區間不明（可能 100 萬到 900 萬），+5% 為直效郵件單一通路；數字未經第三方驗證。",
+      "takeaway": "精簡工程團隊的成長期公司，免寫碼行為分析的價值在於「不佔用工程就能看見漏斗哪一步壞掉」：先用數據定位那個壞掉的步驟、再對症改，比全站瞎改有效。",
+      "metrics": [
+        [
+          "+5%",
+          "直效郵件轉換率"
+        ],
+        [
+          "七位數",
+          "年新核發本金增長"
+        ],
+        [
+          "+2,000",
+          "每夥伴增額申請數"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "成長期新創、工程精簡、需歸因與漏斗優化的處境明確",
+        "行為分析定位漏斗第 4 步壞掉→改 pre-pop，insight 驅動但線性",
+        "+5% 轉換＋七位數營收＋2,000 件，數據具體（惟七位數區間模糊）",
+        "Heap/Contentsquare 發佈、具名高管但非親撰，封頂 1",
+        "「免寫碼定位壞掉的漏斗步驟」可複用但略偏工具特定"
+      ]
+    },
     {
       "title": "Specsavers 把網站「最大那塊」變小：Store Locator LCP −68%，驗光預約轉換 +33%",
       "original_title": "Specsavers improves customer experience and delivers measurable growth with Contentsquare",
