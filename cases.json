@@ -2,9 +2,104 @@
   "updated": "2026-07-17",
   "run": {
     "scanned": 12,
-    "candidates": 5
+    "candidates": 4
   },
   "cases": [
+    {
+      "title": "Taylor & Hart 用 NPS 當北極星：四年年營收翻倍至 €4.5M",
+      "original_title": "NPS® Case Study: How To Double Revenue with Net Promoter® Score",
+      "url": "https://contentsquare.com/guides/net-promoter-score/case-study/",
+      "source": "Contentsquare",
+      "tier": 2,
+      "date": "",
+      "author": "Contentsquare（Taylor & Hart 案例）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "珠寶電商",
+      "why": "倫敦珠寶品牌 Taylor & Hart 要把顧客體驗轉成成長引擎，選擇以 NPS 作為主要商業指標來對齊全公司。",
+      "how": "界定關鍵體驗里程碑，拆成兩個 NPS：下單後的「服務 NPS」與到貨後的「產品 NPS」；用 Salesforce＋Zapier 自動化蒐集與監測，持續分析。發現服務滿意度常高於產品滿意度，據此回頭改善製造端。",
+      "result": "四年內年營收翻倍至 €4.5M；NPS 導向被歸功於約 70% 的營收成長。把 NPS 拆成服務／產品兩段，讓改善方向可對症下藥。",
+      "caveat": "Contentsquare 發佈之案例，單一來源、可能偏正面；把四年營收翻倍全歸因於 NPS 屬相關非因果（期間亦有其他成長因素），「+70% 營收」與「翻倍至 €4.5M」兩種表述並存、未給嚴謹拆分。原文未標明日期。數字未經第三方驗證。",
+      "takeaway": "與其量一個籠統的 NPS，把它按顧客旅程拆段（服務 vs 產品），落差本身就是改善指引；再用自動化讓量測常態化，NPS 才會從「分數」變成能驅動決策的營運指標。",
+      "metrics": [
+        [
+          "€4.5M",
+          "四年後年營收（翻倍）"
+        ],
+        [
+          "~70%",
+          "NPS 導向帶動之營收成長"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "以 NPS 作全公司北極星、驅動成長的商業意圖明確",
+        "拆服務/產品兩段 NPS、依落差回頭改製造，具洞察與行動",
+        "四年營收翻倍至 €4.5M、約 +70% 成長（絕對數字）",
+        "Contentsquare 發佈案例、非當事團隊親撰，封頂 1",
+        "服務/產品分段 NPS＋自動化量測為可複用框架"
+      ]
+    },
+    {
+      "title": "New Look 商品頁 16 場實驗：對治 34% 流失，加入購物袋逐步 +3.9%",
+      "original_title": "New Look x Contentsquare (PDP optimization)",
+      "url": "https://contentsquare.com/customers/new-look-pdp/",
+      "source": "Contentsquare",
+      "tier": 2,
+      "date": "",
+      "author": "Contentsquare（New Look 案例；team：Mike Hatch、Elinor Pierce）",
+      "cats": [
+        "國際品牌",
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "時尚電商",
+      "why": "疫情後，New Look 商品頁（PDP）從「看商品」到「加入購物袋」出現 34% 流失，數位團隊要把這段漏斗救回來。",
+      "how": "用 Contentsquare 分析定位問題，跑 16 場 A/B。代表性實驗：行內圖片（inline imagery）改善商品視覺、色樣預覽（color swatch preview）、尺寸選擇器（size selector）。",
+      "result": "桌機加入購物袋率：行內圖片 +3.7%、色樣預覽 +2.7%（即使點閱率略降仍淨賺加購）、尺寸選擇器 +3.9%。以 34% 流失為基準，逐步累積改善。",
+      "caveat": "Contentsquare 發佈之案例，單一來源、可能偏正面；各 +2.7%～+3.9% 為個別實驗、桌機的相對提升，未揭露樣本量、顯著性與整體合計效果；原文未標明日期。數字未經第三方驗證。",
+      "takeaway": "PDP 的成長多靠「累積小勝」而非單一大改：把圖片、色樣、尺寸選擇器逐一實驗；且要看淨效果——色樣預覽點閱率下降但加購仍上升，提醒別只盯中段點擊、要盯真正的轉換動作。",
+      "metrics": [
+        [
+          "34%",
+          "看商品→加購的流失(基準)"
+        ],
+        [
+          "+3.9%",
+          "尺寸選擇器→加購(桌機)"
+        ],
+        [
+          "+3.7%",
+          "行內圖片→加購(桌機)"
+        ],
+        [
+          "16",
+          "PDP A/B 測試數"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "疫後 34% 流失的漏斗問題明確",
+        "16 場實驗、含「點閱降但加購升」的取捨判讀",
+        "有 34% 流失基準與多項 +3.7~3.9% 成果",
+        "Contentsquare 發佈、具名團隊但非親撰，封頂 1",
+        "PDP 累積小勝可複用，但未提煉成框架"
+      ]
+    },
     {
       "title": "Booking.com Partner Hub 行動增長：黏性 CTA 列讓行動註冊點擊 +36%",
       "original_title": "Mobile Momentum: How Booking.com’s Partner Hub Accelerated Growth",
@@ -1587,6 +1682,20 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Zoopla used personalization to improve buyer’s experience",
+      "url": "https://www.optimizely.com/field-notes/customer-stories/zoopla/",
+      "source": "Optimizely",
+      "tier": 2,
+      "scores": [
+        2,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "個人化策略敘事（Data／Journey／Experimentation／Automation 四支柱），全篇無任何量化成果，量化 0 分觸下限。Optimizely 自述案例。"
+    },
     {
       "title": "Chase：為什麼彩帶慶祝會適得其反",
       "url": "https://builtformars.com/case-studies/chase",
