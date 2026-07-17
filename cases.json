@@ -1,10 +1,101 @@
 {
   "updated": "2026-07-17",
   "run": {
-    "scanned": 12,
-    "candidates": 3
+    "scanned": 8,
+    "candidates": 2
   },
   "cases": [
+    {
+      "title": "Specsavers 把網站「最大那塊」變小：Store Locator LCP −68%，驗光預約轉換 +33%",
+      "original_title": "Specsavers improves customer experience and delivers measurable growth with Contentsquare",
+      "url": "https://contentsquare.com/customers/specsavers/",
+      "source": "Contentsquare",
+      "tier": 2,
+      "date": "2026",
+      "author": "Contentsquare（Specsavers 案例；team：James Saukinsey、Jacob Christiansen、Thomas Quartey）",
+      "cats": [
+        "國際品牌",
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "眼鏡零售",
+      "why": "Specsavers 全球 2,600 店、10 個網站，線上是進店預約的第一印象；團隊有 GA／BigQuery 卻看不到行為背後的「為什麼」，無法把網站效能問題連到商業成果。",
+      "how": "先在 3 站試 Experience Analytics、快速擴到全球；加 Speed Analysis（RUM＋合成監測）。換 PHP 平台前先建 Core Web Vitals 基準、依 LCP 好壞分群；再針對關鍵的 Store Locator 頁，鎖定拖慢 LCP 的互動地圖元素，做靜態地圖優化＋preload。",
+      "result": "換平台後：驗光預約轉換 +33%、電商購買率 +24%、跳出 −25%。Store Locator 專案：LCP −68%、預約轉換 +6.5%、平均停留 +1 分 34 秒、跳出改善 +17%。並用 Impact Quantification 把效能改善換算成訂單／營收，爭取 stakeholder 與工程支持。",
+      "caveat": "Contentsquare 發佈之案例，單一來源、可能偏正面；各數字未逐一揭露樣本量與統計顯著性，部分成果與換平台等多因素並存（相關非因果）。數字未經第三方驗證。",
+      "takeaway": "效能就是轉換：先建基準、依 Core Web Vitals 分群，找出頁面「最大的那塊」（這裡是地圖）把它變小；再把效能改善量化成營收，才拿得到工程與主管的 buy-in。",
+      "metrics": [
+        [
+          "+33%",
+          "驗光預約轉換率"
+        ],
+        [
+          "+24%",
+          "電商購買率"
+        ],
+        [
+          "−68%",
+          "Store Locator LCP"
+        ],
+        [
+          "+6.5%",
+          "Store Locator 預約轉換"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "全球 2,600 店、線上導進店的第一印象，商業脈絡清楚",
+        "建 CWV 基準→依 LCP 分群→鎖定地圖元素優化，診斷過程完整",
+        "+33%/+24%/−25%/−68% LCP 等多指標且含機制",
+        "Contentsquare 發佈、具名團隊但非親撰，封頂 1",
+        "「把最大那塊變小＋量化效能營收」為可複用框架"
+      ]
+    },
+    {
+      "title": "M1 靠熱圖抓到「被狂點的死圖」：改成可點，產品頁轉換單月 +143%",
+      "original_title": "How M1 used Contentsquare to drive +143% monthly increase in conversion",
+      "url": "https://contentsquare.com/customers/m1/",
+      "source": "Contentsquare",
+      "tier": 2,
+      "date": "2026",
+      "author": "Contentsquare（M1 案例；Andy Ang 具名）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "電信",
+      "why": "新加坡電信 M1 服務逾 190 萬用戶、網站路徑龐雜；團隊要搞懂顧客在哪轉換、為何流失，以持續優化。",
+      "how": "用 Contentsquare 熱圖發現某產品落地頁上有個「不可點的 Sign up 圖片」被大量點擊（潛在需求訊號）；把它改成可點、直接導到註冊表單。",
+      "result": "該圖誤點下降，成功註冊的單月轉換 +143%。屬「小洞察、大結果」：一個 dead click 被熱圖抓出來。",
+      "caveat": "Contentsquare 發佈之案例，單一來源、可能偏正面；+143% 為單月、單一產品頁的相對提升，未揭露基準值、期間與樣本量；內文另附通用「轉換清單」屬填充、非本案。數字未經第三方驗證。",
+      "takeaway": "使用者狂點一個「不能點」的元素，就是最誠實的需求訊號——把它變成可點，常是最低成本的轉換槓桿。熱圖／session replay 的價值就在讓這種 dead click 現形。",
+      "metrics": [
+        [
+          "+143%",
+          "產品頁成功註冊單月轉換"
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "電信、路徑龐雜的商業脈絡偏一般，壓力點不突出",
+        "熱圖發現死圖→改可點的單一洞察修正，線性、無失敗迭代",
+        "+143% 具體但單一指標、無基準與期間",
+        "Contentsquare 發佈、Andy Ang 具名但非親撰，封頂 1",
+        "「死點即需求訊號」可複用，但未提煉成框架"
+      ]
+    },
     {
       "title": "Orange Belgium『hey!』改版：即時行為監測攔下結帳崩盤，轉換 +67%、CSAT +15 分",
       "original_title": "How Orange Belgium tripled web conversions with Contentsquare",
