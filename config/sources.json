@@ -100,13 +100,15 @@
           "name": "AB Tasty Case Studies",
           "domain": "abtasty.com",
           "lang": "en",
-          "note": "僅收具實驗設計與可驗證成果的案例"
+          "note": "僅收具實驗設計與可驗證成果的案例",
+          "path_hint": "resource-categories/case-studies"
         },
         {
           "name": "Contentsquare Case Studies",
           "domain": "contentsquare.com",
           "lang": "en",
-          "note": "僅收具行為洞察、改動與成果鏈路的案例"
+          "note": "僅收具行為洞察、改動與成果鏈路的案例",
+          "path_hint": "customers"
         },
         {
           "name": "UX Collective",
@@ -213,6 +215,106 @@
           "region": "日本"
         }
       ]
+    },
+    {
+      "tier": 2,
+      "name": "CRO／實驗與行為數據平台（廠商／顧問自述案例）",
+      "trust_bonus": 0.5,
+      "filter": "多為廠商自行發佈的客戶成功故事：一律 firsthand 封頂 1、強制回溯 caveat（單一來源、可能偏正面選樣、數字未經第三方驗證）。tier 加成不代表放寬五維——仍須具實驗設計與 baseline→成果，且五維皆 ≥1、總分 ≥6.0 才收。",
+      "sources": [
+        {
+          "name": "Optimizely Customer Stories",
+          "domain": "optimizely.com",
+          "path_hint": "customer-stories / field-notes",
+          "lang": "en",
+          "note": "A/B 與 DXP 鼻祖；偏後端實驗與 feature flags 大規模增長"
+        },
+        {
+          "name": "VWO Case Studies",
+          "domain": "vwo.com",
+          "path_hint": "success-stories",
+          "lang": "en",
+          "note": "完整『假設→熱圖/錄影→A/B 結果』調研閉環；中小到財星 500 皆有"
+        },
+        {
+          "name": "Amplitude Customer Stories",
+          "domain": "amplitude.com",
+          "path_hint": "customer-stories",
+          "lang": "en",
+          "note": "行為數據找 Aha moment、留存與 onboarding"
+        },
+        {
+          "name": "Convert (Econvert) Case Studies",
+          "domain": "convert.com",
+          "path_hint": "case-studies",
+          "lang": "en",
+          "note": "高流量電商無腳本實驗、兼顧隱私法規"
+        },
+        {
+          "name": "Dynamic Yield Case Studies",
+          "domain": "dynamicyield.com",
+          "path_hint": "case-studies",
+          "lang": "en",
+          "note": "Mastercard 旗下；全通路個人化與動態定價"
+        },
+        {
+          "name": "Mixpanel Customer Stories",
+          "domain": "mixpanel.com",
+          "path_hint": "customers",
+          "lang": "en",
+          "note": "cohort／漏斗／留存分析驅動 upsell 與付費"
+        },
+        {
+          "name": "Unbounce Success Stories",
+          "domain": "unbounce.com",
+          "path_hint": "customers / case-studies（非 landing-page-optimization 指南頁）",
+          "lang": "en",
+          "note": "落地頁與文案×意圖匹配；偏漏斗頂端"
+        },
+        {
+          "name": "Hotjar Customer Stories",
+          "domain": "hotjar.com",
+          "path_hint": "customers",
+          "lang": "en",
+          "note": "熱圖／錄影質性洞察為主——僅收有量化成果者，否則淘汰"
+        },
+        {
+          "name": "Speero (CXL Agency) Case Studies",
+          "domain": "speero.com",
+          "path_hint": "case-studies",
+          "lang": "en",
+          "note": "CXL 系顧問；重實驗文化與 SOP，常含失敗假設（品質偏高）"
+        },
+        {
+          "name": "Conversion Rate Experts",
+          "domain": "conversion-rate-experts.com",
+          "path_hint": "clients-and-results",
+          "lang": "en",
+          "note": "始祖級 CRO 顧問；PDF 完整報告，訪談/眼動/問卷→增長假設，厚實"
+        },
+        {
+          "name": "Invesp CRO Case Studies",
+          "domain": "invespcro.com",
+          "path_hint": "case-studies",
+          "lang": "en",
+          "note": "逐案拆『挑戰／洞察／版本／結果／商業價值』，純數據不花俏"
+        },
+        {
+          "name": "Kameleoon Case Studies",
+          "domain": "kameleoon.com",
+          "path_hint": "customers / resources",
+          "lang": "en",
+          "region": "歐洲",
+          "note": "AI 個人化＋GDPR 下數據實驗；金融與高奢參考價值高。注意：使用者提供的 featuredcustomers.com 為第三方彙整站→改用官方 kameleoon.com"
+        },
+        {
+          "name": "Phiture Case Studies",
+          "domain": "phiture.com",
+          "path_hint": "案例頁（mobilegrowthstack.com 為框架頁、非案例庫）",
+          "lang": "en",
+          "note": "行動增長顧問；ASO／推播實驗／App 留存。金量高但需找對案例頁"
+        }
+      ]
     }
   ],
   "discovery": {
@@ -264,6 +366,18 @@
         "domain": "des13.com",
         "role": "代理商 SEO 內容行銷",
         "use": "站本身棄；內含二手數字（如 Mizzen+Main）僅作線索，須回溯原始源"
+      },
+      {
+        "name": "GoodUI Insights",
+        "domain": "goodui.org",
+        "role": "彙整各站公開 A/B 結果、歸納成勝率 UI 模式庫",
+        "use": "找靈感與線索；單一 pattern 非單一案例，須回溯原始 A/B 出處"
+      },
+      {
+        "name": "FeaturedCustomers",
+        "domain": "featuredcustomers.com",
+        "role": "第三方廠商評論／案例彙整站（含 Kameleoon 等）",
+        "use": "只當發現池；引用要回到該品牌／廠商官方案例頁"
       }
     ]
   },
@@ -285,5 +399,12 @@
       "hayley.work",
       "samuel-medvedowsky.com"
     ]
-  }
+  },
+  "excluded": [
+    {
+      "name": "Harness",
+      "domain": "harness.io",
+      "reason": "CI/CD 軟體交付／DevOps 平台，客戶故事多為部署與工程 ROI，非 UX／CRO／產品增長，離本站主旨太遠。除非出現明確產品體驗×商業成果案例，否則不收。"
+    }
+  ]
 }
