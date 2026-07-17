@@ -543,7 +543,7 @@
 </details>
 
 <footer>
-  <div>評分規則：五維各 0–2 分（商業脈絡・決策過程・量化成果・第一手性・可遷移性）＋ 來源層級加成，總分 ≥ 7.0 發佈。</div>
+  <div>評分規則：五維各 0–2 分（商業脈絡・決策過程・量化成果・第一手性・可遷移性）。發佈需五維皆 ≥ 1、且總分（含來源加成）≥ 6.0；二手案須附可回溯出處的 caveat。</div>
   <div class="powerby">Powered by <a href="https://www.threads.com/@meme.design.ai" target="_blank" rel="noopener">@meme.design.ai</a></div>
 </footer>
 </div>
@@ -626,7 +626,7 @@ let CASES = [
 
 let REJECTED = [
   {title:"GOV.UK：用設計評審（Design Crits）改善跨職能協作",url:"https://designnotes.blog.gov.uk/2017/11/27/using-design-crits-to-improve-collaboration/",source:"GOV.UK Design Notes",tier:1,scores:[1,1,0,2,1],
-   reason:"全文無任何量化成果（量化成果 0 分）。第一手且主題有價值，但總分 5＋加成 1.0 = 6.0，未達 7.0 門檻。"},
+   reason:"量化成果 0 分，低於各維下限 1，直接淘汰——即使五維總和 5＋tier1 加成 1.0 = 6.0 已達總分門檻，仍因缺 baseline→成果不予發佈。第一手且主題有價值。"},
   {title:"Zapier：改善升級體驗的 9 個方法",url:"https://growth.design/case-studies/zapier-upgrade",source:"growth.design",tier:2,scores:[1,0,0,1,2],
    reason:"建議清單型內容，不是單一案例：沒有決策過程、沒有任何成效數據。總分 4＋加成 0.5 = 4.5。第二層（tier 2）來源也會被刷掉——評分看內容，不看出身。"}
 ];

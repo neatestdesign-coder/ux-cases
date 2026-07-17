@@ -1,6 +1,6 @@
 {
-  "description": "五維品質評分規則。每維 0–2 分，滿分 10。總分 + 來源層級加成 ≥ 門檻才發佈。寧缺勿濫：當日無達標案例則不發佈。",
-  "publish_threshold": 7.0,
+  "description": "五維品質評分規則。每維 0–2 分，滿分 10。發佈採「下限閘門＋總分門檻」雙重把關（見 gate）。寧缺勿濫：當日無達標案例則不發佈。",
+  "publish_threshold": 6,
   "dimensions": [
     {
       "key": "business_context",
@@ -54,10 +54,29 @@
     }
   ],
   "auto_reject": [
-    "全文無任何數據",
+    "任一評分維度為 0（含全文無任何數據＝量化成果 0）",
     "內容為產品宣傳稿或工具導購",
-    "無法找到原始出處的二手改寫",
+    "純建議清單／彙整清單，非單一案例",
+    "無法回溯原始出處的二手改寫、SEO 內容行銷",
     "AI 生成痕跡明顯的內容農場文"
   ],
-  "notes": "來源 tier 加成（tier1 +1.0 / tier2、3 +0.5 / tier4 +0）加在總分上再與門檻比較。"
+  "notes": "來源 tier 加成（tier1 +1.0 / tier2、3 +0.5 / tier4 +0）加在五維總和上，再與 gate.min_total 比較。發佈條件＝五維皆 ≥1 且（總和＋加成）≥6.0 且（若為二手）附回溯 caveat。",
+  "gate": {
+    "description": "通過發佈需同時滿足下列全部條件（AND）。任一不滿足即進 rejected。",
+    "dimension_floors": {
+      "business_context": 1,
+      "decision_process": 1,
+      "quantified_outcome": 1,
+      "firsthand": 1,
+      "transferability": 1
+    },
+    "floors_note": "五維每一維都必須 ≥ 1，杜絕「某一維掛零卻靠其他維拉高總分」的偏斜案（例如無數據卻仍過關）。",
+    "min_total": 6,
+    "min_total_note": "五維總和＋來源加成 ≥ 6.0。可避免五維全 1（總分 4–5）的單薄爛泥過關——實務上等於至少要有一維達 2。",
+    "secondhand_caveat": {
+      "description": "窄放規則：第二手資訊可用，但必須可回溯到原始出處。",
+      "rule": "當 firsthand < 2（即非當事團隊親撰）時，caveat 欄位必須寫明『轉述鏈與原始出處』及數字可信度疑慮，且關鍵數字須已回溯驗證；否則不得發佈。",
+      "note": "firsthand 下限為 1 已排除 firsthand=0（匿名不可溯源）。追不回原始源的線索一律作廢。"
+    }
+  }
 }

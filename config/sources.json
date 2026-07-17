@@ -4,19 +4,65 @@
     {
       "tier": 1,
       "name": "當事團隊第一手",
-      "trust_bonus": 1.0,
+      "trust_bonus": 1,
       "sources": [
-        { "name": "Airbnb Design", "domain": "airbnb.design", "lang": "en" },
-        { "name": "Spotify Design", "domain": "spotify.design", "lang": "en" },
-        { "name": "Booking.com Design", "domain": "booking.design", "lang": "en" },
-        { "name": "Shopify UX", "domain": "ux.shopify.com", "lang": "en" },
-        { "name": "Intercom Blog", "domain": "intercom.com/blog", "lang": "en" },
-        { "name": "Dropbox Design", "domain": "dropbox.design", "lang": "en" },
-        { "name": "Figma Blog", "domain": "figma.com/blog", "lang": "en" },
-        { "name": "GOV.UK Design Notes", "domain": "designnotes.blog.gov.uk", "lang": "en" },
-        { "name": "Duolingo Blog", "domain": "blog.duolingo.com", "lang": "en" },
-        { "name": "Grab Design", "domain": "design.grab.com", "lang": "en", "region": "東南亞" },
-        { "name": "Gojek Blog", "domain": "blog.gojek.io", "lang": "en", "region": "東南亞" }
+        {
+          "name": "Airbnb Design",
+          "domain": "airbnb.design",
+          "lang": "en"
+        },
+        {
+          "name": "Spotify Design",
+          "domain": "spotify.design",
+          "lang": "en"
+        },
+        {
+          "name": "Booking.com Design",
+          "domain": "booking.design",
+          "lang": "en"
+        },
+        {
+          "name": "Shopify UX",
+          "domain": "ux.shopify.com",
+          "lang": "en"
+        },
+        {
+          "name": "Intercom Blog",
+          "domain": "intercom.com/blog",
+          "lang": "en"
+        },
+        {
+          "name": "Dropbox Design",
+          "domain": "dropbox.design",
+          "lang": "en"
+        },
+        {
+          "name": "Figma Blog",
+          "domain": "figma.com/blog",
+          "lang": "en"
+        },
+        {
+          "name": "GOV.UK Design Notes",
+          "domain": "designnotes.blog.gov.uk",
+          "lang": "en"
+        },
+        {
+          "name": "Duolingo Blog",
+          "domain": "blog.duolingo.com",
+          "lang": "en"
+        },
+        {
+          "name": "Grab Design",
+          "domain": "design.grab.com",
+          "lang": "en",
+          "region": "東南亞"
+        },
+        {
+          "name": "Gojek Blog",
+          "domain": "blog.gojek.io",
+          "lang": "en",
+          "region": "東南亞"
+        }
       ]
     },
     {
@@ -24,14 +70,56 @@
       "name": "高品質拆解與聚合",
       "trust_bonus": 0.5,
       "sources": [
-        { "name": "growth.design", "domain": "growth.design", "lang": "en" },
-        { "name": "Built for Mars", "domain": "builtformars.com", "lang": "en" },
-        { "name": "Nielsen Norman Group", "domain": "nngroup.com", "lang": "en" },
-        { "name": "Baymard Institute", "domain": "baymard.com", "lang": "en" },
-        { "name": "Lenny's Newsletter", "domain": "lennysnewsletter.com", "lang": "en" },
-        { "name": "AB Tasty Case Studies", "domain": "abtasty.com", "lang": "en", "note": "僅收具實驗設計與可驗證成果的案例" },
-        { "name": "Contentsquare Case Studies", "domain": "contentsquare.com", "lang": "en", "note": "僅收具行為洞察、改動與成果鏈路的案例" },
-        { "name": "UX Collective", "domain": "uxdesign.cc", "lang": "en", "note": "Medium 出版物中少數有編輯把關的" }
+        {
+          "name": "growth.design",
+          "domain": "growth.design",
+          "lang": "en"
+        },
+        {
+          "name": "Built for Mars",
+          "domain": "builtformars.com",
+          "lang": "en"
+        },
+        {
+          "name": "Nielsen Norman Group",
+          "domain": "nngroup.com",
+          "lang": "en"
+        },
+        {
+          "name": "Baymard Institute",
+          "domain": "baymard.com",
+          "lang": "en"
+        },
+        {
+          "name": "Lenny's Newsletter",
+          "domain": "lennysnewsletter.com",
+          "lang": "en",
+          "note": "含 podcast；只讀 Substack 逐字稿/文字版，不採音檔；產品/成長訪談需含可回溯數字"
+        },
+        {
+          "name": "AB Tasty Case Studies",
+          "domain": "abtasty.com",
+          "lang": "en",
+          "note": "僅收具實驗設計與可驗證成果的案例"
+        },
+        {
+          "name": "Contentsquare Case Studies",
+          "domain": "contentsquare.com",
+          "lang": "en",
+          "note": "僅收具行為洞察、改動與成果鏈路的案例"
+        },
+        {
+          "name": "UX Collective",
+          "domain": "uxdesign.cc",
+          "lang": "en",
+          "note": "Medium 出版物中少數有編輯把關的"
+        },
+        {
+          "name": "MeasuringU",
+          "domain": "measuringu.com",
+          "lang": "en",
+          "note": "量化 UX 研究（Jeff Sauro），嚴謹度高；偏方法論/benchmark，僅收有具體專案與 baseline→成果者"
+        }
       ]
     },
     {
@@ -39,26 +127,91 @@
       "name": "商業視角與顧問業",
       "trust_bonus": 0.5,
       "sources": [
-        { "name": "McKinsey Design", "domain": "mckinsey.com", "path_hint": "business value of design", "lang": "en" },
-        { "name": "Harvard Business Review", "domain": "hbr.org", "path_hint": "design / customer experience", "lang": "en" },
-        { "name": "IDEO Journal", "domain": "ideo.com/journal", "lang": "en" },
-        { "name": "Forrester Blog", "domain": "forrester.com/blogs", "path_hint": "CX ROI", "lang": "en" },
-        { "name": "ustwo", "domain": "ustwo.com/work", "lang": "en" },
-        { "name": "Work & Co", "domain": "work.co", "lang": "en" }
+        {
+          "name": "McKinsey Design",
+          "domain": "mckinsey.com",
+          "path_hint": "business value of design",
+          "lang": "en"
+        },
+        {
+          "name": "Harvard Business Review",
+          "domain": "hbr.org",
+          "path_hint": "design / customer experience",
+          "lang": "en"
+        },
+        {
+          "name": "IDEO Journal",
+          "domain": "ideo.com/journal",
+          "lang": "en"
+        },
+        {
+          "name": "Forrester Blog",
+          "domain": "forrester.com/blogs",
+          "path_hint": "CX ROI",
+          "lang": "en"
+        },
+        {
+          "name": "ustwo",
+          "domain": "ustwo.com/work",
+          "lang": "en"
+        },
+        {
+          "name": "Work & Co",
+          "domain": "work.co",
+          "lang": "en"
+        }
       ]
     },
     {
       "tier": 4,
       "name": "在地案例：華文・日本・東南亞（嚴格過濾）",
-      "trust_bonus": 0.0,
+      "trust_bonus": 0,
       "sources": [
-        { "name": "人人都是產品經理", "domain": "woshipm.com", "lang": "zh", "filter": "僅收原創標記且文內有具體 baseline→成果數據者" },
-        { "name": "AAPD (Medium)", "domain": "medium.com/as-a-product-designer", "lang": "zh", "region": "台灣" },
-        { "name": "UX 四神湯 (Medium)", "domain": "medium.com/uxeastmeetswest", "lang": "zh", "region": "台灣" },
-        { "name": "Edu Cabellos UX Case Studies", "domain": "educabellos.com", "lang": "en", "region": "歐洲", "filter": "個人顧問案例，僅收具體研究、設計過程與可驗證成果者" },
-        { "name": "Romane Designs Case Studies", "domain": "romanedesigns.com", "lang": "en", "region": "歐洲", "filter": "個人顧問案例，僅收客戶背景、策略與成果清楚揭露者" },
-        { "name": "note.com（UX/事業改善タグ）", "domain": "note.com", "lang": "ja", "region": "日本", "filter": "UGC 平台，僅收當事團隊復盤且有數據者" },
-        { "name": "Goodpatch Blog", "domain": "goodpatch.com", "lang": "ja", "region": "日本" }
+        {
+          "name": "人人都是產品經理",
+          "domain": "woshipm.com",
+          "lang": "zh",
+          "filter": "僅收原創標記且文內有具體 baseline→成果數據者"
+        },
+        {
+          "name": "AAPD (Medium)",
+          "domain": "medium.com/as-a-product-designer",
+          "lang": "zh",
+          "region": "台灣"
+        },
+        {
+          "name": "UX 四神湯 (Medium)",
+          "domain": "medium.com/uxeastmeetswest",
+          "lang": "zh",
+          "region": "台灣"
+        },
+        {
+          "name": "Edu Cabellos UX Case Studies",
+          "domain": "educabellos.com",
+          "lang": "en",
+          "region": "歐洲",
+          "filter": "個人顧問案例，僅收具體研究、設計過程與可驗證成果者"
+        },
+        {
+          "name": "Romane Designs Case Studies",
+          "domain": "romanedesigns.com",
+          "lang": "en",
+          "region": "歐洲",
+          "filter": "個人顧問案例，僅收客戶背景、策略與成果清楚揭露者"
+        },
+        {
+          "name": "note.com（UX/事業改善タグ）",
+          "domain": "note.com",
+          "lang": "ja",
+          "region": "日本",
+          "filter": "UGC 平台，僅收當事團隊復盤且有數據者"
+        },
+        {
+          "name": "Goodpatch Blog",
+          "domain": "goodpatch.com",
+          "lang": "ja",
+          "region": "日本"
+        }
       ]
     }
   ],
@@ -82,6 +235,55 @@
     ],
     "queries_sea": [
       "UX case study conversion (Grab OR Gojek OR Shopee OR \"southeast asia\")"
+    ]
+  },
+  "lead_pool": {
+    "description": "線索源／發現池（窄放）：只用來『發現』候選案，本身不得作為引用來源。命中後必須追到原始第一手出處、驗證關鍵數字，才進評分；firsthand 封頂 1 並強制回溯 caveat。追不回原始源即作廢。",
+    "trust_bonus": 0,
+    "sources": [
+      {
+        "name": "Case Study Club",
+        "domain": "casestudy.club",
+        "role": "策展彙整週報",
+        "use": "找連結，不引用本站"
+      },
+      {
+        "name": "GoodUX (Appcues)",
+        "domain": "goodux.appcues.com",
+        "role": "廠商 showcase",
+        "use": "挑到真實公司案例時去追該公司第一手發文"
+      },
+      {
+        "name": "Dark Patterns Hall of Shame",
+        "domain": "hallofshame.design",
+        "role": "反面教材目錄",
+        "use": "僅供 dark pattern 主題發現；無商業數據，不可進評分"
+      },
+      {
+        "name": "益盛科技 UX 部落格",
+        "domain": "des13.com",
+        "role": "代理商 SEO 內容行銷",
+        "use": "站本身棄；內含二手數字（如 Mizzen+Main）僅作線索，須回溯原始源"
+      }
+    ]
+  },
+  "case_by_case": {
+    "description": "第一手但促銷味重或為作品集索引：不設 domain 白名單，僅在單篇具真實 baseline→成果時逐案收，firsthand 依實際給分。",
+    "agency_portfolios": [
+      "perpetualny.com",
+      "eleken.co",
+      "fruto.design",
+      "accenture.com/song"
+    ],
+    "personal_portfolios": [
+      "thatedchao.com",
+      "jieyuxiong.com",
+      "jennywen.ca",
+      "verachen.me",
+      "nanwang-design.com",
+      "glorialo.design",
+      "hayley.work",
+      "samuel-medvedowsky.com"
     ]
   }
 }
