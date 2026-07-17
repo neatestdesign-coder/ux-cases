@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-14",
+  "updated": "2026-07-17",
   "run": {
-    "scanned": 60,
-    "candidates": 10
+    "scanned": 16,
+    "candidates": 3
   },
   "cases": [
     {
@@ -1284,6 +1284,48 @@
         1
       ],
       "reason": "第一手且含被捨棄方案的決策過程，品質不錯，但全文無任何量化成果（量化 0 分）。總分 6＋加成 0.5 = 6.5，未達 7.0——補上數據就會過。"
+    },
+    {
+      "title": "UX改善で成果を出すには？海外事例3選に学ぶリサーチ起点の改善プロセス",
+      "url": "https://designalpha.jp/knowledge/ux/ux_overseas_cases/",
+      "source": "DESIGN α",
+      "tier": 0,
+      "scores": [
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "reason": "三個海外案例合一的二手轉述清單（設計公司部落格），非單一第一手案例；數據來源不可溯源，屬清單型內容。"
+    },
+    {
+      "title": "Case Study: From zero to one",
+      "url": "https://medium.com/design-bootcamp/case-study-from-zero-to-one-82b7e1b9d3df",
+      "source": "Medium / Bootcamp",
+      "tier": 0,
+      "scores": [
+        1,
+        1,
+        0,
+        2,
+        1
+      ],
+      "reason": "第一手設計師案例，但通篇為流程與 lessons learned，完全無量化成果或 baseline，屬 portfolio 練習型。"
+    },
+    {
+      "title": "Impact’s Website Redesign Case Study: Lessons Learned",
+      "url": "https://www.impactmybiz.com/blog/impacts-website-redesign-case-study-lessons-learned/",
+      "source": "Impact",
+      "tier": 0,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "代理商以自家改版做內容行銷式流程教學，無任何量化成果、帶宣傳性質。"
     }
   ],
   "facets": [
