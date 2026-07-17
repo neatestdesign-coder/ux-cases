@@ -1,10 +1,235 @@
 {
   "updated": "2026-07-17",
   "run": {
-    "scanned": 40,
-    "candidates": 11
+    "scanned": 12,
+    "candidates": 5
   },
   "cases": [
+    {
+      "title": "Booking.com Partner Hub 行動增長：黏性 CTA 列讓行動註冊點擊 +36%",
+      "original_title": "Mobile Momentum: How Booking.com’s Partner Hub Accelerated Growth",
+      "url": "https://www.abtasty.com/resources/booking-com-partner-hub-mobile-growth/",
+      "source": "AB Tasty",
+      "tier": 2,
+      "date": "2026-04",
+      "author": "AB Tasty（Booking.com 客戶案例）",
+      "cats": [
+        "國際品牌",
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "旅遊平台",
+      "why": "Booking.com 的 Partner Hub 近半流量來自行動裝置，Platform Experience 團隊要把房源業主的「註冊」做起來，靠實驗驅動成長。",
+      "how": "以優先序框架挑實驗、做針對性測試。關鍵一役是在行動版加上黏性（sticky）CTA 列，並實測不同 CTA 文案的成效差異。",
+      "result": "黏性 CTA 列讓房源註冊點擊 +36%；不同 CTA 文案間也出現顯著成效差異。文章為 AB Tasty 自述，僅揭露此一主要指標。",
+      "caveat": "AB Tasty 自述客戶案例，單一來源、可能偏正面；+36% 為註冊點擊（非完成註冊）的相對提升，未揭露樣本量、期間與顯著性。",
+      "takeaway": "行動優先的漏斗頂端，先把「行動可及性」做滿：黏性 CTA 讓行動使用者不必回捲就能行動；文案微差也值得實測。",
+      "metrics": [
+        [
+          "+36%",
+          "行動房源註冊點擊"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "近半流量行動、把房源註冊列為增長目標，商業脈絡清楚",
+        "有優先序框架與 CTA 文案測試，但單線改動、未見被推翻方案",
+        "+36% 註冊點擊為 A/B 相對提升，單一指標",
+        "AB Tasty 自述客戶案例，封頂 1",
+        "黏性 CTA＋文案實測可複用，但提煉度一般"
+      ]
+    },
+    {
+      "title": "Truckstop CRO 計畫：貨運媒合改版，轉換 +26%、表單完成 +137%",
+      "original_title": "Truckstop Saw 26% Increase In Conversions",
+      "url": "https://vwo.com/success-stories/truckstop/",
+      "source": "VWO",
+      "tier": 2,
+      "date": "2024-06",
+      "author": "VWO（Truckstop 客戶案例）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "B2B 物流",
+      "why": "Truckstop 連結貨主與卡車司機，要同時服務技術嫻熟的貨運商與較不熟數位的司機，目標是提升線上銷售與 demo 申請。",
+      "how": "建立實驗文化，用 A/B 測試與 session 錄影找 UX 問題、以數據取代個人偏見。兩役：在 broker load board 放 demo 表單彈窗；在 carrier load board 用類似策略。",
+      "result": "broker 端轉換 +26%、carrier 端 +11%；由使用者研究揪出的 UX 問題，讓表單完成率 +137%。控制組轉換基準約 64.96%。",
+      "caveat": "VWO 自述客戶案例，單一來源、可能偏正面；各數字為個別活動的相對提升，未逐一揭露樣本量與顯著性。",
+      "takeaway": "服務兩種數位熟練度落差大的使用者時，別靠直覺：用 session 錄影定位摩擦點、以 A/B 驗證，並把表單完成率這種中段指標一起盯，才看得到真實漏斗改善。",
+      "metrics": [
+        [
+          "+26%",
+          "broker 端轉換"
+        ],
+        [
+          "+11%",
+          "carrier 端轉換"
+        ],
+        [
+          "+137%",
+          "表單完成率"
+        ],
+        [
+          "64.96%",
+          "控制組轉換基準"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "兩類使用者、線上銷售與 demo 目標明確",
+        "使用者研究→session 錄影→兩役 A/B，以數據去偏",
+        "多指標且有控制組 64.96% 基準",
+        "VWO 自述客戶案例，封頂 1",
+        "CRO 計畫結構可複用，但未提煉成框架"
+      ]
+    },
+    {
+      "title": "Kisah 行動購物三役：個人化尺碼＋PLP／PDP 改版，營收 +120%",
+      "original_title": "How Kisah Grew Revenue 120% with A/B Testing",
+      "url": "https://vwo.com/success-stories/kisah-convertpolo-revenue/",
+      "source": "VWO",
+      "tier": 2,
+      "date": "2026-07",
+      "author": "VWO／ConvertPolo（Kisah 客戶案例）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "時尚電商",
+      "why": "男性民族服飾品牌 Kisah 要個人化瀏覽、改善商品發現與轉換；觀察發現重複選尺碼等可用性問題拖慢流程。",
+      "how": "以 VWO 跑三個 A/B：1) 個人化尺碼選擇；2) 重設計商品列表頁（PLP）；3) 優化商品詳情頁（PDP）。",
+      "result": "整體營收 +120%；分解：個人化尺碼 +33% 營收、PLP 改版加購 +15%＋篩選使用 +34%、PDP 優化轉換 +91%。",
+      "caveat": "VWO／ConvertPolo 自述客戶案例，單一來源、可能偏正面；+120% 營收與 +91% 轉換亮眼但未揭露期間、樣本量與是否受季節／流量影響；各測試為相對提升。",
+      "takeaway": "行動電商的摩擦常藏在「重複操作」（如反覆選尺碼）。把尺碼記憶、PLP 篩選與 PDP 決策逐段拆開實驗，累積效果可觀——但看到 +120% 這種數字要追問期間與基準。",
+      "metrics": [
+        [
+          "+120%",
+          "整體營收"
+        ],
+        [
+          "+91%",
+          "PDP 轉換"
+        ],
+        [
+          "+33%",
+          "個人化尺碼帶動營收"
+        ],
+        [
+          "+15%",
+          "PLP 加購"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "個人化、商品發現與轉換目標明確，並先觀察到可用性痛點",
+        "三個具假設的 A/B 分段驗證",
+        "多指標豐富（+120% 營收及分項），惟基準／期間未揭露",
+        "VWO／ConvertPolo 自述客戶案例，封頂 1",
+        "尺碼記憶／PLP／PDP 逐段實驗可複用"
+      ]
+    },
+    {
+      "title": "GoSection8 移除註冊頁影片：讓 CTA 現形，轉換 +88%",
+      "original_title": "Case Study: Removing Video increased conversion rate by 88.46%",
+      "url": "https://www.invespcro.com/blog/removing-video-increased-conversion-rate/",
+      "source": "Invesp",
+      "tier": 2,
+      "date": "2014-04",
+      "author": "Invesp（GoSection8 顧問案例）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角",
+        "經典案例"
+      ],
+      "industry": "租屋平台",
+      "why": "租屋服務 GoSection8 卡在免費會員轉付費，註冊頁離開率高。",
+      "how": "用轉換框架分析，發現註冊頁的影片擠壓了清楚的 CTA 呈現；於是移除影片，改以利益點＋明確 CTA，以 A/B 驗證。",
+      "result": "轉換率 +88.46%。關鍵領悟：把最重要的元素（CTA、利益點）放到最顯眼、最易取用的位置，勝過華麗媒體。",
+      "caveat": "Invesp 顧問自述案例（2014 年、單一小型網站），單一來源、可能偏正面；+88.46% 為相對提升，未揭露絕對基準與樣本量。",
+      "takeaway": "「加東西」不一定更好：當影片、動畫擠掉了行動點，移除反而提升轉換。先確保頁面最關鍵元素最易被看見與取用，再談裝飾。別照抄同業——對別人有效未必對你有效。",
+      "metrics": [
+        [
+          "+88.46%",
+          "註冊頁轉換率"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "免費轉付費、註冊頁高離開率的商業／漏斗問題明確",
+        "框架分析→發現影片擠壓 CTA→移除的反直覺決策",
+        "+88.46% A/B 成果（惟單一指標、年代較早）",
+        "Invesp 顧問自述、非當事品牌，封頂 1",
+        "提煉出可複用原則：關鍵元素優先、勿盲抄同業"
+      ]
+    },
+    {
+      "title": "La Fée Maraboutée 升級站內搜尋：兩週內每人營收 +11.7%",
+      "original_title": "Search Success: How La Fée Maraboutée Boosted Revenue with AB Tasty Search",
+      "url": "https://www.abtasty.com/resources/search-success-how-la-fee-maraboutee-boosted-revenue-with-ab-tasty-search/",
+      "source": "AB Tasty",
+      "tier": 2,
+      "date": "2026-03",
+      "author": "AB Tasty（La Fée Maraboutée 客戶案例）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "時尚電商",
+      "why": "法國女裝品牌 La Fée Maraboutée 的 Shopify 搜尋缺乏容錯與語意理解，拖累商品發現。",
+      "how": "以 AB Tasty 升級搜尋：加入錯字容忍與語意能力，同時保留品牌設計。",
+      "result": "兩週內：每位使用者營收 +11.7%、加入購物車率 +9.4%。凸顯站內搜尋作為轉換槓桿，尤其旺季。",
+      "caveat": "AB Tasty 自述客戶案例，單一來源、可能偏正面；兩週窗口短、未揭露樣本量與是否受旺季影響；主題與本站「Attraction Tickets 自適應搜尋」相近。",
+      "takeaway": "站內搜尋是被低估的轉換槓桿：容錯與語意理解讓使用者找得到，直接反映在每人營收。改版時保住品牌視覺，降低導入阻力。",
+      "metrics": [
+        [
+          "+11.7%",
+          "每使用者營收"
+        ],
+        [
+          "+9.4%",
+          "加入購物車率"
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "搜尋缺陷拖累發現的商業脈絡，較局部",
+        "單一升級改動、未見迭代或被推翻方案",
+        "+11.7% 每人營收與 +9.4% 加購，兩週窗口",
+        "AB Tasty 自述客戶案例，封頂 1",
+        "站內搜尋即轉換槓桿可複用，惟與既有案例主題重疊"
+      ]
+    },
     {
       "title": "Air Europa 行動優先實驗：一年 500 次 A/B，CSAT 81%→87%、訂票漏斗 +9%",
       "original_title": "The Sky’s the Limit: Air Europa’s Experimentation Success Story",
