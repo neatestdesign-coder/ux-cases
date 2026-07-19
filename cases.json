@@ -1,10 +1,103 @@
 {
-  "updated": "2026-07-18",
+  "updated": "2026-07-19",
   "run": {
-    "scanned": 36,
-    "candidates": 3
+    "scanned": 30,
+    "candidates": 5
   },
   "cases": [
+    {
+      "title": "Kast 用 Mixpanel 校正產品直覺：差點被砍的 Push to Talk 其實是熱門功能，用戶留存 +50%",
+      "original_title": "Kast uses Mixpanel to identify their power users and understand what leads to stickiness",
+      "url": "https://mixpanel.com/customers/kast-improved-user-retention-by-50-with-mixpanel",
+      "source": "Mixpanel",
+      "tier": 2,
+      "date": "2020",
+      "author": "Mixpanel（廠商自述；當事 Kast 具名高管：CXO Elina Ollila、產品技術總監 Mika Kunto、CEO Mark Ollila）",
+      "cats": [
+        "更多案例"
+      ],
+      "industry": "社群軟體",
+      "why": "疫情期間 Kast（虛擬客廳）用戶爆量成長，但大小決策多憑感覺不憑數據，團隊看不出哪些功能真正驅動投入、也難從錯誤中學習；要規模化就得先變成數據驅動組織（把『data wins arguments』定為原則）。",
+      "how": "導入 Mixpanel 後，用 Retention 報表追 Week1/4/12 留存、自訂『Churn 30』指標（30 天前流失者中自然回流的比例）建立 stickiness 觀測；用 cohorts 定義 power users（近 15 天活躍且進入派對 ≥30 次）作為高品質質性回饋來源。關鍵反轉：團隊原打算砍掉為遊戲玩家設計的『Push to Talk』，先查數據才發現它竟是最多人用的功能之一——假設被推翻，避免了社群反彈。",
+      "result": "用戶留存率提升約 50%（廠商標示，未揭露起點 baseline）；建立可信的 power-user cohort 作為產品回饋來源；公司文化從『憑感覺』轉為數據驅動。最有價值的一點是靠行為數據擋下了一個錯誤的砍功能決策。侷限：50% 為單一數字、無對照 baseline，且屬廠商行銷素材、收益自然歸功自家工具。",
+      "caveat": "firsthand=1 二手：本案為 Mixpanel 官方 customer story，屬廠商自述、單一來源、可能偏正面選樣；『留存 +50%』未揭露對照期起點 baseline、未經第三方驗證，成效也自然歸因於自家工具。當事 Kast 高管具名（Elina Ollila 等）可回溯，數字宜視為廠商陳述。",
+      "takeaway": "在砍掉『看似沒用』的功能前，先用真實行為數據驗證使用度——直覺常錯；並可用明確的 power-user cohort 定義（活躍天數＋核心行為次數）鎖定最有價值的質性回饋對象。",
+      "metrics": [
+        [
+          "+50%",
+          "用戶留存率（廠商標示，未揭露 baseline）"
+        ],
+        [
+          "≥30 次",
+          "定義 power user 的派對進入門檻（近 15 天活躍）"
+        ],
+        [
+          "Push to Talk",
+          "差點被砍、經數據證明為熱門功能的關鍵反轉"
+        ]
+      ],
+      "scores": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "score_notes": [
+        "商業脈絡=1：有點出『憑感覺決策、要規模化』的痛點，但偏泛用的『變數據驅動』目標，未錨定具體商業指標壓力。",
+        "決策過程=2：Push to Talk 假設被數據推翻、避免社群反彈，是真實案例的指紋（含被推翻方案）。",
+        "量化成果=1：僅『留存 +50%』單一百分比，未揭露對照期起點 baseline。",
+        "第一手性=1：Mixpanel 廠商自述、非當事團隊親撰，封頂 1 並強制回溯 caveat。",
+        "可遷移性=1：power-user cohort 與『砍功能前先驗證使用度』有啟發，但未提煉成完整方法框架。"
+      ]
+    },
+    {
+      "title": "Workshop Digital 落地頁迭代測試：建商客戶轉換率 5%→20%+、同廣告預算下名單約 +400%",
+      "original_title": "How Workshop Digital Grew Client Conversions by 400%",
+      "url": "https://unbounce.com/customer-case-study/workshop-digital/",
+      "source": "Unbounce",
+      "tier": 2,
+      "date": "約 2015",
+      "author": "Unbounce（廠商 customer case study；當事代理商共同創辦人 Andrew Miller 具名）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "行銷代理",
+      "why": "Workshop Digital 是 PPC 代理商，客戶付費買流量後轉換卡在『網站天花板』（某建商客戶約 5%）；在不加廣告預算、不增人力、也不想自養設計／工程團隊的前提下，要把『點擊→轉換』這段做出更高 ROI。",
+      "how": "用 Unbounce 快速做落地頁並持續 A/B 測試——從圖片、背景、輪播、影片、文案到標題／表單／按鈕版位一路測，初期『憑感覺猜』再靠數據逐步收斂；把落地頁測試優化包成固定月費定價賣給客戶；後期用 Dynamic Text Replacement 依搜尋關鍵字動態替換文案，減少要維護的頁面數。",
+      "result": "某建商客戶轉換率從 5%→8%（同廣告預算多拿 50% 名單），持續測到 20–22%（等於同流量下名單約 4 倍／+400%）；DTR 讓部分頁面再 +20% 轉換，並因 Quality Score 上升壓低 CPC。侷限：僅單一客戶區間數字、無跨客戶樣本，且屬廠商行銷素材。",
+      "caveat": "firsthand=1 二手：本案為 Unbounce 官方 customer case study，廠商自述、單一來源、明顯偏正面選樣，成效自然歸功自家工具；轉換率數字由代理商共同創辦人 Andrew Miller 具名陳述、未經第三方驗證，且為約 2015 年舊案。當事代理商具名可回溯，數字宜視為廠商／代理商陳述。",
+      "takeaway": "買流量到頂後，真正的增量常在『點擊→轉換』這段：用能快速迭代的落地頁工具先廣泛測（版位／文案／媒材）再收斂，並把『測試優化』做成可預期的月費服務——同預算下靠轉換率把名單翻數倍。",
+      "metrics": [
+        [
+          "5%→8%→20–22%",
+          "建商客戶落地頁轉換率（同廣告預算）"
+        ],
+        [
+          "約 +400%",
+          "同流量下客戶名單增幅（約 4 倍）"
+        ],
+        [
+          "+50%",
+          "5%→8% 階段、同預算下名單增幅"
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "商業脈絡=1：清楚點出『流量到頂、不加預算／人力要拉 ROI』的代理商痛點，但目標偏通用 ROI、未錨定客戶端具體營收數字。",
+        "決策過程=1：從廣測到收斂的迭代流程清楚，但為線性成功敘事、未見被推翻方案或失敗迭代。",
+        "量化成果=2：有 5%→8%→20–22% 完整 baseline→成果對照與約 +400% 名單增幅（同預算）。",
+        "第一手性=1：Unbounce 廠商自述、代理商具名，封頂 1 並強制回溯 caveat。",
+        "可遷移性=1：『先廣測再收斂＋測試做成月費服務』有啟發，但偏通用 CRO 操作、未提煉成獨特框架。"
+      ]
+    },
     {
       "title": "Moz（原 SEOmoz）三階段落地頁改造＋$1 試用：付費轉換 +170%、年營收多賺約 $100 萬美元",
       "original_title": "How we made $1 million for Moz—with one landing page and a few emails",
@@ -2265,6 +2358,34 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Going 首頁 CTA 三字實驗：『Sign up for free』改『Trial for free』，試用啟動率 +104%",
+      "url": "https://unbounce.com/conversion-rate-optimization/going-ab-testing-case-study/",
+      "source": "Unbounce",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "gate 未過（min_total 5.5 < 6）：單一乾淨 A/B（改三字 CTA）有清楚假設但無迭代／被推翻方案（決策=1）；成果僅『試用啟動率 +104% MoM』單一百分比、無絕對 baseline（量化=1）；目標偏通用 CRO（脈絡=1）；Unbounce＋Concierge 廠商自述、單一來源（第一手=1）；CTA 措辭框架有啟發但偏通用（可遷移=1）。且通篇為 Concierge 方案的軟性廣告。品質不足，列入淘汰。"
+    },
+    {
+      "title": "Clubhouse 用戶留存與流失的心理學拆解（Growth.Design 第三方分析）",
+      "url": "https://growth.design/case-studies/clubhouse-user-retention",
+      "source": "Growth.Design",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "reason": "gate 未過（量化成果=0 觸下限＋min_total 5.5<6）：全篇為 Growth.Design 對 Clubhouse 的第三方心理學拆解與假想改版，未含 Clubhouse 自身 baseline→成果留存數據（僅引用 Facebook『10 天加 7 友』、Clubhouse『追蹤 25 人』等外部啟發式門檻）→量化=0；非當事團隊、屬外部拆解（第一手=1）；心理學原則可遷移性佳（可遷移=2）但量化掛零一律淘汰。"
+    },
     {
       "title": "Sparify 行動站四組實驗：重排 PDP＋FOMO 購物車，營收 +51.77%",
       "url": "https://vwo.com/success-stories/sparify-convertpolo-revenue/",
