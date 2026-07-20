@@ -735,7 +735,7 @@ let visibleCount = 15;
 let FACETS = [];
 const CHIP_LABELS = {};
 let CAT_ORDER = ["國際品牌","經典案例"];   // 兩個導覽分流，避免同一文章重複出現在兩個 tab
-let IND_ORDER = ["電商","SaaS","生產力","教育","媒體","內容平台","社群","工業","顧問"];
+let MORE_SUBMENU = ["電商","SaaS","AI","生產力","時尚","醫療健康","金融","旅遊","社群","餐飲","教育","遊戲","媒體","工業","電信","物流","房地產"];
 let CATCH_ALL = "更多案例";
 const ADV_KEYS = ["goal","product","industry"];
 const advActiveCount = ()=> ADV_KEYS.filter(k=>ADV[k]).length;
@@ -757,10 +757,9 @@ function dnum(s){ if(!s) return 0; const p=String(s).split("-"); const y=(p[0]||
 function sortCmp(a,b){ return SORT==="date" ? (dnum(b.date)-dnum(a.date)) : (total(b)-total(a)); }
 
 function industryList(){
-  const present = [...new Set(CASES.map(c=>c.industry).filter(Boolean))];
-  const ordered = IND_ORDER.filter(x=>present.includes(x));
-  present.forEach(x=>{ if(!ordered.includes(x)) ordered.push(x); });
-  return ordered;
+  const present = new Set();
+  CASES.forEach(c=>{ (c.f_industry||[]).forEach(x=>present.add(x)); (c.f_product||[]).forEach(x=>present.add(x)); });
+  return MORE_SUBMENU.filter(x=>present.has(x));
 }
 
 function mkChip(label, on, onclick){
@@ -970,7 +969,7 @@ function filteredList(){
       if(ADV.industry && !(c.f_industry||[]).includes(ADV.industry)) return false;
     } else {
       if(NAV.type==="cat" && navCategoryOf(c)!==NAV.value) return false;
-      if(NAV.type==="ind" && c.industry!==NAV.value) return false;
+      if(NAV.type==="ind" && !((c.f_industry||[]).includes(NAV.value) || (c.f_product||[]).includes(NAV.value))) return false;
     }
     return true;
   });
@@ -1114,7 +1113,7 @@ async function boot(){
     const cr = await fetch("config/categories.json", {cache:"no-store"});
     if(cr.ok){ const cj = await cr.json();
       if(Array.isArray(cj.nav_tabs)) CAT_ORDER = cj.nav_tabs;
-      if(Array.isArray(cj.industry_order)) IND_ORDER = cj.industry_order;
+      if(Array.isArray(cj.more_submenu)) MORE_SUBMENU = cj.more_submenu;
       if(typeof cj.catch_all === "string") CATCH_ALL = cj.catch_all;
     }
   }catch(e){ /* categories.json 讀不到就用內建 fallback，行為不變 */ }
