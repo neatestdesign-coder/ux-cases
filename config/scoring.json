@@ -60,7 +60,7 @@
     "無法回溯原始出處的二手改寫、SEO 內容行銷",
     "AI 生成痕跡明顯的內容農場文"
   ],
-  "notes": "來源 tier 加成（tier1 +1.0 / tier2、3 +0.5 / tier4 +0）加在五維總和上，再與 gate.min_total 比較。發佈條件＝五維皆 ≥1 且（總和＋加成）≥6.0 且（若為二手）附回溯 caveat。",
+  "notes": "來源 tier 加成由 scripts/score-gate.js 統一套用（tier 對應加成數值以該檔的 TIER_BONUS 為唯一真實來源），加在五維總和上，再與 gate.min_total 比較。發佈條件＝五維皆 ≥1 且（總和＋加成）≥ gate.min_total 且（若為二手）附回溯 caveat。",
   "gate": {
     "description": "通過發佈需同時滿足下列全部條件（AND）。任一不滿足即進 rejected。",
     "dimension_floors": {

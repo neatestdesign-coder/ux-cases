@@ -1,9 +1,14 @@
 {
+  "_status": "設計參考文件，非程式讀取。實際樣式以 index.html 的 <style> 為準；本檔用於記錄視覺設計決策，修改本檔不會改變網站外觀。",
   "name": "Frosted Minimalism — Case Journal Design System",
   "analysis": "參考三組 UI（Planner、NFT Dashboard、Intellecta）共同語言：冷灰藍→薰衣草漸層環境光、半透明玻璃面板、超大圓角、多層柔陰影＋內側白描邊、深 navy 墨色作唯一深色錨點、萊姆綠高亮、藥丸形互動元件、極大留白、小型字距放寬的 label。",
   "color": {
     "bg-base": "#EEF1F5",
-    "bg-mesh": ["#DCE6EE (radial, 左上)", "#E7E2F4 (radial, 右)", "#F3E8EC (radial, 下)"],
+    "bg-mesh": [
+      "#DCE6EE (radial, 左上)",
+      "#E7E2F4 (radial, 右)",
+      "#F3E8EC (radial, 下)"
+    ],
     "surface-glass": "rgba(255,255,255,0.62) + blur(24px)",
     "surface-solid": "#FFFFFF",
     "ink": "#1A1E2B",
@@ -13,12 +18,27 @@
     "lime": "#D7F16B",
     "lime-ink": "#4A5417",
     "tier-tints": {
-      "1": {"bg": "#DCF1E8", "fg": "#1E6B54"},
-      "2": {"bg": "#DFE9F6", "fg": "#2F5787"},
-      "3": {"bg": "#E9E2F6", "fg": "#5D468F"},
-      "4": {"bg": "#F6E9DC", "fg": "#8A5A2A"}
+      "1": {
+        "bg": "#DCF1E8",
+        "fg": "#1E6B54"
+      },
+      "2": {
+        "bg": "#DFE9F6",
+        "fg": "#2F5787"
+      },
+      "3": {
+        "bg": "#E9E2F6",
+        "fg": "#5D468F"
+      },
+      "4": {
+        "bg": "#F6E9DC",
+        "fg": "#8A5A2A"
+      }
     },
-    "reject": {"fg": "#A05543", "bg": "rgba(255,255,255,0.4)"}
+    "reject": {
+      "fg": "#A05543",
+      "bg": "rgba(255,255,255,0.4)"
+    }
   },
   "typography": {
     "family": "Inter + Noto Sans TC（幾何無襯線，全站統一，不用襯線體）",
