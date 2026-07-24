@@ -80,7 +80,7 @@
     border-bottom:1px solid rgba(23,27,41,.06);
     box-shadow:0 10px 26px -18px rgba(23,27,41,.24);
   }
-  .toolbar-row{display:flex;align-items:center;gap:12px}
+  .toolbar-row{position:relative;display:flex;align-items:center;gap:12px}
   /* 開啟進階篩選時，保留原導覽脈絡，但讓它退到半透模糊背景。 */
   .sticky-head.adv-open .toolbar,
   .sticky-head.adv-open .tools > :not(.adv-anchor),
@@ -496,7 +496,7 @@
   .sit-title{font-size:14px;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
   .sit-count{flex:0 0 auto;min-width:30px;height:30px;padding:0 9px;border-radius:999px;background:rgba(23,27,41,.05);display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
   .footstat{margin-bottom:6px}.footstat b{color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums}
-  @media (max-width:640px){.sit-sec{padding-bottom:20px}.sit-grid{display:grid;grid-auto-flow:column;grid-template-rows:auto auto;grid-auto-columns:max-content;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:16px 16px 22px;row-gap:12px}.sit-grid::-webkit-scrollbar{display:none}}
+  @media (max-width:640px){.sit-sec{padding-bottom:20px}.sit-grid{display:grid;grid-auto-flow:column;grid-template-rows:auto auto;grid-auto-columns:max-content;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:14px 16px 24px;row-gap:12px}.sit-grid::-webkit-scrollbar{display:none}.sit-sec .sit-tile{box-shadow:0 1px 2px rgba(23,27,41,.05),0 8px 18px -8px rgba(23,27,41,.12)}}
 </style>
 </head>
 <body>
@@ -504,9 +504,9 @@
 
 <header class="header-grid">
   <div class="header-left">
-    <div class="eyebrow">每日更新</div>
+    <div class="eyebrow">每日 am8:00 更新</div>
     <h1>全球 UX 商業案例</h1>
-    <p class="sub">增長 Product Sense 與營收</p>
+    <p class="sub">產品增長方法 • 案例知識庫 • 培養產品思維</p>
   </div>
 </header>
 
@@ -526,9 +526,9 @@
     </div>
     <button class="icon-btn" id="layout-btn" type="button" aria-label="排版方式" title="排版方式"></button>
   </div>
-</div>
-<div class="adv-wrap" id="adv-wrap" hidden>
-  <div class="adv" id="adv" aria-label="進階篩選"></div>
+  <div class="adv-wrap" id="adv-wrap" hidden>
+    <div class="adv" id="adv" aria-label="進階篩選"></div>
+  </div>
 </div>
 <div class="submenu-wrap" id="submenu-wrap" hidden>
   <div class="submenu" id="submenu" aria-label="產業篩選"></div>
@@ -770,7 +770,8 @@ function buildSituations(){
   box.innerHTML=SITUATIONS.map(function(s){var n=CASES.filter(s.fn).length;
     return '<button class="sit-tile s-'+s.badge+(SIT===s.id?' on':'')+'" data-sit="'+s.id+'"><span class="sit-badge b-'+s.badge+'">'+s.badge+'</span><span class="sit-title">'+esc(s.title)+'</span><span class="sit-count">'+n+'</span></button>';}).join("");
 }
-function setSituation(id){SIT=id;ADV={goal:null,product:null,industry:null};advOpen=false;subOpen=false;visibleCount=RUN.batchSize;syncUI();var a=document.getElementById("toolbar-sentinel");if(a)a.scrollIntoView({behavior:"smooth",block:"start"});}
+function scrollToToolbar(){var sh=document.getElementById("sticky-head");if(!sh)return;var st=parseInt(getComputedStyle(sh).top,10)||0;var y=window.pageYOffset+sh.getBoundingClientRect().top-st;if(y<0)y=0;window.scrollTo({top:y,behavior:"smooth"});}
+function setSituation(id){SIT=id;ADV={goal:null,product:null,industry:null};advOpen=false;subOpen=false;visibleCount=RUN.batchSize;syncUI();scrollToToolbar();}
 const ADV_KEYS = ["goal","product","industry"];
 const advActiveCount = ()=> ADV_KEYS.filter(k=>ADV[k]).length;
 
@@ -883,8 +884,8 @@ function renderTools(){
     sb.setAttribute("aria-expanded", String(sortOpen));
     const pop = document.getElementById("sort-pop");
     if(pop){
-      pop.innerHTML = [["listed","最新上架","依收錄時間"],["date","出處時間","依原文發布時間"],["score","評分","依五維總分"]]
-        .map(([k,l,s])=>`<button type="button" class="pop-item${SORT===k?' on':''}" data-sort="${k}">${l}<span class="pi-sub">${s}</span></button>`).join("");
+      pop.innerHTML = [["listed","最新收錄"],["date","原文發布時間"],["score","評分"]]
+        .map(([k,l])=>`<button type="button" class="pop-item${SORT===k?' on':''}" data-sort="${k}">${l}</button>`).join("");
       pop.hidden = !sortOpen;
     }
   }
@@ -1054,8 +1055,7 @@ function wireBadgeFilter(){
     if(!t) return;
     if(t.dataset.ind != null){ subOpen=true; setNav("ind", t.dataset.ind); }
     else if(t.dataset.cat != null){ subOpen=false; setNav("cat", t.dataset.cat); }
-    const s = document.getElementById("toolbar-sentinel");
-    if(s && s.scrollIntoView) s.scrollIntoView({behavior:"smooth", block:"start"});
+    scrollToToolbar();
   });
 }
 
