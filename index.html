@@ -483,6 +483,20 @@
     .adv-toggle .advbadge{position:absolute;top:-4px;right:-4px}
     .icon-btn{width:42px;height:42px}
   }
+  /* ── 情境入口 ── */
+  .sit-sec{margin:20px 0 4px}
+  .sit-grid{display:flex;flex-wrap:wrap;gap:12px;padding:2px}
+  .sit-tile{display:inline-flex;align-items:center;gap:10px;white-space:nowrap;cursor:pointer;font-family:inherit;padding:7px 8px 7px 10px;border-radius:999px;background:var(--glass-strong);border:1px solid var(--stroke);box-shadow:var(--sh-card);backdrop-filter:blur(16px);transition:background var(--ease),border-color var(--ease)}
+  .sit-tile.on{border-color:transparent}
+  .sit-tile.on.s-獲取{background:var(--t1-bg)}.sit-tile.on.s-啟用{background:var(--t2-bg)}.sit-tile.on.s-參與{background:var(--t3-bg)}.sit-tile.on.s-轉換{background:var(--t4-bg)}.sit-tile.on.s-留存{background:var(--lime-soft)}.sit-tile.on.s-方法{background:rgba(23,27,41,.06)}
+  .sit-badge{font-size:11px;font-weight:700;letter-spacing:.02em;padding:3px 11px;border-radius:999px;flex:0 0 auto}
+  .b-獲取{background:var(--t1-bg);color:var(--t1-fg)}.b-啟用{background:var(--t2-bg);color:var(--t2-fg)}.b-參與{background:var(--t3-bg);color:var(--t3-fg)}.b-轉換{background:var(--t4-bg);color:var(--t4-fg)}.b-留存{background:var(--lime-soft);color:var(--lime-ink)}.b-方法{background:rgba(23,27,41,.06);color:var(--navy)}
+  .sit-tile.on .sit-badge{background:rgba(255,255,255,.62);box-shadow:inset 0 0 0 1px rgba(23,27,41,.05)}
+  .sit-tile.on .sit-count{background:rgba(255,255,255,.62)}
+  .sit-title{font-size:14px;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+  .sit-count{flex:0 0 auto;min-width:30px;height:30px;padding:0 9px;border-radius:999px;background:rgba(23,27,41,.05);display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+  .footstat{margin-bottom:6px}.footstat b{color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums}
+  @media (max-width:640px){.sit-grid{display:grid;grid-auto-flow:column;grid-template-rows:auto auto;grid-auto-columns:max-content;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:4px 16px 12px}.sit-grid::-webkit-scrollbar{display:none}}
 </style>
 </head>
 <body>
@@ -494,12 +508,9 @@
     <h1>全球 UX 商業案例</h1>
     <p class="sub">增長 Product Sense 與營收</p>
   </div>
-  <div class="stats">
-    <div class="stat"><b id="st-scanned">—</b><span>掃描文章</span></div>
-    <div class="stat"><b id="st-candidates">—</b><span>進入評分</span></div>
-    <div class="stat hero"><b id="st-published">—</b><span>評分通過發佈</span></div>
-  </div>
 </header>
+
+<section class="sit-sec"><div class="sit-grid" id="sitGrid"></div></section>
 
 <div id="toolbar-sentinel"></div>
 <div class="sticky-head" id="sticky-head">
@@ -543,6 +554,7 @@
 </details>
 
 <footer>
+  <div class="footstat">已掃描 <b id="ft-scanned">—</b> 篇文章 ｜ 評分通過發佈 <b id="ft-published">—</b> 篇</div>
   <div>評分規則：五維各 0–2 分（商業脈絡・決策過程・量化成果・第一手性・可遷移性）。發佈需五維皆 ≥ 1、且總分（含來源加成）≥ 6.0；二手案須附可回溯出處的 caveat。</div>
   <div class="powerby">Powered by <a href="https://www.threads.com/@meme.design.ai" target="_blank" rel="noopener">@meme.design.ai</a></div>
 </footer>
@@ -737,6 +749,28 @@ const CHIP_LABELS = {};
 let CAT_ORDER = ["國際品牌","經典案例"];   // 兩個導覽分流，避免同一文章重複出現在兩個 tab
 let MORE_SUBMENU = ["電商","SaaS","AI","生產力","時尚","醫療健康","金融","旅遊","社群","餐飲","教育","遊戲","媒體","工業","電信","物流","房地產"];
 let CATCH_ALL = "更多案例";
+// ── 情境入口 ──
+let SIT = null;
+var SITKW1=/熱圖|session|錄影|dead click|死圖|同群分析|cohort|Contentsquare|Mixpanel|Heap|Hotjar|行為分析|行為數據/;
+var SITKW2=/行為心理|行為經濟|心理抗拒|reactance|認知負荷|損失趨避|稟賦效應|框架效應|社會評價|System 1|直覺系統|稀缺|急迫感|倒數計時|漸進承諾/;
+function sitGoal(c,a){return (c.f_goal||[]).some(function(x){return a.indexOf(x)>=0;});}
+function sitTxt(c){return [c.title,c.blurb,c.why,c.how,c.takeaway].join(" ");}
+var SITUATIONS=[
+ {id:1,badge:"獲取",title:"引流進來卻留不住？",fn:function(c){return sitGoal(c,["到達頁","行銷導流","第一印象"]);}},
+ {id:2,badge:"啟用",title:"如何提升註冊率？",fn:function(c){return sitGoal(c,["註冊","登入","新手引導","教學導覽"]);}},
+ {id:3,badge:"轉換",title:"如何提升購物車／結帳轉換？",fn:function(c){return sitGoal(c,["結帳","付款"]);}},
+ {id:4,badge:"轉換",title:"如何讓人更願意付費／升級？",fn:function(c){return sitGoal(c,["定價","升級"]);}},
+ {id:5,badge:"留存",title:"互動留存低怎麼辦？",fn:function(c){return sitGoal(c,["個人化","通知","儀表板","忠誠","習慣養成","再互動"]);}},
+ {id:6,badge:"參與",title:"如何改善找不到資訊的問題？",fn:function(c){return sitGoal(c,["站內搜尋"]);}},
+ {id:7,badge:"方法",title:"擅用數據找出潛在問題",fn:function(c){return SITKW1.test(sitTxt(c));}},
+ {id:8,badge:"方法",title:"靠心理學與推力拉高客單",fn:function(c){return SITKW2.test(sitTxt(c));}},
+];
+function buildSituations(){
+  var box=document.getElementById("sitGrid");if(!box)return;
+  box.innerHTML=SITUATIONS.map(function(s){var n=CASES.filter(s.fn).length;
+    return '<button class="sit-tile s-'+s.badge+(SIT===s.id?' on':'')+'" data-sit="'+s.id+'"><span class="sit-badge b-'+s.badge+'">'+s.badge+'</span><span class="sit-title">'+esc(s.title)+'</span><span class="sit-count">'+n+'</span></button>';}).join("");
+}
+function setSituation(id){SIT=id;ADV={goal:null,product:null,industry:null};advOpen=false;subOpen=false;visibleCount=RUN.batchSize;syncUI();var a=document.getElementById("toolbar-sentinel");if(a)a.scrollIntoView({behavior:"smooth",block:"start"});}
 const ADV_KEYS = ["goal","product","industry"];
 const advActiveCount = ()=> ADV_KEYS.filter(k=>ADV[k]).length;
 
@@ -776,12 +810,12 @@ function buildChips(){
   const hasAdv = advActiveCount() > 0;
   fbox.innerHTML = "";
   // 進階篩選生效時，保留既有主選單狀態但不顯示任何已選取項。
-  fbox.appendChild(mkChip("全部", !hasAdv && NAV.type==="all", ()=>{ subOpen=false; setNav("all",null); }));
+  fbox.appendChild(mkChip("全部", !hasAdv && SIT===null && NAV.type==="all", ()=>{ subOpen=false; setNav("all",null); }));
   const present = new Set(CASES.flatMap(c=>c.cats));
   CAT_ORDER.filter(x=>present.has(x)).forEach(cat=>{
-    fbox.appendChild(mkChip(CHIP_LABELS[cat]||cat, !hasAdv && NAV.type==="cat"&&NAV.value===cat, ()=>{ subOpen=false; setNav("cat",cat); }));
+    fbox.appendChild(mkChip(CHIP_LABELS[cat]||cat, !hasAdv && SIT===null && NAV.type==="cat"&&NAV.value===cat, ()=>{ subOpen=false; setNav("cat",cat); }));
   });
-  const more = mkChip("更多", !hasAdv && (subOpen||NAV.type==="ind"), toggleSub);
+  const more = mkChip("更多", !hasAdv && SIT===null && (subOpen||NAV.type==="ind"), toggleSub);
   more.classList.add("more");
   more.setAttribute("aria-expanded", subOpen ? "true" : "false");
   more.innerHTML = '更多<span class="caret" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="m3 5.25 4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
@@ -815,7 +849,7 @@ function buildSubmenu(){
   industryList().forEach(ind=>{
     const b = document.createElement("button");
     b.type = "button";
-    b.className = "subchip" + (advActiveCount()===0 && NAV.type==="ind"&&NAV.value===ind ? " on" : "");
+    b.className = "subchip" + (advActiveCount()===0 && SIT===null && NAV.type==="ind"&&NAV.value===ind ? " on" : "");
     b.textContent = "#" + ind;
     b.onclick = ()=>{ subOpen=true; setNav("ind",ind); };
     box.appendChild(b);
@@ -887,6 +921,7 @@ function storyHtml(c, animate){
 function cancelAdv(){ advOpen = false; syncUI(); }                    // 取消：丟棄草稿
 function applyAdv(){
   if(countWith(PENDING) === 0) return;                               // 0 筆不可套用
+  SIT = null;
   ADV = {...PENDING};
   // 保留原主選單狀態；篩選清除後可無縫回復該選取項。
   advOpen = false;
@@ -946,6 +981,7 @@ function renderAdvanced(){
 
 function setNav(type, value){
   NAV = {type, value};
+  SIT = null;
   ADV = {goal:null, product:null, industry:null};   // 主選單與進階篩選互斥、獨立
   advOpen = false;
   visibleCount = RUN.batchSize;
@@ -953,6 +989,7 @@ function setNav(type, value){
 }
 
 function syncUI(){
+  buildSituations();
   buildChips();
   renderAdvToggle();
   renderTools();
@@ -962,8 +999,10 @@ function syncUI(){
 
 function filteredList(){
   const useAdv = advActiveCount() > 0;   // 進階篩選一旦套用，就獨立於主選單 tab
+  const sit = SIT!==null ? SITUATIONS.find(s=>s.id===SIT) : null;
   const list = CASES.filter(c=>{
-    if(useAdv){
+    if(sit){ if(!sit.fn(c)) return false; }
+    else if(useAdv){
       if(ADV.goal && !(c.f_goal||[]).includes(ADV.goal)) return false;
       if(ADV.product && !(c.f_product||[]).includes(ADV.product)) return false;
       if(ADV.industry && !(c.f_industry||[]).includes(ADV.industry)) return false;
@@ -1074,6 +1113,7 @@ function renderRejected(){
 
 function init(){
   visibleCount = RUN.batchSize || 15;
+  buildSituations();
   buildChips();
   renderAdvToggle();
   renderTools();
@@ -1117,9 +1157,9 @@ async function boot(){
       if(typeof cj.catch_all === "string") CATCH_ALL = cj.catch_all;
     }
   }catch(e){ /* categories.json 讀不到就用內建 fallback，行為不變 */ }
-  document.getElementById("st-scanned").textContent = RUN.scanned;
-  document.getElementById("st-candidates").textContent = RUN.candidates;
-  document.getElementById("st-published").textContent = CASES.length;
+  var _fs=document.getElementById("ft-scanned"); if(_fs) _fs.textContent = RUN.scanned;
+  var _fp=document.getElementById("ft-published"); if(_fp) _fp.textContent = CASES.length;
+  var _sg=document.getElementById("sitGrid"); if(_sg){ _sg.addEventListener("click",function(e){var b=e.target.closest(".sit-tile"); if(b) setSituation(+b.dataset.sit);}); }
   init();
   const sentinel = document.getElementById("toolbar-sentinel");
   if(window.IntersectionObserver && sentinel){
