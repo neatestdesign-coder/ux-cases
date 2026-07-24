@@ -484,7 +484,7 @@
     .icon-btn{width:42px;height:42px}
   }
   /* ── 情境入口 ── */
-  .sit-sec{margin:20px 0 4px}
+  .sit-sec{margin:20px 0 0;padding-bottom:24px;border-bottom:1px solid var(--stroke)}
   .sit-grid{display:flex;flex-wrap:wrap;gap:12px;padding:2px}
   .sit-tile{display:inline-flex;align-items:center;gap:10px;white-space:nowrap;cursor:pointer;font-family:inherit;padding:7px 8px 7px 10px;border-radius:999px;background:var(--glass-strong);border:1px solid var(--stroke);box-shadow:var(--sh-card);backdrop-filter:blur(16px);transition:background var(--ease),border-color var(--ease)}
   .sit-tile.on{border-color:transparent}
@@ -496,7 +496,7 @@
   .sit-title{font-size:14px;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
   .sit-count{flex:0 0 auto;min-width:30px;height:30px;padding:0 9px;border-radius:999px;background:rgba(23,27,41,.05);display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
   .footstat{margin-bottom:6px}.footstat b{color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums}
-  @media (max-width:640px){.sit-grid{display:grid;grid-auto-flow:column;grid-template-rows:auto auto;grid-auto-columns:max-content;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:4px 16px 12px}.sit-grid::-webkit-scrollbar{display:none}}
+  @media (max-width:640px){.sit-sec{padding-bottom:14px}.sit-grid{display:grid;grid-auto-flow:column;grid-template-rows:auto auto;grid-auto-columns:max-content;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:4px 16px 12px}.sit-grid::-webkit-scrollbar{display:none}}
 </style>
 </head>
 <body>
@@ -742,7 +742,7 @@ let subOpen = false;
 let advOpen = false;
 let sortOpen = false;
 let VIEW = "brief";      // brief（圖＋標題＋指標＋摘要，預設）| full（完整）
-let SORT = "score";      // score（評分）| date（最新，依原文發布時間）
+let SORT = "listed";     // listed（最新上架＝收錄順序）| date（出處時間，依原文發布）| score（評分）
 let visibleCount = 15;
 let FACETS = [];
 const CHIP_LABELS = {};
@@ -788,7 +788,7 @@ const LAYOUT_BRIEF_ICON = `<svg width="16" height="16" viewBox="0 0 16 16" fill=
 const LAYOUT_FULL_ICON = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 3.5h11M2.5 6.5h11M2.5 9.5h11M2.5 12.5h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>`;
 
 function dnum(s){ if(!s) return 0; const p=String(s).split("-"); const y=(p[0]||"0"), m=(p[1]||"0"), da=(p[2]||"0"); return parseInt(y.padStart(4,"0")+m.padStart(2,"0")+da.padStart(2,"0"),10)||0; }
-function sortCmp(a,b){ return SORT==="date" ? (dnum(b.date)-dnum(a.date)) : (total(b)-total(a)); }
+function sortCmp(a,b){ if(SORT==="date") return dnum(b.date)-dnum(a.date); if(SORT==="score") return total(b)-total(a); return 0; }
 
 function industryList(){
   const present = new Set();
@@ -878,12 +878,12 @@ function openAdv(){ PENDING = {...ADV}; advOpen = true; sortOpen = false; syncUI
 function renderTools(){
   const sb = document.getElementById("sort-btn");
   if(sb){
-    sb.className = "icon-btn" + ((sortOpen || SORT!=="score") ? " on" : "");
+    sb.className = "icon-btn" + ((sortOpen || SORT!=="listed") ? " on" : "");
     sb.innerHTML = SORT_ICON;
     sb.setAttribute("aria-expanded", String(sortOpen));
     const pop = document.getElementById("sort-pop");
     if(pop){
-      pop.innerHTML = [["date","最新","依原文發布時間"],["score","評分","依五維總分"]]
+      pop.innerHTML = [["listed","最新上架","依收錄時間"],["date","出處時間","依原文發布時間"],["score","評分","依五維總分"]]
         .map(([k,l,s])=>`<button type="button" class="pop-item${SORT===k?' on':''}" data-sort="${k}">${l}<span class="pi-sub">${s}</span></button>`).join("");
       pop.hidden = !sortOpen;
     }
