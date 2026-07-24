@@ -496,7 +496,7 @@
   .sit-title{font-size:14px;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
   .sit-count{flex:0 0 auto;min-width:30px;height:30px;padding:0 9px;border-radius:999px;background:rgba(23,27,41,.05);display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
   .footstat{margin-bottom:6px}.footstat b{color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums}
-  @media (max-width:640px){.sit-sec{padding-bottom:20px}.sit-grid{display:grid;grid-auto-flow:column;grid-template-rows:auto auto;grid-auto-columns:max-content;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:14px 16px 24px;row-gap:12px}.sit-grid::-webkit-scrollbar{display:none}.sit-sec .sit-tile{box-shadow:0 1px 2px rgba(23,27,41,.05),0 8px 18px -8px rgba(23,27,41,.12)}}
+  @media (max-width:640px){.sit-sec{padding-bottom:20px}.sit-grid{display:grid;grid-auto-flow:column;grid-template-rows:auto auto;grid-auto-columns:max-content;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:14px 16px 24px;row-gap:12px}.sit-grid::-webkit-scrollbar{display:none}.sit-sec .sit-tile{box-shadow:0 1px 2px rgba(23,27,41,.05),0 8px 18px -8px rgba(23,27,41,.12)}.sit-sec .sit-count{margin-left:auto}}
 </style>
 </head>
 <body>
@@ -506,7 +506,7 @@
   <div class="header-left">
     <div class="eyebrow">每日 am8:00 更新</div>
     <h1>全球 UX 商業案例</h1>
-    <p class="sub">產品增長方法 • 案例知識庫 • 培養產品思維</p>
+    <p class="sub">培養產品思維 • 產品增長心法 • 案例知識庫</p>
   </div>
 </header>
 
@@ -554,8 +554,8 @@
 </details>
 
 <footer>
-  <div class="footstat">已掃描 <b id="ft-scanned">—</b> 篇文章 ｜ 評分通過發佈 <b id="ft-published">—</b> 篇</div>
-  <div>評分規則：五維各 0–2 分（商業脈絡・決策過程・量化成果・第一手性・可遷移性）。發佈需五維皆 ≥ 1、且總分（含來源加成）≥ 6.0；二手案須附可回溯出處的 caveat。</div>
+  <div class="footstat">共審 <b id="ft-scanned">—</b> 篇 ｜ 通過評分正式收錄 <b id="ft-published">—</b> 篇</div>
+  <div>評分規則：五維各 0–2 分（商業脈絡・決策過程・量化成果・第一手性・可遷移性）。發佈需五維皆 ≥ 1、且總分（含來源加成）≥ 6.0；二手案須附可回溯出處的保留說明。</div>
   <div class="powerby">Powered by <a href="https://www.threads.com/@meme.design.ai" target="_blank" rel="noopener">@meme.design.ai</a></div>
 </footer>
 </div>
@@ -1157,7 +1157,7 @@ async function boot(){
       if(typeof cj.catch_all === "string") CATCH_ALL = cj.catch_all;
     }
   }catch(e){ /* categories.json 讀不到就用內建 fallback，行為不變 */ }
-  var _fs=document.getElementById("ft-scanned"); if(_fs) _fs.textContent = RUN.scanned;
+  var _fs=document.getElementById("ft-scanned"); if(_fs) _fs.textContent = CASES.length + REJECTED.length;
   var _fp=document.getElementById("ft-published"); if(_fp) _fp.textContent = CASES.length;
   var _sg=document.getElementById("sitGrid"); if(_sg){ _sg.addEventListener("click",function(e){var b=e.target.closest(".sit-tile"); if(b) setSituation(+b.dataset.sit);}); }
   init();
