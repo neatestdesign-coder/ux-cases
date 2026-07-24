@@ -55,7 +55,8 @@
         "量化成果=2：改版前後有「流失率偏高、螢幕內容轉化率偏低」的診斷描述對照到「點擊率+15%、每日訂單+約50單」的結果數字，惟原文未附完整原始數值，視為方向性參考。",
         "第一手性=2：文章由主導此專案的設計師MINGZI本人原創發表，屬當事團隊第一手記錄。",
         "可遷移性=2：提煉出「體驗直覺→數據驗證→競品佐證」的問題診斷順序，以及「背景＋利益＋需求拆解＋具體時間」的跨部門溝通公式，皆可直接套用到其他自發型改版專案。"
-      ]
+      ],
+      "image": "https://image.woshipm.com/wp-files/2020/09/tquVpUd3IcUOT0fuxwbW.jpg"
     },
     {
       "title": "天貓精靈雙11全鏈路行銷：早上8點53分就賣破百萬台",
@@ -102,7 +103,8 @@
         "量化成果=1：「detail頁改版後轉化率持續上升、跳出率持續下降」為定性描述、未附具體百分比；「雙11當天8點53分賣破百萬台」是明確絕對數字，但難以完全歸因於設計本身（還涉及品牌聲量、供給等因素），故整體量化成果打1分。",
         "第一手性=2：文章由阿里巴巴UED團隊多位設計師聯合署名發表，原文註明來源為阿里巴巴UED，屬當事團隊第一手記錄。",
         "可遷移性=2：明確提煉出「潛在-感知-行動-忠誠-分享」五階段全鏈路框架、3M認知模型（Why-What-How），以及權益／社交／情感三類酬賞分類法，皆是可復用的行銷設計工具。"
-      ]
+      ],
+      "image": "https://image.woshipm.com/wp-files/img/86.jpg"
     },
     {
       "title": "攜程UED的數據復盤：導航改版翻車兩次，靠拆解點擊佔比才找到解方",
@@ -154,7 +156,8 @@
         "量化成果=2：每一版都有CLICK佔比與CTR的具體前後對照數字，並交叉比對頻道頁BUYER轉化率佐證決策，數據鏈完整。",
         "第一手性=2：作者「老曹」為攜程UED團隊成員，以第一人稱記錄自己團隊的實戰過程，原文並註明來源為攜程UED，屬當事團隊第一手記錄。",
         "可遷移性=1：「數據是雙刃劍，需要綜合考量、不能只看單一指標」的原則具啟發性，但未提煉成一個明確命名、可直接套用的框架。"
-      ]
+      ],
+      "image": "https://image.woshipm.com/wp-files/img/89.jpg"
     },
     {
       "title": "數位行銷媒體Smart Insights：一頁銷售信插在報價前，付費會員數大增",
@@ -212,7 +215,8 @@
         "量化成果=2：三個獨立A/B測試（銷售信、表單、導航）皆有清楚對照組與結果數字（+157%、+91%、+75%），量化紮實。",
         "第一手性=1：由CRO顧問公司Conversion Rate Experts發佈為客戶案例，雖附CEO Dr. Dave Chaffey具名影片與多則引言，仍屬顧問代理商自述，依規則封頂1並強制caveat。",
         "可遷移性=2：明確提煉出樹測試、Mastermind Session、Wins Database等可復用的研究與團隊協作方法，並示範了「先處理訪客心理疑慮，再談價格」的通用原則。"
-      ]
+      ],
+      "image": "https://res.cloudinary.com/conversion-rate-experts/image/upload/w_1200,dpr_auto,c_scale,f_auto,q_auto/Smart-Insights-Case-Study-2.jpg"
     },
     {
       "title": "跨國網路花店daFlores：加一個倒數時鐘、換一句粉絲數字，訂單雙雙成長",
@@ -267,7 +271,8 @@
         "量化成果=2：兩項測試都有清楚的對照組與結果對照（倒數時鐘+27%訂單；Facebook粉絲圖片+44%銷售），並有整體83%測試勝率佐證研究方法的有效性。",
         "第一手性=1：本案由CRO顧問公司Conversion Rate Experts發佈為客戶案例，雖附daFlores執行長具名影片推薦，仍屬顧問代理商自述，依規則封頂1並強制caveat。",
         "可遷移性=2：明確提煉出「先診斷訪客具體疑慮、再依疑慮挑選設計元素」的方法論（文末以「不該在診斷症狀前開藥」比喻收束），可套用到其他產業。"
-      ]
+      ],
+      "image": "https://res.cloudinary.com/conversion-rate-experts/image/upload/w_1200,dpr_auto,c_scale,f_auto,q_auto/daFlores-homepage5.jpg"
     },
     {
       "title": "會計自動化獨角獸 Tipalti 導入實驗文化，潛在客戶轉商機比例從5%衝上12-24%",
@@ -323,7 +328,8 @@
         "第一手性=1：由CRO顧問公司Speero發佈為客戶案例，雖附Tipalti員工具名引言，仍屬廠商/顧問自述，封頂1並強制caveat。",
         "可遷移性=1：教訓（實驗卡關常因跨部門溝通而非技術）具參考價值，但案例整體仍圍繞Speero服務流程描述，未完全提煉成獨立可複製的框架。"
       ],
-      "blurb": "這家會計自動化公司早就請了顧問跑測試，卡關的卻不是技術，是每個提案都得先過內部核准的紅地毯。團隊索性砍掉虛榮指標，只留高層真正在意的KPI，改用研究報告說服各部門為什麼要測，實驗文化才真正立起來，交易量也跟著成長50%。"
+      "blurb": "這家會計自動化公司早就請了顧問跑測試，卡關的卻不是技術，是每個提案都得先過內部核准的紅地毯。團隊索性砍掉虛榮指標，只留高層真正在意的KPI，改用研究報告說服各部門為什麼要測，實驗文化才真正立起來，交易量也跟著成長50%。",
+      "image": "https://cdn.prod.website-files.com/5fbb892601063d4822d16704/6412ec714a5b8ca8e9b33cb3_tipalti-img.avif"
     },
     {
       "title": "瑞士線上學習平台Evulpo靠數據校準行銷投放，財測準確度3倍、行銷投資報酬率翻倍",
@@ -436,7 +442,8 @@
         "第一手性=1：廠商Dynamic Yield發佈的客戶案例，雖附具名引言，仍屬廠商自述，封頂1並強制caveat。",
         "可遷移性=1：教訓（「內容量沒有放諸四海皆準的公式，需逐頁測試」）具備遷移價值，但案例本身仍聚焦在其平台工具的操作細節，未完全提煉成獨立於工具的框架。"
       ],
-      "blurb": "探險旅遊品牌原本用同一套首頁招呼所有訪客，想搞懂每個人理想的旅程長什麼樣。行程頁測試出反直覺結果：有頁面拿掉部落格文章轉換就衝高，換到船宿行程頁卻是加滿影音圖片，轉換率才衝上50.96%、營收多70.5%，內容多寡沒有標準答案，只能逐頁測。"
+      "blurb": "探險旅遊品牌原本用同一套首頁招呼所有訪客，想搞懂每個人理想的旅程長什麼樣。行程頁測試出反直覺結果：有頁面拿掉部落格文章轉換就衝高，換到船宿行程頁卻是加滿影音圖片，轉換率才衝上50.96%、營收多70.5%，內容多寡沒有標準答案，只能逐頁測。",
+      "image": "https://www.dynamicyield.com/wp-content/uploads/2019/09/gadventures-casestudy-social.jpg"
     },
     {
       "title": "拉美電商龍頭 Linio 個人化整趟購物旅程，轉換率+30%、點擊率+300%",
@@ -491,7 +498,8 @@
         "第一手性=1：廠商Dynamic Yield發佈的客戶案例，雖附具名引言仍屬廠商自述，封頂1並強制caveat。",
         "可遷移性=1：「具體購買數優於籠統瀏覽數」是可套用的社會證明文案原則，但未進一步提煉成更廣泛的框架。"
       ],
-      "blurb": "拉美電商平台商品多到讓人眼花，首次從搜尋進站的訪客常看一眼就跳走，於是在商品頁加提示列引導人多逛同類商品。更有意思的是社群認同文案測試：把『多少人看過』換成『多少人買過』，講買的比講看的多帶來5%轉換，比籠統的關注度更有說服力。"
+      "blurb": "拉美電商平台商品多到讓人眼花，首次從搜尋進站的訪客常看一眼就跳走，於是在商品頁加提示列引導人多逛同類商品。更有意思的是社群認同文案測試：把『多少人看過』換成『多少人買過』，講買的比講看的多帶來5%轉換，比籠統的關注度更有說服力。",
+      "image": "https://www.dynamicyield.com/wp-content/uploads/2019/12/dy-linio-social-share-1.jpg"
     },
     {
       "title": "眼鏡電商 GlassesUSA 導入深度學習推薦引擎，單一版位帶動營收+88%",
@@ -547,7 +555,8 @@
         "第一手性=1：廠商Dynamic Yield發佈的客戶案例，雖附具名引言仍屬廠商自述，封頂1並強制caveat。",
         "可遷移性=1：「協同過濾vs深度學習的差異在於是否納入即時行為」是可遷移的判斷框架，但案例本身仍緊扣特定廠商技術，未完全獨立於工具之外。"
       ],
-      "blurb": "全球最大線上眼鏡零售商，商品多到消費者常挑不出重點，過去首頁推薦靠傳統協同過濾，抓『相似的人買了什麼』猜你要什麼，卻不是真的認識你。換上能讀取即時瀏覽行為的深度學習演算法後，加購率多45%、購買率多68%，真正的個人化，得看這一刻你在做什麼。"
+      "blurb": "全球最大線上眼鏡零售商，商品多到消費者常挑不出重點，過去首頁推薦靠傳統協同過濾，抓『相似的人買了什麼』猜你要什麼，卻不是真的認識你。換上能讀取即時瀏覽行為的深度學習演算法後，加購率多45%、購買率多68%，真正的個人化，得看這一刻你在做什麼。",
+      "image": "https://www.dynamicyield.com/wp-content/uploads/2021/04/glasses-use-social.png"
     },
     {
       "title": "金融服務業者 Synchrony 為信用卡申辦頁做版面與個人化測試，持卡人點擊率+12%",
@@ -601,7 +610,8 @@
         "第一手性=1：廠商Dynamic Yield發佈的客戶案例，無品牌方具名發言，仍屬廠商自述，封頂1並強制caveat。",
         "可遷移性=1：「精簡版面可能優於加強說服文案」是可遷移的測試假設，但案例本身較像多個小測試的條列成果，未收斂成單一可複用框架。"
       ],
-      "blurb": "金融服務選擇太多，Synchrony清楚訪客沒耐心慢慢挑，得第一眼就送對優惠。有意思的是醫療信用卡查詢頁測試：團隊原以為多句說明能提高說服力，結果拿掉文字、只留乾淨按鈕，申請數反而多7%，少即是多得靠測試驗證，不能只憑直覺。"
+      "blurb": "金融服務選擇太多，Synchrony清楚訪客沒耐心慢慢挑，得第一眼就送對優惠。有意思的是醫療信用卡查詢頁測試：團隊原以為多句說明能提高說服力，結果拿掉文字、只留乾淨按鈕，申請數反而多7%，少即是多得靠測試驗證，不能只憑直覺。",
+      "image": "https://www.dynamicyield.com/wp-content/uploads/2022/08/synchrony-social.png"
     },
     {
       "title": "程式教學平台 Codecademy 用策略性實驗設計帶動5倍成長",
@@ -658,7 +668,8 @@
         "第一手性=1：顧問公司Speero發佈的客戶案例，雖附客戶具名引言仍屬顧問視角敘述，封頂1並強制caveat。",
         "可遷移性=2：提煉出「先定位漏斗底端槓桿、假設建立在研究而非意見、分階段驗證複雜測試」這套可複用的實驗方法論，具體且不限於此案例。"
       ],
-      "blurb": "Codecademy 過去也曾埋頭猛測，一口氣上線一堆實驗，卻常抓錯重點，第一批測試幾乎沒打中要害。團隊先搞懂免費用戶被自動排進Pro版試用、分不清該不該付費升級，再用研究假設分三階段驗證，每階段先過關才進下一輪，最後年繳方案選擇率多75%。"
+      "blurb": "Codecademy 過去也曾埋頭猛測，一口氣上線一堆實驗，卻常抓錯重點，第一批測試幾乎沒打中要害。團隊先搞懂免費用戶被自動排進Pro版試用、分不清該不該付費升級，再用研究假設分三階段驗證，每階段先過關才進下一輪，最後年繳方案選擇率多75%。",
+      "image": "https://cdn.prod.website-files.com/5fbb892601063d4822d16704/640aee06419520e2df03ddc9_image%2014%20(1).avif"
     },
     {
       "title": "澳洲房產平台 Domain 用行為數據校正產品直覺，高意圖用戶留存達平均2倍",
@@ -768,7 +779,8 @@
       ],
       "f_goal": [
         "定價"
-      ]
+      ],
+      "image": "https://www.convert.com/wp-content/uploads/2018/12/Challenger-win.jpg"
     },
     {
       "title": "虛擬信箱服務靠一句《4小時工作週》書摘背書，兩頁改版累積多賺150萬美元",
@@ -822,7 +834,8 @@
       ],
       "f_goal": [
         "到達頁"
-      ]
+      ],
+      "image": "https://www.convert.com/wp-content/uploads/2016/11/CRE_2.jpg"
     },
     {
       "title": "淨水設備品牌原本不敢秀定價，測試「秀高價」反而輸給不秀價，秀低起價才讓詢價轉換多15%",
@@ -988,7 +1001,8 @@
       ],
       "f_goal": [
         "結帳"
-      ]
+      ],
+      "image": "https://miro.medium.com/v2/resize:fit:1200/1*14UWFP1PI-SWd5kSE1NZRw.jpeg"
     },
     {
       "title": "旅遊訂購頁表單從8欄砍到3欄，轉換率多26%，跳出率完全沒變",
@@ -1268,7 +1282,8 @@
       "f_goal": [
         "個人化",
         "註冊"
-      ]
+      ],
+      "image": "https://www.dynamicyield.com/wp-content/uploads/2021/08/coopeuch-social-en.png"
     },
     {
       "title": "Smart Insights 用『當客戶走一遍全流程』的研究法，付費會員數暴增157%",
@@ -1322,7 +1337,8 @@
       "f_product": [
         "SaaS"
       ],
-      "f_goal": []
+      "f_goal": [],
+      "image": "https://www.convert.com/wp-content/uploads/2017/01/Smart-Insights-Case-Study-1.png"
     },
     {
       "title": "ClassHero 某天新生完課率瞬間跌至 39%，用 Session Recording 抓出 3 個介面地雷，一週內拉回",
@@ -1379,7 +1395,8 @@
       "f_goal": [
         "新手引導",
         "習慣養成"
-      ]
+      ],
+      "image": "https://images.ctfassets.net/lh3zuq09vnm2/B2xIVdlPPEr6vERtLGlZX/66c1b7301817fc02610512cb2903e6c1/classhero.jpg"
     },
     {
       "title": "Every.org 拆解捐款流程反直覺加一步：新增信用卡頁面後轉換率反升 29.5%",
@@ -1431,7 +1448,8 @@
       ],
       "f_goal": [
         "付款"
-      ]
+      ],
+      "image": "https://images.ctfassets.net/lh3zuq09vnm2/5fTnpUrX4pia8IzQrBGch1/6039f8c489f7b0b89c402e480bbedb7f/everyorg-Case-study-Header.svg"
     },
     {
       "title": "Brand24 CEO 親自看錄影抓卡點：砍掉優惠碼欄位後註冊轉換 2.56%→7.42%",
@@ -1483,7 +1501,8 @@
       ],
       "f_goal": [
         "註冊"
-      ]
+      ],
+      "image": "https://images.ctfassets.net/lh3zuq09vnm2/2MOofujlzuKACLndX8zaXZ/f54b4db58f89725d575b2b96240dfbd2/Brand24-Case-study-Header.svg"
     },
     {
       "title": "Mizzen+Main 靠熱圖抓到色卡滑動卡關：改版三週後加購率 +39%、次指標全面轉正",
@@ -1543,7 +1562,8 @@
       ],
       "f_goal": [
         "結帳"
-      ]
+      ],
+      "image": "https://images.ctfassets.net/lh3zuq09vnm2/7aDbhjyTuRiAWMFySje6O6/f0703d1ab9399196206a5cde5058b4a0/Mizzen_Hotjar.png"
     },
     {
       "title": "Kast 用 Mixpanel 校正產品直覺：差點被砍的 Push to Talk 其實是熱門功能，用戶留存 +50%",
@@ -1652,7 +1672,8 @@
       "f_product": [],
       "f_goal": [
         "到達頁"
-      ]
+      ],
+      "image": "https://unbounce.com/photos/Opengraph_SmartBuilder.jpg"
     },
     {
       "title": "Moz（原 SEOmoz）三階段落地頁改造＋$1 試用：付費轉換 +170%、年營收多賺約 $100 萬美元",
@@ -1709,7 +1730,8 @@
       "f_goal": [
         "定價",
         "到達頁"
-      ]
+      ],
+      "image": "https://res.cloudinary.com/conversion-rate-experts/image/upload/w_1200,dpr_auto,c_scale,f_auto,q_auto/seo1.jpg"
     },
     {
       "title": "Voices.com 靠「訪客分流＋示範影片＋首頁背書」：轉換率從不到 5% 拉到 22%（約 +400%）",
@@ -1767,7 +1789,8 @@
       "f_goal": [
         "第一印象",
         "到達頁"
-      ]
+      ],
+      "image": "https://res.cloudinary.com/conversion-rate-experts/image/upload/w_1200,dpr_auto,c_scale,f_auto,q_auto/v1.png"
     },
     {
       "title": "GoHenry 專為手機訪客重做落地頁：行動註冊 +78%、FB 廣告註冊 +191%，一年成長 470%",
@@ -1826,7 +1849,8 @@
       "f_goal": [
         "到達頁",
         "註冊"
-      ]
+      ],
+      "image": "https://res.cloudinary.com/conversion-rate-experts/image/upload/w_1200,dpr_auto,c_scale,f_auto,q_auto/go-henry-img.jpg"
     },
     {
       "title": "ConversionWise 用「三角驗證」重排保健品 PDP：賣點與份量拉到首圖，購買轉換 5.27%→5.74%",
@@ -1883,7 +1907,8 @@
       ],
       "f_goal": [
         "結帳"
-      ]
+      ],
+      "image": "https://www.convert.com/wp-content/uploads/2024/11/Control-Blurred.jpg"
     },
     {
       "title": "Country Road Group 從「瀑布」到「敢弄壞」：實驗文化帶動購買轉換 +2%、營收 +5%",
@@ -2006,7 +2031,8 @@
       ],
       "f_goal": [
         "站內搜尋"
-      ]
+      ],
+      "image": "https://images.ctfassets.net/gwbpo1m641r7/56W0VCS2rtIPTIsgxxyhrP/c4b0feb30454c8af8c10bfd099966fc7/IMG_2273-7291207de02186a365fda6296b5ee37f-780x470-1.jpeg"
     },
     {
       "title": "OppLoans 用行為分析揪出漏斗第 4 步壞掉：轉換 +5%、年營收七位數增長",
@@ -2063,7 +2089,8 @@
       ],
       "f_goal": [
         "結帳"
-      ]
+      ],
+      "image": "https://images.ctfassets.net/gwbpo1m641r7/2zoVtWHtFRrVGFz5pW40u9/8cd5b1990077ac458017fe61bd7209e4/Group_877.png"
     },
     {
       "title": "Specsavers 把網站「最大那塊」變小：Store Locator LCP −68%，驗光預約轉換 +33%",
@@ -2125,7 +2152,8 @@
       ],
       "f_goal": [
         "站內搜尋"
-      ]
+      ],
+      "image": "https://images.ctfassets.net/gwbpo1m641r7/6CD4HsysSbJAt8NqftyTKs/000061b4a40a80eff4793fd19f34b4b2/Customer_Stories_Template__2_.png"
     },
     {
       "title": "M1 靠熱圖抓到「被狂點的死圖」：改成可點，產品頁轉換單月 +143%",
@@ -2174,7 +2202,8 @@
       ],
       "f_goal": [
         "註冊"
-      ]
+      ],
+      "image": "https://images.ctfassets.net/gwbpo1m641r7/1EyfonwBbUf8FZwb10e8qP/d766472836181d5952bf1256e65a64d9/M1.png"
     },
     {
       "title": "Orange Belgium『hey!』改版：即時行為監測攔下結帳崩盤，轉換 +67%、CSAT +15 分",
@@ -2236,7 +2265,8 @@
       ],
       "f_goal": [
         "結帳"
-      ]
+      ],
+      "image": "https://images.ctfassets.net/gwbpo1m641r7/2BdXwZ89BnTACOh8YNI806/2e01b1efc201311baa8d2e5e6fd6ac9e/Orange__1_.png"
     },
     {
       "title": "CompTIA 電商收回自營：省下 $2M 廠商費、轉換 +25%、客單價 +15–20%",
@@ -2296,7 +2326,8 @@
       "f_product": [
         "電商"
       ],
-      "f_goal": []
+      "f_goal": [],
+      "image": "https://images1.cmp.optimizely.com/Zz0yMzZlODUyYTVhM2ExMWYxYTJmZTllNTQ5ZTdjZjYwOA=="
     },
     {
       "title": "Robinson Club 反直覺實驗：9 步結帳反而更好、秀『訂不到的房』賺進 €2.5M",
@@ -2470,7 +2501,8 @@
       ],
       "f_goal": [
         "結帳"
-      ]
+      ],
+      "image": "https://images.ctfassets.net/gwbpo1m641r7/7Bv9We1cRDx3fzc6VhI7fW/499a3fa136f013928413c6ef35099219/CS-x-New-look.png"
     },
     {
       "title": "Booking.com Partner Hub 行動增長：黏性 CTA 列讓行動註冊點擊 +36%",
@@ -2521,7 +2553,8 @@
       ],
       "f_goal": [
         "註冊"
-      ]
+      ],
+      "image": "https://www.abtasty.com/wp-content/uploads/2026/04/booking.com-case-study-cover.png"
     },
     {
       "title": "Truckstop CRO 計畫：貨運媒合改版，轉換 +26%、表單完成 +137%",
@@ -2582,7 +2615,8 @@
       ],
       "f_goal": [
         "註冊"
-      ]
+      ],
+      "image": "https://static.wingify.com/gcp/uploads/2020/11/Truckstop.com_.png"
     },
     {
       "title": "Kisah 行動購物三役：個人化尺碼＋PLP／PDP 改版，營收 +120%",
@@ -2644,7 +2678,8 @@
       "f_goal": [
         "個人化",
         "結帳"
-      ]
+      ],
+      "image": "https://static.wingify.com/gcp/uploads/2026/07/2x-OG-image-Kisah.png"
     },
     {
       "title": "GoSection8 移除註冊頁影片：讓 CTA 現形，轉換 +88%",
@@ -2694,7 +2729,8 @@
       ],
       "f_goal": [
         "註冊"
-      ]
+      ],
+      "image": "https://www.invespcro.com/blog/images/blog-images/Wayback-Machine-1-e1707317489243.png"
     },
     {
       "title": "La Fée Maraboutée 升級站內搜尋：兩週內每人營收 +11.7%",
@@ -2747,7 +2783,8 @@
       ],
       "f_goal": [
         "站內搜尋"
-      ]
+      ],
+      "image": "https://www.abtasty.com/wp-content/uploads/2026/03/La-fee-maraboutee-EN-Cover.png"
     },
     {
       "title": "Air Europa 行動優先實驗：一年 500 次 A/B，CSAT 81%→87%、訂票漏斗 +9%",
@@ -2809,7 +2846,8 @@
       ],
       "f_goal": [
         "結帳"
-      ]
+      ],
+      "image": "https://www.abtasty.com/wp-content/uploads/2025/12/Air-Europa-Cover.png"
     },
     {
       "title": "Attraction Tickets 自適應搜尋：轉換率 +41%、加購 +22%（惟為「有用 vs 沒用」比較）",
@@ -2870,7 +2908,8 @@
       ],
       "f_goal": [
         "站內搜尋"
-      ]
+      ],
+      "image": "https://www.abtasty.com/wp-content/uploads/2026/02/Attraction-Tickets-EN-Cover.png"
     },
     {
       "title": "Kurt Geiger 首頁即時個人化輪播：首頁→商品頁轉換 +23%",
@@ -3829,7 +3868,8 @@
         "生產力"
       ],
       "f_industry": [],
-      "blurb": "很多新用戶還沒體驗到核心價值就走了，對訂閱制產品這直接傷續約，團隊沒把導覽做成一本功能說明書，而是先想清楚使用者真正「啊哈」的那一刻在哪，再把互動式引導放在行為正要發生的當下觸發，光是導覽第二步的互動率就到 64%，是站內一般訊息的好幾倍。"
+      "blurb": "很多新用戶還沒體驗到核心價值就走了，對訂閱制產品這直接傷續約，團隊沒把導覽做成一本功能說明書，而是先想清楚使用者真正「啊哈」的那一刻在哪，再把互動式引導放在行為正要發生的當下觸發，光是導覽第二步的互動率就到 64%，是站內一般訊息的好幾倍。",
+      "image": "https://blog.intercomassets.com/blog/wp-content/uploads/2019/04/Product-Tours-Hero-1968.jpg"
     },
     {
       "title": "Intercom Resolution Bot：把機器學習做成可被客服團隊採用的 AI 產品",
@@ -3879,7 +3919,8 @@
         "SaaS"
       ],
       "f_industry": [],
-      "blurb": "這套客服 AI 有個反直覺的設計：碰到自己沒把握的問題，它不硬答，直接轉給真人，而整套系統也是從一個最小可用版本（內部叫它 cupcake）一口一口養大的，說到底，一個 AI 能不能被團隊信任，往往就看它懂不懂得在沒把握時收手。"
+      "blurb": "這套客服 AI 有個反直覺的設計：碰到自己沒把握的問題，它不硬答，直接轉給真人，而整套系統也是從一個最小可用版本（內部叫它 cupcake）一口一口養大的，說到底，一個 AI 能不能被團隊信任，往往就看它懂不懂得在沒把握時收手。",
+      "image": "https://blog.intercomassets.com/blog/wp-content/uploads/2020/07/Machine_learning_Hero.jpg"
     },
     {
       "title": "VeryChic：用旅程分析讓旅遊平台轉換率提升 6.31%、跳出率下降 12%",
@@ -3995,7 +4036,8 @@
       "f_industry": [
         "時尚"
       ],
-      "blurb": "登入頁跳出率高得不尋常，原因藏在選項太多：會員登入、訪客結帳、建立帳號一字排開，每多一條路就多一個讓人猶豫、離開的點，團隊用 A/B 把最想要顧客做的「建立帳號」移到頁面正中央、訪客登入退到一旁，等於幫使用者把決策層級排好，建立帳號的點擊立刻多了 30%。"
+      "blurb": "登入頁跳出率高得不尋常，原因藏在選項太多：會員登入、訪客結帳、建立帳號一字排開，每多一條路就多一個讓人猶豫、離開的點，團隊用 A/B 把最想要顧客做的「建立帳號」移到頁面正中央、訪客登入退到一旁，等於幫使用者把決策層級排好，建立帳號的點擊立刻多了 30%。",
+      "image": "https://www.abtasty.com/wp-content/uploads/2024/02/Lancome-Case-Study-EN-1200x630-1.png"
     },
     {
       "title": "Triggle：把旅宿夥伴儀表板改成決策工具，採用率提升 96%",
@@ -4052,7 +4094,8 @@
       "f_industry": [
         "旅遊"
       ],
-      "blurb": "儀表板明明在那，飯店夥伴卻幾乎不看，因為它只是把資料攤出來，回答不了「那我現在該做什麼」，設計負責人跑去訪談夥伴、辦 co-design 工作坊，和 BI、產品、技術一起重排 KPI 的層級和期間比較，讓每個數字都連著一個下一步，儀表板這才真的走進他們每天的決策裡。"
+      "blurb": "儀表板明明在那，飯店夥伴卻幾乎不看，因為它只是把資料攤出來，回答不了「那我現在該做什麼」，設計負責人跑去訪談夥伴、辦 co-design 工作坊，和 BI、產品、技術一起重排 KPI 的層級和期間比較，讓每個數字都連著一個下一步，儀表板這才真的走進他們每天的決策裡。",
+      "image": "https://www.educabellos.com/assets/img/triggle-hotels-dashboard-b2b-ux-case-study/opengraph.jpg"
     },
     {
       "title": "Nygen Analytics：在使用者碰到價值限制時提示升級，付費轉換提升 15%",
