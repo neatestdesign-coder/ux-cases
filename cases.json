@@ -1,10 +1,71 @@
 {
   "updated": "2026-07-24",
   "run": {
-    "scanned": 58,
-    "candidates": 8
+    "scanned": 32,
+    "candidates": 3
   },
   "cases": [
+    {
+      "title": "Crazy Egg 首頁改成 20 倍長、加一支解說影片：轉換率累積 +363%，營收進帳七位數美元",
+      "original_title": "Does optimization ever end? How we grew Crazy Egg's conversion rate by 363%",
+      "url": "https://conversion-rate-experts.com/crazy-egg-case-study/",
+      "source": "Conversion Rate Experts",
+      "tier": 2,
+      "date": "2012",
+      "author": "Conversion Rate Experts（CRE 顧問自述其操作；當事品牌 Crazy Egg 具名，數據由 Crazy Egg 的 Amee Shah 提供）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "SaaS"
+      ],
+      "f_goal": [
+        "到達頁",
+        "註冊"
+      ],
+      "why": "Crazy Egg 是已經很強的網站分析工具，站點本身也做得好、甚至自己發過案例，但公司想把營收再往上推。真正卡住轉換的，是訪客心裡幾個沒被回應的疑慮：搞不懂熱圖能產出什麼、覺得價格貴、以為和 Google Analytics 的疊加報表沒兩樣、擔心功能比對手少。",
+      "how": "先做訪客情報：透過調查與客服訪談，把「合格訪客為什麼不買」拆成四大異議，逐一在頁面回應。做法包括：(1) 首頁改成約 20 倍長的長篇敘事版，用 A/B split-test 對照；(2) 用學術研究（卡內基美隆大學 88% 眼動與滑鼠軌跡相關性）替價格『重新框架』，證明比正式眼動研究便宜太多；(3) 加一支三分鐘解說影片，測同樣訊息換成影片會不會更有效；(4) 在免費試用頁裝 Qualaroo 就地問出疑慮，發現訪客怕填信用卡被偷扣款，於是把說明貼到按鈕下方；(5) 針對新客推一次性優惠拉高終身價值。全程走 CRE 自有方法論、逐項 A/B 驗證。",
+      "result": "整體轉換率累積提升約 363%，替 Crazy Egg 帶來七位數美元的增量營收。分項：長篇首頁 vs 原版 +30%；加入解說影片版本 +64% 轉換；改造結帳／免費試用頁 +116% 註冊；一次性優惠有 25% 顧客接受。CRE 也誠實指出並非每個測試都贏，只是靠系統化方法把勝率拉高。需注意：文中多為相對提升百分比，未逐項揭露對照期的絕對 baseline 數字。",
+      "caveat": "firsthand=1 二手：本案由 CRE 顧問公司自行發佈、講述自己替 Crazy Egg 操作的成果，屬單一來源、可能偏正面選樣，+363%／+64%／+116% 等數字未經第三方驗證，且為 2012 年舊案。當事品牌 Crazy Egg 具名、數據由其員工 Amee Shah 提供、可回溯，但 CRE 未逐項公開對照期的原始轉換率 baseline，數字宜視為顧問方陳述。",
+      "takeaway": "當轉換卡關，先別急著重畫介面，而是到使用者猶豫的那個當下（例如結帳頁）就地問出他的疑慮，再把答案放在最靠近決策的位置回應──把擋路的異議清掉，往往比新增功能更能提升轉換。這套「先問疑慮、就地回應」可複用到任何有明顯猶豫點的流程。",
+      "blurb": "做的第一件事是先弄清楚訪客為什麼不買，而不急著動設計：用 Qualaroo 就地在結帳頁問出疑慮，發現大家卡在免費試用要填信用卡、怕被偷扣款，於是把說明貼到按鈕下方回應這份不安，這正是「疏通阻塞的動脈」，把擋在轉換前的異議一條條清掉，錢就流動了。",
+      "metrics": [
+        [
+          "+363%",
+          "整體轉換率累積提升（顧問自述）"
+        ],
+        [
+          "+64%",
+          "加入解說影片後的轉換提升（vs 無影片對照）"
+        ],
+        [
+          "+116%",
+          "結帳／免費試用頁改造後的註冊提升"
+        ],
+        [
+          "七位數美元",
+          "增量營收（絕對量級，顧問陳述）"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "商業脈絡=2：明確為 SaaS 工具的營收成長目標，並具體連到四大訪客異議（熱圖不懂、價格、與 GA 差異、功能數）。",
+        "決策過程=1：訪客情報→A/B 逐項驗證清楚，且誠實承認並非每測都贏，但整體仍為成功敘事，未展示具體被推翻的失敗方案。",
+        "量化成果=2：有 +363% 整體與 +30%／+64%／+116% 分項及七位數營收；惟多為相對百分比，未逐項揭露 baseline 絕對值。",
+        "第一手性=1：CRE 顧問自述自家操作、非當事品牌親撰，封頂 1 並強制 caveat。",
+        "可遷移性=2：提煉出「就地調查訪客疑慮→在決策點回應異議」與「換媒介測同一訊息」等可複用原則。"
+      ],
+      "image": "https://res.cloudinary.com/conversion-rate-experts/image/upload/w_1200,dpr_auto,c_scale,f_auto,q_auto/Crazy-Eggs-conversion-rate-graph.png"
+    },
     {
       "title": "獨立設計師主導機票首頁改版：點擊率+15%，每天多出約50張訂單",
       "original_title": "项目复盘：如何主导设计改版",
@@ -4156,6 +4217,20 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Invesp：好的價值主張讓轉換 +90%（價值主張 webinar 五則匿名 A/B 彙整）",
+      "url": "https://www.invespcro.com/blog/increasing-conversion-rate-through-value-proposition/",
+      "source": "Invesp",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "score-gate: min_total 5.5 < 6.0（五維皆 1，僅 tier 加成 0.5）。本質是 webinar 教學把五則匿名夥伴的 A/B 結果（26%／17.04%／55.5%／90%／18.67%）拼在一起，非單一可回溯案例：多數數字缺 baseline 與絕對量、當事公司匿名不可溯源，標題再以最高的 90% 概括，有選樣放大之嫌。命中 auto_reject 的『純彙整清單、非單一案例』與『無法回溯原始出處』。"
+    },
     {
       "title": "Headspace新手引導個案（付費牆鎖定，未獲驗證）",
       "url": "https://builtformars.com/case-studies/headspace",
