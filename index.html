@@ -1175,10 +1175,13 @@ boot();
   .ucf{position:fixed;z-index:90;background:rgba(255,255,255,.9);
     -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
     border:1px solid var(--stroke,rgba(23,27,41,.08));
-    box-shadow:0 2px 8px rgba(23,27,41,.06),0 22px 50px -12px rgba(23,27,41,.30);overflow:hidden}
+    box-shadow:0 2px 8px rgba(23,27,41,.06),0 22px 50px -12px rgba(23,27,41,.30);overflow:hidden;
+    opacity:0;transform:translateY(24px);visibility:hidden;pointer-events:none;
+    transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.3,1)}
+  .ucf.ucf-in{opacity:1;transform:none;visibility:visible;pointer-events:auto}
   @media(min-width:768px){ .ucf{right:22px;bottom:22px;width:410px;border-radius:20px} }
   @media(max-width:767px){ .ucf{left:0;right:0;bottom:0;width:100%;border-radius:18px 18px 0 0} }
-  .ucf-head{display:flex;align-items:center;gap:10px;padding:20px 20px 16px;cursor:pointer}
+  .ucf-head{display:flex;align-items:center;gap:10px;padding:20px 20px 6px;cursor:pointer}
   .ucf-tag{flex:none;font-size:12px;font-weight:700;letter-spacing:.03em;
     color:#8A5A2A;background:#F6E9DC;padding:4px 11px;border-radius:999px}
   .ucf-title{flex:1;min-width:0;margin:0;font-size:20px;line-height:1.3;font-weight:800;color:var(--ink,#1A1E2B);
@@ -1191,25 +1194,29 @@ boot();
   .ucf-arrow svg{width:16px;height:16px}
   .ucf.is-expanded .ucf-arrow{transform:rotate(180deg)}
   .ucf-body{max-height:0;opacity:0;overflow:hidden;transition:max-height .44s cubic-bezier(.2,.7,.3,1),opacity .3s ease}
-  .ucf.is-expanded .ucf-body{max-height:360px;opacity:1}
+  .ucf.is-expanded .ucf-body{max-height:380px;opacity:1}
   .ucf-mid{padding:0 20px}
   .ucf-desc{margin:2px 0 0;font-size:14px;line-height:1.6;color:var(--ink2,#646B7A);
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .ucf-prog{margin:18px 0 0}
+  .ucf-prog{margin:24px 0 0}
   .ucf-prog .meta{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;color:var(--ink2,#646B7A);margin-bottom:9px}
   .ucf-prog .meta b{color:var(--ink,#1A1E2B);font-size:14px}
   .ucf-bar{height:9px;border-radius:999px;background:rgba(23,27,41,.09);overflow:hidden}
   .ucf-bar > i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#C7E85A,var(--lime,#D7F16B));transition:width 1.1s cubic-bezier(.2,.7,.3,1)}
-  .ucf-act{padding:16px 20px 20px}
+  .ucf-act{padding:32px 20px 20px}
   .ucf form{display:flex;gap:8px}
   .ucf input[type=email]{flex:1;min-width:0;font-size:15px;color:var(--ink,#1A1E2B);background:#fff;
     border:1px solid rgba(23,27,41,.14);border-radius:10px;padding:11px 13px;outline:none}
+  .ucf input[type=email]::placeholder{color:#AEB4C0;opacity:1}
   .ucf input[type=email]:focus{border-color:var(--ink,#1A1E2B);box-shadow:0 0 0 3px var(--lime-soft,rgba(215,241,107,.4))}
+  .ucf input[type=email].err{border-color:var(--reject,#A05543);box-shadow:0 0 0 3px rgba(160,85,67,.16)}
   .ucf .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
   .ucf button.cta{flex:none;font-size:15px;font-weight:700;color:#fff;background:var(--navy,#171B29);
     border:0;border-radius:10px;padding:11px 18px;cursor:pointer;transition:transform .18s ease,opacity .18s}
   .ucf button.cta:hover{transform:translateY(-1px)}
   .ucf button.cta:disabled{opacity:.55;transform:none;cursor:default}
+  .ucf-err{margin:8px 0 0;font-size:12px;line-height:1.5;color:var(--reject,#A05543);display:none}
+  .ucf-err.show{display:block}
   .ucf .ucf-trust{margin:11px 0 0;font-size:11.5px;color:var(--ink3,#9AA1B0)}
   .ucf-success{font-size:14px;line-height:1.6;color:var(--ink,#1A1E2B)}
   .ucf-success .rank{color:#4A5417;font-weight:800}
@@ -1238,13 +1245,25 @@ boot();
   var ENDPOINT="https://script.google.com/macros/s/AKfycbzpR9p8P3h4c_nit3B5x_1TLSJlz0BU4C-z2Dx56QrCJK_h180AF5xK_QXbza85CRL_sQ/exec";
   var ROLES=["產品經理","設計師","創業者","數據分析師","行銷人"];
   var LS="ucf_done", LSC="ucf_collapsed";
+  /* ── 出現時機（可調）── */
+  var SCROLL_TRIGGER=70;         // 捲動深度百分比門檻
+  var CLICK_TRIGGER=6;           // 互動點擊次數門檻
+  var REVEAL_MODE="hidden";      // "hidden"=達標才滑入顯示；"collapsed"=預設收合顯示、達標自動展開
   var state={count:23,goal:200,open:false};
 
   var root=document.getElementById("ucf"),head=document.getElementById("ucf-head"),
       arrow=document.getElementById("ucf-arrow"),mid=document.getElementById("ucf-mid"),
       act=document.getElementById("ucf-act"),tagEl=root.querySelector(".ucf-tag");
 
-  function validEmail(s){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s); }
+  /* email 前端驗證：缺 @、缺後綴/TLD、空白、連續點、頭尾點皆擋 */
+  function validEmail(s){
+    if(!s || /\s/.test(s)) return false;
+    if((s.match(/@/g)||[]).length!==1) return false;
+    var p=s.split("@"), local=p[0], dom=p[1];
+    if(!local || !dom) return false;
+    if(/\.\./.test(s) || /^\.|\.$/.test(local) || /^\.|\.$/.test(dom)) return false;
+    return /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(s);
+  }
   function jsonp(url){ return new Promise(function(res,rej){
     var cb="__ucf_"+Math.random().toString(36).slice(2),s=document.createElement("script");
     var t=setTimeout(function(){ done(); rej(new Error("t")); },8000);
@@ -1284,15 +1303,18 @@ boot();
       act.innerHTML='<form novalidate><input type="email" required placeholder="123@mail.com" autocomplete="email" aria-label="你的 email">'+
         '<input type="text" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">'+
         '<button type="submit" class="cta">'+(open?"免費訂閱":"免費登記")+'</button></form>'+
+        '<p class="ucf-err" id="ucf-err">請輸入正確的 Email，例如 name@mail.com</p>'+
         '<p class="ucf-trust">免費・無廣告・隨時退訂</p>';
-      var f=act.querySelector("form");
+      var f=act.querySelector("form"), inp=f.querySelector("input[type=email]"), err=act.querySelector("#ucf-err");
+      inp.addEventListener("input",function(){ inp.classList.remove("err"); err.classList.remove("show"); });
       f.addEventListener("submit",function(ev){
         ev.preventDefault();
-        var i=f.querySelector("input[type=email]"); if(f.querySelector(".hp").value) return;
-        if(!validEmail(i.value.trim())){ i.focus(); return; }
+        if(f.querySelector(".hp").value) return;
+        var v=inp.value.trim().toLowerCase();
+        if(!validEmail(v)){ inp.classList.add("err"); err.classList.add("show"); inp.focus(); return; }
         var b=f.querySelector("button"); b.disabled=true; b.textContent="登記中…";
         var src=(window.matchMedia&&window.matchMedia("(max-width:767px)").matches)?"float-mobile":"float-desktop";
-        postEmail(i.value.trim(),src);
+        postEmail(v,src);
         state.count=state.count+1; localStorage.setItem(LS,String(state.count));
         setTimeout(function(){ render(); if(root.classList.contains("is-expanded")) fillBar();
           setTimeout(function(){ fetchState(); },1500); },600);
@@ -1306,13 +1328,38 @@ boot();
   head.addEventListener("click",function(e){ if(e.target.closest("a,input,button,form")) return; toggle(); });
   arrow.addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); toggle(); } });
 
-  var t=setInterval(function(){ (function(){ var i=(ROLES._i=((ROLES._i||0)+1)%ROLES.length);
+  var t=setInterval(function(){ var i=(ROLES._i=((ROLES._i||0)+1)%ROLES.length);
     root.querySelectorAll(".ucf-role").forEach(function(n){ n.classList.add("swap");
-      setTimeout(function(){ n.textContent=ROLES[i]; n.classList.remove("swap"); },280); }); })(); },2200);
+      setTimeout(function(){ n.textContent=ROLES[i]; n.classList.remove("swap"); },280); }); },2200);
 
-  setExpanded(localStorage.getItem(LSC)!=="1");
+  /* ── 出現時機控制 ── */
+  var clicks=0, scrolledEnough=false, revealed=false;
+  function onScroll(){ var el=document.scrollingElement||document.documentElement;
+    var pct=(el.scrollTop+window.innerHeight)/Math.max(el.scrollHeight,1)*100;
+    if(pct>=SCROLL_TRIGGER){ scrolledEnough=true; maybeTrigger(); } }
+  function onClick(e){ if(e.target.closest("#ucf")) return;
+    if(!e.target.closest("a,button,.card,[data-ind],[data-cat],#sitGrid,#feed,#toolbar-row,#adv,#rejzone")) return;
+    clicks++; maybeTrigger(); }
+  function attach(){ window.addEventListener("scroll",onScroll,{passive:true}); document.addEventListener("click",onClick,true); }
+  function detach(){ window.removeEventListener("scroll",onScroll); document.removeEventListener("click",onClick,true); }
+  function maybeTrigger(){
+    if(!scrolledEnough || clicks<CLICK_TRIGGER) return;
+    detach();
+    if(REVEAL_MODE==="collapsed"){ setExpanded(true); }
+    else { revealed=true; root.classList.add("ucf-in"); setExpanded(true); }
+    setTimeout(fillBar,140);
+  }
+
   render();
   fetchState().then(render);
+
+  if(localStorage.getItem(LS)){
+    /* 已登記者：不主動打擾（維持隱藏） */
+  } else if(REVEAL_MODE==="collapsed"){
+    root.classList.add("ucf-in"); setExpanded(false); attach(); onScroll();
+  } else {
+    attach(); onScroll();
+  }
 })();
 </script>
 </body>
