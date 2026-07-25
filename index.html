@@ -1172,38 +1172,34 @@ boot();
 </script>
 <!-- ═══════ ux-cases 訂閱浮動卡（搶先登記假門）═══════ -->
 <style>
-  .ucf{position:fixed;z-index:90;background:rgba(215,241,107,.22);
+  .ucf{position:fixed;z-index:90;background:rgba(230,244,212,.7);
     -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
     border:1px solid rgba(23,27,41,.06);
     box-shadow:0 2px 8px rgba(23,27,41,.06),0 22px 50px -12px rgba(23,27,41,.30);overflow:hidden;
     opacity:0;transform:translateY(24px);visibility:hidden;pointer-events:none;
     transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.3,1)}
   .ucf.ucf-in{opacity:1;transform:none;visibility:visible;pointer-events:auto}
-  @media(min-width:768px){ .ucf{right:22px;bottom:22px;width:480px;border-radius:20px} }
+  @media(min-width:768px){ .ucf{right:22px;bottom:22px;width:500px;border-radius:20px} }
   @media(max-width:767px){ .ucf{left:0;right:0;bottom:0;width:100%;border-radius:18px 18px 0 0;
     padding-bottom:calc(env(safe-area-inset-bottom, 0px) + 8px)} }
+  .ucf-close{position:absolute;top:10px;right:12px;width:22px;height:22px;display:grid;place-items:center;z-index:3;
+    background:none;border:0;padding:0;cursor:pointer;color:var(--ink3,#9AA1B0);border-radius:6px;transition:background .18s,color .18s}
+  .ucf-close:hover{background:rgba(23,27,41,.06);color:var(--ink,#1A1E2B)}
+  .ucf-close svg{width:14px;height:14px}
   .ucf-head{padding:20px 20px 18px;cursor:pointer;display:flex;align-items:center;gap:16px}
   .ucf-main{min-width:0;flex:1}
   .ucf-row{display:flex;align-items:center;gap:10px}
   .ucf-tag{flex:none;font-size:12px;font-weight:700;letter-spacing:.03em;
     color:#407600;background:#cfff95;padding:4px 11px;border-radius:999px}
-  .ucf-title{flex:1;min-width:0;margin:0;font-size:20px;line-height:1.3;font-weight:800;color:var(--ink,#1A1E2B);
-    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ucf-title{flex:1;min-width:0;margin:0;font-size:20px;line-height:1.3;font-weight:800;color:var(--ink,#1A1E2B)}
   @media(max-width:767px){ .ucf-title{font-size:17px} }
   .ucf-role{position:relative;color:var(--ink,#1A1E2B);box-shadow:inset 0 -.42em 0 #a7ff3e;transition:opacity .28s ease}
   .ucf-role.swap{opacity:0}
-  .ucf-arrow{flex:none;width:26px;height:26px;display:none;place-items:center;color:var(--ink2,#646B7A);
-    border-radius:8px;transition:transform .34s cubic-bezier(.2,.7,.3,1),background .18s}
-  .ucf-arrow:hover{background:rgba(23,27,41,.05)}
-  .ucf-arrow svg{width:16px;height:16px}
-  .ucf.is-expanded .ucf-arrow{transform:rotate(180deg)}
   .ucf-cta-collapsed{display:inline-flex;flex:none;white-space:nowrap;font-size:14px;font-weight:700;color:#fff;
-    background:var(--navy,#171B29);border:0;border-radius:10px;padding:10px 15px;cursor:pointer;
-    transition:transform .18s ease}
+    background:var(--navy,#171B29);border:0;border-radius:10px;padding:10px 15px;cursor:pointer;transition:transform .18s ease}
   .ucf-cta-collapsed:hover{transform:translateY(-1px)}
   .ucf.is-expanded .ucf-cta-collapsed{display:none}
-  .ucf-desc{margin:6px 0 0;font-size:14px;line-height:1.6;color:var(--ink2,#646B7A);
-    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ucf-desc{margin:6px 0 0;font-size:14px;line-height:1.6;color:var(--ink2,#646B7A)}
   @media(max-width:767px){ .ucf-desc{font-size:13px} }
   .ucf-prog{margin:24px 0 0}
   .ucf-prog .meta{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;color:var(--ink2,#646B7A);margin-bottom:9px}
@@ -1238,8 +1234,6 @@ boot();
   .ucf.is-expanded form{transform:none;opacity:1;transition-delay:.10s}
   .ucf.is-expanded .ucf-trust{transform:none;opacity:1;transition-delay:.16s}
   .ucf.is-expanded .ucf-success{transform:none;opacity:1;transition-delay:.06s}
-  @media(max-width:767px){
-  }
   /* 手機版文章主圖：兩種卡型統一 213 橫幅、滿版 cover */
   @media(max-width:767px){
     .card.sc{flex-direction:column}
@@ -1250,14 +1244,14 @@ boot();
   }
 </style>
 <div class="ucf" id="ucf" aria-live="polite">
+  <button class="ucf-close" id="ucf-close" type="button" aria-label="關閉">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
   <div class="ucf-head" id="ucf-head">
     <div class="ucf-main">
       <div class="ucf-row">
         <span class="ucf-tag">限量搶先</span>
         <h3 class="ucf-title">你會變成更強的 <span class="ucf-role">產品經理</span></h3>
-        <span class="ucf-arrow" id="ucf-arrow" role="button" aria-label="收合或展開" tabindex="0">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
-        </span>
       </div>
       <p class="ucf-desc" id="ucf-desc"></p>
       <div class="ucf-prog" id="ucf-prog"></div>
@@ -1270,12 +1264,12 @@ boot();
 (function(){
   var ENDPOINT="https://script.google.com/macros/s/AKfycbzpR9p8P3h4c_nit3B5x_1TLSJlz0BU4C-z2Dx56QrCJK_h180AF5xK_QXbza85CRL_sQ/exec";
   var ROLES=["產品經理","設計師","創業者","數據分析師","行銷人"];
-  var LS="ucf_done";
+  var LS="ucf_done", LS_CLOSED="ucf_closed";
   var COPY='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
   var CHECK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
   var state={count:23,goal:200,open:false};
 
-  var root=document.getElementById("ucf"),head=document.getElementById("ucf-head"),arrow=document.getElementById("ucf-arrow"),
+  var root=document.getElementById("ucf"),head=document.getElementById("ucf-head"),closeBtn=document.getElementById("ucf-close"),
       cta=document.getElementById("ucf-cta"),descEl=document.getElementById("ucf-desc"),progEl=document.getElementById("ucf-prog"),
       act=document.getElementById("ucf-act"),tagEl=root.querySelector(".ucf-tag");
 
@@ -1347,8 +1341,8 @@ boot();
   function setExpanded(on){ root.classList.toggle("is-expanded",on); setTimeout(fillBar,80); }
   function toggle(){ setExpanded(!root.classList.contains("is-expanded")); }
   head.addEventListener("click",function(e){ if(e.target.closest("a,input,button,form,.ucf-copy")) return; toggle(); });
-  arrow.addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); toggle(); } });
   cta.addEventListener("click",function(){ setExpanded(true); });
+  closeBtn.addEventListener("click",function(e){ e.stopPropagation(); localStorage.setItem(LS_CLOSED,"1"); root.classList.remove("ucf-in"); setTimeout(function(){ root.style.display="none"; },320); });
 
   var t=setInterval(function(){ var i=(ROLES._i=((ROLES._i||0)+1)%ROLES.length);
     root.querySelectorAll(".ucf-role").forEach(function(n){ n.classList.add("swap");
@@ -1357,20 +1351,20 @@ boot();
   render();
   fetchState().then(render);
 
-  /* 顯示時機：桌機立即（收合）；手機捲到第 4 張文章卡才出現（收合） */
+  /* 顯示時機：桌機/平板＝滑到第 5 篇文章；手機＝滑到第 4 篇。已關閉則不再出現 */
   var revealed=false;
-  function revealCollapsed(){ if(revealed) return; revealed=true; root.classList.add("ucf-in"); setExpanded(false); }
-  var isMobile=window.matchMedia && window.matchMedia("(max-width:767px)").matches;
-  if(!isMobile){ revealCollapsed(); }
-  else {
+  function revealCollapsed(){ if(revealed || localStorage.getItem(LS_CLOSED)) return; revealed=true; root.classList.add("ucf-in"); setExpanded(false); }
+  if(!localStorage.getItem(LS_CLOSED)){
+    var isMobile=window.matchMedia && window.matchMedia("(max-width:767px)").matches;
+    var idx=isMobile?3:4;   // 第 4 篇（手機）/ 第 5 篇（桌機、平板）
     var tries=0;
     (function arm(){
-      var cards=document.querySelectorAll("#feed .card"), c4=cards[3];
-      if(c4 && "IntersectionObserver" in window){
+      var cards=document.querySelectorAll("#feed .card"), c=cards[idx];
+      if(c && "IntersectionObserver" in window){
         var io=new IntersectionObserver(function(es){
           for(var k=0;k<es.length;k++){ if(es[k].isIntersecting){ io.disconnect(); revealCollapsed(); return; } }
         },{threshold:0});
-        io.observe(c4);
+        io.observe(c);
       } else if(tries++<12){ setTimeout(arm,400); }
       else {
         var onS=function(){ var el=document.scrollingElement||document.documentElement;
