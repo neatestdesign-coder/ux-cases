@@ -1179,13 +1179,15 @@ boot();
     opacity:0;transform:translateY(24px);visibility:hidden;pointer-events:none;
     transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.3,1)}
   .ucf.ucf-in{opacity:1;transform:none;visibility:visible;pointer-events:auto}
-  @media(min-width:768px){ .ucf{right:22px;bottom:22px;width:410px;border-radius:20px} }
+  @media(min-width:768px){ .ucf{right:22px;bottom:22px;width:440px;border-radius:20px} }
   @media(max-width:767px){ .ucf{left:0;right:0;bottom:0;width:100%;border-radius:18px 18px 0 0} }
-  .ucf-head{display:flex;align-items:center;gap:10px;padding:20px 20px 6px;cursor:pointer}
+  .ucf-head{padding:20px 20px 16px;cursor:pointer}
+  .ucf-row{display:flex;align-items:center;gap:10px}
   .ucf-tag{flex:none;font-size:12px;font-weight:700;letter-spacing:.03em;
     color:#8A5A2A;background:#F6E9DC;padding:4px 11px;border-radius:999px}
   .ucf-title{flex:1;min-width:0;margin:0;font-size:20px;line-height:1.3;font-weight:800;color:var(--ink,#1A1E2B);
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  @media(max-width:767px){ .ucf-title{font-size:17px} }
   .ucf-role{position:relative;color:var(--ink,#1A1E2B);box-shadow:inset 0 -.42em 0 var(--lime,#D7F16B);transition:opacity .28s ease}
   .ucf-role.swap{opacity:0}
   .ucf-arrow{flex:none;width:26px;height:26px;display:grid;place-items:center;color:var(--ink2,#646B7A);
@@ -1193,12 +1195,13 @@ boot();
   .ucf-arrow:hover{background:rgba(23,27,41,.05)}
   .ucf-arrow svg{width:16px;height:16px}
   .ucf.is-expanded .ucf-arrow{transform:rotate(180deg)}
-  .ucf-body{max-height:0;opacity:0;overflow:hidden;transition:max-height .44s cubic-bezier(.2,.7,.3,1),opacity .3s ease}
-  .ucf.is-expanded .ucf-body{max-height:380px;opacity:1}
-  .ucf-mid{padding:0 20px}
-  .ucf-desc{margin:2px 0 0;font-size:14px;line-height:1.6;color:var(--ink2,#646B7A);
+  .ucf-desc{margin:6px 0 0;font-size:14px;line-height:1.6;color:var(--ink2,#646B7A);
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .ucf-prog{margin:24px 0 0}
+  @media(max-width:767px){ .ucf-desc{font-size:13px} }
+  .ucf-body{max-height:0;opacity:0;overflow:hidden;transition:max-height .44s cubic-bezier(.2,.7,.3,1),opacity .3s ease}
+  .ucf.is-expanded .ucf-body{max-height:360px;opacity:1}
+  .ucf-mid{padding:0 20px}
+  .ucf-prog{margin:8px 0 0}
   .ucf-prog .meta{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;color:var(--ink2,#646B7A);margin-bottom:9px}
   .ucf-prog .meta b{color:var(--ink,#1A1E2B);font-size:14px}
   .ucf-bar{height:9px;border-radius:999px;background:rgba(23,27,41,.09);overflow:hidden}
@@ -1218,25 +1221,29 @@ boot();
   .ucf-err{margin:8px 0 0;font-size:12px;line-height:1.5;color:var(--reject,#A05543);display:none}
   .ucf-err.show{display:block}
   .ucf .ucf-trust{margin:11px 0 0;font-size:11.5px;color:var(--ink3,#9AA1B0)}
-  .ucf-success{font-size:14px;line-height:1.6;color:var(--ink,#1A1E2B)}
-  .ucf-success .rank{color:#4A5417;font-weight:800}
-  .ucf-share{margin-top:9px;font-size:12.5px}
-  .ucf-share a{color:var(--navy,#171B29);font-weight:700;text-decoration:underline;cursor:pointer}
+  .ucf-success .done{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#1E6B54}
+  .ucf-success .done svg{width:16px;height:16px}
+  .ucf-copy{margin-top:8px;display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:0;
+    cursor:pointer;font-family:inherit;font-size:13px;font-weight:600;color:var(--navy,#171B29)}
+  .ucf-copy svg{width:15px;height:15px}
   .ucf.is-open .ucf-tag{color:#1E6B54;background:var(--t1-bg,#DCF1E8)}
-  .ucf-desc,.ucf-prog,.ucf form,.ucf .ucf-trust{transform:translateY(8px);opacity:0;
+  .ucf-prog,.ucf form,.ucf .ucf-trust,.ucf-success{transform:translateY(8px);opacity:0;
     transition:transform .4s cubic-bezier(.2,.7,.3,1),opacity .34s ease}
-  .ucf.is-expanded .ucf-desc{transform:none;opacity:1;transition-delay:.05s}
-  .ucf.is-expanded .ucf-prog{transform:none;opacity:1;transition-delay:.10s}
-  .ucf.is-expanded form{transform:none;opacity:1;transition-delay:.16s}
-  .ucf.is-expanded .ucf-trust{transform:none;opacity:1;transition-delay:.22s}
+  .ucf.is-expanded .ucf-prog{transform:none;opacity:1;transition-delay:.06s}
+  .ucf.is-expanded form{transform:none;opacity:1;transition-delay:.14s}
+  .ucf.is-expanded .ucf-trust{transform:none;opacity:1;transition-delay:.20s}
+  .ucf.is-expanded .ucf-success{transform:none;opacity:1;transition-delay:.08s}
 </style>
-<div class="ucf is-expanded" id="ucf" aria-live="polite">
+<div class="ucf" id="ucf" aria-live="polite">
   <div class="ucf-head" id="ucf-head">
-    <span class="ucf-tag">限量搶先</span>
-    <h3 class="ucf-title">你會變成更強的 <span class="ucf-role">產品經理</span></h3>
-    <span class="ucf-arrow" id="ucf-arrow" role="button" aria-label="收合或展開" tabindex="0">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
-    </span>
+    <div class="ucf-row">
+      <span class="ucf-tag">限量搶先</span>
+      <h3 class="ucf-title">你會變成更強的 <span class="ucf-role">產品經理</span></h3>
+      <span class="ucf-arrow" id="ucf-arrow" role="button" aria-label="收合或展開" tabindex="0">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+      </span>
+    </div>
+    <p class="ucf-desc" id="ucf-desc"></p>
   </div>
   <div class="ucf-body"><div class="ucf-mid" id="ucf-mid"></div><div class="ucf-act" id="ucf-act"></div></div>
 </div>
@@ -1244,24 +1251,21 @@ boot();
 (function(){
   var ENDPOINT="https://script.google.com/macros/s/AKfycbzpR9p8P3h4c_nit3B5x_1TLSJlz0BU4C-z2Dx56QrCJK_h180AF5xK_QXbza85CRL_sQ/exec";
   var ROLES=["產品經理","設計師","創業者","數據分析師","行銷人"];
-  var LS="ucf_done", LSC="ucf_collapsed";
-  /* ── 出現時機（可調）── */
-  var SCROLL_TRIGGER=70;         // 捲動深度百分比門檻
-  var CLICK_TRIGGER=6;           // 互動點擊次數門檻
-  var REVEAL_MODE="hidden";      // "hidden"=達標才滑入顯示；"collapsed"=預設收合顯示、達標自動展開
+  var LS="ucf_done";
+  var COPY='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+  var CHECK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
   var state={count:23,goal:200,open:false};
 
-  var root=document.getElementById("ucf"),head=document.getElementById("ucf-head"),
-      arrow=document.getElementById("ucf-arrow"),mid=document.getElementById("ucf-mid"),
-      act=document.getElementById("ucf-act"),tagEl=root.querySelector(".ucf-tag");
+  var root=document.getElementById("ucf"),head=document.getElementById("ucf-head"),arrow=document.getElementById("ucf-arrow"),
+      descEl=document.getElementById("ucf-desc"),mid=document.getElementById("ucf-mid"),act=document.getElementById("ucf-act"),
+      tagEl=root.querySelector(".ucf-tag");
 
-  /* email 前端驗證：缺 @、缺後綴/TLD、空白、連續點、頭尾點皆擋 */
   function validEmail(s){
     if(!s || /\s/.test(s)) return false;
     if((s.match(/@/g)||[]).length!==1) return false;
-    var p=s.split("@"), local=p[0], dom=p[1];
-    if(!local || !dom) return false;
-    if(/\.\./.test(s) || /^\.|\.$/.test(local) || /^\.|\.$/.test(dom)) return false;
+    var p=s.split("@"),local=p[0],dom=p[1];
+    if(!local||!dom) return false;
+    if(/\.\./.test(s)||/^\.|\.$/.test(local)||/^\.|\.$/.test(dom)) return false;
     return /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(s);
   }
   function jsonp(url){ return new Promise(function(res,rej){
@@ -1279,7 +1283,6 @@ boot();
   function postEmail(email,source){ return fetch(ENDPOINT,{method:"POST",mode:"no-cors",
     headers:{"Content-Type":"text/plain;charset=utf-8"},
     body:JSON.stringify({email:email,source:source,hp:""})}).catch(function(){}); }
-
   function fillBar(){ var b=mid.querySelector(".ucf-bar > i"); if(!b) return;
     var pct=Math.max(4,Math.min(100,Math.round(state.count/state.goal*100)));
     b.style.width="0%"; requestAnimationFrame(function(){ b.style.width=pct+"%"; }); }
@@ -1288,27 +1291,25 @@ boot();
     var open=state.open, done=localStorage.getItem(LS);
     tagEl.textContent=open?"活動中":"限量搶先";
     root.classList.toggle("is-open",open);
+    descEl.textContent=open?"留下 E-mail，每日精選案例明早開始發給你":"每日 E-mail 精選案例，累積你的產品品味與判斷力";
     var left=Math.max(state.goal-state.count,0);
-    var desc=open?"留下 E-mail，每日精選案例明早開始發給你":"每日 E-mail 精選案例，累積你的產品品味與判斷力";
-    mid.innerHTML='<p class="ucf-desc">'+desc+'</p>'+
-      '<div class="ucf-prog"><div class="meta"><span>已有 <b>'+state.count+'</b> 人搶先登記</span>'+
+    mid.innerHTML='<div class="ucf-prog"><div class="meta"><span>已有 <b>'+state.count+'</b> 人搶先登記</span>'+
       (open?'<span>目標達成 🎉</span>':'<span>還差 '+left+' 人</span>')+'</div><div class="ucf-bar"><i></i></div></div>';
     if(done && !open){
-      act.innerHTML='<div class="ucf-success">你是第 <span class="rank">'+done+'</span> 位搶先登記者。開通後，第一批精選會第一時間通知你。'+
-        '<div class="ucf-share"><a data-share>把它分享給同事，一起解鎖 →</a></div></div>';
-      var sh=act.querySelector("[data-share]");
-      if(sh) sh.addEventListener("click",function(){ try{ navigator.clipboard.writeText(location.href); }catch(_){}
-        sh.textContent="連結已複製，去揪同事 👍"; });
+      act.innerHTML='<div class="ucf-success"><div class="done">'+CHECK+'已登記完成</div>'+
+        '<button type="button" class="ucf-copy" aria-label="複製連結">歡迎分享給更多同事'+COPY+'</button></div>';
+      var cp=act.querySelector(".ucf-copy");
+      cp.addEventListener("click",function(){ try{ navigator.clipboard.writeText(location.href); }catch(_){}
+        cp.innerHTML="已複製連結，貼給同事吧 "+CHECK; });
     } else {
       act.innerHTML='<form novalidate><input type="email" required placeholder="123@mail.com" autocomplete="email" aria-label="你的 email">'+
         '<input type="text" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">'+
         '<button type="submit" class="cta">'+(open?"免費訂閱":"免費登記")+'</button></form>'+
         '<p class="ucf-err" id="ucf-err">請輸入正確的 Email，例如 name@mail.com</p>'+
         '<p class="ucf-trust">免費・無廣告・隨時退訂</p>';
-      var f=act.querySelector("form"), inp=f.querySelector("input[type=email]"), err=act.querySelector("#ucf-err");
+      var f=act.querySelector("form"),inp=f.querySelector("input[type=email]"),err=act.querySelector("#ucf-err");
       inp.addEventListener("input",function(){ inp.classList.remove("err"); err.classList.remove("show"); });
-      f.addEventListener("submit",function(ev){
-        ev.preventDefault();
+      f.addEventListener("submit",function(ev){ ev.preventDefault();
         if(f.querySelector(".hp").value) return;
         var v=inp.value.trim().toLowerCase();
         if(!validEmail(v)){ inp.classList.add("err"); err.classList.add("show"); inp.focus(); return; }
@@ -1322,44 +1323,20 @@ boot();
     }
     if(root.classList.contains("is-expanded")) fillBar();
   }
-  function setExpanded(on){ root.classList.toggle("is-expanded",on);
-    localStorage.setItem(LSC,on?"0":"1"); if(on) setTimeout(fillBar,80); }
+  function setExpanded(on){ root.classList.toggle("is-expanded",on); if(on) setTimeout(fillBar,80); }
   function toggle(){ setExpanded(!root.classList.contains("is-expanded")); }
-  head.addEventListener("click",function(e){ if(e.target.closest("a,input,button,form")) return; toggle(); });
+  head.addEventListener("click",function(e){ if(e.target.closest("a,input,button.cta,form,.ucf-copy")) return; toggle(); });
   arrow.addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); toggle(); } });
 
   var t=setInterval(function(){ var i=(ROLES._i=((ROLES._i||0)+1)%ROLES.length);
     root.querySelectorAll(".ucf-role").forEach(function(n){ n.classList.add("swap");
       setTimeout(function(){ n.textContent=ROLES[i]; n.classList.remove("swap"); },280); }); },2200);
 
-  /* ── 出現時機控制 ── */
-  var clicks=0, scrolledEnough=false, revealed=false;
-  function onScroll(){ var el=document.scrollingElement||document.documentElement;
-    var pct=(el.scrollTop+window.innerHeight)/Math.max(el.scrollHeight,1)*100;
-    if(pct>=SCROLL_TRIGGER){ scrolledEnough=true; maybeTrigger(); } }
-  function onClick(e){ if(e.target.closest("#ucf")) return;
-    if(!e.target.closest("a,button,.card,[data-ind],[data-cat],#sitGrid,#feed,#toolbar-row,#adv,#rejzone")) return;
-    clicks++; maybeTrigger(); }
-  function attach(){ window.addEventListener("scroll",onScroll,{passive:true}); document.addEventListener("click",onClick,true); }
-  function detach(){ window.removeEventListener("scroll",onScroll); document.removeEventListener("click",onClick,true); }
-  function maybeTrigger(){
-    if(!scrolledEnough || clicks<CLICK_TRIGGER) return;
-    detach();
-    if(REVEAL_MODE==="collapsed"){ setExpanded(true); }
-    else { revealed=true; root.classList.add("ucf-in"); setExpanded(true); }
-    setTimeout(fillBar,140);
-  }
-
   render();
   fetchState().then(render);
-
-  if(localStorage.getItem(LS)){
-    /* 已登記者：不主動打擾（維持隱藏） */
-  } else if(REVEAL_MODE==="collapsed"){
-    root.classList.add("ucf-in"); setExpanded(false); attach(); onScroll();
-  } else {
-    attach(); onScroll();
-  }
+  // 無條件顯示，預設收合（tag＋標題＋副標）
+  root.classList.add("ucf-in");
+  setExpanded(false);
 })();
 </script>
 </body>
