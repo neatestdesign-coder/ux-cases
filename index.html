@@ -1264,7 +1264,7 @@ boot();
 (function(){
   var ENDPOINT="https://script.google.com/macros/s/AKfycbzpR9p8P3h4c_nit3B5x_1TLSJlz0BU4C-z2Dx56QrCJK_h180AF5xK_QXbza85CRL_sQ/exec";
   var ROLES=["產品經理","設計師","創業者","數據分析師","行銷人"];
-  var LS="ucf_done", LS_CLOSED="ucf_closed";
+  var LS="ucf_done", SESS="ucf_closed_sess";
   var COPY='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
   var CHECK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
   var state={count:23,goal:200,open:false};
@@ -1342,7 +1342,7 @@ boot();
   function toggle(){ setExpanded(!root.classList.contains("is-expanded")); }
   head.addEventListener("click",function(e){ if(e.target.closest("a,input,button,form,.ucf-copy")) return; toggle(); });
   cta.addEventListener("click",function(){ setExpanded(true); });
-  closeBtn.addEventListener("click",function(e){ e.stopPropagation(); localStorage.setItem(LS_CLOSED,"1"); root.classList.remove("ucf-in"); setTimeout(function(){ root.style.display="none"; },320); });
+  closeBtn.addEventListener("click",function(e){ e.stopPropagation(); sessionStorage.setItem(SESS,"1"); root.classList.remove("ucf-in"); setTimeout(function(){ root.style.display="none"; },320); });
 
   var t=setInterval(function(){ var i=(ROLES._i=((ROLES._i||0)+1)%ROLES.length);
     root.querySelectorAll(".ucf-role").forEach(function(n){ n.classList.add("swap");
@@ -1353,8 +1353,8 @@ boot();
 
   /* 顯示時機：桌機/平板＝滑到第 5 篇文章；手機＝滑到第 4 篇。已關閉則不再出現 */
   var revealed=false;
-  function revealCollapsed(){ if(revealed || localStorage.getItem(LS_CLOSED)) return; revealed=true; root.classList.add("ucf-in"); setExpanded(false); }
-  if(!localStorage.getItem(LS_CLOSED)){
+  function revealCollapsed(){ if(revealed || sessionStorage.getItem(SESS) || localStorage.getItem(LS)) return; revealed=true; root.classList.add("ucf-in"); setExpanded(false); }
+  if(!sessionStorage.getItem(SESS) && !localStorage.getItem(LS)){
     var isMobile=window.matchMedia && window.matchMedia("(max-width:767px)").matches;
     var idx=isMobile?3:4;   // 第 4 篇（手機）/ 第 5 篇（桌機、平板）
     var tries=0;
