@@ -1172,7 +1172,7 @@ boot();
 </script>
 <!-- ═══════ ux-cases 訂閱浮動卡（搶先登記假門）═══════ -->
 <style>
-  .ucf{position:fixed;z-index:90;background:rgba(215,241,107,.32);
+  .ucf{position:fixed;z-index:90;background:rgba(215,241,107,.22);
     -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
     border:1px solid rgba(23,27,41,.06);
     box-shadow:0 2px 8px rgba(23,27,41,.06),0 22px 50px -12px rgba(23,27,41,.30);overflow:hidden;
@@ -1182,32 +1182,26 @@ boot();
   @media(min-width:768px){ .ucf{right:22px;bottom:22px;width:480px;border-radius:20px} }
   @media(max-width:767px){ .ucf{left:0;right:0;bottom:0;width:100%;border-radius:18px 18px 0 0;
     padding-bottom:calc(env(safe-area-inset-bottom, 0px) + 8px)} }
-  .ucf-head{padding:20px 20px 18px;cursor:pointer}
-  .ucf-main{min-width:0}
+  .ucf-head{padding:20px 20px 18px;cursor:pointer;display:flex;align-items:center;gap:16px}
+  .ucf-main{min-width:0;flex:1}
   .ucf-row{display:flex;align-items:center;gap:10px}
   .ucf-tag{flex:none;font-size:12px;font-weight:700;letter-spacing:.03em;
-    color:#B05A1E;background:#F2EBDA;padding:4px 11px;border-radius:999px}
+    color:#4A5417;background:#F2EBDA;padding:4px 11px;border-radius:999px}
   .ucf-title{flex:1;min-width:0;margin:0;font-size:20px;line-height:1.3;font-weight:800;color:var(--ink,#1A1E2B);
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   @media(max-width:767px){ .ucf-title{font-size:17px} }
-  .ucf-role{position:relative;color:var(--ink,#1A1E2B);box-shadow:inset 0 -.42em 0 #FF9E45;transition:opacity .28s ease}
+  .ucf-role{position:relative;color:var(--ink,#1A1E2B);box-shadow:inset 0 -.42em 0 #D7F16B;transition:opacity .28s ease}
   .ucf-role.swap{opacity:0}
-  .ucf-arrow{flex:none;width:26px;height:26px;display:grid;place-items:center;color:var(--ink2,#646B7A);
+  .ucf-arrow{flex:none;width:26px;height:26px;display:none;place-items:center;color:var(--ink2,#646B7A);
     border-radius:8px;transition:transform .34s cubic-bezier(.2,.7,.3,1),background .18s}
   .ucf-arrow:hover{background:rgba(23,27,41,.05)}
   .ucf-arrow svg{width:16px;height:16px}
   .ucf.is-expanded .ucf-arrow{transform:rotate(180deg)}
-  .ucf-cta-collapsed{display:none;flex:none;white-space:nowrap;font-size:14px;font-weight:700;color:#fff;
+  .ucf-cta-collapsed{display:inline-flex;flex:none;white-space:nowrap;font-size:14px;font-weight:700;color:#fff;
     background:var(--navy,#171B29);border:0;border-radius:10px;padding:10px 15px;cursor:pointer;
     transition:transform .18s ease}
   .ucf-cta-collapsed:hover{transform:translateY(-1px)}
-  @media(min-width:768px){
-    .ucf-head{display:flex;align-items:center;gap:16px}
-    .ucf-main{flex:1}
-    .ucf-arrow{display:none}
-    .ucf-cta-collapsed{display:inline-flex}
-    .ucf.is-expanded .ucf-cta-collapsed{display:none}
-  }
+  .ucf.is-expanded .ucf-cta-collapsed{display:none}
   .ucf-desc{margin:6px 0 0;font-size:14px;line-height:1.6;color:var(--ink2,#646B7A);
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   @media(max-width:767px){ .ucf-desc{font-size:13px} }
@@ -1215,7 +1209,7 @@ boot();
   .ucf-prog .meta{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;color:var(--ink2,#646B7A);margin-bottom:9px}
   .ucf-prog .meta b{color:var(--ink,#1A1E2B);font-size:14px}
   .ucf-bar{height:9px;border-radius:999px;background:rgba(23,27,41,.10);overflow:hidden}
-  .ucf-bar > i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#FF9A2E,#FF6A0D);transition:width 1.1s cubic-bezier(.2,.7,.3,1)}
+  .ucf-bar > i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#C7E85A,#D7F16B);transition:width 1.1s cubic-bezier(.2,.7,.3,1)}
   .ucf-body{max-height:0;opacity:0;overflow:hidden;transition:max-height .44s cubic-bezier(.2,.7,.3,1),opacity .3s ease}
   .ucf.is-expanded .ucf-body{max-height:260px;opacity:1}
   .ucf-act{padding:8px 20px 20px}
@@ -1223,7 +1217,7 @@ boot();
   .ucf input[type=email]{flex:1;min-width:0;font-size:15px;color:var(--ink,#1A1E2B);background:#fff;
     border:1px solid rgba(23,27,41,.14);border-radius:10px;padding:11px 13px;outline:none}
   .ucf input[type=email]::placeholder{color:#AEB4C0;opacity:1}
-  .ucf input[type=email]:focus{border-color:var(--ink,#1A1E2B);box-shadow:0 0 0 3px rgba(255,106,13,.32)}
+  .ucf input[type=email]:focus{border-color:var(--ink,#1A1E2B);box-shadow:0 0 0 3px rgba(215,241,107,.55)}
   .ucf input[type=email].err{border-color:var(--reject,#A05543);box-shadow:0 0 0 3px rgba(160,85,67,.16)}
   .ucf .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
   .ucf button.cta{flex:none;font-size:15px;font-weight:700;color:#fff;background:var(--navy,#171B29);
