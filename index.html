@@ -1180,6 +1180,9 @@ boot();
     opacity:0;transform:translateY(24px);visibility:hidden;pointer-events:none;
     transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.3,1)}
   .ucf.ucf-in{opacity:1;transform:none;visibility:visible;pointer-events:auto}
+  /* 站內彈窗開啟時暫時退場，避免互相遮擋 */
+  .ucf.ucf-in.ucf-veiled{opacity:0;transform:translateY(12px);visibility:hidden;pointer-events:none;
+    transition:opacity .22s ease,transform .22s ease,visibility .22s ease}
   @media(min-width:768px){ .ucf{right:22px;bottom:22px;width:500px;border-radius:20px} }
   @media(max-width:767px){ .ucf{left:0;right:0;bottom:0;width:100%;border-radius:18px 18px 0 0;
     padding-bottom:calc(env(safe-area-inset-bottom, 0px) + 8px)} }
@@ -1308,7 +1311,7 @@ boot();
     var open=state.open, done=localStorage.getItem(LS);
     tagEl.textContent=open?"活動中":"限量搶先";
     root.classList.toggle("is-open",open);
-    descEl.textContent=open?"留下 E-mail，每日精選案例明早開始發給你":"E-mail 精選案例，累積你的品味與判斷力";
+    descEl.textContent=open?"留下 E-mail，每日精選案例明早開始發給你":"每日發送精選案例，提升你的產品力";
     var left=Math.max(state.goal-state.count,0);
     progEl.innerHTML='<div class="meta"><span>已有 <b>'+state.count+'</b> 人首批加入</span>'+
       (open?'<span>目標達成 🎉</span>':'<span>還差 '+left+' 人</span>')+'</div><div class="ucf-bar"><i></i></div>';
@@ -1377,6 +1380,17 @@ boot();
       }
     })();
   }
+
+  /* 站內彈窗（排序 / 進階篩選 / 雷達）開啟時，暫時隱藏浮動卡，讓操作不被遮擋 */
+  (function(){
+    var overlays=["sort-pop","adv-wrap","radar-modal"].map(function(id){return document.getElementById(id);}).filter(Boolean);
+    if(!overlays.length) return;
+    function anyOpen(){ for(var i=0;i<overlays.length;i++){ if(!overlays[i].hidden) return true; } return false; }
+    function sync(){ root.classList.toggle("ucf-veiled", anyOpen()); }
+    var mo=new MutationObserver(sync);
+    overlays.forEach(function(el){ mo.observe(el,{attributes:true,attributeFilter:["hidden"]}); });
+    sync();
+  })();
 })();
 </script>
 </body>
