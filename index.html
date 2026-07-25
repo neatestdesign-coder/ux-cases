@@ -1180,7 +1180,8 @@ boot();
     transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.3,1)}
   .ucf.ucf-in{opacity:1;transform:none;visibility:visible;pointer-events:auto}
   @media(min-width:768px){ .ucf{right:22px;bottom:22px;width:440px;border-radius:20px} }
-  @media(max-width:767px){ .ucf{left:0;right:0;bottom:0;width:100%;border-radius:18px 18px 0 0} }
+  @media(max-width:767px){ .ucf{left:0;right:0;bottom:0;width:100%;border-radius:18px 18px 0 0;
+    padding-bottom:calc(env(safe-area-inset-bottom, 0px) + 8px)} }
   .ucf-head{padding:20px 20px 16px;cursor:pointer}
   .ucf-row{display:flex;align-items:center;gap:10px}
   .ucf-tag{flex:none;font-size:12px;font-weight:700;letter-spacing:.03em;
@@ -1233,6 +1234,12 @@ boot();
   .ucf.is-expanded form{transform:none;opacity:1;transition-delay:.14s}
   .ucf.is-expanded .ucf-trust{transform:none;opacity:1;transition-delay:.20s}
   .ucf.is-expanded .ucf-success{transform:none;opacity:1;transition-delay:.08s}
+  /* 手機版文章主圖：固定高度橫幅、滿版 cover（延伸到所有手機寬度） */
+  @media(max-width:767px){
+    .full-intro{display:block}
+    .card-hero{height:180px;aspect-ratio:auto;margin:0 0 18px;border-radius:var(--r-inner,16px);overflow:hidden}
+    .card-hero .sc-img{width:100%;height:100%;object-fit:cover;display:block}
+  }
 </style>
 <div class="ucf" id="ucf" aria-live="polite">
   <div class="ucf-head" id="ucf-head">
@@ -1334,9 +1341,29 @@ boot();
 
   render();
   fetchState().then(render);
-  // 無條件顯示，預設收合（tag＋標題＋副標）
-  root.classList.add("ucf-in");
-  setExpanded(false);
+
+  /* 顯示時機：桌機立即（收合）；手機捲到第 4 張文章卡才出現（收合） */
+  var revealed=false;
+  function revealCollapsed(){ if(revealed) return; revealed=true; root.classList.add("ucf-in"); setExpanded(false); }
+  var isMobile=window.matchMedia && window.matchMedia("(max-width:767px)").matches;
+  if(!isMobile){ revealCollapsed(); }
+  else {
+    var tries=0;
+    (function arm(){
+      var cards=document.querySelectorAll("#feed .card"), c4=cards[3];
+      if(c4 && "IntersectionObserver" in window){
+        var io=new IntersectionObserver(function(es){
+          for(var k=0;k<es.length;k++){ if(es[k].isIntersecting){ io.disconnect(); revealCollapsed(); return; } }
+        },{threshold:0});
+        io.observe(c4);
+      } else if(tries++<12){ setTimeout(arm,400); }
+      else {
+        var onS=function(){ var el=document.scrollingElement||document.documentElement;
+          if((el.scrollTop+window.innerHeight)/Math.max(el.scrollHeight,1)*100>=45){ window.removeEventListener("scroll",onS); revealCollapsed(); } };
+        window.addEventListener("scroll",onS,{passive:true});
+      }
+    })();
+  }
 })();
 </script>
 </body>
