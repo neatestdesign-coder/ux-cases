@@ -259,10 +259,13 @@
   .card-top{display:flex;justify-content:space-between;gap:22px;align-items:flex-start;flex-wrap:wrap}
   h2{font-size:24px;font-weight:800;letter-spacing:1px;line-height:1.4}
   h2 a{color:inherit;text-decoration:none;transition:var(--ease)}
+  .case-title{cursor:pointer}
   h2 a:hover{color:var(--t2-fg);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
   .meta{font-size:12.5px;color:var(--ink3);margin-top:6px;font-weight:500}
 
   .score{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:4px;border:0;background:transparent;padding:0;color:inherit;font:inherit;cursor:pointer;transition:transform var(--ease)}
+  .score-cap{font-size:11px;line-height:1;color:var(--ink3);font-weight:400;letter-spacing:.02em;white-space:nowrap}
+  @media(max-width:640px){.score-cap{display:none}}
   .score:hover{transform:translateY(-2px)}
   .score:focus-visible{outline:2px solid var(--ink2);outline-offset:5px;border-radius:50%}
   .ring{position:relative;width:64px;height:64px}
@@ -270,12 +273,57 @@
   .ring .track{stroke:rgba(23,27,41,.08)}
   .ring .val{stroke:var(--navy);stroke-linecap:round}
   .ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:16.5px;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-  .radar-modal{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:20px;background:rgba(23,27,41,.34);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .radar-modal{position:fixed;inset:0;z-index:2100;display:grid;place-items:center;padding:20px;background:rgba(23,27,41,.34);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
   .radar-modal[hidden]{display:none}
   .radar-dialog{position:relative;width:min(460px,100%);max-height:min(720px,88vh);overflow:auto;background:#fff;border:1px solid var(--stroke);border-radius:24px;padding:24px;box-shadow:0 28px 70px -24px rgba(23,27,41,.5)}
-  .radar-title{font-size:16px;font-weight:800;line-height:1.45;padding-right:42px}
+  .radar-title{font-size:20px;font-weight:800;line-height:1.4;padding-right:44px}
   .radar-close{position:absolute;top:14px;right:14px;width:34px;height:34px;border:1px solid var(--stroke);border-radius:50%;background:#fff;color:var(--ink2);font:inherit;font-size:22px;line-height:1;cursor:pointer}
   .radar-dialog .radar-wrap{margin-top:12px}
+  .radar-total{margin-top:8px;font-size:12.5px;font-weight:600;color:var(--ink3);display:flex;align-items:baseline;gap:6px}
+  .radar-total b{font-size:17px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+  .radar-total span{color:var(--ink3);font-weight:500}
+
+  /* ═══ 詳情 popup：左右滿版、上方留空的底部抽屜（凌駕所有元素）═══ */
+  .cvm-overlay{position:fixed;inset:0;z-index:2000;display:flex;align-items:flex-end;justify-content:center;background:rgba(23,27,41,.42);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;transition:opacity .3s ease}
+  .cvm-overlay.cvm-show{opacity:1}
+  .cvm-overlay[hidden]{display:none}
+  .cvm-panel{position:relative;width:100%;height:96vh;max-height:96vh;background:var(--bg,#fff);border-radius:24px 24px 0 0;box-shadow:0 -24px 70px -24px rgba(23,27,41,.5);display:flex;flex-direction:column;overflow:hidden;transform:translateY(100%);transition:transform .4s cubic-bezier(.2,.75,.25,1);will-change:transform}
+  .cvm-overlay.cvm-show .cvm-panel{transform:translateY(0)}
+  @media(prefers-reduced-motion:reduce){.cvm-overlay,.cvm-panel{transition:none}}
+  .cvm-close{position:absolute;top:16px;right:18px;width:36px;height:36px;border:1px solid var(--stroke);border-radius:50%;background:#fff;color:var(--ink2);font:inherit;font-size:22px;line-height:1;cursor:pointer;z-index:3;display:grid;place-items:center;box-shadow:0 2px 8px rgba(23,27,41,.12)}
+  .cvm-close:hover{color:var(--ink)}
+  .cvm-body{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+  .cvm-inner{width:80%;max-width:1500px;margin:0 auto;padding:60px 0 84px}
+  .cvm-body .cvm-article{box-shadow:none;border:none;padding:0;margin:0;background:transparent}
+  .cvm-body .cvm-title{font-size:20px;font-weight:800;line-height:1.42;margin-top:6px;max-width:90%}
+  .cvm-body .takeaway{max-width:90%;margin-top:0}
+  .cvm-body .full-summary{--full-space:12px}
+  .cvm-source{margin-top:24px;padding-top:14px;border-top:1px solid var(--stroke);font-size:13px;color:var(--ink3);font-weight:500}
+  .cvm-source .src-link{color:var(--ink2);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+  body.cvm-open{overflow:hidden}
+  .coreview-btn{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:6px 0;color:var(--ink);font:inherit;font-size:14px;font-weight:700;cursor:pointer;letter-spacing:.01em}
+  .coreview-btn svg{transition:transform .2s ease}
+  .coreview-btn:hover{opacity:.72}
+  .coreview-btn:hover svg{transform:translate(2px,-2px)}
+  .prov .src-link{color:inherit;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+  .prov-label{display:none}
+  .hero-score{display:none}
+  @media(max-width:640px){
+    .prov-sep{display:none}
+    .prov-date{display:block;margin-left:0}
+    .cvm-source{text-align:right}
+    .cvm-body .card-hero{overflow:visible}
+    .cvm-body .hero-score{display:block;position:absolute;right:12px;bottom:-30px;z-index:5;background:rgba(255,255,255,.92);border-radius:50%;padding:0;box-shadow:0 4px 14px rgba(23,27,41,.3)}
+    .cvm-body .full-head{min-height:0;padding-right:0}
+    .cvm-body .full-head>.score{display:none}
+  }
+  @media(max-width:768px){.cvm-inner{width:auto;padding:56px 22px 72px}}
+  @media(max-width:768px){
+    .cvm-body .full-intro .card-hero{width:auto;height:auto;aspect-ratio:1;border-radius:var(--r-inner);margin:0 0 18px}
+    .cvm-body .full-intro .card-hero .sc-img{width:100%;height:100%;object-fit:cover;display:block}
+  }
+  @media(max-width:640px){.cvm-panel{height:96vh;max-height:96vh;border-radius:20px 20px 0 0}.cvm-inner{width:auto;padding:54px 16px 64px}
+    .cvm-body .full-intro .card-hero{aspect-ratio:16/9;border-radius:0;margin:-54px -16px 18px}}
 
   .metrics{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
   .full-summary>.metrics{margin-top:0}
@@ -439,9 +487,10 @@
     .metric b{font-size:clamp(13px,4vw,15.5px);overflow-wrap:anywhere;word-break:break-word}
     .metric span{font-size:10px;line-height:1.4;display:block;overflow-wrap:anywhere;word-break:break-word}
     /* 行動列：雷達左、閱讀原文右、等寬並排；展開雷達時佔滿整列 */
-    .actions{flex-direction:row;align-items:stretch;gap:10px}
+    .actions,.sc-actions{flex-direction:row;align-items:flex-end;gap:10px;flex-wrap:nowrap}
     .actions .read-btn,.sc-actions .read-btn{order:2;flex:0 0 auto;margin-left:auto;justify-content:center}
-    .actions .prov,.sc-actions .prov{order:1;margin:0 auto 0 0;max-width:58%;text-align:left}
+    .actions .prov,.sc-actions .prov{order:0;margin:0;flex:1;min-width:0;text-align:left;padding-left:2px}
+    .actions .coreview-btn,.sc-actions .coreview-btn{order:1;flex:0 0 auto;margin:0;padding-right:4px}
     .actions details{order:1;flex:1 1 0;min-width:0;align-items:stretch}
     .actions details[open]{flex-basis:100%}
     .actions summary{width:100%;text-align:center;padding:9px 0}
@@ -524,7 +573,6 @@
       <button class="icon-btn" id="sort-btn" type="button" aria-label="排序" title="排序"></button>
       <div class="menu-pop" id="sort-pop" hidden></div>
     </div>
-    <button class="icon-btn" id="layout-btn" type="button" aria-label="排版方式" title="排版方式"></button>
   </div>
   <div class="adv-wrap" id="adv-wrap" hidden>
     <div class="adv" id="adv" aria-label="進階篩選"></div>
@@ -540,6 +588,12 @@
     <button class="radar-close" id="radar-close" type="button" aria-label="關閉">×</button>
     <div class="radar-title" id="radar-title"></div>
     <div id="radar-content"></div>
+  </div>
+</div>
+<div class="cvm-overlay" id="case-modal" hidden role="dialog" aria-modal="true" aria-label="案例完整版">
+  <div class="cvm-panel" role="document">
+    <button class="cvm-close" id="cvm-close" type="button" aria-label="關閉">×</button>
+    <div class="cvm-body" id="cvm-body"><div class="cvm-inner" id="cvm-inner"></div></div>
   </div>
 </div>
 
@@ -660,7 +714,7 @@ function ringHtml(c){
     <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
       <circle class="track" cx="32" cy="32" r="${R}" fill="none" stroke-width="5"/>
       <circle class="val" cx="32" cy="32" r="${R}" fill="none" stroke-width="5" stroke-dasharray="${C.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}"/>
-    </svg><b>${score.toFixed(1)}</b></div></button>`;
+    </svg><b>${score.toFixed(1)}</b></div><span class="score-cap">審核總分</span></button>`;
 }
 function radarSvg(scores){
   const cx=100, cy=90, R=54, LR=R+21;
@@ -681,7 +735,7 @@ function radarSvg(scores){
 function dimHtml(c, notes){
   const noteList = notes ? `<div class="dim-notes">${c.scores.map((s,i)=>
     `<div class="dnote"><b>${DIMS[i]} ${s}/2</b> — ${esc(notes[i]||"")}</div>`).join("")}</div>` : "";
-  return `<div class="radar-wrap">${radarSvg(c.scores)}${noteList}</div>`;
+  return `<div class="radar-total">審核總分 <b>${total(c).toFixed(1)}</b><span>／滿分 ${MAXSCORE}</span></div><div class="radar-wrap">${radarSvg(c.scores)}${noteList}</div>`;
 }
 
 function openRadar(key){
@@ -694,6 +748,60 @@ function openRadar(key){
   document.getElementById("radar-close").focus();
 }
 function closeRadar(){ document.getElementById("radar-modal").hidden = true; }
+
+/* ═══ 核心觀點 popup：站內完整版 ═══ */
+function caseFullHtml(c){
+  var cats=(c.cats||[]).filter(function(x){return x!==CATCH_ALL;});
+  var badges='<div class="badges">'
+    + (c.industry?'<span class="badge b-ind">#'+esc(c.industry)+'</span>':'')
+    + cats.map(function(x){return '<span class="badge b-cat">'+esc(x)+'</span>';}).join('')
+    + '<span class="badge b-src">'+esc(c.source)+'</span></div>';
+  var metrics=(c.metrics&&c.metrics.length)?'<div class="metrics m-'+Math.min(c.metrics.length,4)+'">'
+    + c.metrics.map(function(m){return '<div class="metric"><b>'+esc(m[0])+'</b><span>'+esc(m[1])+'</span></div>';}).join('')+'</div>':'';
+  return '<article class="card has-hero cvm-article">'
+    + '<div class="full-intro"><div class="card-hero">'+mediaInner(c)+'<div class="hero-score">'+ringHtml(c)+'</div></div>'
+    + '<div class="full-summary"><div class="full-head">'+badges+ringHtml(c)+'</div>'
+    + '<h2 class="cvm-title">'+esc(c.title)+'</h2>'
+    + metrics
+    + (c.takeaway?'<div class="takeaway"><div class="sec-label">核心觀點</div><p>'+esc(c.takeaway)+'</p></div>':'')
+    + '</div></div>'
+    + '<div class="story">'
+    + (c.why?'<div class="step"><div class="step-label">問題／目標</div><p>'+esc(c.why)+'</p></div>':'')
+    + (c.how?'<div class="step"><div class="step-label">思維與作法</div><p>'+esc(c.how)+'</p></div>':'')
+    + (c.result?'<div class="step result"><div class="step-label">成果</div><p>'+esc(c.result)+'</p>'+(c.caveat?'<div class="caveat"><b>保留意見</b>　'+esc(c.caveat)+'</div>':'')+'</div>':'')
+    + '</div>'
+    + '<div class="cvm-source">原文出處：<a class="src-link" href="'+esc(c.url)+'" target="_blank" rel="noopener">'+esc(c.source)+'</a>'+(c.date?'<span class="prov-sep"> · </span><span class="prov-date">'+esc(c.date)+'</span>':'')+'</div>'
+    + '</article>';
+}
+function openCaseModal(url){
+  var c=CASES.find(function(x){return x.url===url;});
+  if(!c) c=[].concat(CASES,REJECTED).find(function(x){return (x.url||x.title)===url;});
+  if(!c) return;
+  var inner=document.getElementById("cvm-inner"); if(!inner) return;
+  inner.innerHTML=caseFullHtml(c);
+  var body=document.getElementById("cvm-body"); if(body) body.scrollTop=0;
+  var m=document.getElementById("case-modal"); m.hidden=false;
+  document.body.classList.add("cvm-open");
+  requestAnimationFrame(function(){ requestAnimationFrame(function(){ m.classList.add("cvm-show"); }); });
+  var cb=document.getElementById("cvm-close"); if(cb) cb.focus();
+}
+function closeCaseModal(){
+  var m=document.getElementById("case-modal"); if(!m||m.hidden) return;
+  m.classList.remove("cvm-show"); document.body.classList.remove("cvm-open");
+  setTimeout(function(){ if(!m.classList.contains("cvm-show")) m.hidden=true; }, 400);
+}
+(function(){
+  var feed=document.getElementById("feed");
+  if(feed) feed.addEventListener("click", function(e){
+    var b=e.target.closest ? e.target.closest("[data-caseopen]") : null;
+    if(!b || !feed.contains(b)) return;
+    e.preventDefault(); openCaseModal(b.getAttribute("data-url"));
+  });
+  var overlay=document.getElementById("case-modal");
+  if(overlay) overlay.addEventListener("click", function(e){ if(e.target===overlay) closeCaseModal(); });
+  var cb=document.getElementById("cvm-close"); if(cb) cb.addEventListener("click", closeCaseModal);
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape"){ var rm=document.getElementById("radar-modal"); if(rm && !rm.hidden) return; closeCaseModal(); } });
+})();
 
 const extIcon = `<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 1.5h7v7M10.5 1.5 1.5 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
@@ -719,7 +827,7 @@ function cardHtml(c, animate){
           </div>
           ${ringHtml(c)}
         </div>
-        <h2><a href="${esc(c.url)}" target="_blank" rel="noopener" title="閱讀原文">${esc(c.title)}</a></h2>
+        <h2><a class="case-title" data-caseopen data-url="${esc(c.url)}" role="button" tabindex="0" title="展開文章詳情">${esc(c.title)}</a></h2>
         <div class="metrics m-${Math.min(c.metrics.length,4)}">${c.metrics.map(m=>`<div class="metric"><b>${esc(m[0])}</b><span>${esc(m[1])}</span></div>`).join("")}</div>
         <div class="takeaway"><div class="sec-label">核心觀點</div><p>${esc(c.takeaway)}</p></div>
         </div>
@@ -731,7 +839,7 @@ function cardHtml(c, animate){
           ${c.caveat?`<div class="caveat"><b>保留意見</b>　${esc(c.caveat)}</div>`:""}</div>
       </div>
       <div class="actions">
-        <a class="read-btn" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a>${prov?`<div class="prov">${prov}</div>`:""}
+        <button type="button" class="coreview-btn" data-caseopen data-url="${esc(c.url)}">繼續閱讀${extIcon}</button><div class="prov"><span class="prov-label">原文出處：</span><a class="src-link" href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.source)}</a>${c.date?`<span class="prov-sep">・</span><span class="prov-date">${esc(c.date)}</span>`:""}</div>
       </div>
     </article>`;
 }
@@ -911,12 +1019,12 @@ function storyHtml(c, animate){
               ${c.cats.filter(x=>x!==CATCH_ALL).map(x=>`<button type="button" class="badge b-cat tag" data-cat="${esc(x)}">${esc(x)}</button>`).join("")}
               <span class="badge b-src">${esc(c.source)}</span>
             </div>
-            <h2><a href="${esc(c.url)}" target="_blank" rel="noopener" title="閱讀原文">${esc(c.title)}</a></h2>
+            <h2><a class="case-title" data-caseopen data-url="${esc(c.url)}" role="button" tabindex="0" title="展開文章詳情">${esc(c.title)}</a></h2>
           </div>
           ${ringHtml(c)}
         </div>
         <div class="sc-summary"><div class="sec-label">重點摘要</div><p>${esc(c.blurb || c.takeaway)}</p></div>
-        <div class="sc-actions"><a class="read-btn" href="${esc(c.url)}" target="_blank" rel="noopener">閱讀原文${extIcon}</a>${prov?`<div class="prov">${prov}</div>`:""}</div>
+        <div class="sc-actions"><button type="button" class="coreview-btn" data-caseopen data-url="${esc(c.url)}">繼續閱讀${extIcon}</button><div class="prov"><span class="prov-label">原文出處：</span><a class="src-link" href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.source)}</a>${c.date?`<span class="prov-sep">・</span><span class="prov-date">${esc(c.date)}</span>`:""}</div></div>
       </div>
     </article>`;
 }
@@ -1375,13 +1483,13 @@ boot();
 
     function cardKey(art){ var a=art.querySelector('a[href]'); return a ? a.getAttribute('href') : null; }
 
-    /* 條件A：閱讀原文／標題外連點擊（事件委派，feed 重繪也持續有效） */
+    /* 條件A：開啟「核心觀點」popup＝站內深度閱讀（事件委派，feed 重繪也持續有效） */
     var feedEl=document.getElementById("feed");
     if(feedEl){
       feedEl.addEventListener("click", function(e){
-        var a=e.target.closest ? e.target.closest('a[target="_blank"]') : null;
-        if(!a || !feedEl.contains(a) || !a.closest('.card')) return;
-        var k=a.getAttribute('href'); if(!k || readSet[k]) return;
+        var b=e.target.closest ? e.target.closest('[data-caseopen]') : null;
+        if(!b || !feedEl.contains(b)) return;
+        var k=b.getAttribute('data-url'); if(!k || readSet[k]) return;
         readSet[k]=1; readN++;
         if(readN>=READ_NEED) revealCollapsed();
       }, true);
@@ -1431,7 +1539,7 @@ boot();
 
   /* 站內彈窗（排序 / 進階篩選 / 雷達）開啟時，暫時隱藏浮動卡，讓操作不被遮擋 */
   (function(){
-    var overlays=["sort-pop","adv-wrap","radar-modal"].map(function(id){return document.getElementById(id);}).filter(Boolean);
+    var overlays=["sort-pop","adv-wrap","radar-modal","case-modal"].map(function(id){return document.getElementById(id);}).filter(Boolean);
     if(!overlays.length) return;
     function anyOpen(){ for(var i=0;i<overlays.length;i++){ if(!overlays[i].hidden) return true; } return false; }
     function sync(){ root.classList.toggle("ucf-veiled", anyOpen()); }
