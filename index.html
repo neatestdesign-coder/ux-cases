@@ -47,7 +47,7 @@
 
   .header-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
   .header-left{flex:1 1 480px;min-width:280px}
-  .eyebrow{display:inline-flex;align-items:center;background:var(--navy);border:1px solid transparent;box-shadow:0 6px 16px -6px rgba(23,27,41,.38);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:800;letter-spacing:.12em;color:#fff;line-height:1}
+  .eyebrow{display:inline-flex;align-items:center;background:var(--navy);border:1px solid transparent;box-shadow:0 6px 16px -6px rgba(23,27,41,.38);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:800;letter-spacing:.04em;color:#fff;line-height:1}
   h1{font-size:40px;font-weight:900;letter-spacing:2px;line-height:1.2;margin-top:12px}
   .sub{color:var(--ink2);font-size:15px;margin-top:12px;max-width:760px;line-height:1.7}
 
@@ -219,6 +219,11 @@
   .full-summary{--full-space:18px;min-width:0;display:flex;flex-direction:column;gap:var(--full-space)}
   .full-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px}
   .full-head .badges{flex:1;min-width:0}
+  /* 桌機／平板：評分環絕對定位到右上角的固定留白欄；full-summary 內容（標題／數據／觀點）統一右縮、彼此等寬，標題也自然緊貼 badges（手機版另有規則，見 ≤640px） */
+  @media(min-width:641px){
+    .full-summary{position:relative;padding-right:80px}
+    .full-head>.score{position:absolute;top:0;right:0;margin:0}
+  }
   .card-hero{position:relative;aspect-ratio:1;overflow:hidden;border-radius:var(--r-inner);background:linear-gradient(135deg,#e2e8f2,#e9e4f2)}
   .sc-img{width:100%;height:100%;object-fit:cover;display:block}
   .sc-fallback{display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;background:linear-gradient(140deg,#dfe9f6,#e7e2f4 55%,#f3e8ec)}
@@ -237,7 +242,7 @@
     background:linear-gradient(135deg,rgba(220,239,255,.98),rgba(242,248,255,.92));
     border:1px solid rgba(73,137,205,.24);border-radius:var(--r-inner);padding:18px 20px;
   }
-  .sc-summary .sec-label{color:var(--t2-fg);letter-spacing:.1em}
+  .sc-summary .sec-label{color:var(--t2-fg);letter-spacing:.04em}
   .sc-summary p{font-size:14.5px;line-height:1.75;color:#2b3b52;font-weight:400}
   @media (max-width:640px){
     .card.sc{flex-direction:column}
@@ -297,7 +302,7 @@
   .cvm-body .cvm-article{box-shadow:none;border:none;padding:0;margin:0;background:transparent}
   .cvm-body .cvm-title{font-size:20px;font-weight:800;line-height:1.42;margin-top:6px;max-width:90%}
   .cvm-body .takeaway{max-width:90%;margin-top:0}
-  .cvm-body .full-summary{--full-space:12px}
+  .cvm-body .full-summary{--full-space:20px}
   .cvm-source{margin-top:24px;padding-top:14px;border-top:1px solid var(--stroke);font-size:13px;color:var(--ink3);font-weight:500}
   .cvm-source .src-link{color:var(--ink2);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
   body.cvm-open{overflow:hidden}
@@ -323,7 +328,8 @@
     .cvm-body .full-intro .card-hero .sc-img{width:100%;height:100%;object-fit:cover;display:block}
   }
   @media(max-width:640px){.cvm-panel{height:96vh;max-height:96vh;border-radius:20px 20px 0 0}.cvm-inner{width:auto;padding:54px 16px 64px}
-    .cvm-body .full-intro .card-hero{aspect-ratio:16/9;border-radius:0;margin:-54px -16px 18px}}
+    .cvm-body .full-intro .card-hero{aspect-ratio:16/9;border-radius:0;margin:-54px -16px 18px}
+    .cvm-body .cvm-title,.cvm-body .takeaway{max-width:100%}}
 
   .metrics{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
   .full-summary>.metrics{margin-top:0}
@@ -336,7 +342,7 @@
   .metric span{font-size:11.5px;color:var(--ink3);font-weight:500}
 
   .sec{margin-top:20px}
-  .sec-label{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);margin-bottom:5px}
+  .sec-label{font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--ink3);margin-bottom:5px}
   .sec p{font-size:14.5px;color:var(--ink)}
 
   /* story rail：問題→思維→成果 敘事軌 */
@@ -346,7 +352,7 @@
   .step + .step{margin-top:24px}
   .step::before{content:"";position:absolute;left:0;top:2px;width:12px;height:12px;border-radius:50%;background:#fff;border:2.5px solid var(--navy);box-shadow:0 0 0 3px rgba(255,255,255,.7)}
   .step.result::before{background:var(--lime);border-color:var(--lime-ink)}
-  .step-label{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px;line-height:1.4}
+  .step-label{font-size:11px;font-weight:800;letter-spacing:.04em;color:var(--ink2);margin-bottom:6px;line-height:1.4}
   .step p{font-size:15px;line-height:1.9;color:var(--ink)}
   .caveat{
     font-size:12.5px;color:var(--ink3);margin-top:10px;
@@ -358,7 +364,7 @@
     border:1px solid rgba(160,180,60,.22);
     border-radius:var(--r-inner);padding:18px 20px;margin-top:20px;
   }
-  .takeaway .sec-label{color:var(--lime-ink);letter-spacing:.1em}
+  .takeaway .sec-label{color:var(--lime-ink);letter-spacing:.04em}
   .takeaway p{font-size:14.5px;color:#333a17}
 
   .prov{font-size:12px;color:var(--ink3);margin:0 0 0 auto;padding:0;max-width:58%;font-weight:500;line-height:1.55;text-align:right}
@@ -455,7 +461,7 @@
     .eyebrow{font-size:10px;padding:5px 9px}
     .actions,.sc-actions{gap:10px}
     .actions{margin-top:10px}
-    .prov{font-size:10.5px;max-width:60%}
+    .prov{font-size:10.5px;max-width:100%}
     .rejected-zone{margin-top:42px;padding:14px 12px 18px;border-radius:22px}
     .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%}
     .stat{min-width:0;padding:12px 12px;border-radius:16px}
@@ -553,7 +559,7 @@
 
 <header class="header-grid">
   <div class="header-left">
-    <div class="eyebrow">每日 am8:00 更新</div>
+    <div class="eyebrow">每日上午 8:00 更新</div>
     <h1>全球 UX 商業案例</h1>
     <p class="sub">培養產品思維 • 產品增長心法 • 案例知識庫</p>
   </div>
@@ -1281,7 +1287,7 @@ boot();
 </script>
 <!-- ═══════ ux-cases 訂閱浮動卡（搶先登記假門）═══════ -->
 <style>
-  .ucf{position:fixed;z-index:90;background:rgba(243,254,230,.7);
+  .ucf{position:fixed;z-index:90;background:rgb(243 248 237 / 80%);
     -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
     border:1px solid rgba(23,27,41,.06);
     box-shadow:0 2px 8px rgba(23,27,41,.06),0 22px 50px -12px rgba(23,27,41,.30);overflow:hidden;
