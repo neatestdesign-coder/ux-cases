@@ -1,10 +1,284 @@
 {
-  "updated": "2026-07-29",
+  "updated": "2026-07-31",
   "run": {
-    "scanned": 20,
-    "candidates": 4
+    "scanned": 25,
+    "candidates": 8
   },
   "cases": [
+    {
+      "title": "NatWest 揪出僅 6% 人用的比較功能：房貸試算完成率 +20%，估計月增 £50 萬營收",
+      "original_title": "How NatWest optimized its mortgage calculator tool to drive an additional £500k per annum",
+      "url": "https://contentsquare.com/customers/natwest-group/",
+      "source": "Contentsquare 案例・NatWest 房貸試算工具",
+      "tier": 2,
+      "date": "2026",
+      "author": "Contentsquare（NatWest Group 案例；Nathan King，前數位體驗經理 具名引用）",
+      "cats": [
+        "國際品牌",
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "金融",
+      "f_industry": [
+        "金融"
+      ],
+      "f_product": [
+        "系統工具"
+      ],
+      "f_goal": [
+        "結帳"
+      ],
+      "why": "NatWest 的房貸試算工具是取得房貸「原則性同意」（AIP）的關鍵入口，每年逾 250 萬次完成，AIP 是房貸業務的命脈，即使小幅提升完成率也牽動龐大業績，團隊因此想找出流程裡真正卡住使用者的環節。",
+      "how": "行為分析揪出頁面上的「比較」功能只有 6% 的使用者用過，卻佔了顯眼版位，團隊於是把比較連結降到次要位置，改把「取得原則性同意」的 CTA 放大、貫穿整段旅程，讓多數人真正想做的事更容易按下去。",
+      "result": "完成 AIP 的用戶比例 +20%，估計額外帶來 £50 萬營收（惟該數字反映單一月份、COVID 期間的房貸活動快照，即便納入疫後回落，增幅仍屬顯著）。",
+      "caveat": "本案為 Contentsquare（廠商）發佈之客戶案例，雖具名引用前數位體驗經理 Nathan King，仍屬單一來源、可能經過正面選樣；£50 萬營收估算僅取自單一月份、COVID 期間的數位行為快照，未經第三方驗證，實際年化效果可能有落差。",
+      "takeaway": "面對版位有限的複雜流程，先用行為數據抓出「誰在用、用多少」把佔用版位卻乏人問津的功能讓位給多數人真正要做的事，往往比整頁重新設計更快見效。",
+      "blurb": "房貸試算頁版面寸土寸金，NatWest 卻把顯眼版位留給一個「比較」功能，行為分析攤開使用率才發現多數人根本不碰它，反而是想直接申請的人被擠到邊緣，於是團隊讓比較功能退位，把版面讓給真正想按下去的那顆按鈕。",
+      "metrics": [
+        [
+          "+20%",
+          "AIP 完成率"
+        ],
+        [
+          "£50 萬",
+          "估計月增營收"
+        ],
+        [
+          "6%",
+          "比較功能使用率"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "每年 250 萬次完成、AIP 為房貸業務命脈，商業脈絡明確",
+        "找出低使用率功能、讓位給主要 CTA，屬單一輪調整，未見失敗迭代或反覆驗證",
+        "有 6% 使用率的診斷基準與 +20%、£50 萬成果對照，惟£50萬僅單一月份快照",
+        "Contentsquare 發佈之客戶案例，具名引用但非當事團隊親撰，封頂 1",
+        "「找出低使用率功能、讓位給主要CTA」原則可遷移，但案例本身較單薄"
+      ],
+      "image": "https://images.ctfassets.net/gwbpo1m641r7/1boqdT5qtb0uOysn7XTDZl/c63779b4bfa177cd396b74df1cc33652/Natwest-group-header-image-scaled.jpg"
+    },
+    {
+      "title": "Rhone 比對競品發現跳出率偏高：揪出自動播放影片拖累網站，黑五業績年增 37%",
+      "original_title": "How Rhone uses Contentsquare to elevate its digital experience and nail its seasonal sales targets",
+      "url": "https://contentsquare.com/customers/rhone/",
+      "source": "Contentsquare 案例・Rhone 黑五旺季表現",
+      "tier": 2,
+      "date": "2026",
+      "author": "Contentsquare（Rhone 案例；Sarah Massey，電商總監 具名）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "時尚",
+      "f_industry": [
+        "時尚"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "個人化"
+      ],
+      "why": "Rhone 是主打男性機能運動服飾的新興品牌，過去團隊只靠一套侷限的行為分析工具，難以說服全公司哪些改動真的有效；黑色星期五這種旺季一翻兩瞪眼，疫後零售景氣不確定，稍有閃失就是整季業績的賭注。",
+      "how": "團隊先用競品基準比對發現，自家轉換率其實優於同業，跳出率卻反常偏高；深入排查後鎖定其中一支熱銷商品頁上自動播放的影片拖慢載入速度，把影片改成點擊播放；同時針對「男性顧客需要更多購物指引」的假設，在部分男裝分類頁加上選購指南並驗證確實提升營收。",
+      "result": "黑色星期五／網購星期一檔期業績年增 +37%，達標甚至超標當季銷售目標（成長為整體旺季綜合成果，非單一改動可完全歸因）。",
+      "caveat": "本案為 Contentsquare 發佈之客戶案例，雖具名引用電商總監 Sarah Massey，仍屬單一來源、可能經過正面選樣；+37% 為黑五檔期整體年增表現，混雜多項改動與旺季自然增長效果，未拆解單一改動貢獻度，也未經第三方驗證。",
+      "takeaway": "轉換率好看不代表沒問題，用競品基準把自己的數字放進脈絡裡比對，才可能揪出「數字看起來還不錯」底下藏的具體技術瑕疵，例如一支不起眼的自動播放影片。",
+      "blurb": "Rhone 團隊原本對自家轉換率頗有信心，一比對競品基準才發現跳出率反而偏高，深入排查後才揪出兇手竟是一支自動播放的商品影片，拖慢了手機版最熱銷那頁的載入速度，團隊把它改成點擊播放，數字比感覺更早看穿問題出在哪。",
+      "metrics": [
+        [
+          "+37%",
+          "黑五檔期業績年增"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "score_notes": [
+        "疫後景氣不確定、旺季業績壓力具體，商業脈絡清楚",
+        "先用競品基準定位異常、再深入排查找到具體技術原因，並平行驗證另一假設，過程有層次",
+        "+37% 為整體檔期年增表現，非單一改動的乾淨前後對照，量化成果打折",
+        "Contentsquare 發佈之客戶案例，具名引用但非當事團隊親撰，封頂 1",
+        "「用競品基準檢視自己數字」可遷移，但實際修法（影片改點擊播放）較情境特定"
+      ],
+      "image": "https://images.ctfassets.net/gwbpo1m641r7/4Z2eVaOZsRfRlw8Yqie1DH/534c45b978f3c35f12c9a96f57327457/Rhone-header.png"
+    },
+    {
+      "title": "NerdCow 兩週用熱圖＋問卷揪出三個卡點：客戶網站轉換率衝到 3 倍",
+      "original_title": "How NerdCow used Hotjar by Contentsquare to triple conversions for a client in two weeks",
+      "url": "https://contentsquare.com/customers/nerdcow/",
+      "source": "Contentsquare 案例・NerdCow 網頁設計代理商",
+      "tier": 2,
+      "date": "2026",
+      "author": "Contentsquare／Hotjar（NerdCow 案例；Tomasz Lisiecki，創辦人 具名）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "媒體",
+      "f_industry": [
+        "媒體"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "站內搜尋",
+        "結帳"
+      ],
+      "why": "The Transport Library 是專門收錄交通運輸老照片、供出版與收藏用途的圖庫網站，使用者年齡層偏高，資料庫超過 14 萬張影像；創辦人 Tomasz 委託的網頁設計代理商 NerdCow 發現，網站雖然有流量，轉換卻始終上不去，卻抓不到問題出在哪個環節。",
+      "how": "NerdCow 先用 Session Replay 錄影確認假設：搜尋欄位太複雜，年長使用者根本用不順；簡化搜尋後，又發現使用者在圖庫裡漫無目的滑了好幾個小時卻不點進商品，於是加開離站問卷直接問原因，得知使用者分不清哪些照片看過、哪些沒看過，因此加上「新上架」徽章與已瀏覽標記；最後又用問卷抓出加入購物車卻沒結帳的原因是「忘記了」加開棄單提醒信與網站內的購物車提示。",
+      "result": "客戶網站轉換率兩週內衝到原本的 3 倍。",
+      "caveat": "本案原刊於 Hotjar.com，後隨 Hotjar 併入 Contentsquare 法人集團而遷移收錄，屬廠商（Contentsquare／Hotjar）發佈之客戶案例，雖具名引用代理商創辦人 Tomasz Lisiecki，仍屬單一來源、可能經過正面選樣；「3 倍」僅為相對倍數，未附轉換率原始基準值，也未經第三方驗證。",
+      "takeaway": "當轉換率卡住卻不知道問題在哪，用「錄影看行為、問卷問原因」交叉驗證，往往比直接改版更快揪出真正的卡點，而且能一次抓好幾個不同環節的問題。",
+      "blurb": "網站有流量卻始終不太轉換，NerdCow 創辦人 Tomasz 不直接改版猜答案，而是把使用者操作錄影一段段看過，確認搜尋欄位太複雜，拿掉多餘欄位後再追問使用者，發現大家分不清哪些照片看過、沒看過，答案都藏在錄影細節裡。",
+      "metrics": [
+        [
+          "3 倍",
+          "客戶網站轉換率（兩週內）"
+        ],
+        [
+          "14 萬 +",
+          "圖庫影像數量"
+        ]
+      ],
+      "scores": [
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "有交代客戶產業與使用者年齡層背景，但未提具體商業壓力或營收規模，脈絡略薄",
+        "錄影驗證假設、問卷交叉驗證原因、依序處理三個獨立卡點，過程有方法論層次",
+        "「3 倍」為相對倍數，未附轉換率原始基準百分比，量化成果打折",
+        "Contentsquare／Hotjar 發佈之客戶案例，具名引用但非當事團隊親撰，封頂 1",
+        "「錄影＋問卷交叉驗證找卡點」是清楚可複用的研究方法論，遷移性高"
+      ],
+      "image": "https://images.ctfassets.net/gwbpo1m641r7/6tTjX71igcCQc5td9hqtMf/2f9109e927aac591be56a7b31d6746ea/Customer_Stories_Template__1_.png"
+    },
+    {
+      "title": "Mitre 10 用 3 個月概念驗證取代 NPS：找路功能帶動店內營收占比 33%",
+      "original_title": "How Mitre 10 uses Contentsquare to turn customer insights into revenue-driving experiences",
+      "url": "https://contentsquare.com/customers/mitre10/",
+      "source": "Contentsquare 案例・Mitre 10 全通路體驗",
+      "tier": 2,
+      "date": "2026",
+      "author": "Contentsquare（Mitre 10 案例；Natalie White，數位顧客體驗資深產品經理 具名）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "其他",
+      "f_industry": [
+        "其他"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [],
+      "why": "紐西蘭建材零售龍頭 Mitre 10 過去只靠 NPS 分數衡量顧客體驗，但 NPS 只在旅程尾端蒐集、還只反映願意回覆的少數人意見，團隊完全無法即時抓到顧客在哪裡卡關，也說不出某個卡點值多少營收，難以說服公司投資改善。",
+      "how": "團隊沒有直接大手筆投入，而是先跑 3 個月概念驗證，用行為分析工具即時看見顧客的挫折點（例如暴怒點擊），並用「營收機會量化」功能把每個卡點換算成具體金額，證明修好一個問題就等於留住多少營收；憑這份證據，團隊決定把「找路」功能（讓顧客用手機在店內定位商品）從概念驗證推上線，並用 A/B 測試比較不同版本在店內外整體旅程的實際表現。",
+      "result": "找路功能上線後累積超過 10 萬名使用者互動、間接促成約 1,200 筆店內交易，公司的數位通路目前約影響全店 33% 的營收（此為公司整體全通路數位影響力指標，非單一功能獨立貢獻的乾淨對照數字）。",
+      "caveat": "本案為 Contentsquare 發佈之客戶案例，雖具名引用數位顧客體驗資深產品經理 Natalie White，仍屬單一來源、可能經過正面選樣；33% 的數位影響營收占比為公司整體全通路指標，並非找路功能單獨的前後對照，實際貢獻度未拆解，也未經第三方驗證。",
+      "takeaway": "與其直接說服公司砸大錢投資新工具，不如先用短期概念驗證把「卡點值多少營收」量化出來，用具體數字取代 NPS 這類事後、片面的滿意度分數，才更容易在組織內部推動投資決策。",
+      "blurb": "顧客體驗好不好，Mitre 10 過去只看 NPS，這種事後才問的分數，抓不到顧客卡在哪一步，團隊索性先花 3 個月做概念驗證，把每個讓顧客暴怒點擊的卡點，換算成具體流失的營收金額，公司終於不用再猜，用數字說服自己把找路功能做起來、推上線。",
+      "metrics": [
+        [
+          "33%",
+          "數位通路影響店內營收占比"
+        ],
+        [
+          "10 萬 +",
+          "找路功能互動人次"
+        ],
+        [
+          "1,200",
+          "間接促成店內交易數"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "NPS 侷限、無法量化卡點營收價值、難以說服公司投資，商業痛點具體",
+        "先跑 3 個月概念驗證取得證據再擴大投資，並用 A/B 測試驗證版本優劣，決策過程有層次",
+        "33%／10萬+／1,200 三個數字具體，但均為整體或累積指標，非單一功能改動的乾淨前後對照",
+        "Contentsquare 發佈之客戶案例，具名引用但非當事團隊親撰，封頂 1",
+        "「先用概念驗證量化卡點營收、取代事後滿意度分數」是可複用的組織說服框架，遷移性高"
+      ],
+      "image": "https://images.ctfassets.net/gwbpo1m641r7/7jkfxTDgH2s26o9zUapoo6/98f1d3fe7db94f2801a72322c55a4bc5/Mitre10__1_.png"
+    },
+    {
+      "title": "Beerwulf 用旅程分析抓到「來回滑動」的比價行為：加一個彈出視窗，轉換率 +2.4%",
+      "original_title": "How Beerwulf used Contentsquare to craft the perfect product page",
+      "url": "https://contentsquare.com/customers/beerwulf/",
+      "source": "Contentsquare 案例・Beerwulf 精釀啤酒電商",
+      "tier": 2,
+      "date": "2026",
+      "author": "Contentsquare（Beerwulf 案例；Lars Harmsen，前實驗產品負責人 具名）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "餐飲",
+      "f_industry": [
+        "餐飲"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "站內搜尋"
+      ],
+      "why": "Beerwulf 是歐洲線上精釀啤酒商，網站賣超過 600 款啤酒與組合包，團隊想搞懂顧客在挑選組合包時的實際行為，藉此優化商品列表頁，讓更多瀏覽轉換成訂單。",
+      "how": "旅程分析顯示顧客會在組合包列表頁與個別啤酒的商品頁之間反覆來回，只為了比較組合裡到底裝了哪幾款啤酒，因為這項資訊只有點進單一商品頁才看得到；團隊因此在列表頁加上一個互動彈出視窗，讓顧客不用跳頁就能直接看到組合內容。",
+      "result": "轉換率 +2.4%，其中 8% 的瀏覽者會主動點開這個新增的彈出視窗（而非像過去一樣跳轉回上一頁）。",
+      "caveat": "本案為 Contentsquare 發佈之客戶案例，雖具名引用前實驗產品負責人 Lars Harmsen，仍屬單一來源、可能經過正面選樣，+2.4% 與 8% 互動率未經第三方驗證。",
+      "takeaway": "顧客在頁面之間來回跳轉，通常代表某個關鍵資訊被藏在錯的地方；與其假設顧客要什麼，不如先看旅程軌跡，把資訊直接搬到他們卡住的那一頁。",
+      "blurb": "顧客一下子點進組合包列表頁，一下子又跳進單一啤酒商品頁，來來回回，Beerwulf 用旅程分析攤開軌跡才發現，大家是在比較組合裡裝了哪幾款啤酒，資訊卻鎖在商品頁才看得到，團隊索性把組合內容搬進列表頁的彈出視窗，顧客不用再跳來跳去。",
+      "metrics": [
+        [
+          "+2.4%",
+          "轉換率"
+        ],
+        [
+          "8%",
+          "彈出視窗互動率"
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "僅交代希望優化商品列表頁，未提營收規模或更大商業壓力，脈絡薄弱",
+        "單一輪假設驗證測試，未見失敗迭代或多輪修正",
+        "旅程分析先定位「來回滑動」行為基準，再對照 +2.4%、8% 互動率成果，數據具體",
+        "Contentsquare 發佈之客戶案例，具名引用但非當事團隊親撰，封頂 1",
+        "「顧客來回跳轉＝資訊放錯頁面」原則可遷移，但案例規模與細節都偏小"
+      ],
+      "image": "https://images.ctfassets.net/gwbpo1m641r7/1yJ8bOq92INH2q62tI2ZKw/982a36fa8f1022ec6cbcfc753f223a6e/Beerwulf-Lifestyle.png"
+    },
     {
       "title": "SeaWorld 動用 100 小時研究重整 12 站購票流程：結帳失敗率砍半",
       "original_title": "SeaWorld delivers step change in customer experience through relentless experimentation",
@@ -5149,6 +5423,48 @@
     }
   ],
   "rejected": [
+    {
+      "title": "從 Dribbble 到 Google Analytics App 重新設計",
+      "url": "https://uxdesign.cc/from-posting-on-dribbble-to-google-analytics-a-ux-case-study-f5589c70f01",
+      "source": "UX Collective・個人概念設計案例",
+      "tier": 2,
+      "scores": [
+        0,
+        1,
+        0,
+        2,
+        1
+      ],
+      "reason": "個人概念性重新設計提案（未與 Google 合作、未上線），全文無任何真實使用者測試數據或商業成果對照，商業脈絡與量化成果皆掛零，屬自我練習作品而非真實商業案例，依 auto_reject 規則不得收錄。"
+    },
+    {
+      "title": "Brooklinen 用 Session Replay 優化組合購物體驗",
+      "url": "https://contentsquare.com/customers/brooklinen/",
+      "source": "Contentsquare 案例・Brooklinen 家飾電商",
+      "tier": 2,
+      "scores": [
+        1,
+        2,
+        0,
+        1,
+        1
+      ],
+      "reason": "全文僅描述「顯著提升轉換率」經過三輪 A/B 測試迭代卻始終未附任何具體百分比或數字，量化成果掛零，依 auto_reject 規則不得收錄。"
+    },
+    {
+      "title": "Cotton On Group 用 Contentsquare 打通零售全通路體驗",
+      "url": "https://contentsquare.com/customers/cotton-on-group/",
+      "source": "Contentsquare 案例・Cotton On Group 全通路策略",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "reason": "全篇為策略敘事，五大改善方向皆未附任何具體數字或前後對照（僅「顯著提升」等形容詞），量化成果掛零；內容近似宣傳性質商業介紹，可遷移性也難以提煉，依 auto_reject 規則不得收錄。"
+    },
     {
       "title": "The Royal Mint 靠 Optimizely One 全平台整合：轉換率成長 20%",
       "url": "https://www.optimizely.com/field-notes/customer-stories/royal-mint",
