@@ -1,10 +1,293 @@
 {
-  "updated": "2026-07-31",
+  "updated": "2026-08-01",
   "run": {
-    "scanned": 25,
+    "scanned": 35,
     "candidates": 8
   },
   "cases": [
+    {
+      "title": "Wolverine Worldwide 重新設計 Merrell 錯誤頁：跳出率 -22%，估算年省 £1 萬",
+      "original_title": "How Wolverine used Contentsquare to reduce bounce rates by -22%",
+      "url": "https://contentsquare.com/customers/wolverine-worldwide/",
+      "source": "Contentsquare 案例・Wolverine Worldwide",
+      "tier": 2,
+      "date": "2026",
+      "author": "Contentsquare 撰寫，具名引用 Wolverine Worldwide 前電商經理 Louise Zanier",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "時尚",
+      "f_industry": [
+        "時尚"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "第一印象"
+      ],
+      "why": "Contentsquare 導入後，團隊對顧客行為第一次有完整可見度，原本多半靠猜測決定要改哪裡；一則自動警示顯示 Merrell 英國站的 404 錯誤頁造訪量突然升高，團隊藉此發現一筆容易被忽略、卻持續流失顧客與營收的小缺口。",
+      "how": "團隊用 Journey Analysis 建立造訪錯誤頁的顧客族群，發現四成訪客落地後直接離站，多數人其實是想找一款已經缺貨的鞋款；短期先設定轉址導向新款或相關分類頁止血，接著重新設計整頁 404，加入符合品牌語氣的標題「回到步道上」與六個簡單捷徑連結。",
+      "result": "錯誤頁離站率下降 32%，跳出率下降 22%，估算每年減少約 £1 萬的營收損失；團隊把同一套做法複製到集團旗下 Cap、Merrell、Saucony 三個品牌、共三十八個地區網站的錯誤頁。",
+      "caveat": "本案為 Contentsquare（廠商）發佈之客戶案例，雖具名引用前 Wolverine Worldwide 電商經理 Louise Zanier，仍屬單一來源、可能經過正面案例篩選；£1 萬年省金額為團隊自行估算的推估值，並未經第三方查核，實際成效可能有落差。",
+      "takeaway": "404、錯誤頁這類「非核心」頁面常被排在改版待辦清單最後，但一則自動警示配合行為區隔分析，就能揪出一筆持續流失的營收，小範圍修正的投資報酬率有時比大改版更高。",
+      "blurb": "一則自動警示揪出流量異常，往下追才發現，訪客落在錯誤頁是因為想找一款早已缺貨的鞋款，多數人看到沒有品牌個性的畫面就直接離開。團隊先用轉址止血，再重新設計整頁語氣，這種容易被排到待辦最後的小修正，後來複製到集團三個品牌、三十八個地區網站。",
+      "metrics": [
+        [
+          "-22%",
+          "Merrell 404 頁跳出率"
+        ],
+        [
+          "-32%",
+          "404 頁離站率"
+        ],
+        [
+          "£1 萬",
+          "估計年省營收"
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "點出從「毫無可見度」到能鎖定單一錯誤頁的轉變，但商業壓力敘述偏籠統",
+        "先轉址止血、再重新設計的兩階段做法算有章法，但未見被推翻的方案或反覆驗證",
+        "有 40% 落地即離站的診斷基準，對照 -32%/-22% 的改善與 £1 萬估算，量化紮實",
+        "Contentsquare 發佈之客戶案例，雖具名引用但非當事團隊親撰，封頂 1",
+        "「用警示揪出被忽略的頁面」原則可遷移，但案例本身聚焦單一頁面，較單薄"
+      ],
+      "image": "https://images.ctfassets.net/gwbpo1m641r7/5a6PbWKphn82Vc2eN586BV/19dad81a75235c0b9e47561ee8a5e626/Wolverine-worldwide.png"
+    },
+    {
+      "title": "Mamabrum 簡化商品頁資訊：轉換率 +6.03%，加入購物車率 +11.64%",
+      "original_title": "Convert Helped Digispot Boost Add-to-Carts by 11% with a Redesigned Product Page",
+      "url": "https://www.convert.com/case-studies/boost-product-page-add-to-cart-rate-digispot/",
+      "source": "Convert 案例・Digispot",
+      "tier": 2,
+      "date": "2026",
+      "author": "Convert 撰寫，記錄 CRO 代理商 Digispot 為 Mamabrum 執行的測試",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "其他"
+      ],
+      "why": "波蘭電商 Mamabrum 專賣木製玩具與嬰幼兒用品，流量不差，但訪客瀏覽商品後常常沒有下單；CRO 代理商 Digispot 受邀進場，用數據分析、專家審查與客服訪談找出真正卡住轉換的環節。",
+      "how": "Digispot 發現商品卡是流失的關鍵：頁面資訊重複、結構不清楚，也削弱了品牌可信度；團隊據此提出假設，把商品頁重新設計得更簡潔，用 Convert Experiences 對控制組與實驗組各投放 5 週、近 15 萬名訪客做 A/B 測試。",
+      "result": "轉換率從 3.63% 提升到 3.85%（+6.03%），加入購物車率 +11.64%，估計每月增加約 3.9 萬波蘭幣（PLN）營收。",
+      "caveat": "本案為 Convert（廠商）發佈之客戶案例，Digispot 為執行測試的 CRO 代理商，屬單一來源、可能經過正面案例篩選；轉換率與營收數字取自 Convert 平台的測試報告，未經第三方查核。",
+      "takeaway": "商品頁的資訊架構要先做減法：把重複資訊拆成可摺疊分區、放大主要 CTA，往往比增加內容更能提升轉換。",
+      "blurb": "同一項商品規格，在同一頁被重複列了兩次，顧客反而看得更亂，這是 Digispot 幫 Mamabrum 診斷出的怪現象。團隊把資訊拆成可摺疊分區、購物車鍵放大醒目，再用近 15 萬訪客跑 5 週測試，才確認簡化版本真的贏了控制組。",
+      "metrics": [
+        [
+          "+11.64%",
+          "加入購物車率"
+        ],
+        [
+          "+6.03%",
+          "轉換率（3.63%→3.85%）"
+        ],
+        [
+          "3.9 萬 PLN",
+          "估計月增營收"
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "點出流量不差但轉換不如預期的落差，但未附具體流失率等數字，商業脈絡偏籠統",
+        "研究→假設→單輪 A/B 測試的流程完整，但未見失敗版本或被推翻的方案",
+        "有轉換率 3.63%→3.85% 的完整前後對照，量化成果紮實",
+        "Convert 發佈之客戶案例，Digispot 為執行代理商，非當事團隊親撰，封頂 1",
+        "「資訊分區、放大主要 CTA、精簡商品頁」的原則清楚可複用到其他商品頁優化"
+      ],
+      "image": "https://www.convert.com/wp-content/uploads/2024/09/mamabrum-pdp-control-Adrian-Jaskulski-scaled.jpg"
+    },
+    {
+      "title": "BestSelf Co. 幫招牌商品首屏只留一句利益句：轉換率 +27%，桌機端衝 +74%",
+      "original_title": "The benefit-driven headline that led to a 27% increase in the conversions for an e-retailer's flagship product",
+      "url": "https://www.convert.com/case-studies/splitbase-increase-ecommerce-conversions/",
+      "source": "Convert 案例・SplitBase",
+      "tier": 2,
+      "date": "2026",
+      "author": "Convert 撰寫，記錄 CRO 代理商 SplitBase 為 BestSelf Co. 執行的測試（引用創辦人 Raphael Paulin-Daigle）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "其他"
+      ],
+      "why": "BestSelf Co. 是美國生產力工具電商，其招牌商品 Self Journal 頁面卻長期跳出率偏高，訪客翻閱商品頁後常常什麼都沒留下就離開，直接侵蝕營收；品牌找上 CRO 代理商 SplitBase 協助止血。",
+      "how": "SplitBase 先在頁面加裝熱圖，再對訪客投放問卷調查，發現多數人根本沒滑過首屏，也不清楚、也不相信這本筆記本真正能帶來幫助；團隊據此設計出聚焦單一利益的首屏標題，並用 Convert 對控制組與兩個實驗版本跑 4 週、約 2 萬名訪客的測試。",
+      "result": "轉換率提升 27%，其中桌機端訪客的提升幅度達 74%，加入購物車率同步提升 13%；獲勝版本的標題只強調一個核心利益，落敗版本因為塞入兩個賣點反而表現較差。",
+      "caveat": "本案為 Convert（廠商）發佈之客戶案例，SplitBase 為執行測試的 CRO 代理商，屬單一來源、可能經過正面案例篩選；轉換率與各裝置細分數字取自 Convert 平台測試報告，未經第三方查核。",
+      "takeaway": "產品頁也該當成一頁行銷頁面經營：與其把每個賣點都塞進首屏，不如先透過質化研究找出訪客最在意的單一利益，把它說清楚。",
+      "blurb": "SplitBase 從熱圖與問卷發現，訪客沒滑過首屏，也不太相信這本筆記本真的能幫上忙。團隊沒有重排整頁結構，先在首屏標題只放一個利益點：「陪你達成目標」捨棄原本想塞進去的第二個賣點，讓沒說滿的那句話，先幫顧客解開心裡的疑慮。",
+      "metrics": [
+        [
+          "+27%",
+          "整體轉換率"
+        ],
+        [
+          "+74%",
+          "桌機端轉換率"
+        ],
+        [
+          "+13%",
+          "加入購物車率"
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "點出跳出率偏高侵蝕營收，但未附具體跳出率或營收數字，商業脈絡偏籠統",
+        "熱圖＋問卷→假設→A/B 測試的流程完整，但屬單輪線性驗證，未見失敗版本或修正循環",
+        "有 27%/74%/13% 等多項轉換提升數字，但未附測試前的基準轉換率，屬有百分比缺基準",
+        "Convert 發佈之客戶案例，SplitBase 為執行代理商，非當事團隊親撰，封頂 1",
+        "「首屏標題只聚焦一個利益點」的原則明確、可遷移到其他產品頁文案優化"
+      ],
+      "image": "https://www.convert.com/wp-content/uploads/2018/11/Variant1-Raphael-Paulin-Daigle.jpg"
+    },
+    {
+      "title": "荷蘭燈具商 lampenlicht.nl 商品輪播圖配上一句賣點：加入購物車率 +13%，測試 ROI 116%",
+      "original_title": "Convert Helped Mintminds Pair Product Attributes with Carousel Images for a 13% Increase in Add-to-Cart",
+      "url": "https://www.convert.com/case-studies/optimize-product-carousel-mintminds/",
+      "source": "Convert 案例・Mintminds",
+      "tier": 2,
+      "date": "2026",
+      "author": "Convert 撰寫，記錄 CRO 代理商 Mintminds 為 lampenlicht.nl 執行的測試（引用創辦人 Rudger De Groot）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "其他"
+      ],
+      "why": "荷蘭燈具電商 lampenlicht.nl 商品頁資訊豐富，圖片、評論、規格一應俱全，但加入購物車率與單次造訪營收仍有成長空間；代理商 Mintminds 決定從資料裡找出還沒被滿足的顧客需求。",
+      "how": "Mintminds 先依 Google Analytics 與 HotJar 數據做出假設，一口氣測了四種呈現商品規格的版型（依篩選條件標示規格、自動展開規格、規格取代文案、規格連結移到輪播圖上方），結果四個版本的加入購物車與單次造訪營收全部低於原始版本；團隊回頭做質化訪談才發現，顧客真正想要的是更多商品圖，技術規格對多數人意義不大。團隊據此重新設計，把一句關鍵賣點文字放進商品輪播圖裡（從第二張圖開始）。",
+      "result": "加入購物車率提升 13%（信心水準 100%），訂單轉換率提升 4.96%，單次造訪營收提升 6.58%，測試投資報酬率達 116%；老客戶與手機端訪客的加入購物車提升幅度更達 19% 與 15%。",
+      "caveat": "本案為 Convert（廠商）發佈之客戶案例，Mintminds 為執行測試的 CRO 代理商，屬單一來源、可能經過正面案例篩選；各項提升數字取自 Convert 平台測試報告，未經第三方查核。",
+      "takeaway": "先出的假設不一定是對的：與其堅持最初的方向，不如把失敗的測試結果當成回頭做質化研究的訊號，往往能找到更貼近顧客真正需求的答案。",
+      "blurb": "團隊一口氣測了四種讓規格更好找的版型，全部輸給控制組，加入購物車和營收都不增反減。回頭做質化訪談才發現，顧客要的不是更多規格，而是滑動商品圖時能看到一句賣點文字，換個角度重測，才終於贏了控制組，還拿下年度 CRO 獎項。",
+      "metrics": [
+        [
+          "+13%",
+          "加入購物車率"
+        ],
+        [
+          "ROI 116%",
+          "測試投資報酬率"
+        ],
+        [
+          "+4.96%",
+          "訂單轉換率"
+        ]
+      ],
+      "scores": [
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "點出加入購物車與單次造訪營收仍有成長空間，但未附具體數字，商業脈絡偏籠統",
+        "連續四個版本測試失敗、回頭做質化訪談才找到方向，含被推翻的方案，屬真實案例指紋",
+        "多項提升百分比與 ROI 116%，但未附測試前的基準加入購物車率，屬有百分比缺基準",
+        "Convert 發佈之客戶案例，Mintminds 為執行代理商，非當事團隊親撰，封頂 1",
+        "「測試失敗後回頭做質化研究」的方法論明確可遷移，屬本案最有價值的部分"
+      ]
+    },
+    {
+      "title": "印度保險 ACKO 用 GenAI 對話取代催促電話：投保轉換 +13%，來電量降 50%",
+      "original_title": "How ACKO Drove 13% More Conversions & 50% Drop in Calls with GenAI",
+      "url": "https://amplitude.com/blog/acko-drove-more-conversions-with-genai",
+      "source": "Amplitude 案例・ACKO",
+      "tier": 2,
+      "date": "2026",
+      "author": "Amplitude 部落格刊出，ACKO Lead AI Product Manager Agastya Sanjai 具名撰寫",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "金融",
+      "f_industry": [
+        "金融"
+      ],
+      "f_product": [
+        "AI"
+      ],
+      "f_goal": [
+        "付款"
+      ],
+      "why": "印度數位保險公司 ACKO 服務近 8000 萬名顧客，發現多數人排斥業務員打來的催促電話，卻又需要有人解答投保疑問；團隊想找到一種不施壓、卻能讓顧客順利完成投保的溝通方式。",
+      "how": "研究顯示四分之三顧客偏好線上對話勝過電話，ACKO 因此打造一套 GenAI 對話機器人，取代傳統電話催促；上線後，團隊用 Amplitude 的漏斗與世代分析發現新問題：近半數使用者聊三句就放棄，也有人一直點建議選項卻沒有推進到購買意圖。團隊因此加入「轉真人」按鈕接住猶豫的顧客，並重新設計建議選項的引導順序，讓對話更有目的性。",
+      "result": "健康保險投保轉換率提升 13%，轉換為實質保費增加達百萬美元等級；來電量下降近 50%，回應延遲時間減少 88%；顧客滿意度（CSAT）從約 63% 衝上 80%。",
+      "caveat": "本案由 Amplitude（廠商）發佈，作者為 ACKO 產品負責人本人具名撰寫，敘事屬第一手，惟因發佈於分析平台廠商官方部落格，仍依規則封頂 firsthand 為 1；各項提升數字未經第三方查核，實際年化財務效益可能與敘述有落差。",
+      "takeaway": "當顧客抗拒的不是產品、而是溝通方式本身時，把單向催促換成可以自己掌握節奏的對話，再用行為數據持續抓出對話卡住的地方逐步修正，比單次改版更能長期見效。",
+      "blurb": "四分之三顧客其實不想接催促電話，只是沒人問過他們要什麼，ACKO 於是把賣保險改成一場不趕時間的線上對話。上線後才發現新麻煩：近半數用戶聊三句就放棄，團隊加一顆「轉真人」按鈕接住猶豫的人，機器人也學會沒把握時主動安靜，滿意度衝上 80 分。",
+      "metrics": [
+        [
+          "+13%",
+          "健康保險投保轉換率"
+        ],
+        [
+          "-50%",
+          "客服來電量"
+        ],
+        [
+          "-88%",
+          "回應延遲時間"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "明確指出顧客排斥催促電話、且用「四分之三偏好線上對話」的具體洞察佐證需求",
+        "發現新問題（三句放棄、建議選項卡住）並針對性修正的迭代過程清楚",
+        "轉換率、來電量、延遲時間多項提升，另有百萬美元級保費增加的絕對數字",
+        "作者為 ACKO 產品負責人具名親撰，但發佈於廠商部落格，依規則封頂 1",
+        "「把對話設計成能主動示弱、轉真人」的原則明確可遷移到其他客服/導購場景"
+      ],
+      "image": "https://cdn.sanity.io/images/l5rq9j6r/production/449d1179dd2e05dfdeb9005db6979c7143130548-1920x1440.jpg"
+    },
     {
       "title": "NatWest 揪出僅 6% 人用的比較功能：房貸試算完成率 +20%，估計月增 £50 萬營收",
       "original_title": "How NatWest optimized its mortgage calculator tool to drive an additional £500k per annum",
@@ -5423,6 +5706,48 @@
     }
   ],
   "rejected": [
+    {
+      "title": "HARTING 用 Contentsquare 提升 PDP 下載量 +38%",
+      "url": "https://contentsquare.com/customers/harting/",
+      "source": "Contentsquare 案例・HARTING",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "min_total: 5.5 < 6（五維總和 5 ＋ tier 加成 0.5，未達 6.0 門檻；決策過程僅為單輪重新設計、無失敗迭代，量化成果僅有相對百分比、缺乏下載量等基準數字）"
+    },
+    {
+      "title": "Ryanair 用 Surveys 追蹤顧客滿意度",
+      "url": "https://contentsquare.com/customers/ryanair/",
+      "source": "Contentsquare 案例・Ryanair",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "floor: quantified_outcome=0 < 1（全文僅描述問卷調查方法與流程，無任何轉換率、留存或營收等量化前後對照數字，量化成果維度掛零，直接淘汰）"
+    },
+    {
+      "title": "Hostinger 靠 Amplitude 打造實驗文化，轉換率提升 20%+",
+      "url": "https://amplitude.com/blog/hostinger-conversion-lift-experimentation",
+      "source": "Amplitude 案例・Hostinger",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "min_total: 5.5 < 6（內容偏向平台導入與組織文化敘事，「20%+ 轉換率」等關鍵數字語意模糊、缺乏明確基準與範圍，接近廠商平台宣傳稿，五維總和僅 5 ＋ tier 加成 0.5，未達門檻）"
+    },
     {
       "title": "從 Dribbble 到 Google Analytics App 重新設計",
       "url": "https://uxdesign.cc/from-posting-on-dribbble-to-google-analytics-a-ux-case-study-f5589c70f01",
