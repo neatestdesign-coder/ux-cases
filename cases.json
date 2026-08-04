@@ -1,10 +1,179 @@
 {
-  "updated": "2026-08-03",
+  "updated": "2026-08-04",
   "run": {
     "scanned": 40,
-    "candidates": 4
+    "candidates": 6
   },
   "cases": [
+    {
+      "title": "The Warehouse Group 分眾促銷改版：每用戶營收 +4.4%",
+      "original_title": "Case Study: The Warehouse Group tailors the shopping experience for specific audience segments",
+      "url": "https://www.dynamicyield.com/case-studies/the-warehouse-group/",
+      "source": "Dynamic Yield 案例・The Warehouse Group",
+      "tier": 2,
+      "date": "約2020",
+      "author": "Dynamic Yield 撰寫，引用 The Warehouse Group 電商個人化經理 Nathan Martin",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "個人化"
+      ],
+      "why": "紐西蘭最大零售集團旗下有六個子品牌、260 多間實體店，品類頁塞滿制式促銷模組卻沒真正幫訪客找到想要的商品，導致跳出率偏高、不少訪客改用搜尋列；團隊在內部完成低規模個人化測試、看到初步成效後，決定引進外部工具把玩法規模化到整個品牌組合。",
+      "how": "分兩軌進行：其一，為旗下戶外運動子品牌 Torpedo7 的品類頁加上子分類內容模組與依用戶偏好排序的推薦元件，例如「Bikes」頁面下再細分「Bikes & Frames」「Helmets」「Bike Racks」；其二，用 Dynamic Yield 的 Variation Feed 依受眾（滑雪愛好者、健身愛好者）動態出稿首頁促銷，取代過去「同一組促銷推給所有訪客」的做法，測試期間即時依點擊表現汰換版位。",
+      "result": "一年內在品牌組合上線超過 400 個活動，帶來 300 萬美元增量營收；品類頁改版使跳出率降 1.5%、CTR 達 26.4%、轉換 +1.8%；分眾促銷讓 CTR +7.8%、每用戶營收 +4.4%。",
+      "caveat": "本案為 Dynamic Yield（廠商）發佈之客戶案例，具名引用 The Warehouse Group 電商個人化經理 Nathan Martin，屬單一來源、可能經過正面案例篩選，未經第三方查核；300 萬美元增量營收與 400 多個活動數為官方案例頁揭露的絕對數字，可回溯，其餘多為相對百分比提升。",
+      "takeaway": "與其直接大手筆導入外部工具，不如先用低成本的內部小規模測試驗證個人化概念是否成立，看到初步訊號再引進外部平台把成效複製到整個品牌組合；分眾出稿時用可即時依成效汰換的動態內容元件，能讓「該推哪個版位」持續被數據修正，而非憑一開始的假設定案。",
+      "blurb": "紐西蘭最大零售集團旗下六個子品牌，品類頁過去塞滿制式促銷，訪客找不到想要的東西只好改用搜尋列。團隊先在內部小規模測試看到苗頭，才引進 Dynamic Yield 複製到全品牌組合，一年衝出 400 多個活動、多賺 300 萬美元。",
+      "metrics": [
+        [
+          "+4.4%",
+          "分眾促銷後每用戶營收"
+        ],
+        [
+          "300 萬美元",
+          "一年增量營收"
+        ],
+        [
+          "26.4%",
+          "品類頁改版後 CTR"
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "點出品類頁堆滿制式促銷導致跳出率高、訪客改用搜尋列的具體商業痛點，但未附改版前的轉換率或跳出率基準數字",
+        "有「內部小規模測試先驗證、再引進外部工具規模化」的決策脈絡，但敘事偏線性成功，未見被推翻的方案或失敗迭代",
+        "品類頁與分眾促銷兩組測試都有具體前後對照數字（跳出率、CTR、轉換、營收），並附一年期間的絕對增量營收",
+        "Dynamic Yield（廠商）發佈之客戶案例，雖具名引用客戶方經理，仍非當事團隊親撰，封頂 1",
+        "「先內部低成本試驗證概念、成效確立才規模化外部工具」與「用可即時汰換的動態內容做分眾出稿」具備一定遷移性，但案例整體仍偏工具功能展示"
+      ],
+      "image": "https://www.dynamicyield.com/wp-content/uploads/2020/08/warehouse-group-casestudy-social.png"
+    },
+    {
+      "title": "Moss Bros 重排導覽與命名 A/B 測試：每用戶營收 +9.7%",
+      "original_title": "Case Study: Moss Bros. suits the modern man through personalization",
+      "url": "https://www.dynamicyield.com/case-studies/moss-bros/",
+      "source": "Dynamic Yield 案例・Moss Bros",
+      "tier": 2,
+      "date": "約2019",
+      "author": "Dynamic Yield 撰寫，引用 Moss Bros 電商主管 Matthew Henton",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "時尚",
+      "f_industry": [
+        "時尚"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "個人化"
+      ],
+      "why": "Moss Bros 是創立於 1851 年的英國老牌西裝零售商，產品線與版型選擇複雜，團隊想把實體店「量身打造」的服務感複製到線上，卻沒有系統化的方法測試哪些頁面元素真的影響轉換。",
+      "how": "團隊用 Dynamic Yield 跑多組 Multi-Touch Campaign：首頁針對「特價客群」測試 5 種不同橫幅組合；導覽列做了兩層測試，一是重新排序精簡分類，二是測試分類命名方式（例如「Suits」vs.「Suits & Tailoring」）；同時在來自 Google 產品目錄廣告（PPC）、跳出率偏高的商品詳情頁摺上區插入推薦模組；另外用「幫我留住購物車」離站彈窗，讓放棄結帳的訪客留信箱換取購物車連結。",
+      "result": "導覽重排與命名測試合計帶來每用戶營收 +9.7%；PPC 流量商品頁加上推薦模組後購買 +5.4%；離站彈窗也協助降低購物車放棄率，但原文未附具體百分比。",
+      "caveat": "本案為 Dynamic Yield（廠商）發佈之客戶案例，具名引用 Moss Bros 電商主管 Matthew Henton，屬單一來源、可能經過正面案例篩選，未經第三方查核；購物車放棄率降低僅為定性描述、無具體數字，解讀時應保留；+9.7%、+5.4% 兩項為官方案例頁揭露的相對百分比。",
+      "takeaway": "「導覽」是常被低估的轉換槓桿：光是重新排序分類、或換一種更直覺的命名方式（而非改版面設計），就能測出實質的營收差異；針對不同流量來源（如 PPC）的到達頁面，也值得針對該流量的行為模式單獨優化，而非套用同一套版型。",
+      "blurb": "創立於 1851 年的英國老牌西裝店，最懂量身訂做，卻沒把講究搬上網路。團隊沒急著改版面，先測試導覽分類該叫「Suits」還是「Suits & Tailoring」；再對跳出率偏高的 PPC 訪客，商品頁塞推薦模組，購買率多了 5.4%。",
+      "metrics": [
+        [
+          "+9.7%",
+          "導覽重排後每用戶營收"
+        ],
+        [
+          "+5.4%",
+          "PPC 商品頁加推薦後購買率"
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "點出想把實體店量身訂做的服務感複製到線上、卻缺系統化測試方法的商業意圖，但未附改版前的具體轉換基準",
+        "多組 Multi-Touch Campaign 平行測試（橫幅、導覽排序、命名、PPC 到達頁、離站彈窗），有明確的多輪測試方法，但未見失敗或被推翻的版本",
+        "導覽測試 +9.7%、PPC 推薦 +5.4% 均為前後對照的相對百分比，但購物車放棄率改善僅定性描述、無數字",
+        "Dynamic Yield（廠商）發佈之客戶案例，雖具名引用客戶方主管，仍非當事團隊親撰，封頂 1",
+        "「導覽分類命名本身就是可測試的轉換槓桿」「依流量來源特性單獨優化到達頁」是具體可遷移的原則，但案例整體偏工具功能展示"
+      ],
+      "image": "https://www.dynamicyield.com/wp-content/uploads/2019/11/dy-mossbros-social-share.jpg"
+    },
+    {
+      "title": "KKday 用行為數據校正轉換假設：結帳轉換率翻倍",
+      "original_title": "KKday makes user behaviour data accessible to employees, building a culture of analytics to drive better user experiences.",
+      "url": "https://mixpanel.com/customers/kkday-case-study/",
+      "source": "Mixpanel 案例・KKday",
+      "tier": 2,
+      "date": "約2020",
+      "author": "Mixpanel 撰寫，引用 KKday 產品經理 Sherry Shih、首席產品官 Mike Chen",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "旅遊",
+      "f_industry": [
+        "旅遊"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "結帳",
+        "站內搜尋"
+      ],
+      "why": "2014 年成立的亞洲旅遊電商 KKday，2017 年推出行動網站與 App 後，同一位使用者的行為分散在網站、行動網站、App 三個介面，團隊卻看不到彼此之間的關聯，舊工具也串不起同一用戶跨三平台的完整旅程，想做精準行銷卻缺乏依據。",
+      "how": "改用 Mixpanel 後，團隊先用 Insights 報表發現 80% 的站內搜尋關鍵字其實是城市名，於是在搜尋框加上「熱門 20 城市」快捷選項；接著用 Funnels 報表逐步比對結帳頁各步驟的流失點，抓出流失最嚴重的環節並修正；另外用機器學習依購買與瀏覽次數加權排序商品，並比較有無個人化排序兩組使用者的轉換差異。",
+      "result": "原本團隊以為使用者從瀏覽到下單需要 1 到 3 天，但用 Mixpanel 拆解後發現 85% 的訂單其實在 50 分鐘內完成，團隊因此把互動設計重新對齊這個真實的決策窗口；搜尋框加城市快捷後點擊率 +7.7%；結帳流程修正後轉換率翻倍（2x）；機器學習排序上線後，個人化組別的轉換又比未個人化組多 4.4%。",
+      "caveat": "本案為 Mixpanel（廠商）發佈之客戶案例，具名引用 KKday 產品經理 Sherry Shih 與首席產品官 Mike Chen，屬單一來源、可能經過正面案例篩選，未經第三方查核；「結帳轉換率翻倍」「+7.7%」「+4.4%」為官方案例頁揭露的絕對倍數與百分比，可回溯，但未附上改版前後的絕對訂單量基準。",
+      "takeaway": "團隊原先對使用者決策週期的假設（1 到 3 天）與實際數據（85% 在 50 分鐘內完成）落差極大，說明產品設計常依賴的直覺假設，一旦有真實行為數據佐證，往往需要整個推翻重來；找出使用者搜尋習慣裡最大宗的模式（如 80% 都在搜城市名），直接把它變成介面捷徑，是低成本卻高槓桿的優化路徑。",
+      "blurb": "團隊一直以為，使用者從瀏覽到下單要花 1 到 3 天，照假設設計互動節奏。直到攤開真實數據才發現，85% 訂單其實在 50 分鐘內拍板，於是把互動重新對齊這個當下決定的窗口；搜尋框也修正，列出最常被搜的 20 個城市名，點擊率多了 7.7%。",
+      "metrics": [
+        [
+          "2x",
+          "結帳流程修正後轉換率"
+        ],
+        [
+          "85%",
+          "訂單在 50 分鐘內完成"
+        ],
+        [
+          "+7.7%",
+          "搜尋框加城市快捷後點擊率"
+        ]
+      ],
+      "scores": [
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "點出使用者行為分散在網站／行動網站／App 三平台、舊工具串不起完整旅程的具體痛點，但未附改版前的轉換率或營收基準數字",
+        "多輪假設驗證：先用 Insights 發現搜尋關鍵字模式、再用 Funnels 定位結帳流失點、再用 A/B 驗證機器學習排序效果，並推翻了「決策要 1 到 3 天」的原先假設",
+        "結帳轉換率翻倍、點擊率 +7.7%、個人化組多 4.4% 轉換，並列 85% 訂單於 50 分鐘內完成的具體行為基準數字",
+        "Mixpanel（廠商）發佈之客戶案例，雖具名引用客戶方產品經理與首席產品官，仍非當事團隊親撰，封頂 1",
+        "「先用數據驗證既有假設而非憑經驗設計互動節奏」「把搜尋行為裡最大宗的模式直接變成介面捷徑」都是可複用到其他產品的具體方法"
+      ],
+      "image": "https://mxpnlcms.wpengine.com/wp-content/uploads/2020/09/kkdayscreenshot1.png"
+    },
     {
       "title": "Dynamic Yield 拿自家網站做實驗：demo 需求 +111%、電子報訂閱 +275%",
       "original_title": "We Drank Our Own Brew & Here's What Happened: A B2B Optimization Story",
@@ -6207,6 +6376,48 @@
     }
   ],
   "rejected": [
+    {
+      "title": "HRS 商務差旅訂房個人化（多數成果僅以「顯著提升」帶過，缺乏可驗證數字）",
+      "url": "https://www.dynamicyield.com/case-studies/hrs/",
+      "source": "Dynamic Yield 案例・HRS",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "gate 回傳 min_total: 5.5 < 6.0 — 全文除單一「特定受眾 +2.5%」外，其餘成果均以 significant uplift、notable uplift 等形容詞帶過，缺乏可驗證的量化基準與絕對數字"
+    },
+    {
+      "title": "美國內衣品牌 Email 個人化推薦（品牌匿名、僅一項相對百分比）",
+      "url": "https://www.dynamicyield.com/case-studies/email-recommendations/",
+      "source": "Dynamic Yield 案例・匿名內衣品牌",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "gate 回傳 min_total: 5.5 < 6.0 — 案例品牌刻意匿名，僅揭露單一「Email 千次曝光營收 +40%」相對百分比、無絕對基準數字，商業脈絡與可遷移性描述均籠統"
+    },
+    {
+      "title": "Speero 協助 LED Lighting Supply 建置行銷歸因儀表板（無任何量化商業成果）",
+      "url": "https://speero.com/case-studies/how-led-lighting-upgraded-their-marketing-attribution",
+      "source": "Speero 案例・LED Lighting Supply",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "gate 回傳 floor: quantified_outcome=0 < 1、min_total: 4.5 < 6.0 — 全文無任何轉換率、營收或留存數字，僅泛稱「節省時間」「數據更可信賴」屬歸因儀表板功能展示而非商業成果案例"
+    },
     {
       "title": "A/B 測試教學文以「某城商行」理財支付頁優化為例：轉化率 +23.4%",
       "url": "https://www.woshipm.com/share/6403150.html",
