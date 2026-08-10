@@ -1,10 +1,59 @@
 {
   "updated": "2026-08-10",
   "run": {
-    "scanned": 16,
-    "candidates": 8
+    "scanned": 7,
+    "candidates": 7
   },
   "cases": [
+    {
+      "title": "Bamboo Health 新用戶留存率：關鍵功能提早曝光後衝高 10%",
+      "original_title": "Medical technology company, Bamboo Health, uses Mixpanel to create a seamless experience for its users—improving retention by 10%",
+      "url": "https://mixpanel.com/customers/bamboohealth-revolutionized-connectivity-collaboration-healthcare-industry",
+      "source": "Mixpanel 案例・Bamboo Health",
+      "tier": 2,
+      "date": "2022",
+      "author": "Mixpanel 撰寫，引用 Bamboo Health 營運總監 Julia Sanders 與資深用戶成功主管 Corinne Pellows",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "醫療健康",
+      "f_industry": [
+        "醫療健康"
+      ],
+      "f_product": [
+        "SaaS"
+      ],
+      "f_goal": [
+        "新手引導"
+      ],
+      "why": "Bamboo Health 是醫療照護資訊交換平台，服務兩萬五千多個訂閱單位橫跨醫療院所、保險與政府機關，但產品功能繁多，訂閱單位不一定摸得清楚全部用途，過去用的分析工具限制重重，換了工具後想解決的核心問題是新訂閱單位能不能真正黏著使用平台。",
+      "how": "團隊先用 Mixpanel Lexicon 建立一套跨團隊（客服、支援、產品、行銷）共用的事件與名詞定義，確保大家講的是同一件事；接著用留存報表發現一個規律：第一週活躍度高的用戶留存表現明顯較好，但光知道活躍還不夠，再用 Signal 報表去找哪個具體功能跟留存有正相關，結果揪出 Patient Story 這個功能的早期使用黏著度與留存有強烈關聯；有了這條線索，團隊把新手引導流程改版，把使用者從登入到第一次看到 Patient Story 之間的路徑縮短。",
+      "result": "調整上線後的頭七天，新用戶留存率提升 10%。",
+      "caveat": "本案為 Mixpanel（廠商）發佈之客戶案例，具名引用 Bamboo Health 營運總監 Julia Sanders，屬單一來源、可能經過正面案例篩選，未經第三方查核；留存率提升幅度為官方案例頁具名揭露之相對數字，惟未附改版前的留存率絕對基準值。",
+      "takeaway": "留存率該看什麼不必用猜的，把留存表現好的用戶反推回去，看他們在頭幾天到底做了哪個動作，往往能挖到一個具體、可操作的早期關鍵行為；找到之後，設計上要做的常常就是一件事，讓新用戶更快摸到那個動作，而不是把新手引導塞滿更多步驟。",
+      "blurb": "想知道留存率該看哪個數字，不必用猜的：團隊先看哪批新用戶活得久，再回頭拆解他們頭幾天到底做了什麼，結果挖到一個具體動作，早點摸到某個功能的人，後續黏著度明顯更高。找到這條線索後，設計上要做的其實很單純，不是在引導流程塞更多步驟，而是把使用者從登入到摸到那個功能的路徑剪短。",
+      "metrics": [
+        [
+          "+10%",
+          "新用戶留存率（改版後前七天）"
+        ]
+      ],
+      "scores": [
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "醫療資訊交換平台服務兩萬五千多訂閱單位，但只籠統提到希望訂閱單位有無縫使用體驗，未附改版前具體留存或流失數字",
+        "從建立跨團隊共用事件定義，到用留存報表找規律、再用 Signal 報表定位具體關聯功能，最後才動手改新手引導路徑，具備清楚的假設驗證鏈",
+        "改版後前七天新用戶留存率提升 10%，惟未附改版前的留存率絕對基準值，屬有百分比但基準不完整",
+        "Mixpanel（廠商）發佈之客戶案例，雖具名引用營運總監，仍非當事團隊親撰，封頂 1",
+        "反推留存表現好的用戶頭幾天做了什麼動作、再把新手引導路徑對準那個動作，具備高度遷移性"
+      ]
+    },
     {
       "title": "LearnWorlds 到達頁轉換率：從 12% 衝到 30%",
       "original_title": "How LearnWorlds Uses Hotjar to Boost Conversions",
@@ -6664,6 +6713,90 @@
     }
   ],
   "rejected": [
+    {
+      "title": "WikiJob／VWO 案例：見證區塊測試購買 +34%",
+      "url": "https://vwo.com/success-stories/wikijob/",
+      "source": "VWO 案例・WikiJob",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "floor 未違反但 min_total=5.5<6：僅單一 A/B 測試（加入見證文字），無 baseline 絕對值、無失敗或被推翻方案、商業脈絡籠統，總分不足門檻。"
+    },
+    {
+      "title": "Optimics／VWO 案例：放大商品圖片使 Mall.cz 營收 +9.46%",
+      "url": "https://vwo.com/success-stories/optimics/",
+      "source": "VWO 案例・Optimics（客戶：Mall.cz）",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "min_total=5.5<6：單一變因測試（放大商品圖），無過程迭代或失敗方案，商業脈絡與可遷移性皆薄弱。"
+    },
+    {
+      "title": "May／Mixpanel 案例：留存率翻倍、月成長雙位數",
+      "url": "https://mixpanel.com/customers/may-uses-mixpanel-to-drive-product-improvements-and-successful-startup-fundraising",
+      "source": "Mixpanel 案例・May",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "min_total=5.5<6：內容偏訪談問答，「留存翻倍」「雙位數成長」皆為模糊相對數字、無基準值，決策過程僅單一發現到單一行動，缺乏迭代或失敗細節。"
+    },
+    {
+      "title": "Freshworks／Speero 案例：從零建立每月 10 場實驗的測試文化",
+      "url": "https://speero.com/case-studies/freshworks-from-0-to-10-tests-a-month",
+      "source": "Speero 案例・Freshworks",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "floor 違反：quantified_outcome=0（全文無具體使用者體驗或營收 baseline→成果數字，僅「貢獻 5–7% 合格名單量」等模糊流程指標）；min_total=4.5<6。屬顧問服務建立實驗文化的案例，非具體 UX 決策的量化成果案例。"
+    },
+    {
+      "title": "MongoDB／Speero 案例：實驗測試量從零衝到年百次",
+      "url": "https://speero.com/case-studies/zero-to-100-tests-a-year-within-six-months",
+      "source": "Speero 案例・MongoDB",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "floor 違反：quantified_outcome=0（全文僅測試「速度」與組織文化轉變等流程指標，無任何使用者體驗或營收的 baseline→成果數字）；min_total=4.5<6。"
+    },
+    {
+      "title": "Gympass／Speero 案例：六個月內建立全公司實驗文化",
+      "url": "https://speero.com/case-studies/how-gympass-started-and-scaled-experimentation-across-its-business-in-just-six-months",
+      "source": "Speero 案例・Gympass",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "floor 違反：quantified_outcome=0（僅「範本採用率 80%」等內部流程指標，無使用者體驗或營收面的 baseline→成果數字）；min_total=4.5<6。"
+    },
     {
       "title": "Webistry 客戶推薦：預約 +750%（缺基準值）",
       "url": "https://unbounce.com/customer-case-study/webistry-digital-agency/",
