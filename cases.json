@@ -1,10 +1,298 @@
 {
-  "updated": "2026-08-04",
+  "updated": "2026-08-10",
   "run": {
-    "scanned": 40,
-    "candidates": 6
+    "scanned": 16,
+    "candidates": 8
   },
   "cases": [
+    {
+      "title": "LearnWorlds 到達頁轉換率：從 12% 衝到 30%",
+      "original_title": "How LearnWorlds Uses Hotjar to Boost Conversions",
+      "url": "https://www.hotjar.com/customers/learnworlds/",
+      "source": "Hotjar 案例・LearnWorlds",
+      "tier": 2,
+      "date": "2023",
+      "author": "Hotjar 撰寫，引用 LearnWorlds 共同創辦人暨 CPO George Palaigeorgiou",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "教育",
+      "f_industry": [
+        "教育"
+      ],
+      "f_product": [
+        "SaaS"
+      ],
+      "f_goal": [
+        "到達頁",
+        "教學導覽"
+      ],
+      "why": "LMS 平台客群從個人講師到企業橫跨多元，人物誌模糊，過去只能看 Google Analytics 的量化數字，看不到用戶實際在頁面上做了什麼、卡在哪裡，行銷與產品決策長期缺乏「為什麼」的依據。",
+      "how": "用熱圖與錄影驗證到達頁轉換率偏低的假設，發現真正的價值主張放在太下面，第一屏沒打中需求，調整資訊層級後做成範本套用到所有活動頁；全站改版時 Google Analytics 顯示部分路徑斷裂，改用錄影追查才發現至少四個看起來能點卻沒人點的導覽元件；新功能上線後只有 1.8% 互動率，靠錄影抓出版面、導覽與工程三層問題並逐一修正。",
+      "result": "到達頁轉換率從 12% 提升到 30%；新功能互動率從 1.8% 提升到近 9%；免費試用轉換率額外提升 0.5 個百分點。",
+      "caveat": "本案為 Hotjar（廠商）發佈之客戶案例，具名引用 LearnWorlds 共同創辦人暨 CPO George Palaigeorgiou 及創意總監、行銷團隊主管，屬單一來源、可能經過正面案例篩選，未經第三方查核；到達頁轉換率與新功能互動率之 baseline 與成果數字為官方案例頁具名揭露、可回溯，免費試用轉換率則為未附基準值的相對提升。",
+      "takeaway": "到達頁轉換率低不必急著整頁重改，先用熱圖看使用者實際卷動與點擊落點，常是「重要資訊放太下面」這種順序問題；找到規律後做成可複用的頁面樣板，比每次從零設計更有效率，也更容易在不同活動頁上快速覆用。",
+      "blurb": "熱圖抓到一個違反直覺的現象：卷得越深的訪客轉換率反而越高，代表真正的賣點被放在太下面。團隊把資訊順序做成範本，全站改版時又靠錄影揪出四個看起來能點卻沒人點的導覽元件，介面看不懂使用者不會替你補完，新功能互動率因此從 1.8% 盯到 9%。",
+      "metrics": [
+        [
+          "12%→30%",
+          "到達頁轉換率"
+        ],
+        [
+          "1.8%→9%",
+          "新功能互動率"
+        ],
+        [
+          "+0.5%",
+          "免費試用轉換率"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "多元客群導致人物誌模糊，且過去只能看 GA 看不到用戶實際行為的商業痛點寫得清楚",
+        "到達頁與全站改版都有假設驗證、發現隱藏元件等真實迭代過程，非一路順利的美化敘事",
+        "到達頁轉換率（12%→30%）與新功能互動率（1.8%→9%）皆有明確 baseline 與成果對照",
+        "Hotjar（廠商）發佈之客戶案例，雖具名引用 CPO 與其他主管，仍非當事團隊親撰，封頂 1",
+        "「資訊順序影響轉換率、做成範本套用到所有頁面」與「用錄影找出看不出可點的元件」具備高度遷移性"
+      ],
+      "image": "https://images.ctfassets.net/lh3zuq09vnm2/3HufymfkuFFw5wfGn3pISn/74b41a8fe3f116558f344c6be8bc06f0/Learnworlds-Case-study-Header.svg"
+    },
+    {
+      "title": "Materials Market 結帳轉換率：0.5% 衝到 1.6%",
+      "original_title": "How to triple conversions in just one month",
+      "url": "https://www.hotjar.com/customers/materials-market/",
+      "source": "Hotjar 案例・Materials Market",
+      "tier": 2,
+      "date": "2023",
+      "author": "Hotjar 撰寫，引用 Materials Market 營運總監暨共同創辦人 Andrew Haehn",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "工業",
+      "f_industry": [
+        "工業"
+      ],
+      "f_product": [
+        "電商",
+        "雙邊平台"
+      ],
+      "f_goal": [
+        "結帳",
+        "到達頁"
+      ],
+      "why": "建材媒合平台成立不到一年就做到半年 50 萬英鎊線上銷售，但團隊沒有專職 CRO 人力，官網轉換率只有 0.5%，營運總監得自己找出流失點，且沒有預算做大規模改版。",
+      "how": "每天早上花 20 分鐘看 Session Recordings，鎖定三個問題：雙 CTA 顏色相同造成混淆、行動版 CTA 在折線以下看不到、結帳流程步驟過多；分別針對每個問題測試修正，CTA 改色分開並在行動版往上移、結帳從多頁改成單一彈出視窗並把文案從「Sign up」換成「Secure Checkout」、Cookie 按鈕放大 30% 並上移。",
+      "result": "結帳轉換率一個月內從 0.5% 提升到 1.6%（約三倍）；結帳流程放棄率從每 4 人棄單 1 人降到每 25 人棄單 1 人；估計每年因此增加逾 1 萬英鎊營收。",
+      "caveat": "本案為 Hotjar（廠商）發佈之客戶案例，具名引用 Materials Market 營運總監暨共同創辦人 Andrew Haehn，屬單一來源、可能經過正面案例篩選，未經第三方查核；轉換率與結帳放棄率之 baseline 與成果數字為官方案例頁具名揭露、可回溯，年增營收為官方案例頁揭露之估算數字。",
+      "takeaway": "光是把結帳文案從「Sign up」改成「Secure Checkout」就能讓人卸下防備，可見同一件事被要求的「說法」比「動作」本身更常勸退使用者；找問題不必等季度會議，每天固定花一小段時間看使用者真實操作紀錄，往往比單純憑直覺快很多。",
+      "blurb": "每天花 20 分鐘看操作紀錄，這位營運總監發現結帳頁四分之一的人半路放棄，問題不是頁面醜，是文案：把「Sign up」改成「Secure Checkout」放棄比例就從 25% 降到 4%，加上按鈕改色與 CTA 上移，勝過一次大改版。",
+      "metrics": [
+        [
+          "0.5%→1.6%",
+          "結帳轉換率"
+        ],
+        [
+          "25%→4%",
+          "結帳流程放棄率"
+        ],
+        [
+          "£10,000+",
+          "估計年增營收"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "新創平台預算有限、營運總監身兼優化工作，凸顯資源受限下仍需找到低成本解法的商業壓力",
+        "先識別三個問題各自測試修正，且有具體的「Sign up→Secure Checkout」文案重新框架的細節迭代",
+        "結帳轉換率（0.5%→1.6%）與結帳放棄率（25%→4%）皆有清楚的 baseline 與成果對照",
+        "Hotjar（廠商）發佈之客戶案例，雖具名引用營運總監，仍非當事團隊親撰，封頂 1",
+        "「用詞比版面更常勸退使用者」與「每天固定花小段時間看真實操作紀錄」具備高度遷移性"
+      ],
+      "image": "https://images.ctfassets.net/lh3zuq09vnm2/4GBVX2GyWZyMw7Yl59fYdK/401f95432d5af2be951be326c5f23cca/final.jpg"
+    },
+    {
+      "title": "Matalan 導入 Hotjar 9 個月：ROI +400%",
+      "original_title": "Matalan saw a +400% ROI within 9 months of using Hotjar",
+      "url": "https://www.hotjar.com/customers/matalan/",
+      "source": "Hotjar 案例・Matalan",
+      "tier": 2,
+      "date": "2023",
+      "author": "Hotjar 撰寫，引用 Matalan UX 經理 Karl Rowlands、UX 優化分析師 Lucy Walton",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "時尚",
+      "f_industry": [
+        "時尚"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "結帳"
+      ],
+      "why": "電商 UX 團隊成立不到兩年、預算有限，過去只有量化流量數據卻不知道使用者「為什麼」這樣做，加上企業內部治理流程慢，新工具導入耗時，多數決策長期靠直覺而非數據佐證。",
+      "how": "從響應式改版前後用非侵入式問卷蒐集用戶反應；上線 Session Recordings 在遷移完成前就抓出結帳流程裡的 bug 並修正，避免問題被帶進新架構；用 Incoming Feedback 找出問題並搭配對應的個別使用者路徑錄影追查原因；把回饋整合進 Google Data Studio 自建儀表板，依主題分類並指派給對應部門負責人跟進。",
+      "result": "修掉結帳流程 bug 後轉換率提升 1.23 個百分點；依用戶回饋建立的 A/B 測試假設，勝出實驗數量增加 17%；9 個月內因解決 Hotjar 發現的問題，整體帶來 400% ROI。",
+      "caveat": "本案為 Hotjar（廠商）發佈之客戶案例，具名引用 Matalan UX 經理 Karl Rowlands、UX 優化分析師 Lucy Walton 及 UX 設計師 Darryl Monks，屬單一來源、可能經過正面案例篩選，未經第三方查核；三項提升數字均為官方案例頁具名揭露之相對百分比，未附改版前的絕對基準值，400% ROI 為官方案例頁揭露之加總估算數字。",
+      "takeaway": "從「靠直覺做決策」轉成「靠數據做決策」不是加一個分析工具就自動發生，關鍵是把「回饋」跟「原因」串起來，光看轉換率掉了沒用，要能回頭看是哪個環節、哪群人卡住，才有辦法真正修對地方；把使用者回饋依主題分類並指派負責人，能讓「誰該處理」不再靠人工協調。",
+      "blurb": "團隊追蹤數字很久，卻始終說不清背後為什麼，決策長期靠直覺補上空白。真正的轉折是把量化和質化接起來：改版上線前先用操作錄影抓漏洞，確保問題不會被帶進新架構，再把用戶回饋依主題分類、指派給對應部門，轉換率跟著 A/B 測試勝率一起往上走。",
+      "metrics": [
+        [
+          "+1.23%",
+          "結帳轉換率提升"
+        ],
+        [
+          "+17%",
+          "A/B 測試勝出實驗數"
+        ],
+        [
+          "+400%",
+          "9 個月 ROI"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "明確點出「只有量化數據卻不知道為什麼」的決策空窗，以及企業治理流程拖慢工具導入的商業脈絡",
+        "從直覺決策轉為數據決策，並在正式改版前先用工具驗證、避免問題被帶進新架構，含明確的方法轉折",
+        "三項結果均為相對百分比提升，未附改版前的絕對基準值，量化成果打折",
+        "Hotjar（廠商）發佈之客戶案例，雖具名引用三位 UX 團隊成員，仍非當事團隊親撰，封頂 1",
+        "「把量化與質化串起來看原因」與「用戶回饋依主題分類並指派負責人」是可複用的組織流程"
+      ]
+    },
+    {
+      "title": "ClickMechanic 調整定價與流程：營收 +60%",
+      "original_title": "How ClickMechanic used Hotjar Polls to collect user feedback, make changes, and grow conversions",
+      "url": "https://www.hotjar.com/customers/clickmechanic/",
+      "source": "Hotjar 案例・ClickMechanic",
+      "tier": 2,
+      "date": "2023",
+      "author": "Hotjar 撰寫，引用 ClickMechanic 成長經理 Simon Tinsley",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "其他",
+      "f_industry": [
+        "其他"
+      ],
+      "f_product": [
+        "雙邊平台"
+      ],
+      "f_goal": [
+        "定價"
+      ],
+      "why": "汽車維修媒合平台原本由系統自動指定師傅、顧客下單前看不到是誰要來服務，定價也偏離市場行情，團隊不清楚訪客不下單的真正原因是價格還是信任問題。",
+      "how": "沒有直接臆測，而是用單題問卷直接問「有什麼一件事讓你沒下單？」篩出兩個關鍵障礙：定價偏離市場行情、顧客想先知道指定師傅是誰再下單；針對兩者分別調整並上線測試。另一波則用熱圖發現多數訪客根本沒卷過首屏，重新設計時只聚焦首屏區塊，省下不必要的版面成本。",
+      "result": "調整定價後兩個月內營收提升 60%；讓顧客能看到師傅資訊後轉換率提升 10%；聚焦首屏改版後轉換率再提升 15%。",
+      "caveat": "本案為 Hotjar（廠商）發佈之客戶案例，具名引用 ClickMechanic 成長經理 Simon Tinsley，屬單一來源、可能經過正面案例篩選，未經第三方查核；三項提升數字均為官方案例頁具名揭露之相對百分比，未附改版前的絕對基準值。",
+      "takeaway": "與其猜測用戶為什麼不下單，不如直接用一句話問卷問出口：「有什麼一件事讓你沒下單？」；找到真正癥結後，調整力氣可以很省，熱圖顯示多數人根本沒卷過首屏，那就只改首屏，把設計與工程資源省下來用在刀口上。",
+      "blurb": "與其臆測用戶猶豫什麼，團隊直接問卷問出口：「有什麼一件事讓你沒下單？」答案是兩個卡點：定價偏離行情，以及想先知道派來的是誰。讓顧客先看到師傅資訊，就多拉 10% 轉換，後來又靠熱圖發現多數人沒捲過首屏，只改那段，省成本又換來 15% 轉換率。",
+      "metrics": [
+        [
+          "+60%",
+          "調整定價後 2 個月營收"
+        ],
+        [
+          "+10%",
+          "顯示師傅資訊後轉換率"
+        ],
+        [
+          "+15%",
+          "聚焦首屏改版後轉換率"
+        ]
+      ],
+      "scores": [
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "點出定價偏離市場行情、顧客不清楚指定師傅是誰即需下單的具體商業痛點，但未附產業或流失率基準",
+        "用單題問卷直接問出障礙、分兩波處理定價與版面問題，含明確的驗證流程",
+        "三項提升數字均為相對百分比，未附改版前的絕對基準值",
+        "Hotjar（廠商）發佈之客戶案例，雖具名引用成長經理，仍非當事團隊親撰，封頂 1",
+        "「直接問使用者卡在哪一件事」與「用熱圖鎖定真正該改的版位、省下不必要的工程成本」具遷移性"
+      ]
+    },
+    {
+      "title": "NerdCow 兩週優化 The Transport Library：轉換率 3 倍成長",
+      "original_title": "How NerdCow used Hotjar to triple conversions for a client in two weeks",
+      "url": "https://www.hotjar.com/customers/nerdcow/",
+      "source": "Hotjar 案例・NerdCow・The Transport Library",
+      "tier": 2,
+      "date": "2024",
+      "author": "Hotjar 撰寫，引用執行方 NerdCow 創辦人 Tomasz Lisiecki",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "媒體",
+      "f_industry": [
+        "媒體"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "站內搜尋",
+        "結帳"
+      ],
+      "why": "客戶 The Transport Library 坐擁 14 萬張以上歷史巴士、鐵路、航運影像，但搜尋欄位過度複雜，對年齡層偏高的用戶不友善，大量訪客卷了老半天卻沒點進任何商品，轉換率低落。",
+      "how": "代理商先用錄影驗證「搜尋欄太複雜」的假設並簡化欄位；針對訪客卷很久卻不點商品的行為，加開離站意圖問卷直接問原因，發現是分不清哪些商品看過、哪些沒看過，於是加上「已上架」徽章與已瀏覽標記；第三步再用問卷找出加入購物車卻沒結帳的原因，原來只是單純忘記，於是設計棄單提醒信與網站內提醒。",
+      "result": "兩週內整體轉換率成長近 3 倍。",
+      "caveat": "本案為 Hotjar（廠商）發佈之客戶案例，具名引用執行方 NerdCow 創辦人 Tomasz Lisiecki，屬單一來源、可能經過正面案例篩選，未經第三方查核；3 倍轉換率成長為官方案例頁揭露之整體結果，惟未附各項個別修正的基準值與貢獻拆解。",
+      "takeaway": "用戶卷了老半天卻不點，不代表他們沒興趣，可能只是「認不出哪些是新的、哪些看過了」；與其臆測原因，直接在退出前用一句話問卷問出口，往往比事後看數據報表更快找到真正癥結。",
+      "blurb": "訪客在 14 萬張歷史影像裡卷了老半天，卻遲遲不點進任何一張，代理商先用離站問卷直接問原因，才發現問題是分不清哪些看過、哪些是新的。加上「已上架」徽章和瀏覽標記，又追出一批人只是把商品丟進購物車就忘了結帳，設一封提醒信補上臨門一腳。",
+      "metrics": [
+        [
+          "3 倍",
+          "兩週內整體轉換率成長"
+        ],
+        [
+          "14 萬 +",
+          "網站商品影像數量"
+        ]
+      ],
+      "scores": [
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "客戶資料庫龐大、用戶年齡層偏高，但未具體說明轉換率低落對營收的直接影響，商業脈絡稍嫌單薄",
+        "用錄影驗證假設、離站問卷追問原因，三個問題各自對應不同方法，過程紮實",
+        "僅有「3 倍轉換率成長」的整體數字，未附改版前基準值、也未拆解各項修正的個別貢獻",
+        "Hotjar（廠商）發佈之客戶案例，雖具名引用執行方創辦人，仍非當事團隊親撰，封頂 1",
+        "「卷很久不點不代表沒興趣，可能是認不出新舊」與「退出前用一句話問卷問原因」具備遷移性"
+      ],
+      "image": "https://images.ctfassets.net/lh3zuq09vnm2/1eY8ihX8e82kKk1QSPk9uU/fe7640c3952a73eb548c75fc643eac46/Nerdcow-Case-study-Headerr.svg"
+    },
     {
       "title": "The Warehouse Group 分眾促銷改版：每用戶營收 +4.4%",
       "original_title": "Case Study: The Warehouse Group tailors the shopping experience for specific audience segments",
@@ -6376,6 +6664,48 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Webistry 客戶推薦：預約 +750%（缺基準值）",
+      "url": "https://unbounce.com/customer-case-study/webistry-digital-agency/",
+      "source": "Unbounce 案例・Webistry",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "gate: min_total 5.5 < 6（內容以客戶推薦引言為主，僅有相對百分比、缺基準值，也沒有假設驗證或失敗迭代的決策過程細節，屬單薄案例）"
+    },
+    {
+      "title": "Directive Consulting 創辦人專訪（缺具體改版流程）",
+      "url": "https://www.hotjar.com/customers/directive-consulting/",
+      "source": "Hotjar 案例・Directive Consulting",
+      "tier": 2,
+      "scores": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "reason": "gate: floor decision_process=0 < 1 且 min_total 4.5 < 6（全文以創辦人成長故事訪談為主，僅末段一句「測試新版行動到達頁，註冊 +78%」無假設、驗證或決策過程可考）"
+    },
+    {
+      "title": "Wonderbox：轉換率 +9%、平均客單 +2%（缺基準值）",
+      "url": "https://www.abtasty.com/wp-content/uploads/2024/12/Case-Study-Wonderbox-Reco-Merch-EN.pdf",
+      "source": "AB Tasty 案例・Wonderbox",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "gate: min_total 5.5 < 6（廠商一頁式 PDF 案例，僅列解法與相對提升百分比，缺基準值與失敗迭代細節）"
+    },
     {
       "title": "HRS 商務差旅訂房個人化（多數成果僅以「顯著提升」帶過，缺乏可驗證數字）",
       "url": "https://www.dynamicyield.com/case-studies/hrs/",
