@@ -1,10 +1,120 @@
 {
-  "updated": "2026-08-12",
+  "updated": "2026-08-14",
   "run": {
-    "scanned": 12,
-    "candidates": 8
+    "scanned": 10,
+    "candidates": 6
   },
   "cases": [
+    {
+      "title": "Calm 冥想 App 留存實驗：把提醒功能推到眼前，留存率翻 3 倍",
+      "original_title": "How Calm Increased Retention 3X After Switching to Amplitude",
+      "url": "https://amplitude.com/case-studies/calm",
+      "source": "Amplitude 案例・Calm",
+      "tier": 2,
+      "date": "2026",
+      "author": "Amplitude 案例頁刊出，引用 Calm 執行長 Alex Tew、iOS 工程主管 Tyler Sheaffer 具名發言",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "醫療健康",
+      "f_industry": [
+        "醫療健康"
+      ],
+      "f_product": [
+        "行動App"
+      ],
+      "f_goal": [
+        "習慣養成"
+      ],
+      "why": "Calm 是訂閱制冥想 App，留存率直接牽動訂閱續訂與終身價值，但團隊當時說不清楚哪些功能真的在留住使用者。",
+      "how": "團隊發現「每日提醒」功能藏在設定頁深處，不到 1% 使用者會主動找到並開啟；用行為輪組比對後，看到設定提醒的使用者留存率高出近 3 倍，但團隊警覺這可能只是相關性，會挖到這個隱藏功能的本來就是重度使用者，於是設計對照實驗：完成第一次冥想後，直接跳出提醒設定畫面，而非讓使用者自己去找。",
+      "result": "收到提示的新使用者裡，40% 主動設定了每日提醒，這群人的留存提升幅度與原本自己找到提醒功能的老使用者一致，證實提醒與留存是因果關係、不只是巧合，Calm 因此決定把這個提示畫面推送給全體使用者。",
+      "caveat": "本案例由 Amplitude 官方發布，含 Calm 執行長 Alex Tew 具名引述，惟屬廠商客戶故事：單一來源、以行銷 Amplitude 產品為目的，可能經正面篩選，3 倍留存與 40% 設定率等數字未經第三方查證，原始樣本規模也未揭露。",
+      "takeaway": "藏在設定頁深處、乏人問津的功能，可能才是留存的關鍵槓桿；先用相關性找線索，再用實驗排除「本來就是重度使用者」這類混淆因子，才敢把介入面推到全體使用者。",
+      "blurb": "一個藏在設定頁深處、不到 1% 人會點開的提醒功能，用過的人留存卻高出一截，團隊沒有急著慶祝，反而先懷疑這只是老鳥剛好愛設提醒的假象，於是把提示推到新手剛完成第一次體驗的當下做對照實驗，兩群人留存幅度一致，才確定這是因果不是巧合。",
+      "metrics": [
+        [
+          "3 倍",
+          "開啟提醒後留存倍數"
+        ],
+        [
+          "40%",
+          "收到提示後設定提醒比例"
+        ],
+        [
+          "<1%",
+          "原本主動找到提醒功能比例"
+        ]
+      ],
+      "scores": [
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "有提到留存牽動訂閱續訂與終身價值，但未附具體流失率或營收數字，商業目標偏籠統",
+        "先看到相關性、主動質疑可能是混淆因子（重度使用者本就愛挖功能），再設計對照實驗驗證因果，含完整的假設驗證循環",
+        "<1% 找到功能到 40% 設定提醒、留存 3 倍提升，baseline 與成果俱全",
+        "Amplitude 官方客戶故事，含 CEO 具名引述，屬 CRO／行為數據平台廠商自述，firsthand 依規則封頂 1",
+        "先相關後因果、用實驗排除混淆因子的驗證方法，可直接遷移到其他留存功能的評估"
+      ]
+    },
+    {
+      "title": "The North Face 節慶購物指南改版：CTA 曝光率 +50%",
+      "original_title": "How The North Face Increased Its CTA Exposure Rate by +50% With Contentsquare",
+      "url": "https://contentsquare.com/customers/the-north-face/",
+      "source": "Contentsquare 案例・The North Face",
+      "tier": 2,
+      "date": "2026",
+      "author": "Contentsquare 撰寫，引用 The North Face 前資深網站體驗經理 Lisa Skowrup、前電商內容經理 Rachel Bonn",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "時尚",
+      "f_industry": [
+        "時尚"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "到達頁"
+      ],
+      "why": "假期購物季是 The North Face 全年最大檔期，每年 Q4 發布的節慶「禮物指南」是重要的線上營收來源，團隊照慣例在檔期全面上線前先軟性推出，藉此觀察早鳥購物者行為並調整，避免旺季流量湧入時才發現問題。",
+      "how": "團隊用熱圖分析禮物指南頁面，先發現主視覺橫幅裡吸睛的分類 CTA 被擠到摺線以下，客人不往下滑就看不到、也點不到；另外從點擊重複率抓到客人對著女性禮物指南頁的主圖猛點，但圖片上根本沒有連結，顯示客人搞不清楚自己是否已經抵達目的地；也用點擊率與吸引力分數，重新排序各分類在頁面上的順序。",
+      "result": "把橫幅往上搬到摺線以上後，關鍵分類 CTA 曝光率提升 +50%；主圖加上標題文字說明「已抵達」後，該頁點擊重複率從 2.07 降到理想值 1，混淆與重複點擊明顯減少；熱門分類前移後，客人不必往下滑就能更快找到想要的商品。",
+      "caveat": "本案例由 Contentsquare 官方發布，含 The North Face 兩位前員工具名引述，惟屬廠商客戶行銷素材：單一來源、可能經正面篩選，CTA 曝光率 +50% 與點擊重複率 2.07→1 等數字未經第三方查證，也未揭露是否曾比對營收或轉換率變化。",
+      "takeaway": "假期檔期全面上線前先軟性推出、蒐集早鳥數據再調整，是把改版風險壓低的做法；點擊重複率這類「客人在同一個地方反覆點」的指標，能直接抓出網站上「看起來能點、其實不能點」的混淆元素，這套抓法可以複用到任何活動頁優化。",
+      "blurb": "遇上一年最大檔期前的軟性上線，團隊先看早鳥購物者怎麼用禮物指南，發現主視覺按鈕全擠在摺線以下，客人不滑到底根本看不見，往上搬之後曝光率立刻拉開；同一批數據也抓到有人對著沒連結的圖片猛點，那其實是使用者在替你指路，加一行標題就解決混淆。",
+      "metrics": [
+        [
+          "+50%",
+          "關鍵分類 CTA 曝光率提升"
+        ],
+        [
+          "2.07→1",
+          "主圖頁面點擊重複率"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "明確講出檔期時間點（Q4 旺季前軟性上線）與禮物指南是重要營收來源，商業脈絡具體",
+        "熱圖找問題到直接調整，三個改動皆為線性的「發現→修正」未見被推翻的方案或反覆驗證的迭代",
+        "CTA 曝光率 +50%、點擊重複率 2.07→1，皆有明確前後對照數字",
+        "Contentsquare 官方客戶故事，含前員工具名引述，屬 CRO／行為數據平台廠商自述，firsthand 依規則封頂 1",
+        "摺線以下曝光率盲點、點擊重複率抓混淆元素，是可直接複用到其他活動頁優化的具體方法"
+      ]
+    },
     {
       "title": "工業機械 B2B 網站找不到路：資訊架構重整後找得到率 +85%",
       "original_title": "Quantifying UX Improvements: A Case Study",
@@ -7029,6 +7139,62 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Zoopla 個人化策略四支柱（Contentsquare × Optimizely）",
+      "url": "https://contentsquare.com/customers/zoopla/",
+      "source": "Contentsquare 案例・Zoopla",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "僅描述個人化策略四支柱（資料／旅程地圖／實驗／自動化）等方法論，全文無任何 baseline→成果的量化數據，quantified_outcome=0 觸發自動淘汰（floor 未達標，總分 4.5<6）"
+    },
+    {
+      "title": "Fivetran 改用 Heap by Contentsquare 做用戶行為分析",
+      "url": "https://contentsquare.com/customers/fivetran/",
+      "source": "Contentsquare 案例・Fivetran",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "全文僅描述「提升顧客互動」「擴大數據驅動文化」等質性結論，無具體百分比或數字佐證，quantified_outcome=0 觸發自動淘汰（floor 未達標，總分 4.5<6）"
+    },
+    {
+      "title": "Klarna UX 案例（Built for Mars）",
+      "url": "https://builtformars.com/case-studies/how-klarna-works",
+      "source": "Built for Mars・Klarna",
+      "tier": 2,
+      "scores": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "reason": "全文內容已改為付費牆，僅公開摘要與宣傳片段，看不到具體分析過程與任何量化成果；作者為外部顧問的獨立評論、非當事團隊或具名訪談，firsthand=0、quantified_outcome=0、decision_process=0，多維度觸發自動淘汰（總分 2.5<6）"
+    },
+    {
+      "title": "Uber Eats 司機行為心理學案例（Built for Mars）",
+      "url": "https://builtformars.com/case-studies/uber-eats-returns",
+      "source": "Built for Mars・Uber Eats",
+      "tier": 2,
+      "scores": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "reason": "全文內容已改為付費牆，僅公開摘要，作者為外部顧問基於自身「臥底送餐」經驗的推測性分析、非 Uber 官方資料，也無任何量化成果，firsthand=0、quantified_outcome=0，多維度觸發自動淘汰（總分 1.5<6）"
+    },
     {
       "title": "quip 訂閱補充商品頁改版（僅稱轉換率顯著提升，無實際數字）",
       "url": "https://www.optimizely.com/field-notes/customer-stories/quip",
