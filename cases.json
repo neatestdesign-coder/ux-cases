@@ -1,10 +1,238 @@
 {
-  "updated": "2026-08-16",
+  "updated": "2026-08-17",
   "run": {
-    "scanned": 40,
-    "candidates": 3
+    "scanned": 38,
+    "candidates": 8
   },
   "cases": [
+    {
+      "title": "Leroy Merlin 南非市場：讓自家推薦位貢獻 32% 購買，首頁營收增 9 倍",
+      "original_title": "Leroy Merlin Boosts Purchases with AI Personalization",
+      "url": "https://www.dynamicyield.com/case-studies/leroymerlin/",
+      "source": "Dynamic Yield 案例・Leroy Merlin",
+      "tier": 2,
+      "date": "2025",
+      "author": "Dynamic Yield（Mastercard）撰寫，引用 Leroy Merlin 商務負責人 Francis Baloyi 具名發言",
+      "cats": [
+        "國際品牌",
+        "更多案例"
+      ],
+      "industry": "其他",
+      "f_industry": [
+        "其他"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "個人化"
+      ],
+      "why": "Leroy Merlin 是全球第三大居家修繕零售商，但 2018 年才剛進入南非市場，品牌知名度幾乎從零開始；團隊原本沿用的推薦系統缺乏 A/B 測試與動態排程能力，難以規模化經營，而大量新訪客又缺乏購買紀錄可供個人化，若持續把行銷資源砸在低意圖訪客身上，等於把預算浪費在還沒準備好購買的人身上。",
+      "how": "團隊改用 Dynamic Yield 的 AdaptML 深度學習系統，依訪客意圖分層設計介入：針對滑到首頁底部卻沒行動的中意圖訪客，在折線下方加入導購橫幅；針對已註冊、有瀏覽紀錄的高意圖訪客，打造「Just for You」個人化頁面；由於網站近七成品項來自第三方賣家、價格更具競爭力，團隊刻意用篩選演算法把推薦位讓給自家產品以建立品牌信任；再針對猶豫不決的低意圖訪客，設計限定自家商品折扣的刮刮卡彈窗。",
+      "result": "導購橫幅上線後，購買率較無橫幅版本提升 3.62%、加購率提升 2.35%；篩選演算法優先曝光自家產品後，首頁直接貢獻的營收成長為原本的 9 倍；刮刮卡彈窗上線僅一週，自家商品銷量就提升 30%；截至案例發布時，32% 的總購買量與 17% 的總營收來自推薦系統，每 3 件售出商品就有 1 件是推薦帶來的。",
+      "caveat": "本案例由 Dynamic Yield（Mastercard 旗下）官方發布，含 Leroy Merlin 商務負責人 Francis Baloyi 具名引述，惟屬 CRO／個人化平台廠商的客戶故事：單一來源、可能經正面篩選，未經第三方查核；各項提升幅度雖有明確前後對照（有無橫幅、篩選前後、上線前後一週），但改版前的絕對轉換率基準未揭露。",
+      "takeaway": "進入品牌知名度為零的新市場時，個人化不該對所有訪客一視同仁，而要依意圖分層給藥：低意圖給促購誘因、中意圖給導購方向、高意圖給精準推薦；把推薦版位優先讓給自家產品、犧牲短期更具價格競爭力的第三方商品曝光，是用可控的方式換取長期品牌信任，而非單純追求成交量。",
+      "blurb": "網站近七成品項來自第三方賣家、價格更有競爭力，團隊卻把推薦版位讓給自家產品，賭的是新市場裡沒人認得這個品牌，信任感比短期成交划算，再依訪客意圖分層出招，中意圖給導購橫幅、低意圖用限定自家商品的刮刮卡促購。",
+      "metrics": [
+        [
+          "32%",
+          "購買來自推薦系統"
+        ],
+        [
+          "9 倍",
+          "首頁篩選後直接營收"
+        ],
+        [
+          "+30%",
+          "刮刮卡上線一週自家銷量"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "明確點出南非新市場品牌認知度低、需靠推薦系統建立信任並避免行銷預算浪費在低意圖訪客的商業痛點",
+        "依訪客意圖（低／中／高）分層設計不同介入手法，並各自獨立測試橫幅、篩選演算法、刮刮卡等版本，非單一線性改動",
+        "橫幅前後對照 +3.62% 購買、首頁篩選後營收 9 倍、刮刮卡上線一週 +30% 銷量，皆有明確前後比較",
+        "Dynamic Yield（Mastercard）官方客戶故事，屬 CRO／個人化平台廠商自述，firsthand 依規則封頂 1",
+        "依訪客意圖分層設計介入手法、優先凸顯自家產品建立品牌信任，是可複用到其他新市場拓展案的原則"
+      ]
+    },
+    {
+      "title": "TUI Cruises 郵輪預訂：依旅客類型分眾溝通，加購率 +10.3%、點擊率衝 191%",
+      "original_title": "Setting Sail with Personalization: How TUI Cruises Kickstarted Success with Audience Segmentation",
+      "url": "https://www.dynamicyield.com/case-studies/tui/",
+      "source": "Dynamic Yield 案例・TUI Cruises",
+      "tier": 2,
+      "date": "2024",
+      "author": "Dynamic Yield（Mastercard）撰寫，引用 TUI Cruises 電商暨直客業務主管 Özgür Turhan、專案交付主管 Ulrike Pomaska 具名發言",
+      "cats": [
+        "國際品牌",
+        "更多案例"
+      ],
+      "industry": "旅遊",
+      "f_industry": [
+        "旅遊"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "個人化",
+        "結帳"
+      ],
+      "why": "TUI Cruises 提供的郵輪航線橫跨獨旅、家庭、情侶等南轅北轍的客群，旅遊本身又是決策成本極高的消費，若訪客得自己從落落長的產品目錄裡猜哪艘船適合自己，很容易在還沒搞懂前就失去耐性離開；團隊需要一套能快速對準不同客群需求的方式，才能在有限的注意力裡完成轉換。",
+      "how": "在啟動任何一次小規模測試之前，團隊先花時間分析行為數據與問卷，定義出三大客群各自的核心價值：獨旅客重視自由與獨立、家庭重視親子共處時光與明確行程、情侶／頂客族重視共同冒險的新鮮感；接著才依此鋪陳一連串測試：首頁依客群顯示不同橫幅文案、把跳出分頁未回訪的家庭客群再互動訊息改成專屬文案、依訪客偏好的訂票前置期（3 個月內或 3 個月以上）調整首頁與商品列表頁內容。",
+      "result": "分眾首頁橫幅整體帶來 10.3% 的加購率提升（其中獨旅客群點擊率成長最猛，達 604.1%）；家庭專屬的再互動訊息，讓這群人從跳出分頁點回網站後的結帳人數提升 28%；依訂票前置期分眾內容後，整體點擊率提升 191%。",
+      "caveat": "本案例由 Dynamic Yield（Mastercard 旗下）官方發布，含 TUI Cruises 電商暨直客業務主管 Özgür Turhan、專案交付主管 Ulrike Pomaska 具名引述，惟屬廠商客戶故事：單一來源、可能經正面篩選，未經第三方查核；各項提升幅度為與無個人化版本的前後對照，但絕對轉換率與統計顯著性未揭露。",
+      "takeaway": "面對差異極大的客群，與其急著測試文案或版面，不如先花時間定義出各客群真正在乎的核心價值，再拿這套分眾邏輯去驅動後續每一次測試決策，讓小規模實驗也能疊加出可觀效果，而不是分散資源測試對每個人都一樣的內容。",
+      "blurb": "郵輪決策成本高，若讓旅客自己猜這艘船適合家庭還是情侶，很容易轉身離開，團隊沒有急著上線單一測試，而是先從行為數據與問卷替獨旅客、家庭、情侶定義出一句價值主張：自由、親子共處、共同冒險，再拿這套分眾邏輯鋪陳後續每一次橫幅與訊息實驗。",
+      "metrics": [
+        [
+          "+10.3%",
+          "首頁分眾後加購率"
+        ],
+        [
+          "+191%",
+          "依訂票前置期分眾點擊率"
+        ],
+        [
+          "+28%",
+          "家庭再互動訊息回站結帳"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "旅遊決策成本高，若無法讓不同類型旅客快速感受到「這艘船適合我」容易在研究階段就流失興趣，商業痛點具體",
+        "先用行為數據與問卷定義三大客群的核心價值主張，再依此鋪陳橫幅、再互動訊息、前置期分眾等多輪測試，非單一線性改版",
+        "首頁分眾橫幅 +10.3% 加購率、前置期分眾內容 +191% 點擊率、家庭再互動訊息 +28% 回站結帳，皆有前後對照",
+        "Dynamic Yield（Mastercard）官方客戶故事，屬 CRO／個人化平台廠商自述，firsthand 依規則封頂 1",
+        "先定義客群核心價值主張、再據此鋪陳所有後續測試的做法，是可複用到其他多元客群產品的分眾框架"
+      ]
+    },
+    {
+      "title": "KKday 訂房流程：抓出結帳斷點後，轉換率翻倍",
+      "original_title": "KKday Makes User Behaviour Data Accessible to Employees, Building a Culture of Analytics to Drive Better User Experiences",
+      "url": "https://mixpanel.com/customers/kkday-case-study",
+      "source": "Mixpanel 案例・KKday",
+      "tier": 2,
+      "date": "2020",
+      "author": "Mixpanel 撰寫，引用 KKday 產品經理 Sherry Shih、技術長 Mike Chen 具名發言",
+      "cats": [
+        "更多案例"
+      ],
+      "industry": "旅遊",
+      "f_industry": [
+        "旅遊"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "結帳",
+        "站內搜尋"
+      ],
+      "why": "KKday 從 2014 年只有網站，到 2017 年陸續推出行動網站與 App，同一位使用者可能白天在公司電腦瀏覽、晚上用手機下單、之後又用 App 查詢訂單，但原有工具無法串接這些跨裝置行為，團隊因此看不見完整的使用者旅程，也難以精準判斷該優先修哪個環節才能提升轉換與營收。",
+      "how": "團隊改用 Mixpanel 建立跨網站、行動網站、App 的統一行為追蹤，並用 Insights 報表挖掘使用者搜尋關鍵字，發現高達 80% 的搜尋字詞其實是城市名稱，因此在搜尋框加入熱門城市快捷選單；同時分析結帳漏斗，找出流失率最高的環節並修正；過程中團隊也用數據回頭檢驗一項內部假設：原本認為顧客從瀏覽行程到下單要花一到三天，於是把使用者互動設計成長線陪伴，直到攤開數據才發現，85% 的訂單其實在短短 50 分鐘內就完成。",
+      "result": "結帳漏斗修正後，結帳轉換率翻倍；熱門城市快捷選單加上依銷量與瀏覽量綜合排序的調整，讓點擊率提升 7.7%；導入機器學習做個人化排序後，轉換率再多 4.4%；50 分鐘決策窗的發現，也讓團隊重新設計了使用者互動的時間軸與訊息節奏。",
+      "caveat": "本案例由 Mixpanel 官方發布，含 KKday 產品經理 Sherry Shih、技術長 Mike Chen 具名引述，惟屬分析平台廠商的客戶故事：單一來源、可能經正面篩選，未經第三方查核；結帳轉換率「翻倍」為倍數對照，改版前的絕對轉換率基準未揭露。",
+      "takeaway": "團隊對使用者決策週期的假設，可能悄悄主導著整個產品設計的方向卻毫無自覺；比起直接改版，先用實際行為數據檢驗這類假設成本更低，一旦假設被推翻（如本案「1 到 3 天」其實是「50 分鐘」），得到的洞察往往比任何一次改版腦力激盪都更關鍵。",
+      "blurb": "團隊一直以為顧客從看行程到下單要花一到三天，設計重心全放在長決策的輔助上，直到攤開數據才發現，八成五訂單其實五十分鐘內就拍板，顧客根本不是團隊想的那樣，於是把力氣從陪伴長思考，搬到五十分鐘講清楚重點，一個被打臉的假設，反而改變了產品方向。",
+      "metrics": [
+        [
+          "2 倍",
+          "結帳轉換率"
+        ],
+        [
+          "85%",
+          "訂單於 50 分鐘內完成"
+        ],
+        [
+          "+7.7%",
+          "熱門城市快捷點擊率"
+        ]
+      ],
+      "scores": [
+        1,
+        2,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "跨裝置數據斷裂導致無法掌握完整旅程與結帳流失原因，目標明確但未附具體營收規模或成長壓力數字，敘述稍嫌籠統",
+        "先推翻「顧客要花 1 到 3 天決策」的內部假設，再依實際 50 分鐘決策窗重新設計互動節奏，屬假設被數據推翻後修正的真實過程",
+        "結帳轉換率翻倍、假設 1 到 3 天實際僅 50 分鐘完成 85% 訂單、熱門城市快捷 +7.7% 點擊率，皆有明確前後對照",
+        "Mixpanel 官方客戶故事，屬分析平台廠商自述，firsthand 依規則封頂 1",
+        "「別假設決策週期，用實際數據校準互動節奏」對其他電商有啟發，但仍偏 KKday 脈絡下的單一發現，未提煉成明確可複用框架"
+      ]
+    },
+    {
+      "title": "T Map 代駕服務：抓出「用滿 3 次就黏住」門檻，兩年成長 30 倍",
+      "original_title": "Using Mixpanel to Accelerate Data-Driven Decision Making",
+      "url": "https://mixpanel.com/customers/t-map-deaeri-uses-mixpanel-to-accelerate-data-driven-decisions",
+      "source": "Mixpanel 案例・T Map Daeri",
+      "tier": 2,
+      "date": "2024",
+      "author": "Mixpanel 撰寫，引用 T Map Daeri 企劃負責人具名發言",
+      "cats": [
+        "更多案例"
+      ],
+      "industry": "其他",
+      "f_industry": [
+        "其他"
+      ],
+      "f_product": [
+        "行動App"
+      ],
+      "f_goal": [
+        "習慣養成"
+      ],
+      "why": "T Map Daeri 是南韓行動導航龍頭 T Map 旗下的代駕到府服務，2021 年上線時，團隊原本以為光靠母 App 兩千萬用戶的流量就能帶來自然採用，甚至認為不需要額外行銷，結果上線頭 6 個月使用率遠低於預期，業務、企劃、開發團隊士氣重挫，只能從頭重組。",
+      "how": "團隊一方面導入敏捷工作法加快反應速度，另一方面引進 Mixpanel，讓產品經理與行銷不必再仰賴數據分析師查詢逾百張資料表，就能自行即時監看數據；藉由留存分析，團隊挖出一個關鍵門檻：只要新客使用滿 3 次，留存率就會明顯跳升；即使點數回饋制度在業界普遍被視為財務燒錢的雷區、同業大多不敢輕易導入，團隊仍根據這項洞察，決定砸下點數回饋，目標就是把新客一路推過這道 3 次門檻。",
+      "result": "T Map Daeri 上線兩年內成長 30 倍，並自 2023 年 7 月起進入陡峭的成長曲線，成為南韓代駕到府服務龍頭；點數回饋制度精準針對「用滿 3 次」門檻設計，是這波成長的關鍵推力之一；團隊也用 Mixpanel 快速驗證產品與行銷團隊對新功能的分歧看法，例如彈窗廣告要不要加「分享」按鈕，一天內就用實際數據證明行銷團隊判斷正確。",
+      "caveat": "本案例由 Mixpanel 官方發布，含 T Map Daeri 企劃負責人具名引述（原文為韓文專訪），惟屬分析平台廠商的客戶故事：單一來源、可能經正面篩選，未經第三方查核；「兩年成長 30 倍」為敏捷流程、Mixpanel 導入與點數回饋等多項介入的綜合結果，並未拆解單一措施各自的獨立貢獻。",
+      "takeaway": "當一項服務的實際採用率遠低於預期（即使背靠龐大的既有用戶池），與其病急亂投醫，不如先從留存數據裡挖出決定黏著度的關鍵使用次數門檻，再把整套引導、誘因與行銷資源，集中火力設計成「把新客推過這道門檻」比起分散資源全面優化體驗更有效率。",
+      "blurb": "2000 萬用戶的老平台推出新服務，團隊原以為母 App 流量會自動導流，結果頭六個月慘澹到讓團隊集體歸零，轉機來自一個被挖出來的門檻：新客只要用滿三次，留存率就明顯跳升，團隊因此砸下業界少見的點數回饋，就是為了把新客一路推過這道三次門檻。",
+      "metrics": [
+        [
+          "30 倍",
+          "兩年內業務成長倍數"
+        ],
+        [
+          "3 次",
+          "解鎖高留存使用門檻"
+        ],
+        [
+          "1 天",
+          "驗證分享按鈕假設耗時"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "明確描述「以為母 App 導流會自動帶動採用，結果頭六個月慘澹到團隊集體歸零」的具體商業危機與時間軸",
+        "從留存數據挖出「用滿 3 次即黏著」的關鍵門檻，據此做出砸點數回饋的高成本決策，並用數據仲裁團隊內部對分享按鈕的分歧，屬真實的假設驗證過程",
+        "兩年成長 30 倍屬多項介入（敏捷流程＋Mixpanel＋點數回饋）綜合結果，未拆解單一改動的獨立貢獻，量化力度打折",
+        "Mixpanel 官方客戶故事，屬分析平台廠商自述，firsthand 依規則封頂 1",
+        "「找出決定黏著度的關鍵使用次數門檻，再據此重新設計整套引導與誘因」是可複用到其他訂閱／重複消費服務的框架"
+      ]
+    },
     {
       "title": "Wallapop 導覽全面重整：舊版 10 人僅 1 人找對路，改版後黏著度衝 +5.3%",
       "original_title": "A case study: how to produce a winning app redesign",
@@ -7534,6 +7762,62 @@
     }
   ],
   "rejected": [
+    {
+      "title": "How Immobiliare Accelerated Innovation With Mixpanel",
+      "url": "https://mixpanel.com/customers/how-immobiliare-accelerated-innovation-with-mixpanel/",
+      "source": "Mixpanel 案例・Immobiliare",
+      "tier": 2,
+      "scores": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "reason": "decision_process 掛零：全文為導入分析文化與組織管理歷程（找 CEO 掛名支持、訓練團隊、建立資料治理），並非具體產品設計決策的假設→驗證→修正過程，未達 floor 下限（min_total 4.5 < 6）"
+    },
+    {
+      "title": "Case Study: How User Research Informs Iterative UX Redesign",
+      "url": "https://sago.com/en/resources/case-study/research-helps-phone-company-with-iterative-ux-redesign/",
+      "source": "Sago 案例・匿名電信公司",
+      "tier": 0,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "quantified_outcome 掛零：文中「量化與質化指標皆有改善」卻未附任何實際數字，公司匿名為「a phone company」屬 Sago（研究廠商）自家客戶故事宣傳，無法驗證任何成果（min_total 4 < 6）"
+    },
+    {
+      "title": "How Boll & Branch Improved Its Website and Increased Online Purchases Using Data",
+      "url": "https://mixpanel.com/customers/how-boll-branch-drove-online-purchases-by-using-data-to-improve-its-website/",
+      "source": "Mixpanel 案例・Boll & Branch",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "quantified_outcome 掛零：Results 僅列「加購率提升、轉換率提升」等方向性敘述，全文未附任何具體百分比或前後對照數字（min_total 4.5 < 6）"
+    },
+    {
+      "title": "How SuperPlay Used Mixpanel to Build a Data-Informed Culture",
+      "url": "https://mixpanel.com/customers/how-superplay-used-mixpanel-to-build-a-data-informed-culture/",
+      "source": "Mixpanel 案例・SuperPlay",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "quantified_outcome 掛零：全文為 Mixpanel 工具易用性與團隊文化見證，未附任何產品或商業成果的具體數字（min_total 4.5 < 6）"
+    },
     {
       "title": "BlueLambda × Convert：跨客戶折扣性數字彙總，屬產品宣傳稿",
       "url": "https://www.convert.com/case-studies/bluelambda/",
