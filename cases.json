@@ -1,10 +1,68 @@
 {
-  "updated": "2026-08-21",
+  "updated": "2026-08-23",
   "run": {
-    "scanned": 18,
-    "candidates": 8
+    "scanned": 40,
+    "candidates": 6
   },
   "cases": [
+    {
+      "title": "招生頁拿掉導覽列的 A/B 測試：轉換率 3.12% 衝上 13.64%，暴增 336%",
+      "original_title": "How A Single A/B Test Increased Conversion by 336% [Case Study]",
+      "url": "https://unbounce.com/a-b-testing/how-a-single-a-b-test-increased-conversions/",
+      "source": "Unbounce 案例・COX Media 招生頁測試",
+      "tier": 2,
+      "date": "2013",
+      "author": "Dustin Sparks（COX Media 資深顧問，代表匿名職業學院客戶執行）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "教育",
+      "f_industry": [
+        "教育"
+      ],
+      "f_product": [
+        "其他"
+      ],
+      "f_goal": [
+        "到達頁",
+        "行銷導流"
+      ],
+      "why": "這家職業學院靠招生頁的表單填寫維生，招生量直接牽動學校存續，但頁面接手時轉換率不到 2%，團隊先套用一輪基本最佳實務當「止血繃帶」才把轉換率墊到 3.12%，離目標仍有很大落差。",
+      "how": "團隊沒有直接跳進細節優化，而是先做一次「蘋果比橘子」的粗篩測試：拿掉整排主導覽、把表單搬到第一屏，版本 A 與 B 皆為行動裝置適應版（當時該校流量 59.84% 來自手機，但轉換幾乎都發生在桌機瀏覽器）。測試只導入 Google Adwords 的 PPC 流量、排除自然與推薦流量干擾，跑了 23 天、120 次純 PPC 曝光，並用 Google Experiments 輪播兩版；跑完後團隊沒有就此收工，而是回頭挖分析報表的「周邊指標」意外發現 88% 的點擊全部落在頁面下半部，等於訪客會一路滑到底找見證才肯下決定，這個發現直接定調了下一輪測試要把行動呼籲鈕往頁尾搬。",
+      "result": "挑戰版以 95.2% 信心水準勝出，轉換率從 3.12% 衝上 13.64%，相對提升 336%；跳出率也從 32.5% 降到 28.7%。測試進行時間短、樣本量（120 次曝光）偏低於建議的每版至少 100 名訪客水準，結果應視為方向性驗證而非最終定論。",
+      "caveat": "本文由代理商 COX Media 顧問 Dustin Sparks 具名發布於 Unbounce 官方部落格，屬顧問代操客戶案例的第一手分享，但客戶學校名稱全程匿名、未經第三方查核；336% 為相對提升幅度，惟已附基準轉換率（3.12%→13.64%）與統計信心水準（95.2%）可供檢視。文章發布於 2013 年，測試工具（Google Experiments 現已下線）與當年的流量環境和今日已有落差，方法論仍可參考，但工具細節不宜直接套用。",
+      "takeaway": "遇到全新頁面或客戶時，別急著微調小細節，先用「蘋果比橘子」這種差異夠大的粗篩測試判斷方向對不對，等方向確認了才逐步收斂到顏色、文案這類細節；跑完測試也別只看主要指標，順手挖一下跳出率、點擊熱區這些「周邊數據」常常能撿到下一輪測試該往哪裡去的線索。",
+      "blurb": "招生頁沒有導覽列可逃，熱點卻顯示 88% 的點擊落在頁面下半部，像訪客硬滑到底找見證才肯下決定，團隊沒有急著改版，於是先用「蘋果比橘子」粗篩測試法確認方向，23 天跳出率從 32.5% 降到 28.7%，主要指標之外多挖一層，找得到下一輪靈感。",
+      "metrics": [
+        [
+          "3.12%→13.64%",
+          "招生頁轉換率（測試前後）"
+        ],
+        [
+          "95.2%",
+          "統計信心水準"
+        ],
+        [
+          "32.5%→28.7%",
+          "頁面跳出率"
+        ]
+      ],
+      "scores": [
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "招生頁轉換攸關學校招生存續，但文中僅以「leads are their life-blood」帶過商業壓力，未揭露具體招生數字或營收影響，故給 1",
+        "從粗篩測試確認方向，到深挖跳出率與點擊熱區發現超乎預期的下滑到頁尾現象，並據此規劃下一輪測試，呈現完整的假設驗證與延伸迭代循環",
+        "轉換率有明確基準值可查（3.12%→13.64%），並附 95.2% 信心水準與跳出率變化佐證，數據完整度高",
+        "由代理商 COX Media 顧問具名發布於 Unbounce 部落格，屬顧問代操客戶案例，依 CRO／實驗平台群組規則封頂 1",
+        "「蘋果比橘子」先粗篩再細測的邏輯，以及主要指標之外深挖周邊數據找下一輪靈感的習慣，可套用到任何 landing page 優化情境"
+      ]
+    },
     {
       "title": "教科書比價聯盟站：留著高抽成書店，另開低價捷徑，轉換率 +15.3%",
       "original_title": "Anticipating Visitor Needs On Product Pages Increases Conversions By 15.3% [Case Study]",
@@ -8577,6 +8635,76 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Kameleoon 案例：AMA 靠實驗平台擴大測試規模，轉換率 +10%",
+      "url": "https://www.kameleoon.com/customer/ama",
+      "source": "Kameleoon 案例・AMA",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "gate 回傳：min_total: 5.5 < 6；caveat 缺失。雖有失敗實驗（CTA 挑戰版未勝出）與 +10% 轉換率提升，但缺基準值、商業脈絡與可遷移框架皆流於通用敘述，總分未達門檻。"
+    },
+    {
+      "title": "Built for Mars 拆解：Intercom 客服泡泡的可用性評論",
+      "url": "https://builtformars.com/case-studies/signing-up-to-intercom",
+      "source": "Built for Mars 拆解・Intercom",
+      "tier": 2,
+      "scores": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "reason": "gate 回傳：floor: decision_process=0 < 1；floor: quantified_outcome=0 < 1；floor: firsthand=0 < 1；min_total: 2.5 < 6；caveat 缺失。屬第三方 UX 評論文章，無 Intercom 官方數據或決策過程揭露。"
+    },
+    {
+      "title": "Built for Mars 拆解：Strava 目標設計為何留不住訂閱用戶",
+      "url": "https://builtformars.com/case-studies/strava",
+      "source": "Built for Mars 拆解・Strava",
+      "tier": 2,
+      "scores": [
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "reason": "gate 回傳：floor: decision_process=0 < 1；floor: quantified_outcome=0 < 1；floor: firsthand=0 < 1；min_total: 3.5 < 6；caveat 缺失。文中雖引用 Strava 公開的訂閱率、留存率等現況數字，但沒有任何實際改版與 baseline→成果的因果鏈，純屬第三方對現狀的批評與假設性建議。"
+    },
+    {
+      "title": "Built for Mars 拆解：YNAB 新手引導為何被使用者跳過",
+      "url": "https://builtformars.com/case-studies/ynab",
+      "source": "Built for Mars 拆解・YNAB",
+      "tier": 2,
+      "scores": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "reason": "gate 回傳：floor: decision_process=0 < 1；floor: quantified_outcome=0 < 1；floor: firsthand=0 < 1；min_total: 2.5 < 6；caveat 缺失。屬第三方 UX 教學拆解，無 YNAB 官方揭露之改版數據或決策過程。"
+    },
+    {
+      "title": "Built for Mars 拆解：Costa Coffee 忠誠計畫如何用「目標梯度效應」催動集點動機",
+      "url": "https://builtformars.com/case-studies/costa",
+      "source": "Built for Mars 拆解・Costa Coffee",
+      "tier": 2,
+      "scores": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "reason": "gate 回傳：floor: decision_process=0 < 1；floor: quantified_outcome=0 < 1；floor: firsthand=0 < 1；min_total: 2.5 < 6；caveat 缺失。屬第三方 UX 教學拆解，僅談心理學原理（目標梯度效應），無 Costa 官方揭露之商業數據或決策過程，非當事團隊。"
+    },
     {
       "title": "PrintGlobe 分類頁改版：加入輪播與側邊導覽，轉換率 +18.5%",
       "url": "https://www.invespcro.com/blog/improving-website-navigation-increased-conversion-rate/",
