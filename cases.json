@@ -1,10 +1,116 @@
 {
-  "updated": "2026-08-23",
+  "updated": "2026-08-24",
   "run": {
-    "scanned": 40,
-    "candidates": 6
+    "scanned": 44,
+    "candidates": 5
   },
   "cases": [
+    {
+      "title": "Yankee Candle 分類頁濾網重設計：產品詳情頁加購 +7%",
+      "original_title": "Yankee Candle Leverages User Research to Realize A/B Testing Wins",
+      "url": "https://www.abtasty.com/resources/yankee-candle-leverages-user-research-to-realize-a-b-testing-wins/",
+      "source": "AB Tasty 案例・Yankee Candle・CXperts",
+      "tier": 2,
+      "date": "2026",
+      "author": "AB Tasty 撰寫（未具名個人，案例研究；CRO 顧問 CXperts 執行）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "站內搜尋"
+      ],
+      "why": "Yankee Candle 是居家香氛品牌，透過官網直接面對消費者銷售；團隊與 CRO 顧問 CXperts 合作做了一輪使用者研究，發現分類頁的篩選器對使用者找到相關商品很重要，因此把篩選器的易用性與商品發現效率訂為優化目標，希望瀏覽動線更精簡，讓更多商品被看見。",
+      "how": "團隊先讓 CXperts 對使用者做質化研究，訪談結果指向分類頁篩選器是使用者找到相關商品的關鍵，於是把「簡化桌面版分類頁篩選器」訂為測試假設，預期簡化後篩選器使用率提升、連帶拉高轉換率；基於這個假設設計三個版本，分別調整篩選器的外觀、位置與功能，包括讓已套用的篩選條件更醒目、把篩選器收進選單裡等做法，三版並行上線 A/B 測試比較成效。",
+      "result": "勝出版本 V2 讓主要篩選器與快速篩選器分區更清楚，同時提高已套用篩選條件的能見度；測試結果顯示分類頁加入購物車件數提升 3%（統計顯著度 100%）、產品詳情頁加購提升 7%（統計顯著度 100%）、整體轉換率提升 3%（統計顯著度 90%），但文中未揭露測試前的基準轉換率或加購率絕對數值，也未說明樣本規模與測試期間長度。",
+      "caveat": "本案例由 AB Tasty 官方發布，屬其客戶（透過顧問 CXperts）自述的成功故事：單一來源、可能經正面篩選、未經第三方查核，firsthand 依規則封頂 1。文中雖附上三項指標的統計顯著度（90%～100%），但未揭露測試前的基準轉換率、樣本規模與測試期間，數字的絕對量級無從查證，應視為方向性參考。",
+      "takeaway": "與其直接憑經驗猜測介面該怎麼改，不如先做一輪質化使用者研究，把研究發現轉換成明確的測試假設，再用多個變體版本量化驗證，讓使用者說了什麼和數字證明了什麼互相印證，才不會流於憑感覺改版。",
+      "blurb": "改版前，團隊先讓顧問 CXperts 訪談用戶，揪出真正卡關的不是商品太少，而是分類頁篩選器不好用，才把這個質性洞察轉成三個介面變體做 A/B 測試，讓已套用篩選更醒目的版本勝出，質化訪談先想清楚要測什麼，量化測試才不會白跑。",
+      "metrics": [
+        [
+          "+7%",
+          "產品詳情頁加購"
+        ],
+        [
+          "+3%",
+          "分類頁加購件數"
+        ],
+        [
+          "+3%",
+          "整體轉換率"
+        ]
+      ],
+      "scores": [
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "有提到篩選器易用性、商品發現等目標，但未具體交代營收壓力或轉換率基準等商業脈絡，略顯含糊",
+        "先做質化訪談，再依洞察訂出假設，測試三個變體版本、擇優上線，屬假設驗證的完整循環",
+        "三項指標皆有相對百分比與統計顯著度，但未揭露測試前基準值與樣本規模，無法確認絕對量級",
+        "AB Tasty 官方發布之客戶自述案例（含顧問 CXperts 執行），依規則封頂 1",
+        "示範質化訪談定義假設、再用 A/B 測試量化驗證的方法論，可套用到多數電商分類頁優化情境"
+      ]
+    },
+    {
+      "title": "南非廚具電商 Yuppiechef 拿掉導覽列：註冊轉換率 3%→6%",
+      "original_title": "A/B Testing Case Study: Removing Navigation Menu Increased Conversions By 100%",
+      "url": "https://vwo.com/blog/a-b-testing-case-study-navigation-menu/",
+      "source": "VWO 案例・Yuppiechef 婚禮清單頁",
+      "tier": 2,
+      "date": "2011",
+      "author": "Paras Chopra（VWO 創辦人，撰寫官方案例）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "到達頁"
+      ],
+      "why": "Yuppiechef 是南非銷售高端廚具的電商，以貼心客服與獨特調性聞名；團隊想拉高婚禮清單頁面的註冊轉換率，這個頁面同時承接 Google Adwords、Facebook、聯盟行銷、目錄站等多元流量來源，登陸頁上還放了與全站共用的導覽列。",
+      "how": "團隊提出假設，訪客會被導覽列上的其他連結分心，移除導覽列能讓使用者更聚焦在頁面唯一目的：完成婚禮清單註冊，於是做了一版拿掉導覽列、其餘完全相同的頁面，與原版一起用 VWO 上線 A/B 測試。",
+      "result": "拿掉導覽列的版本註冊轉換率從 3% 衝上 6%，等同轉換量翻倍；團隊事後表示「越簡單越好，把使用者的注意力集中在唯一目的上」並肯定 VWO 工具的建置速度與報表細緻度足以支撐這個判斷。",
+      "caveat": "本案例由 VWO 官方發布，屬其客戶自述案例（具名引用 Yuppiechef 團隊的回饋），firsthand 依規則封頂 1；文章未揭露測試樣本規模、測試期間與統計顯著度，3% 到 6% 為單一頁面單一變因測試的相對提升，未經第三方查核，且發布年份為 2011 年，當時的流量環境與今日電商生態已有落差。",
+      "takeaway": "到達頁若只有單一轉換目的，共用導覽列反而是分心的來源；把拿掉不相關連結、只留一條路徑當成低成本的第一個假設來測試，往往比直接微調文案或顏色更快看到效果。",
+      "blurb": "多數電商頁面的預設共識是留著導覽列才不會讓人找不到路，Yuppiechef 卻反著做，婚禮清單頁只留一條路徑，把和流量無關的選單整個拿掉，賭的是使用者一旦少了岔路，只會更快完成唯一該做的事，這個反直覺的簡化，成了團隊掛在嘴邊的座右銘。",
+      "metrics": [
+        [
+          "3%→6%",
+          "婚禮清單頁註冊轉換率"
+        ],
+        [
+          "+100%",
+          "相對轉換量成長"
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "有提到婚禮清單頁的轉換目標，但未說明對業務營收或流量成本的具體壓力，商業脈絡偏薄弱",
+        "僅有單一假設、單一變因的一次性測試，沒有失敗迭代或被推翻的方案，屬線性美化的過程",
+        "轉換率從 3% 到 6% 有明確前後對照的絕對數字，非孤立百分比",
+        "VWO 官方發布之客戶案例，雖具名引用客戶回饋，依規則仍封頂 1",
+        "拿掉導覽列讓到達頁更聚焦屬常見且已被廣泛驗證的通用技巧，有啟發但未提煉出更深的決策框架"
+      ]
+    },
     {
       "title": "招生頁拿掉導覽列的 A/B 測試：轉換率 3.12% 衝上 13.64%，暴增 336%",
       "original_title": "How A Single A/B Test Increased Conversion by 336% [Case Study]",
@@ -8635,6 +8741,48 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Wonderbox 用彈窗與購物流程復原做個人化",
+      "url": "https://www.abtasty.com/resources/wonderbox-optimizes-customer-journey/",
+      "source": "AB Tasty 案例・Wonderbox",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "floor: quantified_outcome=0 < 1；min_total: 4.5 < 6。內文為行銷性質描述（個人化彈窗、購物流程復原），實際成效數字被鎖在需下載的 PDF 內，公開頁面看不到任何前後對照數據"
+    },
+    {
+      "title": "DirectAsia 用 EmotionsAI 簡化保險購買流程",
+      "url": "https://www.abtasty.com/resources/directasia-emotionsai/",
+      "source": "AB Tasty 案例・DirectAsia",
+      "tier": 2,
+      "scores": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "reason": "floor: decision_process=0 < 1；quantified_outcome=0 < 1；transferability=0 < 1；min_total: 2.5 < 6。公開頁面僅有行銷性質敘述，未說明測試設計、也無任何量化結果，成效數字同樣被鎖在需下載的 PDF 內"
+    },
+    {
+      "title": "Unbounce：失敗的 A/B 測試也能帶來轉換提升",
+      "url": "https://unbounce.com/a-b-testing/failed-ab-test-results/",
+      "source": "Unbounce 部落格・跨客戶測試合集",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "auto_reject：文章彙整顧問 Michael Aagaard 在 Unbounce 自家頁面、Bettingexpert.com、個人電子書頁面等三個不同網站上的多組測試，屬跨案例教學合輯而非單一案例，符合「純建議清單／彙整清單，非單一案例」的自動淘汰規則"
+    },
     {
       "title": "Kameleoon 案例：AMA 靠實驗平台擴大測試規模，轉換率 +10%",
       "url": "https://www.kameleoon.com/customer/ama",
