@@ -1,10 +1,106 @@
 {
-  "updated": "2026-08-24",
+  "updated": "2026-08-26",
   "run": {
-    "scanned": 44,
+    "scanned": 54,
     "candidates": 5
   },
   "cases": [
+    {
+      "title": "英倫襯衫 Charles Tyrwhitt：一年 2 場測試衝到每月 5–10 場，實驗團隊打進商業會議桌",
+      "original_title": "Building a Solid Partnership to Grow an Experimentation Program",
+      "url": "https://speero.com/case-studies/building-a-solid-partnership-to-grow-an-experimentation-program",
+      "source": "Speero 案例・Charles Tyrwhitt",
+      "tier": 2,
+      "date": "",
+      "author": "Speero 撰寫，引用 Charles Tyrwhitt 數位體驗負責人 Alex Buckingham 具名發言",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "時尚",
+      "f_industry": [
+        "時尚"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [],
+      "why": "Charles Tyrwhitt 是一家英國多通路襯衫零售商，找上 Speero 之前一年只做得出 2 場測試，內部對實驗有興趣、也想擴大規模，卻始終缺乏足夠的內部專業能力；數位體驗負責人 Alex Buckingham 原本擔心找代理商合作，只會收到一份「照單全收、埋頭交件」的需求清單，而不是真正一起把內部團隊養起來的夥伴。",
+      "how": "Speero 先靠每週兩次的例行會議打消 Alex 對遠距合作的疑慮，接著花時間深入理解 Charles Tyrwhitt 的業務脈絡與限制，把策略攤開來跟內部團隊來回辯論、而非單向丟方案，共同磨出一份雙方都認同的路線圖；團隊也跑了三個深度研究，其中一個是針對「西裝選購流程」做全電商團隊參與的捷思法評估，做法是把所有人拉進同一通話、再拆成兩組分別遠距進行評估，這個做法後來還被電商團隊自己搬去用在其他場合。",
+      "result": "測試量從一年 2 場衝到每月 5 到 10 場，內部團隊也養出能自己設計、開發測試的能力，實驗從單純的介面小修小補，轉型成能左右重大商業決策的策略性實驗；更關鍵的是，實驗團隊因此獲邀進入每週的商業會議，正式成為公司決策的一份子。",
+      "caveat": "本案例由 Speero 官方發布，引用 Charles Tyrwhitt 數位體驗負責人 Alex Buckingham 具名發言，屬顧問公司客戶故事：單一來源、可能經正面篩選、未經第三方查核；「一年 2 場衝到每月 5 到 10 場」的測試量數字有明確引述，但案例未揭露這些測試對應的實際轉換率、營收或其他業務指標變化。",
+      "takeaway": "找外部顧問擴大實驗量能時，真正決定成敗的往往不是工具或方法論，而是願不願意把內部團隊也一起帶起來；用固定的例會建立信任、把方案攤開來辯論而非單向輸出，再透過像「拆兩組遠距做捷思法評估」這類具體、可複製的協作設計，讓內部團隊在合作過程中真的學到東西，才是實驗文化真正扎根的關鍵。",
+      "blurb": "找代理商最怕丟一堆需求出去，換回照單全收的交件，Alex 原本也這麼擔心，後來靠固定例會打消疑慮，把方案攤開辯論、不單向輸出，甚至拉整個電商團隊做遠距捷思法評估，實驗團隊也因此從介面小修小補，一路做到獲邀進公司每週商業會議桌。",
+      "metrics": [
+        [
+          "5–10 場 / 月",
+          "測試頻率，原僅一年 2 場"
+        ]
+      ],
+      "scores": [
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "有想擴大實驗規模的明確意圖與「一年僅 2 場測試」的具體起點，但商業壓力（如流失率、GMV）沒有被具體點出，屬有目標但稍嫌籠統",
+        "透過每週例會建立信任、共同辯論方案而非單向輸出，並用「拉進同一通話拆成兩組做遠距捷思法評估」這類具體協作設計，屬有意識的流程規劃而非線性美化",
+        "測試量從「一年 2 場」到「每月 5 到 10 場」有明確 baseline 與成果對照，但案例未揭露對應的轉換率或營收變化",
+        "Speero 官方客戶故事，雖具名引述 Charles Tyrwhitt 數位體驗負責人發言，仍屬顧問公司自述，firsthand 依規則封頂 1",
+        "用例會建立信任、方案攤開辯論、具體協作設計養成內部團隊的做法，是能複製到其他「找外部顧問擴大內部能力」情境的框架"
+      ]
+    },
+    {
+      "title": "網通巨頭 Cisco：EMEAR 團隊 9 個月測試量從 3 場衝到 38 場，靠健檢法複製到 7 萬人組織",
+      "original_title": "How Speero Scaled Cisco's Experimentation Program With Speero's Maturity Audit",
+      "url": "https://speero.com/case-studies/how-speero-scaled-ciscos-experimentation-program-with-speeros-maturity-audit",
+      "source": "Speero 案例・Cisco",
+      "tier": 2,
+      "date": "",
+      "author": "Speero 撰寫，引用 Cisco EMEAR 區域數位負責人 Sandip Amlani 具名發言",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "系統工具"
+      ],
+      "f_goal": [],
+      "why": "Cisco 是一家有 71,000 名員工、96 個據點的網通巨擘，Sandip Amlani 在 2017 年加入擔任 EMEAR 區域數位負責人時，區域的實驗優化工作才剛起步、帶著一堆延宕與空轉，直到隔年成立區域「卓越中心（CoE）」9 個月內把測試量從 3 場衝到 38 場，成果讓高層動心，直接下達「把這套優化能力複製到全公司」的指示，目標訂為一年測試量翻倍、建立標準流程，只是 71,000 人、96 個據點的規模，光是「該從哪裡下手」就像大海撈針。",
+      "how": "Sandip 先自己主導「People」軌道，跑遍各地區訪談、盤點各地做法落差、提出可規模化的組織架構草案，接著找 Speero 用「實驗成熟度健檢（Maturity Audit）」把主觀直覺換成可比較的分數：訪談跨部門利害關係人，把個別分數攤開比對，找出彼此認知落差最大的「戰場（battlegrounds）」再逐一討論建立共識，依四大成熟度支柱抓出弱點與優先順序，最終產出一份聚焦資源在最高槓桿處的擴張路線圖。",
+      "result": "Sandip 帶領的 EMEAR 區域測試量在 9 個月內從 3 場衝到 38 場，這個成績促成了全公司規模化的決定；但這波全球擴張本身的產出，目前只到「盤點完成、路線圖出爐」的階段，案例並未揭露後續全球測試量、營收或轉換率是否真的因此提升。",
+      "caveat": "本案例由 Speero 官方發布，引用 Cisco EMEAR 區域數位負責人 Sandip Amlani 具名發言，屬顧問公司客戶故事：單一來源、可能經正面篩選、未經第三方查核；「9 個月從 3 場衝到 38 場」一段發生在 Speero 介入之前，是 Sandip 主導 EMEAR CoE 時的自有成果，Speero 承接的全球健檢工作本身目前只產出評估與路線圖，尚未見對應的量化結果。",
+      "takeaway": "想把一個區域做出來的成功複製到全公司，光靠「這招有效」的說服力不夠；用一套跨部門訪談、把主觀認知換成可比較分數、揪出認知落差最大的「戰場」逐一對焦的健檢法，才把「該從哪裡下手」的模糊感覺，變成排得出優先順序的路線圖。",
+      "blurb": "這家網通巨擘曾把一個區域的成績直接想搬到全球，才發現 96 個據點、不同部門對「優化該怎麼做」認知落差比想像中大，於是先讓顧問逐一訪談各部門，把主觀感受換成可比較的分數，揪出認知落差最大的「戰場」逐一對齊，才敢排出全球化的優先順序與路線圖。",
+      "metrics": [
+        [
+          "3→38 場",
+          "EMEAR 團隊 9 個月測試場次"
+        ],
+        [
+          "71,000 人",
+          "Cisco 全球員工規模"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "高層直接下達「把優化複製到全公司」的指示，並訂出測試量一年內翻倍、建立標準流程的具體商業目標，動機明確不含糊",
+        "採用訪談跨部門、把分數攤開比對、揪出認知落差最大的「戰場」逐一對齊共識的具體方法，屬有意識設計的評估流程而非直覺拍板",
+        "EMEAR 團隊「9 個月從 3 場衝到 38 場」有明確 baseline 與成果，但這段成績發生在 Speero 介入之前；Speero 承接的全球健檢工作本身只產出評估與路線圖，未揭露後續全球測試量或營收是否確實提升",
+        "Speero 官方客戶故事，雖具名引述 Cisco EMEAR 區域數位負責人發言，仍屬顧問公司自述，firsthand 依規則封頂 1",
+        "訪談盤點、分數比對、鎖定認知落差最大戰場逐一對齊的健檢方法，是能直接複製到其他大型組織做規模化決策的框架"
+      ]
+    },
     {
       "title": "Yankee Candle 分類頁濾網重設計：產品詳情頁加購 +7%",
       "original_title": "Yankee Candle Leverages User Research to Realize A/B Testing Wins",
@@ -8741,6 +8837,48 @@
     }
   ],
   "rejected": [
+    {
+      "title": "The Bouqs：Speero 六個月測試帶來 2 倍營收",
+      "url": "https://speero.com/case-studies/how-speero-helped-the-bouqs-double-revenue-and-set-a-roadmap-for-future-growth",
+      "source": "Speero 案例・The Bouqs",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "min_total: 5.5 < 6（五維總和加來源加成僅 5.5，未達門檻；商業脈絡、決策過程、量化成果、可遷移性均只有籠統描述，缺乏具體數字與明確 trade-off，「2 倍營收」為相對倍數且無絕對數字或轉換率佐證）"
+    },
+    {
+      "title": "GBM 用 Mixpanel 提升用戶互動與留存",
+      "url": "https://mixpanel.com/customers/gbm-optimizes-its-investment-products-to-increase-user-engagement-and-retention",
+      "source": "Mixpanel 案例・GBM",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "floor: quantified_outcome=0（全文僅有「提升用戶互動」「提升留存」等形容詞式描述，無任何百分比、絕對數字或 baseline→成果對照，五維量化成果掛零，直接自動淘汰）"
+    },
+    {
+      "title": "Decathlon 瑞士站：Speero 協助聚焦測試優先順序",
+      "url": "https://speero.com/case-studies/providing-focus-for-decathlons-testing-program",
+      "source": "Speero 案例・Decathlon",
+      "tier": 2,
+      "scores": [
+        1,
+        2,
+        0,
+        1,
+        2
+      ],
+      "reason": "floor: quantified_outcome=0（案例詳述了測試頻寬計算、目標樹、ResearchXL 研究、PXL 優先排序等具體方法論，決策過程與可遷移性俱佳，但「Results」段落全無任何測試數量、轉換率或營收數字，僅有「建立了流程」「提升了測試品質與影響力」等形容詞式結論，量化成果掛零，直接自動淘汰）"
+    },
     {
       "title": "Wonderbox 用彈窗與購物流程復原做個人化",
       "url": "https://www.abtasty.com/resources/wonderbox-optimizes-customer-journey/",
