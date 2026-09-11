@@ -1,10 +1,63 @@
 {
-  "updated": "2026-09-10",
+  "updated": "2026-09-11",
   "run": {
-    "scanned": 89,
-    "candidates": 8
+    "scanned": 27,
+    "candidates": 2
   },
   "cases": [
+    {
+      "title": "Walkie-talkie 語音社交 App：把新用戶推向陌生人而非好友，30 天留存從 8% 衝上 20% 以上",
+      "original_title": "Discovering Our True Value Proposition: Doubling User Retention and Building a Better App with Amplitude Analytics",
+      "url": "https://amplitude.com/blog/walkie-talkie-boost-retention",
+      "source": "Amplitude 案例・Walkie-talkie 留存翻倍",
+      "tier": 2,
+      "date": "2026-06",
+      "author": "Maxime Berthelot（Walkie-talkie 產品成長主管，具名發表於 Amplitude 官方部落格）",
+      "cats": [
+        "更多案例"
+      ],
+      "industry": "社群",
+      "f_industry": [
+        "社群"
+      ],
+      "f_product": [
+        "行動App"
+      ],
+      "f_goal": [
+        "新手引導",
+        "習慣養成"
+      ],
+      "why": "2021 年 9 月，Maxime Berthelot 加入法商 Picslo Corp 旗下、主打 Z 世代的語音社交 App「Walkie-talkie」擔任產品成長主管時，App 已累積 1,600 萬次安裝、100 萬月活躍用戶，成長速度飛快，卻卡在公司最大的痛點：30 天留存率不到 8%。團隊當時只用 Google Analytics 與 Firebase 收集高層級數據，查不出使用者為什麼不照預期行動，也講不清楚為什麼留不住人。",
+      "how": "團隊引進 Amplitude 後，開始用同類群組（cohort）拆解使用者行為。原本的假設是：讓新用戶註冊後盡快上傳通訊錄、接上原本認識的朋友，靠熟人網路效應帶動留存，於是把「加好友」排進新手引導的第一步。數據卻給出完全相反的答案：30 天後留存率最高的，反而是使用公開頻道、和陌生人互動的那群使用者，對熟人網路的依賴沒有想像中高。團隊還發現，使用者在前 72 小時的行為模式，幾乎能預告誰會留下來。基於這個反直覺發現，團隊把引導流程整個倒過來：先讓新用戶在公開頻道認識三位新朋友、感受到產品的核心價值後，才邀請他們匯入通訊錄、接上原本認識的朋友。",
+      "result": "30 天留存率從不到 8% 提升到超過 20%，擁有 3 位以上朋友的使用者占比過半，擁有 10 位以上朋友的使用者 30 天留存率來到 80%。日活躍用戶從 7 萬成長到 30 萬以上（近 5 倍），月活躍用戶從 100 萬成長到 400 萬，累計又新增 1,200 萬次安裝。",
+      "caveat": "本文由 Walkie-talkie 產品成長主管 Maxime Berthelot 具名撰寫、發表於其分析工具供應商 Amplitude 的官方部落格，數字未經第三方查核，且該部落格作為客戶案例展示平台，存在挑選正面案例的選樣傾向。不過內容為當事人第一人稱具名敘述，而非廠商代筆改寫的第三人稱行銷文案，決策過程與反轉數據的描述具體可信，讀者仍應對其中的成長倍數（如安裝量、活躍用戶數）保持審慎。",
+      "takeaway": "別急著照自己對使用者行為的假設去設計引導流程，哪怕這個假設聽起來再合理（熟人網路效應帶動留存）。先用數據檢驗使用者實際怎麼用產品、什麼行為能預測長期留存，再據此決定引導順序，往往比預設的成長公式更接近產品真正的價值主張。",
+      "blurb": "團隊原本設想，把好友通訊錄排進新手引導第一步，新用戶越快接上舊識就留得住人，數據卻給出反過來的答案：真正撐得住的，反而是先在公開頻道跟陌生人聊開的那群，使用者前 72 小時的行為模式，幾乎能預告誰會留下來，團隊索性把引導流程倒過來，先讓人交到三個新朋友，才談熟人邀請。",
+      "metrics": [
+        [
+          "8%→20%+",
+          "30 天留存率"
+        ],
+        [
+          "7 萬→30 萬+",
+          "日活躍用戶數"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "App 當時已有 1,600 萬安裝、100 萬月活躍用戶，卻卡在 30 天留存不到 8% 這個公司最大痛點，商業目標與壓力點明確具體，故給 2。",
+        "團隊原本假設加好友、連結熟人網路能帶動留存，並依此設計新手引導，但數據反轉了這個假設，發現陌生人互動的使用者留存反而更高，團隊因此推翻原先設計、重新調整引導順序，屬於真實的假設被推翻並修正的過程，故給 2。",
+        "文中提供 30 天留存率 8% 到 20% 以上、日活躍用戶 7 萬到 30 萬以上、月活躍用戶 100 萬到 400 萬等多組 baseline 到成果的完整對照數字，故給 2。",
+        "本文由 Walkie-talkie 產品成長主管 Maxime Berthelot 具名撰寫，但發表於其分析工具供應商 Amplitude 官方部落格，依規則屬廠商／顧問自述案例，firsthand 封頂 1。",
+        "先用數據檢驗使用者實際行為與留存的關聯，而非直接按照直覺假設設計引導流程，是可以套用到任何產品新手引導設計的決策原則，故給 2。"
+      ]
+    },
     {
       "title": "澳洲紅十字會建立「數位脊椎」：報稅季捐款 +10%，卻在換系統的路上踩了一次坑",
       "original_title": "With the right data plan, Australian Red Cross builds a digital spine",
@@ -11459,6 +11512,20 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Zillow × Optimizely 客戶訪談影片摘要（僅籠統 ROI 說法，缺乏具體基準與決策細節）",
+      "url": "https://www.optimizely.com/field-notes/customer-stories/zillow",
+      "source": "Optimizely 案例・Zillow",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "內容為 Zillow CMO 受訪引言的行銷摘要，僅提到「測試多戶型租賃訊息效果好、加碼投資」「個人化與體驗優化帶來 2 至 3 倍 ROI」等籠統說法，缺乏具體基準數據、沒有失敗或被推翻方案的決策過程細節，五維皆低分（總和 5 ＋ tier 加成 0.5 ＝ 5.5 ＜ 6），且 firsthand 未達 2 卻無回溯 caveat，未達發佈門檻，故淘汰。"
+    },
     {
       "title": "Monzo 儲蓄挑戰案例（付費牆擋內容，無法評分）",
       "url": "https://builtformars.com/case-studies/monzo-savings-challenge",
