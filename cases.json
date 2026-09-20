@@ -1,10 +1,62 @@
 {
-  "updated": "2026-09-19",
+  "updated": "2026-09-20",
   "run": {
-    "scanned": 13,
-    "candidates": 6
+    "scanned": 11,
+    "candidates": 3
   },
   "cases": [
+    {
+      "title": "Canyon 單車官網改版：Google 排名衝出 13 名，轉換卻按兵不動",
+      "original_title": "How Canyon Bicycles reduced data analysis time by 94% with Contentsquare's AI",
+      "url": "https://www.hotjar.com/customers/canyon/",
+      "source": "Contentsquare 案例（原刊 Hotjar）・Canyon Bicycles",
+      "tier": 2,
+      "date": "",
+      "author": "Contentsquare 官方發布之客戶案例，原刊登於旗下 Hotjar 部落格，具名引述 Canyon Bicycles 數位商品陳列暨電商營運全球總監 Sarah Wilson-Reissmann",
+      "cats": [
+        "國際品牌",
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "到達頁"
+      ],
+      "why": "Canyon Bicycles 是全球最大的直接對消費者（D2C）性能自行車品牌，總部在德國科布倫茨，只走線上通路、無實體經銷，官網因此是超過 80 個市場、17 種語言唯一的顧客接觸點。團隊過去仰賴 Google Analytics 與 BI 儀表板，只看得到使用者「做了什麼」看不到「為什麼」：說不出購買旅程裡的摩擦點在哪，一般同仁也很難自己上手工具查數據，公司也一直沒有整合的 A / B 測試機制（官網跑在 Salesforce Commerce Cloud 上，沒有內建實驗工具），CRO 工作長期停留在被動、短期反應的層次。",
+      "how": "2025 年中，團隊先在兩個最大市場試行導入 Contentsquare，把分析工具直接嵌進日常工作。第一步是靠 CSQ Live 瀏覽器外掛，讓 UX 設計師、DGMM（數位成長暨陳列經理）等非分析師，不必登入完整後台就能直接在真實頁面上跑熱區分析，其中一位 UX 設計師的所有熱區研究，現在全靠這款外掛在瀏覽器裡完成。第二步是用內建 AI「Sense」加速判讀，把原本要 4 到 6 小時才能做完的分析，壓縮到約 20 分鐘。團隊接著把這套工具用在兩個高流量的上層導流頁「World」與「Ride Style」上，拿掉大型輪播圖、換成精簡的頁內導覽，目標是讓行動版體驗更好、也對 SEO 更友善。改版上線後，團隊沒有就此打住，而是用同一套工具的分區熱區分析與流量分眾功能，比對桌機與行動裝置、直接進站與有機搜尋進站的訪客行為差異；同一套方法也用來補強沒有專屬測試工具時的 A / B 實驗判讀，例如首頁第二個版位該放影片還是靜態圖這種牽動製作成本的決策，都靠行為證據輔助判斷。",
+      "result": "改版上線後，Road 相關頁面在搜尋結果的平均排名上升 13 名，但電商業績卻沒有如預期跟著成長，數字對不上反而成了新的線索：團隊把有機流量依裝置與進站管道拆開比對，才發現訪客行為模式原本就不一樣，把一個令人納悶的落差，轉成下一輪優化的路線圖，但文章沒有交代這輪拆解後，轉換率或營收具體回升了多少。另外，分析效率的提升則有明確前後對照：原本 4 到 6 小時的分析工作，用 AI 壓到約 20 分鐘完成，9 個月內累積 29 名跨部門使用者定期回報分析發現與商業影響。",
+      "caveat": "本案例由 Contentsquare 官方發布，原刊登於旗下 Hotjar 網域（Hotjar 併入 Contentsquare 後案例頁沿用舊網址），屬其客戶 Canyon Bicycles 自述案例，雖具名引述數位商品陳列暨電商營運全球總監 Sarah Wilson-Reissmann 發言，firsthand 依規則仍封頂 1，數字未經第三方驗證、也可能經過廠商篩選才對外發布。文章對「排名上升但業績沒跟上」這個關鍵轉折，只交代團隊用了什麼方法去拆解原因，並未回報拆解後轉換率或營收是否、以及回升了多少，此段落更接近過程紀錄而非完整結果。",
+      "takeaway": "排名、流量這類「上層」指標變好，不代表商業指標會自動跟上，中間還有一段訪客實際行為的落差要靠證據去補。遇到「指標對不上」的怪現象時，與其重新猜測原因，不如把流量依裝置、進站管道這類變因拆開分別比對，往往比籠統看整體平均更快找到答案，這套「先懷疑平均值、再拆分眾比對」的習慣，可以複製到任何「做對了一件事，結果卻沒兌現」的場景。",
+      "blurb": "Google 排名衝出一截，業績卻沒跟著動，團隊沒有急著慶功，反而把有機流量拆成桌機、手機、直接進站分開比對，才揪出訪客行為早就分岔，同一款分析工具也把原本 4 到 6 小時的報告，壓縮到 20 分鐘就能看懂。",
+      "metrics": [
+        [
+          "+13",
+          "Road 頁排名名次"
+        ],
+        [
+          "94%",
+          "分析時間縮短幅度"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "文章清楚交代 Canyon 只做線上直營、官網是唯一顧客觸點，過去 GA 與 BI 只看得到「做了什麼」看不到「為什麼」也沒有整合的 A / B 測試工具，商業脈絡具體明確，屬明確的商業目標與背景",
+        "改版上層導流頁後排名上升，業績卻沒有如預期跟上，團隊沒有就此收工，而是進一步拆分裝置與進站管道找原因，是一個打壞原本預期的意外結果，符合驗證後修正的痕跡，但文章未交代拆解後的最終成果，過程紀錄多於結論",
+        "分析時間從 4 到 6 小時砍到 20 分鐘、9 個月內 29 名使用者常態使用，皆有清楚的前後對照與具體數字，但排名 +13 名之後業績是否回升、回升多少全無交代，屬 baseline 與成果俱全但不完整的量化成果",
+        "Contentsquare（原 Hotjar）官方發布之客戶案例，雖具名引述 Canyon 數位商品陳列暨電商營運全球總監發言，依 CRO 廠商自述規則 firsthand 仍封頂 1",
+        "「指標對不上就拆分眾比對」是能複製到其他情境的診斷習慣，方向明確且可操作，但文章停在方法論層次，沒有進一步提煉成更上位的判斷框架"
+      ]
+    },
     {
       "title": "Senja 修好新手引導，啟用率翻倍甩開零營收半年",
       "original_title": "From $0 to $250 MRR. How we broke out of absolute zero.",
@@ -13408,6 +13460,34 @@
     }
   ],
   "rejected": [
+    {
+      "title": "麥肯錫 QED 方法論案例：2.3B 美元消費成長背後，客戶全部匿名",
+      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/digital-blog/design-meet-data-unlocking-design-roi",
+      "source": "McKinsey 部落格・QED 方法論文宣",
+      "tier": 3,
+      "scores": [
+        2,
+        1,
+        2,
+        0,
+        2
+      ],
+      "reason": "文章以匿名案例（「一家銀行」「一家區域公用事業」「一家跨國藥廠」）拼接佐證自家 QED 方法論，屬顧問公司方法論文宣而非可溯源的單一案例；firsthand 依規則列為 0（匿名轉述、無法溯源），關鍵數字無法回溯查證所屬公司，依規則不予收錄。"
+    },
+    {
+      "title": "Unbounce 客戶案例：代理商用 Smart Traffic 衝高轉換率",
+      "url": "https://unbounce.com/marketing-ai/how-agency-is-using-ai-marketing-to-10x-their-conversion-rates/",
+      "source": "Unbounce 案例・Taylor Made Marketing",
+      "tier": 2,
+      "scores": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "reason": "全文偏工具導購語氣（大量擬人化「機器人不會請病假」式行銷語言），未見任何失敗或被推翻的測試、也沒有自身前後對照的具體轉換率數字（僅與產業平均比較），決策過程掛零，總分未達門檻，予以淘汰。"
+    },
     {
       "title": "Samsung B2B 用 Prompt-Based Experimentation 加速測試",
       "url": "https://www.kameleoon.com/customer/samsung",
