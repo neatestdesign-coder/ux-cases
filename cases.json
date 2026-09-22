@@ -1,10 +1,63 @@
 {
-  "updated": "2026-09-20",
+  "updated": "2026-09-22",
   "run": {
-    "scanned": 11,
-    "candidates": 3
+    "scanned": 42,
+    "candidates": 5
   },
   "cases": [
+    {
+      "title": "Tinkoff Bank 信用卡申請表優化：進度條與延後填寫，轉換率 +35.8%",
+      "original_title": "Tinkoff Bank Used A/B Testing To Improve Conversions By 36%",
+      "url": "https://vwo.com/success-stories/tinkoff-bank/",
+      "source": "VWO 案例・Tinkoff Bank",
+      "tier": 2,
+      "date": "",
+      "author": "VWO（Wingify）官方發布之客戶案例，引用 Tinkoff Bank 網頁分析團隊使用 Adobe Site Catalyst 與 VWO 執行的 A/B 測試結果，未具名引述當事窗口",
+      "cats": [
+        "顧問／商業視角",
+        "更多案例"
+      ],
+      "industry": "金融",
+      "f_industry": [
+        "金融"
+      ],
+      "f_product": [
+        "其他"
+      ],
+      "f_goal": [
+        "註冊"
+      ],
+      "why": "Tinkoff Bank 是俄羅斯純網路銀行，無實體分行，官網是唯一的獲客管道。使用者透過官網申請信用卡，填完多步驟表單並送出後，銀行才會核卡並免費寄送卡片，因此申請表單的完成率直接決定核卡量，但團隊透過 Adobe Site Catalyst 分析發現，申請頁跳出率偏高，於是設立專責的網頁分析團隊，鎖定表單頁面展開一連串 A/B 測試。",
+      "how": "團隊沒有一次改動整頁，而是拆成三個獨立假設分別測試。測試一：猜測在表單上方補充信用卡權益說明能提高送出率，做了兩版，一版把「更多詳情」連結另開新頁，另一版就地展開成資訊框；結果另開新頁的版本轉換率比什麼都沒改的原始版還低，反而是就地展開版本讓轉換率提升 15.5%，因為使用者一離開申請頁就很難再回來完成表單。測試二：在四步驟表單上加進度條，同樣做了兩種視覺，一版是頁面上方的黃底黑線，一版是隨填寫進度變色的綠色漸進條，兩版都贏過對照組（分別 +6.9%、+12.8%），對比度更高、更顯眼的綠色版本效果更好。測試三：表單第二步要求填寫護照細節，多數人手邊沒有這些資料，容易卡住放棄，團隊加了一顆「不記得護照資料？」勾選框，讓使用者可以改用手機或 email 事後補件，先把表單其餘部分填完送出。",
+      "result": "三場測試都各自在超過 6 萬到 26.5 萬名訪客、13 到 39 天的規模下跑出穩定結果：測試一的就地展開版轉換率 +15.5%，另開新頁版本反而輸給對照組；測試二兩版進度條分別 +6.9%、+12.8%；測試三的「護照資料延後填」版本轉換率 +35.8%，且完成填寫後的轉換率額外再拉高 10%，三場測試皆有 100% 機率贏過原始頁面的統計顯著性。",
+      "caveat": "本案為 VWO（Wingify）官方發布之客戶案例，用於行銷自家 A/B 測試工具，firsthand 依 CRO 廠商自述規則封頂為 1，未具名引用 Tinkoff 內部窗口，數字未經第三方驗證，廠商也可能篩選效果較好的案例對外發布；文章也未標示三場測試實際執行的年份。但每場測試皆附上具體訪客量、天數與統計顯著性，細節程度高於一般行銷型案例，關鍵數字內部前後一致，可信度尚可。",
+      "takeaway": "表單流失多半不是單一原因，把大改版拆成幾個小假設分開測試，才看得出哪個環節真正卡住使用者；「另開新頁補充資訊」這個看似貼心的做法，實際上把使用者推離了完成表單的路徑，比不做還糟，這種「反而更差」的測試結果和成功的測試一樣值錢，因為它排除了一個看似合理但其實錯誤的直覺，讓團隊把力氣放在真正有效的「降低當下決策與填寫成本」這條路上。",
+      "blurb": "多數人直覺覺得，把信用卡優惠攤開讓人看，申辦意願只會更高，但 Tinkoff 把「更多詳情」連到新頁面時，轉換率反而比什麼都沒動的原始版還低，原來使用者一跳頁就難再回頭。團隊索性把資訊直接展開在原頁面，護照資料也比照辦理，讓人先勾選「之後再補」，把表單填完再說。",
+      "metrics": [
+        [
+          "+35.8%",
+          "信用卡申請整體轉換率"
+        ],
+        [
+          "+12.8%",
+          "進度條版本轉換率"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "文章清楚交代 Tinkoff 是無實體分行的純網路銀行，官網申請表單是核卡與獲客的唯一入口，且點出跳出率偏高的具體痛點，屬明確的商業目標與背景",
+        "拆成三個獨立假設分別測試，測試一「另開新頁補充資訊」的版本效果比對照組還差，團隊據此推翻直覺、改採就地展開，是有假設、驗證與被推翻方案的真實迭代痕跡",
+        "三場測試皆附上訪客量（6 萬至 26.5 萬）、測試天數與百分比前後對照，baseline 與成果俱全，量化程度高",
+        "VWO 官方發布之客戶案例，用於行銷自家工具，未具名引用當事窗口，依 CRO 廠商自述規則 firsthand 封頂為 1",
+        "「拆成小假設分開測試」「進度條降低表單焦慮」「延後非必要欄位」皆是可套用到其他表單優化情境的具體原則，提煉程度高"
+      ]
+    },
     {
       "title": "Canyon 單車官網改版：Google 排名衝出 13 名，轉換卻按兵不動",
       "original_title": "How Canyon Bicycles reduced data analysis time by 94% with Contentsquare's AI",
@@ -13460,6 +13513,62 @@
     }
   ],
   "rejected": [
+    {
+      "title": "人人都是產品經理・活動改版引導案例",
+      "url": "https://www.woshipm.com/pd/5802121.html",
+      "source": "人人都是產品經理・活動改版引導設計",
+      "tier": 4,
+      "scores": [
+        1,
+        1,
+        0,
+        2,
+        1
+      ],
+      "reason": "作者親自參與該運營活動改版，過程與設計手法交代清楚，但全文只描述做了什麼設計調整，未附任何改版前後的量化數據（無轉化率、參與度等 baseline→成果對照），quantified_outcome=0，依規則不予收錄。"
+    },
+    {
+      "title": "Built for Mars・Gmail App 體驗評論",
+      "url": "https://builtformars.com/case-studies/gmail",
+      "source": "Built for Mars・Gmail App 評論",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "reason": "屬 Built for Mars 對 Gmail App 新手引導體驗的第三方評論文章，作者與 Google／Gmail 團隊無關，也未具名訪談當事團隊，firsthand=0；文中無 Gmail 團隊實際改動後的量化成果對照，quantified_outcome=0，依規則不予收錄。"
+    },
+    {
+      "title": "Medium・Miniso 網站 UX/UI 改版個人練習",
+      "url": "https://bootcamp.uxdesign.cc/miniso-website-a-ux-ui-redesign-case-study-1f87ed5a7331",
+      "source": "Medium Bootcamp・Miniso 個人改版練習",
+      "tier": 0,
+      "scores": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "reason": "為作者自主發起的 Miniso 網站改版練習，非受雇於 Miniso 或獲其委託的真實專案，改版方案未實際上線，全文無任何商業成果數據，firsthand=0、quantified_outcome=0，依規則不予收錄。"
+    },
+    {
+      "title": "Medium・Amazon App 改版個人練習",
+      "url": "https://uxdesign.cc/i-felt-the-amazon-app-was-outdated-so-i-redesigned-it-using-design-thinking-a-ux-case-study-549c5880d9be",
+      "source": "UX Collective・Amazon App 個人改版練習",
+      "tier": 2,
+      "scores": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "reason": "作者僅為 Amazon App 的一般使用者，自主發起的設計思考練習，非受雇於 Amazon 的真實專案，改版方案未實際上線，全文無商業成果數據，firsthand=0、quantified_outcome=0，依規則不予收錄。"
+    },
     {
       "title": "麥肯錫 QED 方法論案例：2.3B 美元消費成長背後，客戶全部匿名",
       "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/digital-blog/design-meet-data-unlocking-design-roi",
