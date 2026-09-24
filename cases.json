@@ -1,10 +1,123 @@
 {
-  "updated": "2026-09-23",
+  "updated": "2026-09-24",
   "run": {
-    "scanned": 25,
-    "candidates": 6
+    "scanned": 22,
+    "candidates": 4
   },
   "cases": [
+    {
+      "title": "英國劇院集團 ATG：手機座位圖藏摘要卡片，選位完成率 +10%、結帳轉換 +2%",
+      "original_title": "How Ambassador Theatre Group drives conversions",
+      "url": "https://www.optimizely.com/field-notes/customer-stories/ambassador-theatre-group",
+      "source": "Optimizely 案例・ATG 劇院集團",
+      "tier": 2,
+      "date": "2026",
+      "author": "Optimizely 官方發布之客戶案例，具名引述 ATG Director of Product Stephen Taylor 與 Product Insight Manager Monty Mohamed",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "媒體",
+      "f_industry": [
+        "媒體"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "結帳"
+      ],
+      "why": "英國劇院集團 Ambassador Theatre Group（ATG）自 1992 年成立以來，已成長為橫跨英美德三國、擁有 58 間劇院、年服務超過 1000 萬名觀眾的全球現場娛樂龍頭，旗下三個售票平台一年要扛住超過 5000 萬個工作階段（session）。2018 年以前，ATG 的數位功能外包給不同供應商，功能上線零零星星，也沒有系統化追蹤成效；團隊發現購票流程中，選位這一步的流失率最高衝到 82%，但廣告投放、新劇目帶來的流量波動等干擾因素太多，很難確定哪個改動真的有用，於是找上 Optimizely 建立系統化的實驗文化。",
+      "how": "團隊用 Optimizely 的 Feature Flag 做金絲雀測試，把新功能先推給一小群使用者驗證訊號、有問題能立刻一鍵回滾。第一個情境鎖定手機版選位頁：把使用者尚未選位前顯示的行程摘要資訊收起來，選定座位後才把摘要滑出畫面底部，讓手機小螢幕能把更多空間留給座位圖本身。第二個情境則是應 B2B 客戶（劇院製作方）要求，在選位過程中加入「座位視角預覽」，讓觀眾在下單前就能看到從該座位望向舞台的實際畫面。",
+      "result": "手機版選位頁清空畫面雜訊後，選位完成率 +10%，整體結帳轉換率也跟著 +2%，是 ATG 目前實驗成效最大的一次；另一項座位視角預覽測試，則讓每訪客營收（公司的北極星指標）+7%、轉換率 +6%。實驗文化也逐漸在內部擴散，員工主動提案測試的人數增加，ATG 目前的實驗速度已提升到每週兩場。",
+      "caveat": "本案為 Optimizely 官方發布之客戶案例，用於行銷自家實驗工具，firsthand 依 CRO／實驗平台廠商自述規則封頂為 1。文中數字多為相對漲幅（如 +10%、+7%），未完整公布選位或結帳轉換率的實際起訖數字，且廠商可能篩選效果最好的測試對外發布，數字未經第三方驗證，讀者應保守看待精確幅度。",
+      "takeaway": "把「減少畫面干擾」拆成兩個獨立情境分開測試（手機螢幕空間、座位預覽），並用 Feature Flag 讓每個測試都能先在小範圍驗證訊號、隨時一鍵回滾，這套「金絲雀測試＋逐步擴大」的節奏，比單一個「移除雜訊提升轉換」的結論更值得複製到其他高涉入、多步驟的購買流程。",
+      "blurb": "選位這一步流失率曾衝上 82%，是漏斗裡最大的黑洞，團隊過去把功能外包出去、上線零零星星，沒人追蹤成效，於是改用 Feature Flag 做金絲雀測試，先小範圍驗證再決定要不要全面上線：把選位前的行程摘要收起來，讓手機畫面只剩座位圈選，結果選位完成率衝上 10%，結帳轉換也多了 2 個百分點。",
+      "metrics": [
+        [
+          "+10%",
+          "選位完成率"
+        ],
+        [
+          "+2%",
+          "結帳轉換率"
+        ],
+        [
+          "+7%",
+          "每訪客營收"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "文中明確點出選位流程的流失率最高達 82%，且提及過去外包導致功能零星上線、缺乏系統追蹤的營運痛點，商業脈絡具體。",
+        "團隊先假設「手機螢幕真實可視空間不足會拖累選位」，用 Feature Flag 做金絲雀測試逐步驗證，同時對照兩個獨立情境（螢幕空間、座位預覽）各自測試，具備假設與驗證的真實痕跡。",
+        "baseline（流失率最高 82%）與成果（選位完成率 +10%、結帳轉換 +2%、每訪客營收 +7%）俱全，且區分不同測試情境各自的漲幅，非籠統單一數字。",
+        "本文為 Optimizely 官方發布之客戶案例，用於行銷自家實驗工具，依 CRO／實驗平台廠商自述規則，firsthand 依規則封頂為 1。",
+        "用 Feature Flag 做金絲雀測試、先在小範圍驗證訊號再決定是否全面上線，是可套用到任何產品迭代的通用實驗方法論。"
+      ]
+    },
+    {
+      "title": "AI 影片新創 Pictory：解決素材庫搜尋卡關，流失率腰斬到 15%",
+      "original_title": "Using data to delight customers: How Pictory increased conversions by 16% and reduced churn by 15%",
+      "url": "https://amplitude.com/blog/pictory-amplitude-conversions-churn",
+      "source": "Amplitude 案例・Pictory",
+      "tier": 2,
+      "date": "2024",
+      "author": "Pictory 共同創辦人暨產品長 Abid Mohammed 於 Amplitude 官方部落格具名撰文親述",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "AI",
+        "SaaS"
+      ],
+      "f_goal": [
+        "習慣養成"
+      ],
+      "why": "Pictory 是一間 2019 年成立、做 AI 影片生成工具的新創，主打「腳本一鍵轉出完整剪輯影片」，鎖定內容行銷從業者，靠產品自然擴散驅動成長（PLG），幾乎不靠業務團隊。共同創辦人暨產品長 Abid Mohammed 觀察到，公司雖然在 2022 到 2023 年成長了 3000%，但一直沒有真正搞清楚「誰是核心用戶」，對誰都想討好的結果就是產品越做越雜、資源分散，團隊決定用 Amplitude 的行為數據把「理想客戶輪廓（ICP）」找出來。",
+      "how": "團隊把用戶按地區、行為、產業、職稱等維度切開，建立一個追蹤轉換率、活躍率、新客數與退訂率的 ICP 儀表板，把資源集中在轉換與終身價值（LTV）看起來最有潛力的族群，不再想討好所有人。找到核心用戶後，團隊再用使用者訪談加上 Amplitude 的行為數據，回頭追流失原因，發現用戶常常在片庫裡翻了老半天素材、卻找不到能搭配腳本的畫面，失望之下直接離開；於是團隊上線 AI 素材配對功能，能自動依腳本內容比對合適片段，並簽下 Getty Images 授權提升素材品質。",
+      "result": "鎖定 ICP、砍掉不對的資源投入後，團隊 3 個月內把銷貨成本（COGS）降低 30%；解決素材配對這個卡點後，整體流失率從 30% 腰斬到 15%。團隊後續也發現，搭配 AI 語音旁白功能的用戶，轉換與留存率是一般用戶的 3 倍，於是找上 ElevenLabs 推出更真人化的語音功能，上線首週月經常性收入（MRR）就出現成長，ICP 族群的轉換率也隨之 +16%。",
+      "caveat": "本文雖由 Pictory 共同創辦人暨產品長 Abid Mohammed 具名撰寫，屬客戶親身敘述，但發布於 Amplitude 官方部落格，用於行銷自家分析工具，依 CRO／行為數據平台廠商自述規則，firsthand 依規則封頂為 1。文中多項數字（如流失率腰斬、COGS 降 30%、語音功能用戶轉換率 3 倍）皆為 Pictory 單方公布，未見第三方查核，「使用語音功能的用戶轉換率是一般用戶 3 倍」也可能只是相關性而非因果關係（願意用進階功能的本來就是較投入的用戶），讀者應保守解讀因果強度。",
+      "takeaway": "與其一次把所有指標都盯著看，不如先用行為數據切出「值得重押的那群人」（ICP），再回頭用訪談加數據去追這群人為什麼流失，把資源和產品開發精力都聚焦在同一群人身上，這個「先鎖定目標客群、再深挖單一卡點」的順序，比同時追求全面成長更容易在資源有限的新創裡看到成效。",
+      "blurb": "這家做 AI 影片生成的新創曾經想討好所有用戶，結果誰都討好不了，資源反而四處分散，團隊改用 Amplitude 的行為數據切出「值得重押的那群人」，不再雨露均霑，回頭一查才發現用戶常在片庫裡翻半天素材卻配不到想要的畫面，失望之下直接離開，於是團隊做了能自動配對腳本的 AI 選片功能，還簽下 Getty Images 補上素材缺口。",
+      "metrics": [
+        [
+          "-15pt",
+          "整體流失率"
+        ],
+        [
+          "-30%",
+          "銷貨成本 COGS"
+        ],
+        [
+          "+16%",
+          "ICP 用戶轉換率"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "文中提到 Pictory 一度想服務所有用戶、卻搞不清楚核心客群是誰，導致資源分散、成長方向模糊，商業脈絡具體可辨。",
+        "團隊先用行為數據切出 ICP、再用訪談加數據回頭追查流失原因，找到片庫搜尋卡關這個具體痛點才動手做功能，具備假設到驗證的完整過程。",
+        "流失率從 30% 降到 15%、COGS 三個月內降 30%、ICP 用戶轉換率 +16%，皆有明確的基期與成果對照，非孤立百分比。",
+        "本文雖由 Pictory 共同創辦人暨產品長 Abid Mohammed 具名親撰，屬性上仍是發佈於 Amplitude 官方部落格的客戶案例，用於行銷自家分析工具，依 CRO／行為數據平台廠商自述規則，firsthand 依規則封頂為 1。",
+        "「先用行為數據鎖定值得重押的客群、再回頭深挖這群人流失的單一卡點」，是可以套用到其他資源有限新創的通用做法。"
+      ]
+    },
     {
       "title": "Evolv 氫水瓶官網優化：砍掉漢堡選單、購物車鈕固定顯示，電商轉換率 +200%",
       "original_title": "Evolv Boosts eCommerce Conversions by 200% Using Wingify, with ConvertPolo's Expertise",
@@ -13613,6 +13726,34 @@
     }
   ],
   "rejected": [
+    {
+      "title": "客戶案例庫首頁改版（UX Collective）",
+      "url": "https://uxdesign.cc/case-study-customer-stories-library-redesign-e15e5f0fec50",
+      "source": "UX Collective・Kiona Lynn",
+      "tier": 2,
+      "scores": [
+        1,
+        2,
+        0,
+        2,
+        1
+      ],
+      "reason": "floor: quantified_outcome=0 < 1。全文僅有兩輪易用性測試的質化觀察（如「多數使用者能完成任務」），未附上轉換率、流量等任何前後對照數據，無法回溯量化成果。"
+    },
+    {
+      "title": "Stride Travel 商品卡改版設計挑戰（UX Collective）",
+      "url": "https://uxdesign.cc/redesigning-a-product-card-for-improved-conversion-a-ux-design-challenge-383560ff843d",
+      "source": "UX Collective・Kalyani Deshpande",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        2,
+        1
+      ],
+      "reason": "floor: quantified_outcome=0 < 1；min_total: 5.5 < 6。本文為求職面試的設計挑戰練習，僅用 2 名使用者做小型測試取得質化回饋，並未真正上線或做 A/B 測試，無任何商業數據佐證成效。"
+    },
     {
       "title": "VWO 案例・ForestView 落地頁篩選優化",
       "url": "https://vwo.com/success-stories/forestview/",
