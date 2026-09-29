@@ -1,10 +1,65 @@
 {
-  "updated": "2026-09-28",
+  "updated": "2026-09-29",
   "run": {
-    "scanned": 34,
-    "candidates": 4
+    "scanned": 38,
+    "candidates": 2
   },
   "cases": [
+    {
+      "title": "Ocado 個人化實驗：把第五單當忠誠門檻，訂閱報名 +13.5%、多件優惠加購 +55%",
+      "original_title": "Ocado: How to foster loyalty at each stage of the customer journey",
+      "url": "https://www.dynamicyield.com/case-studies/ocado/",
+      "source": "Dynamic Yield 案例・Ocado",
+      "tier": 2,
+      "date": "2023",
+      "author": "Dynamic Yield（Mastercard 旗下）官方發布之客戶案例，具名引述 Ocado 數位開發經理 Matthew Wilson 與執行顧問公司 Conversio 共同創辦人 Paul Wilkins",
+      "cats": [
+        "更多案例"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "再互動",
+        "忠誠"
+      ],
+      "why": "Ocado 是英國最大的線上超市之一，約八成英國家庭可配送，目錄超過 5 萬件、天天變動。逛超市本來就是苦差事，團隊想讓顧客從首購走到長期訂閱 Smart Pass（免運與專屬價的會員方案），於是與優化顧問公司 Conversio 合作，用 Dynamic Yield 的個人化與 A/B 測試，依顧客所處階段（首購、二到四單、五單以上、已訂閱）分別設計體驗。",
+      "how": "團隊從回購資料發現第五次下單是關鍵里程碑，做到五單的顧客更可能長期回購，也最適合轉訂閱。首購者不強制先註冊，可先逛完整目錄、建好購物車，結帳前也把只給回頭客看的「離開前」促銷頁拿掉，減少干擾。二到四單的顧客看到集點卡式的進度條與第五單可解鎖的贈品（如環保袋、巧克力），第四單者再加碼提示。五單以上、尚未訂閱者看到 Smart Pass 的浮層說明。另有一項測試把符合「多件購買優惠」的商品獨立成一列，提高優惠可見度。",
+      "result": "首購者可自由瀏覽整站的版本，加入購物車率 +5.7%；隱藏「離開前」頁面給首購者，轉換率 +1.4%；對五單以上的非會員顯示 Smart Pass 浮層，訂閱率 +13.5%；多件優惠獨立成列，顧客加購推薦品的機率高出 55%，轉換率 +6.7%。文中未揭露任何一項的基期數字、樣本數或顯著性。",
+      "caveat": "本案為 Dynamic Yield（Mastercard 旗下）自家行銷用客戶案例，執行方 Conversio 為其長期合作夥伴，firsthand 依 CRO／實驗平台廠商自述規則封頂為 1。單一來源、可能偏正面選樣、未經第三方驗證；所有漲幅皆為相對值，未附基期、樣本數與統計顯著性，且「第五單是關鍵」的論斷僅為 Ocado 內部觀察，文中未公布佐證數據，讀者應保守看待精確數字。",
+      "takeaway": "別只盯著首購：先用回購資料找出「做到第幾次才會留下來」的里程碑，再依顧客所處階段分別設計，首購少干擾、中段給進度與獎勵、成熟顧客才推訂閱。「對新客拿掉促銷頁」這類做減法的測試，成本低又能驗證「多即是好」的直覺。",
+      "blurb": "團隊從回購資料抓出一個里程碑：做到第五單的人才會長期留下，於是首購者只給乾淨的結帳流程，二到四單的顧客則看到集點卡式的進度條和第五單可解鎖的贈品，把力氣花在中段的回購習慣，而不是一味衝首購。",
+      "metrics": [
+        [
+          "+13.5%",
+          "Smart Pass 訂閱率"
+        ],
+        [
+          "+55%",
+          "多件優惠加購率"
+        ],
+        [
+          "+6.7%",
+          "轉換率（多件優惠版位）"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "明確交代顧客生命週期三階段與「從首購走到訂閱」的忠誠目標，並指出目錄過大、逛超市是苦差事的痛點",
+        "有假設（首購者偏好較少干擾）與逐階段驗證，但全文皆為成功測試、未提被推翻的方案或失敗迭代，呈現線性美化",
+        "全部為相對漲幅（+13.5%、+55%、+6.7%），無基期、樣本數或絕對數字",
+        "Dynamic Yield 官方客戶案例，執行方為合作顧問，依規則 firsthand 封頂為 1",
+        "「以回購里程碑分群、首購做減法、成熟顧客才推訂閱」是可直接套用到其他電商與訂閱產品的分階段框架"
+      ]
+    },
     {
       "title": "Mention 靠重寫訊息內容，兩個月啟用率衝 +50%",
       "original_title": "How Mention Increased Activation Rate by 50%",
@@ -14626,6 +14681,20 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Purp Social 用 Mixpanel 追蹤使用者行為，付費轉換 +47%",
+      "url": "https://mixpanel.com/customers/how-purp-social-increased-paid-user-conversions-with-mixpanel",
+      "source": "Mixpanel 案例・Purp Social",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "min_total: 5.5 < 6。內容偏產品導購，僅說明導入 Mixpanel 後付費轉換 +47%、每日寶石收集 1.17M→1.69M，缺乏改版決策與取捨過程，付費轉換無基期，廠商自述 firsthand 封頂 1。"
+    },
     {
       "title": "Huntr 靠 Mixpanel 找出履歷上傳時機，啟用轉換未附清楚基準",
       "url": "https://mixpanel.com/customers/how-huntr-uses-mixpanel-to-drive-data-backed-growth-and-optimize-user-engagement",
