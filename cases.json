@@ -1,10 +1,69 @@
 {
-  "updated": "2026-09-29",
+  "updated": "2026-09-30",
   "run": {
-    "scanned": 38,
+    "scanned": 42,
     "candidates": 2
   },
   "cases": [
+    {
+      "title": "Keyhole 轉向產品主導成長（PLG）：啟用率從 30% 拉到 45%，ARR +25%",
+      "original_title": "A case study: 4 lessons from Keyhole's transition to product-led growth",
+      "url": "https://www.mindtheproduct.com/a-case-study-4-lessons-from-keyholes-transition-to-product-led-growth/",
+      "source": "Mind the Product 案例・Keyhole",
+      "tier": 0,
+      "date": "2025",
+      "author": "Alex Rastatuev（Keyhole 資深產品經理，本人具名撰寫並參與此次轉型）",
+      "cats": [
+        "更多案例"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "SaaS"
+      ],
+      "f_goal": [
+        "新手引導",
+        "定價"
+      ],
+      "why": "Keyhole 原本靠業務驅動，成交成本高、速度慢、擴張要靠大量支援；同時團隊觀察到部落格與登陸頁的自然流量持續成長，主動上門試用的人變多，於是決定用一支小團隊，靠成長實驗把註冊、啟用、轉換整條漏斗改成自助式。",
+      "how": "先砍註冊摩擦：加上 Google 登入、試用不再要求信用卡。接著發現啟用是下一個斷點：新用戶要在 48 小時內匯出至少一份報告、加入至少兩個社群帳號或監聽主題才會看到價值，但只有 30% 做到。第一版做法是註冊後直接用應用內引導催用戶加資料，沒達到目標，因為用戶不懂為何要給資料，加資料變成雜事。第二版改成先讓用戶進到塞滿示範資料的主頁儀表板，看過能得到什麼再自己動手，並依用戶選的目標逐步解鎖功能。定價頁也做了多輪實驗：套裝方案雖提高試用與付費轉換，卻沒改善啟用與留存，最後改成分頁展示個別產品；試用期從 7 天拉到 14 天才是轉換的關鍵。",
+      "result": "啟用率從 30% 提升到多數自助式族群的 45%；ARR +25%，多數族群的淨收入留存率（NRR）達 65% 到 70%。整體約 13 個月後才看到明顯的留存與營收影響。另外業務針對「在高階方案加購資料、邀請成員」的帳號主動接洽，有 10% 升級到更高價的企業方案。",
+      "caveat": "作者為當事公司產品經理，屬第一手自述，但文中 ARR +25%、NRR 65% 到 70% 未附基期營收與觀察區間，也沒有第三方查核；啟用率 30%→45% 為文中明列的前後對照。Keyhole 為小型 SaaS，結論不必然適用於複雜、需長時間導入的產品，作者也自己提醒 PLG 並不適合這類產品。",
+      "takeaway": "啟用不等於證明所有價值，而是讓用戶更早摸到「我正在朝解決問題前進」的實感：把要求用戶付出（給資料）的步驟往後放，先用示範資料展示回報。定價實驗要分清楚它影響的是轉換還是留存，兩者常常不同步；試用期長度可能比方案設計更能撬動轉換。",
+      "blurb": "起初團隊在註冊後用引導流程催新用戶補帳號資料，結果被當成雜事，於是反過來先讓人進到塞滿示範資料的儀表板，看過能得到什麼才願意動手。另一個沒料到的發現是，套裝方案不如拆成單一產品定價，而試用期從 7 天拉長到 14 天，才是轉換真正的槓桿。",
+      "metrics": [
+        [
+          "30%→45%",
+          "自助族群啟用率"
+        ],
+        [
+          "+25%",
+          "ARR"
+        ],
+        [
+          "65–70%",
+          "多數族群 NRR"
+        ],
+        [
+          "10%",
+          "業務接洽升級率"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "score_notes": [
+        "明確交代業務驅動成本高、速度慢，以及自然流量成長的機會，商業目標清楚。",
+        "有假設、驗證與被推翻的方案：第一版引導無效、套裝方案不改善留存、7 天試用轉換偏低。",
+        "啟用率 30%→45% 有前後對照，另有 ARR +25% 與 NRR 65% 到 70%，只是後兩者缺基期。",
+        "作者為 Keyhole 資深產品經理，本人親撰並參與。",
+        "提煉出示範資料先行、逐步解鎖功能、定價實驗分辨轉換與留存等可複用原則。"
+      ]
+    },
     {
       "title": "Ocado 個人化實驗：把第五單當忠誠門檻，訂閱報名 +13.5%、多件優惠加購 +55%",
       "original_title": "Ocado: How to foster loyalty at each stage of the customer journey",
@@ -14681,6 +14740,20 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Convert 案例・Tangiblee",
+      "url": "https://www.convert.com/case-studies/tangiblee/",
+      "source": "Convert 案例・Tangiblee",
+      "tier": 0,
+      "scores": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "reason": "廠商產品宣傳稿，全文無實驗設計與成果數字（量化成果 0、決策過程 0）；floor: decision_process=0 < 1; floor: quantified_outcome=0 < 1; floor: transferability=0 < 1; min_total: 2 < 6"
+    },
     {
       "title": "Purp Social 用 Mixpanel 追蹤使用者行為，付費轉換 +47%",
       "url": "https://mixpanel.com/customers/how-purp-social-increased-paid-user-conversions-with-mixpanel",
