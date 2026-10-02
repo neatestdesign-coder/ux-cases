@@ -1,10 +1,62 @@
 {
-  "updated": "2026-09-30",
+  "updated": "2026-10-02",
   "run": {
-    "scanned": 42,
-    "candidates": 2
+    "scanned": 46,
+    "candidates": 3
   },
   "cases": [
+    {
+      "title": "印度傳統服飾電商：客製選項價格即時更新，加上獨特價值主張，轉換率 +34%",
+      "original_title": "Case Study - Adding clarity to product pages and reducing visitor anxiety increases conversions by 34%",
+      "url": "https://www.invespcro.com/blog/case-study-adding-clarity-to-product-pages-and-reducing-visitor-anxiety-increases-conversions-by-34/",
+      "source": "Invesp 案例・印度服飾電商",
+      "tier": 2,
+      "date": "2016",
+      "author": "Khalid Saleh（Invesp 共同創辦人）",
+      "cats": [
+        "更多案例"
+      ],
+      "industry": "時尚",
+      "f_industry": [
+        "時尚"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "結帳"
+      ],
+      "why": "這家 1995 年成立、超過半數客戶在北美的印度傳統服飾電商，商品頁提供多種客製選項，但選了選項價格卻不會跟著更新。分析發現超過 60% 的訪客會走到商品頁，代表信任感不是問題，Invesp 因此把焦點放在商品頁的清晰度與焦慮感上。",
+      "how": "客戶因為競爭對手都不更新價格，擔心價格一跳會讓商品看起來比較貴而流失訂單，起初相當猶豫。團隊提出假設：降低客製與尺寸的不確定感，並讓客製價格如實反映，轉換率會上升。A/B 測試對照原版與兩個挑戰版：兩版都加上強調客製裁縫的標章、補充客製說明文案、移除干擾主要目標的社群分享圖示，差別只在版本 1 會隨選項更新價格，版本 2 維持價格不動。",
+      "result": "價格會隨選項即時更新的版本 1 明顯勝出，轉換率提升 34%；價格不動的版本 2 沒有勝出，顯示贏的關鍵是定價透明，而非標章或文案。",
+      "caveat": "本案例由 CRO 代理商 Invesp 創辦人自述，單一來源、可能偏正面選樣、未經第三方驗證；34% 為相對提升，未揭露基準轉換率、樣本數、測試期間與統計顯著性，且文章發表於 2016 年。firsthand 依 CRO 廠商案例規則封頂 1 分。",
+      "takeaway": "業界慣例不等於對的做法：當全行都不揭露價格變動，透明反而可能是差異化。測試時用兩個挑戰版只差一個變數（價格是否更新），才能分辨真正的因果來源，也能說服猶豫的客戶放手驗證。",
+      "blurb": "客戶怕價格跳動會嚇跑人，競爭對手也全都不更新價格，團隊仍堅持測試這個「業界默契」。設計上做了一個巧妙的對照：兩個挑戰版共用標章、文案與移除分享圖示，只差價格會不會隨客製選項即時更新，結果只有更新價格的那版贏，證明買家要的是透明，不是更多裝飾。",
+      "metrics": [
+        [
+          "+34%",
+          "商品頁轉換率提升"
+        ],
+        [
+          "60%+",
+          "訪客進入商品頁"
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "有交代客製選項價格不更新的痛點與競爭考量，但沒有營收或流失率等具體商業數字，給 1 分。",
+        "有假設、兩個挑戰版對照與客戶猶豫，但過程線性、未提到失敗迭代，給 1 分。",
+        "只有 34% 相對提升，沒有基準轉換率或絕對數字，給 1 分。",
+        "由 Invesp 創辦人自述的廠商案例，依規則 firsthand 封頂 1 分。",
+        "「競品都不做的透明化值得測，並用單變數對照拆因果」是可複用的原則，給 2 分。"
+      ]
+    },
     {
       "title": "Keyhole 轉向產品主導成長（PLG）：啟用率從 30% 拉到 45%，ARR +25%",
       "original_title": "A case study: 4 lessons from Keyhole's transition to product-led growth",
@@ -14740,6 +14792,20 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Lovable：為什麼你在碰到付費牆前就已上癮（Built for Mars）",
+      "url": "https://builtformars.com/case-studies/lovable",
+      "source": "Built for Mars 案例・Lovable",
+      "tier": 2,
+      "scores": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "reason": "全文為 BFM+ 付費牆，僅見前言；$100m ARR 與「60% 訊息在修 bug」為作者自述，無法取得全文驗證決策過程與數字出處，且屬外部觀察而非當事團隊資料。"
+    },
     {
       "title": "Convert 案例・Tangiblee",
       "url": "https://www.convert.com/case-studies/tangiblee/",
