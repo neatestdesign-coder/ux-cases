@@ -1,10 +1,62 @@
 {
-  "updated": "2026-10-04",
+  "updated": "2026-10-06",
   "run": {
-    "scanned": 32,
-    "candidates": 3
+    "scanned": 30,
+    "candidates": 5
   },
   "cases": [
+    {
+      "title": "家居零售 Home Centre：對首次手機訪客彈出 Q&A 式導覽，購買轉換 +10%",
+      "original_title": "Home Centre Converts Window Shoppers into Buyers with Tatvic's Strategy and Wingify's Experimentation Platform",
+      "url": "https://vwo.com/success-stories/home-centre/",
+      "source": "Wingify 案例・Home Centre",
+      "tier": 2,
+      "date": "2025",
+      "author": "Wingify（VWO）／執行方 Tatvic",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "到達頁",
+        "個人化"
+      ],
+      "why": "Home Centre 是印度大型家居零售商，GA 分析發現多數首次造訪的手機訪客只有一次 session，僅 26.19% 進到商品詳情頁，也幾乎不觸發加入購物車或購買，等於一大群「逛逛看」的訪客在首頁就流失。",
+      "how": "執行方 Tatvic 假設：給首次手機訪客一個個人化、Q&A 式的導覽，能更快引導到相關品類。A/B 測試的變體是只對首次手機訪客顯示的彈窗，依居家風格與需求提問後導向品類；對照組維持原本體驗。受眾切分靠 Wingify 的分眾功能，只鎖定最容易早退的低意圖族群。",
+      "result": "變體的最終購買轉換 +10%，商品頁互動也有提升（原文未給絕對數字）。後續計畫是擴大到其他訪客分群、測試不同訊息語氣、依行為修正 Q&A 邏輯。",
+      "caveat": "廠商自述：單一來源、可能偏正面選樣、未經第三方驗證；firsthand 依 CRO 廠商案例規則封頂 1 分。+10% 沒有 baseline 轉換率、樣本數、測試時長與顯著性，商品頁互動的提升也未量化；原文沒有失敗或被推翻的方案；引述來自客戶電商主管，但文章由 Wingify 撰寫並附試用導購。",
+      "takeaway": "與其對所有人調整首頁，不如先從資料找出「低意圖、單次造訪」的分群，只對他們放一個降低選擇成本的引導（問兩三題再導向品類），並用分眾讓實驗成果可歸因。",
+      "blurb": "一群只逛一次就走的新訪客，GA 顯示只有 26.19% 看到商品頁，團隊沒有改全站，而是只對首次手機訪客丟出幾個居家風格問題，把「不知從何逛起」變成被帶著選品類，這個切分受眾的做法，讓低意圖族群的轉換成了可單獨驗證的實驗。",
+      "metrics": [
+        [
+          "+10%",
+          "最終購買轉換"
+        ],
+        [
+          "26.19%",
+          "首訪者到商品頁"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "score_notes": [
+        "有明確的流失數據（僅 26.19% 到商品頁）與目標，給 2 分。",
+        "有觀察→假設→A/B 驗證，但線性呈現、無失敗迭代，給 1 分。",
+        "+10% 沒有 baseline 與樣本，只有另一指標的 26.19%，給 1 分。",
+        "廠商撰寫並附客戶引述，依 CRO 廠商規則封頂 1 分。",
+        "分眾＋引導式導覽的思路可複用，但未提煉成方法，給 1 分。"
+      ]
+    },
     {
       "title": "B2B 金融科技 Tipalti：用目標樹對齊 KPI 並以報告換取內部支持，線索轉商機率 5% → 12–24%",
       "original_title": "Helping a FinTech grow into a unicorn",
@@ -14957,6 +15009,20 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Best Choice Products：搜尋列放大置中，轉換 +30%（數字前後矛盾）",
+      "url": "https://vwo.com/success-stories/best-choice-products/",
+      "source": "Wingify 案例・Best Choice Products",
+      "tier": 2,
+      "scores": [
+        2,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "數字矛盾：標題宣稱轉換 +30%，客戶引述卻稱一週營收僅 +0.1%，無 baseline、樣本與顯著性，且為 2019 年舊稿；量化成果 0 分，依 floor 與誠實原則淘汰"
+    },
     {
       "title": "Lovable：為什麼你在碰到付費牆前就已上癮（Built for Mars）",
       "url": "https://builtformars.com/case-studies/lovable",
