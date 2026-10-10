@@ -1,10 +1,120 @@
 {
-  "updated": "2026-10-07",
+  "updated": "2026-10-10",
   "run": {
-    "scanned": 24,
+    "scanned": 30,
     "candidates": 4
   },
   "cases": [
+    {
+      "title": "Product Fruits：把導覽換成單一目標清單，試用 Day 1 留存 +20%",
+      "original_title": "Step-by-Step Guide: How We Reduced Day 1 Churn by 20%",
+      "url": "https://productfruits.com/blog/how-we-reduced-day-1-churn-by-20-percent",
+      "source": "Product Fruits 官方部落格・Day 1 留存改版",
+      "tier": 0,
+      "date": "2025",
+      "author": "Product Fruits 行銷負責人 Daniel Musialek（團隊自述，附內部訪談影片）",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "SaaS"
+      ],
+      "f_goal": [
+        "新手引導"
+      ],
+      "why": "Product Fruits 的 B2B SaaS 採產品導入、業務輔助的混合模式，免費試用是轉換漏斗核心。原本的新手引導想一次介紹全平台，但用量資料顯示，探索越多功能的使用者並沒有轉換得更好。",
+      "how": "團隊先從用量資料找 aha moment：24 小時內建立產品導覽的使用者，轉換率是其他人的 3.5 倍。於是砍掉功能巡禮，改做一份嵌入介面的清單，只帶使用者從註冊走到建立導覽。他們選清單而非互動導覽，因為清單可跨工作階段保留，且流程依賴瀏覽器擴充功能安裝，導覽容易在企業環境中中斷。團隊用自家產品在 5 小時內完成上線，並以 Day 1 留存當營收轉換的先行指標跑 A/B 測試。另外把「安裝程式碼片段」定為 PQL（產品合格潛在客戶）訊號，接進 HubSpot 讓業務即時跟進。",
+      "result": "A/B 測試顯示 Day 1 留存提升 20%，達 95% 信賴水準後全量上線，團隊表示在不增加行銷支出下擴大了可變現的使用者基數。PQL 讓業務只聯絡已跨過里程碑的名單，但文中只說管線品質與業務效率「顯著改善」，未給數字。",
+      "caveat": "廠商自述：單一來源、可能偏正面選樣、未經第三方驗證；作者為廠商行銷人員，且文末為產品導購。+20% 未給 Day 1 留存 baseline、樣本數與測試時長，不確定是相對或百分點；標題的「churn」其實是以 Day 1 留存改善推得，並非實際營收轉換；PQL 成效無量化。",
+      "takeaway": "新手引導不要展示全部功能，先用資料找出最能預測轉換的單一行動，把整段流程對準它；營收週期長時，選一個經驗證的先行指標（如 Day 1 留存）做實驗，並把同一個里程碑轉成業務可用的 PQL 訊號。",
+      "blurb": "用量資料顯示，探索越多功能的使用者並沒有轉換更高，24 小時內建立導覽的人才是。團隊於是丟掉功能巡禮，改做可跨工作階段保留的清單，並把安裝程式碼片段定為 PQL，讓業務只追已有意圖的名單。",
+      "metrics": [
+        [
+          "+20%",
+          "Day 1 留存"
+        ],
+        [
+          "3.5 倍",
+          "aha 行動者轉換率"
+        ],
+        [
+          "5 小時",
+          "清單上線耗時"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "免費試用是轉換漏斗核心，並說明混合 GTM 與 aha moment 的商業脈絡，給 2 分。",
+        "有「功能巡禮陷阱」被資料推翻、清單與導覽的取捨、先行指標選擇與 A/B 驗證，給 2 分。",
+        "有 +20% 與 3.5 倍，但缺 baseline 與樣本數，給 1 分。",
+        "廠商行銷人員自述，無第三方驗證，保守給 1 分。",
+        "提煉出「找單一 aha 行動、選先行指標、轉成 PQL」的可複用框架，給 2 分。"
+      ]
+    },
+    {
+      "title": "High Street TV：付費流量專屬落地頁取代商品頁，購買 +32.6%",
+      "original_title": "How Journey Further Used Convert Experiences to Build Trust for High Street TV",
+      "url": "https://www.convert.com/case-studies/credibility-optimization-journey-further/",
+      "source": "Convert 案例・Journey Further／High Street TV",
+      "tier": 2,
+      "date": "2020",
+      "author": "Convert 官方發布，引述 Journey Further 轉換總監 Jonny Longden",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "到達頁"
+      ],
+      "why": "High Street TV 的熱銷充氣床商品頁，付費流量跳出率高、轉換偏低。路徑分析加上使用者研究顯示，相較 Amazon、Argos 這類大平台，付費訪客對這個品牌很陌生，缺乏可信度。",
+      "how": "顧問提出假設：給付費流量一個專屬 PPC 落地頁，先講品牌與價值主張，再帶入商品沉浸式內容。測試只做一個變體、只針對付費流量，對照組是未改動的原商品頁，雙方各約 7,500 位使用者、跑 6 週，並用 Google Analytics 做事後分析。",
+      "result": "變體的完成購買比對照組多 32.62%，信賴度 98.56%。團隊原本就預期變體會贏，意外的是幅度超過 30%；事後分群分析又衍生出一批後續測試，並重啟與客戶的價值主張討論。",
+      "caveat": "廠商自述：單一來源、可能偏正面選樣、未經第三方驗證；firsthand 依 CRO 廠商案例規則封頂 1 分。未揭露對照組購買轉換率 baseline 與絕對訂單數，+32.62% 為相對值；只有單一變體，且頁面同時改了文案、版型與內容，無法拆解是哪個元素造成提升。",
+      "takeaway": "流量來源不同，信任起點就不同：陌生品牌的付費流量需要先建立可信度，再談銷售。用分群路徑分析找出落差，針對單一流量區隔做專屬落地頁，並把結果拆開分析，當作下一輪測試的來源。",
+      "blurb": "路徑分析顯示，付費訪客在商品頁大量流失，使用者研究又指出他們對這個牌子很陌生。團隊於是只替付費流量做專屬落地頁，先講品牌與價值主張再展示商品，6 週後勝出，事後拆解結果還長出一批後續測試。",
+      "metrics": [
+        [
+          "+32.6%",
+          "完成購買（相對）"
+        ],
+        [
+          "98.56%",
+          "結果信賴度"
+        ],
+        [
+          "7,500",
+          "每組測試人數"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "有路徑分析與使用者研究指出低轉換與品牌陌生，商業痛點明確，給 2 分。",
+        "有假設與單一變體測試，並提到事後拆解，但沒有被推翻的方案或失敗迭代，給 1 分。",
+        "有 +32.62%、信賴度與樣本數，但缺對照組 baseline 與絕對值，給 1 分。",
+        "廠商發布並引述顧問公司轉換總監，依規則封頂 1 分。",
+        "提煉出「陌生流量先建立可信度、依流量區隔做落地頁」的可複用做法，給 2 分。"
+      ]
+    },
     {
       "tier": 2,
       "cats": [
@@ -15170,6 +15280,34 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Super.com：以 Amplitude Experiment 提升實驗速度，留存 +90%",
+      "url": "https://amplitude.com/blog/super-dot-com-customer-retention",
+      "source": "Amplitude 部落格・Super.com",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "留存 +90% 語意不明（標題寫 month 1，無 baseline、指標定義與實驗歸因）；文章重心為工具導購與實驗文化，不收（gate: min_total: 5.5 < 6）"
+    },
+    {
+      "title": "Worship Digital：改用 Convert 後測試速度與支援改善（11.6% uplift）",
+      "url": "https://www.convert.com/case-studies/convert-case-study-worship/",
+      "source": "Convert 案例・Worship Digital",
+      "tier": 2,
+      "scores": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "reason": "工具導購型案例：主軸是換用 A/B 測試平台的客服與價格，唯一數字 +11.6% 無 baseline、無過程；決策過程 0、可遷移性 0（gate 自動淘汰）（gate: floor: decision_process=0 < 1; floor: transferability=0 < 1; min_total: 3.5 < 6）"
+    },
     {
       "title": "160 Driving Academy：首頁卡車駕駛庫存照換成真實學員照，轉換 +161%",
       "url": "https://vwo.com/success-stories/160-driving-academy/",
