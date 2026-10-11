@@ -1,10 +1,125 @@
 {
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "run": {
-    "scanned": 30,
-    "candidates": 4
+    "scanned": 20,
+    "candidates": 2
   },
   "cases": [
+    {
+      "title": "Lotte Duty Free：暢銷榜商品卡直接加購物車，加購率 +45.7%",
+      "original_title": "How Lotte Duty Free Encouraged Multi-Item Purchases and Increased Add-to-Cart Conversions",
+      "url": "https://wingify.com/success-stories/lotte-duty-free-golden-planet-add-to-cart/",
+      "source": "Wingify 案例・樂天免稅店加購",
+      "tier": 2,
+      "date": "2026",
+      "author": "Wingify／顧問夥伴 Golden Planet、Lotte Duty Free UX 經理引述",
+      "cats": [
+        "國際品牌",
+        "更多案例"
+      ],
+      "industry": "旅遊",
+      "f_industry": [
+        "旅遊"
+      ],
+      "f_product": [
+        "電商",
+        "行動App"
+      ],
+      "f_goal": [
+        "結帳"
+      ],
+      "why": "免稅購物的使用者常一次比較、加購多件商品，而行動端暢銷榜是流量最高的區塊。原本要進商品頁才能加入購物車，團隊想縮短這段漏斗並拉高加購率。",
+      "how": "觀察到使用者得反覆按返回鍵才能加一件商品，不少人進商品頁後就沒回到榜單。團隊假設在榜單商品卡上直接放「加入購物車」與「到貨通知」圖示，能減少來回並鼓勵多件加購。Lotte 內部開發獨立版本頁面，顧問夥伴 Golden Planet 規劃實驗，用 Split URL 測試以 50:50 分流。",
+      "result": "約兩週、17,440 名行動端使用者的測試中，加購率 +45.70%，加入購物車的商品總數達 1,403 件，支持多件加購的假設。頁面未提供 baseline 加購率，也未回報對最終訂單或營收的影響。",
+      "caveat": "廠商自述：單一來源、可能偏正面選樣、未經第三方驗證；原文為 Wingify 行銷頁，文末導購；缺 baseline 與營收成效，只驗證加購層級；「多件加購」僅以加入件數佐證，未見對照組同指標。",
+      "takeaway": "列表頁若能直接完成主要動作，就別強迫使用者進詳情頁再回來。驗證時先看加購層級，再追蹤到訂單與客單，避免只停在中間指標。",
+      "blurb": "問題出在暢銷榜的動線：想加一件商品得進詳情頁，再反覆按返回，不少人一進去就沒回來。團隊把加購與到貨通知圖示放上商品卡，用 Split URL 做 50:50 分流，兩週內 1.7 萬名行動端使用者的加購率 +45.7%。",
+      "metrics": [
+        [
+          "+45.7%",
+          "行動端加購率"
+        ],
+        [
+          "17,440",
+          "測試行動端使用者"
+        ],
+        [
+          "1,403 件",
+          "加入購物車商品數"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "score_notes": [
+        "講清楚高流量暢銷榜與多件購物情境，給 2 分。",
+        "有行為觀察到假設與 Split URL 驗證，但線性無失敗迭代，給 1 分。",
+        "有加購率與樣本數，但缺 baseline 與營收，給 1 分。",
+        "廠商與顧問夥伴案例頁，客戶僅引述，封頂 1 分。",
+        "列表直接加購的原則可複用但未提煉成框架，給 1 分。"
+      ]
+    },
+    {
+      "title": "NRMA Parks and Resorts：總價改顯示每晚均價，加入購物車 +68%、購買 +18%",
+      "original_title": "NRMA Parks and Resorts Used Wingify to Test Price Framing and Improve Booking Conversions",
+      "url": "https://wingify.com/success-stories/nrma-parks-and-resorts-booking-conversions/",
+      "source": "Wingify 案例・NRMA 價格框架",
+      "tier": 2,
+      "date": "2026",
+      "author": "Wingify／NRMA Parks and Resorts 產品負責人 Ben Hoefel 引述",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "旅遊",
+      "f_industry": [
+        "旅遊"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "定價"
+      ],
+      "why": "NRMA Parks and Resorts 在澳洲經營 40 多座假期營地，訂房漏斗上每一點摩擦都會被放大。CRO 團隊想找出決策節點的猶豫來自哪裡。",
+      "how": "團隊先做競品分析，發現多家旅遊與住宿品牌在決策階段顯示的是平均每晚價格，而非訂單總額。他們假設問題不在價格本身，而在價格怎麼被處理，於是用 Wingify 做 A/B 測試：對照組在關鍵節點顯示總價，實驗組把同一筆費用改寫成每晚均價，方案內容與費用完全不變。",
+      "result": "實驗組勝出：加入購物車 +68%（信賴水準 100%），進入多步驟結帳第一步 +19%（96%），最終購買 +18%（98%）。頁面只給相對提升幅度，未提供 baseline、樣本數與測試天數。",
+      "caveat": "廠商自述：單一來源、可能偏正面選樣、未經第三方驗證；原文為 Wingify 行銷頁，文末附試用導購；無 baseline 與樣本數，無法判斷提升的絕對規模；單次測試，未見後續重複驗證。",
+      "takeaway": "價格揭露的單位也是設計變數：在決策節點先給較小、較好處理的數字，再於後段揭露總額。測試時同時追蹤漏斗各層，能看出效應是否一路傳到購買。",
+      "blurb": "團隊不是先改價或改方案，而是先看同業怎麼標價，發現多家都在決策點放每晚均價。於是用同一筆費用、只換呈現單位去測，結果加入購物車先跳了 68%，而且一路傳導到結帳與購買，代表猶豫來自數字的處理負擔。",
+      "metrics": [
+        [
+          "+68%",
+          "加入購物車"
+        ],
+        [
+          "+19%",
+          "進入結帳第一步"
+        ],
+        [
+          "+18%",
+          "最終購買"
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "有訂房漏斗摩擦的目標，但未量化現況痛點，給 1 分。",
+        "有競品觀察到假設到 A/B 的線性流程，無失敗或被推翻的方案，給 1 分。",
+        "有三層漏斗提升與信賴水準，但無 baseline 與樣本數，給 1 分。",
+        "廠商案例頁，僅引述客戶產品負責人，無第三方驗證，封頂 1 分。",
+        "價格呈現單位與漏斗逐層追蹤的做法可直接套用，給 2 分。"
+      ]
+    },
     {
       "title": "Product Fruits：把導覽換成單一目標清單，試用 Day 1 留存 +20%",
       "original_title": "Step-by-Step Guide: How We Reduced Day 1 Churn by 20%",
