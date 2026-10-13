@@ -1,10 +1,66 @@
 {
-  "updated": "2026-10-11",
+  "updated": "2026-10-13",
   "run": {
     "scanned": 20,
-    "candidates": 2
+    "candidates": 5
   },
   "cases": [
+    {
+      "title": "GRENE：手機列表縮小商品卡、首頁賣點加色，三個測試累積營收 +59.9%",
+      "original_title": "Continuous A/B Testing Coupled with Marketing Efforts Achieve a tremendous Revenue Uplift",
+      "url": "https://wingify.com/success-stories/grene/",
+      "source": "Wingify 案例・GRENE",
+      "tier": 2,
+      "date": "2019",
+      "author": "Wingify／顧問服務團隊與 GRENE 合作",
+      "cats": [
+        "國際品牌",
+        "更多案例"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "站內搜尋",
+        "結帳"
+      ],
+      "why": "波蘭農業用品電商 GRENE 長期用 Wingify 做 A/B 測試。團隊針對三個漏斗環節各設目標：手機列表頁更好找商品、首頁賣點更醒目、迷你購物車更快導向購物車頁。",
+      "how": "手機列表頁原本商品卡佔太多版面，使用者得捲很長才找得到東西，團隊縮小每張卡的資訊量，並把按鈕換成購物車圖示。首頁四個賣點原本顏色平淡，改成綠色圖示並拆成「關鍵字＋說明」兩行。迷你購物車則把主要按鈕移到頂端、加上小計與較大的結帳按鈕，因為觀察到使用者誤把「免運」標示當成按鈕。三個測試各跑 15 到 46 天。",
+      "result": "手機列表頁轉換率從 36.81% 升到 43.03%，商品方塊點擊 +15.5%；首頁賣點互動率從 0.26% 升到 2.28%，電商轉換率從 2.64% 升到 3.18%；迷你購物車測試中前往購物車頁的比率從 2.91% 升到 3.05%、購買數量近 2 倍。頁面另列出整體營收 +59.9%、交易數 +81%，但這是持續測試加行銷投入的整體成果，並非三個測試的加總。",
+      "caveat": "廠商自述：單一來源、可能偏正面選樣、未經第三方驗證，原文為 Wingify 行銷頁，文末導購；測試時間為 2019 年，案例偏舊。標題的營收 +59.9% 來自「持續測試搭配行銷」頁面自述區間又寫「2017-2018」與「2018-2019」不一致，無法歸因到單一測試；三個測試的轉換率數字有 baseline，較可信，營收數字僅作脈絡參考。",
+      "takeaway": "每個測試只鎖一個漏斗環節、先寫下假設再看指標，比追一個總營收數字更能學到東西。整體營收提升若混了行銷變因，引用時要拆開來看。",
+      "blurb": "波蘭農業用品電商把手機列表頁的商品卡縮小，只為了少捲幾下就找到東西，再把首頁四個賣點從灰白換成綠色圖示；賣點互動率從 0.26% 拉到 2.28%。迷你購物車則因為使用者把「免運」誤認成按鈕，才把主要按鈕移到最上方。",
+      "metrics": [
+        [
+          "43.03%",
+          "手機列表轉換率"
+        ],
+        [
+          "2.28%",
+          "賣點互動率"
+        ],
+        [
+          "+59.9%",
+          "整體營收(含行銷)"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "三個漏斗環節各有明確目標與使用者痛點，給 2 分。",
+        "有假設到測試的流程，但全為成功案例、無被推翻的方案，給 1 分。",
+        "三個測試皆有 baseline 與對照數字，給 2 分。",
+        "廠商與顧問團隊撰寫、客戶未具名發言，封頂 1 分。",
+        "每次只改一個環節的做法可複用，但未提煉成框架，給 1 分。"
+      ]
+    },
     {
       "title": "Lotte Duty Free：暢銷榜商品卡直接加購物車，加購率 +45.7%",
       "original_title": "How Lotte Duty Free Encouraged Multi-Item Purchases and Increased Add-to-Cart Conversions",
@@ -142,7 +198,7 @@
       ],
       "why": "Product Fruits 的 B2B SaaS 採產品導入、業務輔助的混合模式，免費試用是轉換漏斗核心。原本的新手引導想一次介紹全平台，但用量資料顯示，探索越多功能的使用者並沒有轉換得更好。",
       "how": "團隊先從用量資料找 aha moment：24 小時內建立產品導覽的使用者，轉換率是其他人的 3.5 倍。於是砍掉功能巡禮，改做一份嵌入介面的清單，只帶使用者從註冊走到建立導覽。他們選清單而非互動導覽，因為清單可跨工作階段保留，且流程依賴瀏覽器擴充功能安裝，導覽容易在企業環境中中斷。團隊用自家產品在 5 小時內完成上線，並以 Day 1 留存當營收轉換的先行指標跑 A/B 測試。另外把「安裝程式碼片段」定為 PQL（產品合格潛在客戶）訊號，接進 HubSpot 讓業務即時跟進。",
-      "result": "A/B 測試顯示 Day 1 留存提升 20%，達 95% 信賴水準後全量上線，團隊表示在不增加行銷支出下擴大了可變現的使用者基數。PQL 讓業務只聯絡已跨過里程碑的名單，但文中只說管線品質與業務效率「顯著改善」，未給數字。",
+      "result": "A/B 測試顯示 Day 1 留存提升 20%，達 95% 信賴水準後全量上線，團隊表示在不增加行銷支出下擴大了可變現的使用者基數。PQL 讓業務只聯絡已跨過里程碑的名單，但文中只說管線品質與業務效率「顯著改善」未給數字。",
       "caveat": "廠商自述：單一來源、可能偏正面選樣、未經第三方驗證；作者為廠商行銷人員，且文末為產品導購。+20% 未給 Day 1 留存 baseline、樣本數與測試時長，不確定是相對或百分點；標題的「churn」其實是以 Day 1 留存改善推得，並非實際營收轉換；PQL 成效無量化。",
       "takeaway": "新手引導不要展示全部功能，先用資料找出最能預測轉換的單一行動，把整段流程對準它；營收週期長時，選一個經驗證的先行指標（如 Day 1 留存）做實驗，並把同一個里程碑轉成業務可用的 PQL 訊號。",
       "blurb": "用量資料顯示，探索越多功能的使用者並沒有轉換更高，24 小時內建立導覽的人才是。團隊於是丟掉功能巡禮，改做可跨工作階段保留的清單，並把安裝程式碼片段定為 PQL，讓業務只追已有意圖的名單。",
@@ -15395,6 +15451,62 @@
     }
   ],
   "rejected": [
+    {
+      "title": "King Living：商品先於內容、CTA 去灰色，營收 +15%",
+      "url": "https://wingify.com/success-stories/kingliving-ab-testing/",
+      "source": "Wingify 案例",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "只有相對百分比、無 baseline 與樣本數，兩個測試成果混述；廠商自述（gate: min_total: 5.5 < 6）"
+    },
+    {
+      "title": "My Sanskritam：手機選單與列表頁三個測試，營收 +115%",
+      "url": "https://wingify.com/success-stories/convertpolo-my-sanskritam-revenue/",
+      "source": "Wingify 案例",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "各測試僅有相對百分比、無 baseline；總營收 +115% 與各測試數字無法對應，客戶說法為通用引言（gate: min_total: 5.5 < 6）"
+    },
+    {
+      "title": "AnotherSole：搜尋、商品頁、購物車三測試，營收 +185%",
+      "url": "https://wingify.com/success-stories/anothersole-convertpolo-revenue/",
+      "source": "Wingify 案例",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "僅相對百分比且無 baseline；總營收 +185% 與 54.8%、131% 無法對應；廠商自述（gate: min_total: 5.5 < 6）"
+    },
+    {
+      "title": "Built for Mars：別抄 Ticketmaster",
+      "url": "https://builtformars.com/case-studies/ticketmaster",
+      "source": "Built for Mars 案例",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "全文付費牆、僅見摘要，且屬 UX 評論而無量化成果（量化成果 0，自動淘汰）"
+    },
     {
       "title": "Super.com：以 Amplitude Experiment 提升實驗速度，留存 +90%",
       "url": "https://amplitude.com/blog/super-dot-com-customer-retention",
