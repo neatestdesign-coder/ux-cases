@@ -1,10 +1,122 @@
 {
-  "updated": "2026-10-13",
+  "updated": "2026-10-14",
   "run": {
-    "scanned": 20,
-    "candidates": 5
+    "scanned": 42,
+    "candidates": 7
   },
   "cases": [
+    {
+      "title": "Green Building Supply：首頁改以「合法不等於安全」開場加分類磚，交易數 +25%",
+      "original_title": "Win Report: How a homepage redesign won by 25%",
+      "url": "https://conversion-rate-experts.com/green-building-supply-homepage-win-report/",
+      "source": "CRE 案例・Green Building Supply",
+      "tier": 2,
+      "date": "2026-06",
+      "author": "Conversion Rate Experts（顧問團隊）",
+      "cats": [
+        "顧問／商業視角",
+        "更多案例"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "到達頁"
+      ],
+      "why": "Green Building Supply 賣無毒建材，許多客人有多重化學物質敏感，家中已有東西讓他們生病才來找安全的建材。安全與親自測試本該是強項，但受測者把它的網站與兩家競品比較時，「願意繼續探索」排最後。",
+      "how": "研究整理出三個反對理由：首頁雜亂過時、導覽複雜、缺乏清楚的產品分類。變體針對這三點同時修改：新標題「多數建材都合法，但那不等於安全」呼應客人心中的疑慮；文案強調 35 年親自測試每項產品；按鈕改成「選購無毒地板」與「我們如何測試」；英雄區下方放四個賣點信任列；再用地板種類、油漆、廚房、居家用品的視覺磚做分類導覽。",
+      "result": "A/B 測試期間，看到變體的訪客交易數比對照組多 25%。原文未提供基準轉換率、樣本數或顯著性。",
+      "caveat": "顧問業者自述：單一來源、可能偏正面選樣、未經第三方驗證，文末為導購。只有相對 +25%，無 baseline、樣本數與顯著性；變體一次改了標題、文案、按鈕、信任列與分類磚，無法分辨是哪一項帶來提升。",
+      "takeaway": "先用受測者的原話找出「進站就走」的理由，再讓首頁標題直接接住客人心裡的那句話，並用分類磚給出下一步，比單純美化版面更能留住人。",
+      "blurb": "賣無毒建材的店，客人其實是被家裡的有毒家具逼出來找答案的。研究發現這群人看到首頁雜亂就走，連「親自測試」的賣點都來不及看到，於是團隊把標題改成一句「合法不等於安全」直接接住他們心裡的疑問，再用分類磚省掉找路的力氣。",
+      "metrics": [
+        [
+          "+25%",
+          "交易數（變體對照組）"
+        ],
+        [
+          "35 年",
+          "文案強調的親自測試年資"
+        ],
+        [
+          "最後一名",
+          "改版前的「願意繼續探索」排名"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "score_notes": [
+        "客群痛點與研究發現的流失原因清楚，給 2 分。",
+        "由研究反對理由推導變體，但只有單次測試、無失敗方案，給 1 分。",
+        "只有相對 +25%，無 baseline 與樣本數，給 1 分。",
+        "顧問團隊自述，封頂 1 分。",
+        "有啟發但未提煉成框架，給 1 分。"
+      ]
+    },
+    {
+      "title": "RealEstateU：改版後銷售一夜掉 30%，研究抓出「太吵」的信任問題，轉換率回到改版前之上",
+      "original_title": "Win Report: How research rescued a website rebrand",
+      "url": "https://conversion-rate-experts.com/realestateu-redesign-win-report/",
+      "source": "CRE 案例・RealEstateU",
+      "tier": 2,
+      "date": "2023-12",
+      "author": "Conversion Rate Experts（顧問團隊）",
+      "cats": [
+        "顧問／商業視角",
+        "更多案例"
+      ],
+      "industry": "教育",
+      "f_industry": [
+        "教育"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "第一印象"
+      ],
+      "why": "美國房地產執照線上課程 RealEstateU 完成長期規劃的品牌改版，新站用大膽色彩與較強勢的語氣，銷售卻在上線後一夜下滑 30%。團隊不想整個推翻幾個月的成果，需要快速查出問題在哪。",
+      "how": "顧問請目標客群把新站與兩家最接近的競品並排評分，發現信任感最低，受測者形容「一切都太吵」「像是詐騙」連「願意繼續探索」也墊底。他們沒有退回舊版，而是用快速原型加可用性測試重做：調低色彩與文案的音量、放大 BBB A+ 評等與 22.5 萬名學員的評價、並解釋低價的原因，因為部分使用者把低價當成品質差的訊號。上線後再做一次同樣的對照研究。",
+      "result": "改版後銷售一夜下滑 30%；新設計上線後，轉換率超過改版前的原始水準，受測者的「願意繼續探索」指標成長 140%，信任評分在所有項目上勝過兩家競品。原文未公布轉換率的絕對數字。",
+      "caveat": "顧問業者自述：單一來源、可能偏正面選樣、未經第三方驗證，文末為導購。轉換率只說「超過原本水準」沒有 baseline 數字；140% 是受測者主觀評分的成長，不是營收。客戶未具名發言。",
+      "takeaway": "改版後營收下滑時，先用「與競品並排評分」量出信任落差，再決定要改什麼，比直接退版或憑美感辯論有效；低價也要主動解釋，否則會被讀成低品質。",
+      "blurb": "一句「第一印象像是詐騙」讓團隊看懂：新站的霓虹色與強勢語氣正在傷害信任。他們沒有退版，而是請受測者先評競品、再評新版，用同一把尺量出信任差距，並刻意去解釋「為什麼這麼便宜」因為低價本身就被當成品質差的訊號。",
+      "metrics": [
+        [
+          "-30%",
+          "改版後銷售一夜下滑"
+        ],
+        [
+          "+140%",
+          "願意繼續探索（受測者評分）"
+        ],
+        [
+          "22.5 萬",
+          "新設計強調的學員數"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "銷售一夜掉 30% 且客戶不願整個推翻改版，目標與壓力清楚，給 2 分。",
+        "先量化信任落差、否決退版、以原型加測試迭代，再做後測，有假設到驗證循環，給 2 分。",
+        "有銷售 -30% 與探索意願 +140%，但轉換率回升只說超過原水準、無絕對數字，給 1 分。",
+        "顧問團隊自述，客戶未具名發言，封頂 1 分。",
+        "「競品並排評分量信任、低價要解釋」可帶去其他改版案，給 2 分。"
+      ]
+    },
     {
       "title": "GRENE：手機列表縮小商品卡、首頁賣點加色，三個測試累積營收 +59.9%",
       "original_title": "Continuous A/B Testing Coupled with Marketing Efforts Achieve a tremendous Revenue Uplift",
@@ -15451,6 +15563,34 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Fawry × Mixpanel：卡片新增彈窗完成率 +8.92%、30 天留存 +23.96%",
+      "url": "https://mixpanel.com/customers/how-fawry-increases-conversion-and-boosts-retention-with-deeper-insights",
+      "source": "Mixpanel 案例・Fawry",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "廠商與代理商合寫的行銷頁，百分比無 baseline 且不清是絕對或相對；6.01% 與他案數字重合，語意存疑，寧可跳過（gate: min_total: 5.5 < 6）"
+    },
+    {
+      "title": "DocuSign × Mixpanel：付費牆、首次引導與帳號建立，三項提升 5% 到 15%",
+      "url": "https://mixpanel.com/customers/docusign-accelerates-growth/",
+      "source": "Mixpanel 案例・DocuSign",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "廠商行銷頁，三項成果皆只有相對百分比、無 baseline 與樣本數，目標與過程描述含糊（約 2020 年舊案）（gate: min_total: 5.5 < 6）"
+    },
     {
       "title": "King Living：商品先於內容、CTA 去灰色，營收 +15%",
       "url": "https://wingify.com/success-stories/kingliving-ab-testing/",
