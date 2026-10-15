@@ -1,10 +1,65 @@
 {
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "run": {
-    "scanned": 42,
+    "scanned": 34,
     "candidates": 7
   },
   "cases": [
+    {
+      "title": "Voices.com 轉換率從不到 5% 衝到 22%：先挖出客人不買的理由，再做 11 次實驗",
+      "original_title": "How we increased the conversion rate of Voices.com by over 400%",
+      "url": "https://conversion-rate-experts.com/voices-case-study/",
+      "source": "CRE 案例・Voices.com",
+      "tier": 2,
+      "date": "2010-01",
+      "author": "Conversion Rate Experts（顧問團隊）",
+      "cats": [
+        "顧問／商業視角",
+        "經典案例"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "雙邊平台"
+      ],
+      "f_goal": [
+        "到達頁"
+      ],
+      "why": "Voices.com 是配音人才的線上媒合平台，2009 年初請 CRE 協助。網站同時面對兩種訪客：配音員與找配音的企業，卻用同一套訊息對待，許多訪客到站後沒有訂閱就離開。",
+      "how": "團隊先做「偵探式」前期研究：分析流量漏斗找出最大缺口、分析 510 份未訂閱訪客問卷、訪談執行長盤點「說服資產」、研究競品定位。釐清客人的主要疑慮後，才建立測試頁，共跑 11 次實驗、橫跨漏斗 5 個階段。幾個可複用的做法：把知名客戶等「炫耀資本」放上首頁當佐證；依訪客類型把配音員與企業導向不同漏斗；加入示範影片讓人看懂要註冊什麼；轉換率提升後再回頭找新機會，加做 email 行銷拉高客戶終身價值。",
+      "result": "轉換率從不到 5% 升到 22%，提升超過 400%。原文未揭露各實驗的個別貢獻、樣本數與測試期間。",
+      "caveat": "顧問業者自述：單一來源、可能偏正面選樣、未經第三方驗證。文章發表於 2010 年，是行銷導向的案例；11 次實驗只報喜、未列失敗的測試，也沒有各項改動的個別成效，不能確定哪一項貢獻最大。",
+      "takeaway": "改版前先問「客人為什麼不買」：用問卷、訪談與競品研究找出疑慮，再用佐證、訪客分流與示範影片逐一化解，比憑直覺改版更有把握。",
+      "blurb": "一個配音平台把兩種完全不同的訪客塞進同一個頁面，所以多數人看完就走。顧問先讀了 510 份「為什麼沒訂閱」的問卷，再把訪客分流、補上名人客戶佐證和示範影片，轉換率從不到 5% 跑到 22%。",
+      "metrics": [
+        [
+          "<5% → 22%",
+          "轉換率（改版前後）"
+        ],
+        [
+          "510 份",
+          "分析的未訂閱訪客問卷"
+        ],
+        [
+          "11 次",
+          "橫跨漏斗 5 階段的實驗"
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "有明確的轉換目標與雙邊訪客的背景，但商業壓力描述較少，給 1 分。",
+        "有研究到假設到實驗的流程，但只報成功項目、無失敗方案，給 1 分。",
+        "有 baseline（<5%）與成果（22%），給 2 分。",
+        "顧問團隊自述，封頂 1 分。",
+        "分流、佐證、先研究客人疑慮可直接複用，給 2 分。"
+      ]
+    },
     {
       "title": "Green Building Supply：首頁改以「合法不等於安全」開場加分類磚，交易數 +25%",
       "original_title": "Win Report: How a homepage redesign won by 25%",
@@ -15563,6 +15618,20 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Mobbin × CRE：註冊彈窗改導向註冊頁，註冊數 +12%",
+      "url": "https://conversion-rate-experts.com/mobbin-simplified-signup-win-report/",
+      "source": "CRE 案例・Mobbin",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "顧問自述的短篇 win report，僅相對 +12%，無 baseline、樣本數與顯著性，也無失敗方案（gate: min_total: 5.5 < 6）"
+    },
     {
       "title": "Fawry × Mixpanel：卡片新增彈窗完成率 +8.92%、30 天留存 +23.96%",
       "url": "https://mixpanel.com/customers/how-fawry-increases-conversion-and-boosts-retention-with-deeper-insights",
