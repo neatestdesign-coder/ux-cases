@@ -1,10 +1,122 @@
 {
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "run": {
-    "scanned": 34,
-    "candidates": 7
+    "scanned": 21,
+    "candidates": 5
   },
   "cases": [
+    {
+      "title": "Swiss Outpost 瑞士刀電商:分類頁大改版轉換率 +273%,九個月營收 +50%",
+      "original_title": "Swiss Outpost - Invesp",
+      "url": "https://www.invespcro.com/case-studies/swiss-outpost/",
+      "source": "Invesp 案例・Swiss Outpost",
+      "tier": 2,
+      "date": "",
+      "author": "Invesp 撰寫,具名引述 Swiss Outpost CEO Peter W. Adler",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "行銷導流"
+      ],
+      "why": "Swiss Outpost 賣瑞士刀與名錶,客源全靠付費廣告,獲客成本偏高,轉換率多年來上下震盪卻說不出原因。行銷與技術團隊從沒做過實驗,過去多半是模仿大型電商的功能。",
+      "how": "Invesp 派出策略、CRO、UX 設計與前端四人小組,先做專家審查找出站內與廣告導流的轉換問題,再用優先順序框架依「對營收影響大、工程成本低」排序,每月跑 2 到 4 個實驗,每週與客戶開會。第一個測試是分類頁,接著整個重做,讓訪客更快進到商品頁;之後再改商品頁,補上功能與情感利益。開發團隊起初不熟怎麼部署測試程式碼,磨合一陣才順。",
+      "result": "分類頁轉換率 +273%、商品頁轉換率 +33%、站上銷售額九個月內成長 50%(顧問原先預期要一年)。原文未揭露任何一項的 baseline 與樣本數。",
+      "caveat": "Invesp 為 CRO 顧問公司,此為其自家案例頁:單一來源、可能偏正面選樣、未經第三方驗證。三項數字(+273%、+33%、+50%)皆為相對值,缺少 baseline、測試期間與顯著性;+50% 出自 CEO 引言,且無法分辨是測試貢獻還是其他因素。案例未標註年份。",
+      "takeaway": "沒做過實驗的團隊,可先用專家審查找問題,再依影響與成本排優先順序,固定每月排 2 到 4 個測試,從流量最大的分類頁下手。",
+      "blurb": "這家電商的轉換率多年來忽高忽低,團隊卻從沒搞清楚為什麼,過去只是照抄大站。顧問先替問題排出「影響大、做起來輕」的順序,每月固定 2 到 4 個實驗,連最初連測試程式碼都貼不上去的工程師,也在磨合後撐起了這個節奏。",
+      "metrics": [
+        [
+          "+273%",
+          "分類頁轉換率"
+        ],
+        [
+          "+33%",
+          "商品頁轉換率"
+        ],
+        [
+          "+50%",
+          "九個月內銷售額"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "score_notes": [
+        "獲客成本高、轉換率忽高忽低且從未做過實驗,商業痛點明確,給 2 分。",
+        "有專家審查、優先順序與每月實驗節奏,但敘述偏線性,給 1 分。",
+        "皆為相對百分比,無 baseline,給 1 分。",
+        "顧問公司自述並引述 CEO,封頂 1 分。",
+        "優先順序與固定實驗節奏可參考,但未提煉成框架,給 1 分。"
+      ]
+    },
+    {
+      "title": "Ocado 首頁砍掉價格與美食大圖，只留訂配送時段，預約數 +6.3%",
+      "original_title": "How Ocado Retail increased delivery slot bookings by +6.3% with Contentsquare",
+      "url": "https://contentsquare.com/customers/ocado/",
+      "source": "Contentsquare 案例・Ocado",
+      "tier": 2,
+      "date": "2024-05",
+      "author": "Contentsquare 撰寫,具名引述 Ocado Retail 前電商暨數位主管 Claudene Scott",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "其他",
+      "f_industry": [
+        "其他"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "到達頁"
+      ],
+      "why": "英國線上超市 Ocado Retail 疫情期間導入 Contentsquare,卻只在出事時才臨時打開。電商與營運團隊想建立「先測再改」的節奏,同時搞清楚新訪客在首頁為什麼找不到下一步。",
+      "how": "團隊辦了「Contentsquare Month」,每週出一道題,用熱圖與旅程分析改一個頁面。聖誕檔期頁的熱圖顯示,桌機 0.76%、手機 1.24% 的人在點一張根本不能點的主視覺,手機用戶因此受挫離開;A/B 測試移除主視覺後訂單轉換沒變,次要指標還變好,於是改放較小的主視覺並拿掉分類磚。首頁則因配送時段按鈕互動低、輪播冷清、有人狂點不可點的元素、跳出率高,加上顧客之聲佐證,改成選項更少的版本,把「預約配送時段」放在最優先。",
+      "result": "首頁預約配送時段 +6.3%、註冊 +6.1%;聖誕頁入口從活動頁導入的比例由 9.3% 升到 11%;Contentsquare 月使用者 8 個月內增加 60%。原文未揭露各測試的樣本數、期間與信賴水準。",
+      "caveat": "Contentsquare 官方發布的客戶案例,屬廠商自述:單一來源、可能偏正面選樣、未經第三方驗證。首頁改版的 +6.3% 與 +6.1% 沒有 baseline 絕對值,也沒說明是否為 A/B 測試結果;文中「+18.3」缺單位,未採用。",
+      "takeaway": "改版前先用熱圖找「被誤點的元素」與低互動區塊,再把頁面收斂到單一最重要的 CTA;主視覺類的刪減先用 A/B 測試確認不傷轉換,再放手做。",
+      "blurb": "一張根本不能點的聖誕主視覺,手機上有 1.24% 的人還是一直點,點不動就走人。團隊先拿掉它做 A/B 測試,確認訂單轉換不受影響,再把首頁的價格、促銷與美食大圖全部收掉,只讓「訂配送時段」一個按鈕說話,新訪客的預約與註冊才跟著上來。",
+      "metrics": [
+        [
+          "+6.3%",
+          "首頁配送時段預約"
+        ],
+        [
+          "+6.1%",
+          "首頁註冊數"
+        ],
+        [
+          "9.3% → 11%",
+          "活動頁導入聖誕頁比例"
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "有提升首頁新訪客轉換與建立數據文化的目標,但商業壓力描述偏少,給 1 分。",
+        "有熱圖找問題、A/B 測試驗證再調整的流程,但未提失敗方案,給 1 分。",
+        "活動頁導入比例有 9.3% → 11% 的前後對照,給 2 分;首頁數字無 baseline。",
+        "廠商發布的客戶案例,封頂 1 分。",
+        "「找被誤點的元素、收斂成單一 CTA」可直接複用,給 2 分。"
+      ]
+    },
     {
       "title": "Voices.com 轉換率從不到 5% 衝到 22%：先挖出客人不買的理由，再做 11 次實驗",
       "original_title": "How we increased the conversion rate of Voices.com by over 400%",
@@ -15618,6 +15730,20 @@
     }
   ],
   "rejected": [
+    {
+      "title": "NatWest 用 Contentsquare 優化房貸申請與儲蓄頁",
+      "url": "https://contentsquare.com/customers/natwest/",
+      "source": "Contentsquare 案例・NatWest",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "全文只寫「顯著提升」,無任何具體數字或 baseline,量化成果為 0(gate: floor: quantified_outcome=0 < 1; min_total: 4.5 < 6)"
+    },
     {
       "title": "Mobbin × CRE：註冊彈窗改導向註冊頁，註冊數 +12%",
       "url": "https://conversion-rate-experts.com/mobbin-simplified-signup-win-report/",
