@@ -1,10 +1,68 @@
 {
-  "updated": "2026-10-17",
+  "updated": "2026-10-20",
   "run": {
-    "scanned": 20,
-    "candidates": 4
+    "scanned": 30,
+    "candidates": 5
   },
   "cases": [
+    {
+      "title": "埃及 El Gouna 度假村:依回訪客看過的飯店推 13 組彈窗,訂房轉換率 +60.75%",
+      "original_title": "Beyond Generic Offers: How Orascom Hotels Management Personalized Summer Campaigns for Increased Bookings",
+      "url": "https://vwo.com/success-stories/orascom-hotels-management-summer-offer/",
+      "source": "Wingify 案例・Orascom Hotels",
+      "tier": 2,
+      "date": "2025",
+      "author": "Wingify(VWO)發布,具名引述 Orascom 數位行銷經理 George Salib",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "旅遊",
+      "f_industry": [
+        "旅遊"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "個人化",
+        "結帳"
+      ],
+      "why": "Orascom Hotels Management 的 El Gouna 官網有大量回訪客,但這批已表達過興趣的人只有約 4% 完成訂房。團隊判斷問題在於對回訪客仍用通用訊息,沒有接續他們上次在訂房引擎裡看過的住宿。",
+      "how": "團隊鎖定「曾在訂房引擎有過動作」的回訪客,依其先前搜尋過的度假村,做出 13 組個人化體驗:彈窗寫著「歡迎回來,完成你在某某度假村的預訂」,並搭配 40% 夏季折扣,另做德文版。活動共跑 4 個月,核心假設是回訪客對自己看過的住宿,反應會好過通用優惠。",
+      "result": "原文宣稱訂房轉換率 +60.75%,期間帶來 873 筆訂單、352,377 美元營收,占其總營收 42%。原文未揭露實驗組與對照組的樣本數、顯著性,也未說明 42% 的分母。",
+      "caveat": "廠商自述:單一來源、可能偏正面選樣、未經第三方驗證;firsthand 依 CRO／實驗平台客戶案例規則封頂 1 分。40% 折扣與個人化訊息同時上線,無法拆出個人化本身的貢獻;+60.75% 疑為相對值,僅知回訪客基準約 4%,對照組細節缺;同一客戶另有一則回訪客案例回報 +25%,兩則數字差異未說明。",
+      "takeaway": "再行銷的素材可以直接取自訪客的上一個動作:先用行為資料把回訪客按「看過什麼」切段,訊息接續上次的未完成任務。但要拆開折扣與個人化兩個變因,才知道哪一個在起作用。",
+      "blurb": "回訪客多、訂房卻停在約 4%,團隊沒發一張通用優惠,而是照每個人上次搜過的度假村,做出 13 組「歡迎回來」彈窗,連德文版也各做一份,把再行銷的鉤子從「全館折扣」換成「你看過哪一間」,只是 40% 折扣同步上線,個人化到底占幾分功勞,原文沒拆開。",
+      "metrics": [
+        [
+          "+60.75%",
+          "訂房轉換率"
+        ],
+        [
+          "873",
+          "訂單數"
+        ],
+        [
+          "$352K",
+          "活動營收"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "score_notes": [
+        "回訪客轉換僅約 4%,痛點與目標明確,給 2 分。",
+        "單一假設、線性敘述,無失敗或被推翻方案,給 1 分。",
+        "有約 4% 基準與絕對營收,但 +60.75% 的口徑與對照組不明,給 1 分。",
+        "廠商發布並引述客戶,封頂 1 分。",
+        "「按回訪客看過的品項切段再接續」可複用,但未提煉成框架且混入折扣變因,給 1 分。"
+      ]
+    },
     {
       "title": "荷蘭包裝電商 Bunzl:首頁類別區塊換成顧客評價,總銷售額 +9%、商品頁造訪 +11%",
       "original_title": "How Wingify Insights helped Bunzl lift conversions with user journey analysis and data-backed hypotheses",
@@ -15898,6 +15956,20 @@
     }
   ],
   "rejected": [
+    {
+      "title": "La Redoute:導入 EmotionsAI,營收每訪客 +4%、轉換率 +3%",
+      "url": "https://www.abtasty.com/wp-content/uploads/La-Redoute-Case-Study-EN.pdf",
+      "source": "AB Tasty 案例・La Redoute",
+      "tier": 2,
+      "scores": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "reason": "產品宣傳單頁:無基準值、無實驗設計與決策過程,決策與可遷移性為 0,不符下限"
+    },
     {
       "title": "Bandwidth:SMS API 產品頁改版,訪客轉潛在客戶 +12%",
       "url": "https://vwo.com/success-stories/bandwidth/",
