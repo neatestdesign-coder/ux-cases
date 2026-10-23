@@ -1,10 +1,66 @@
 {
-  "updated": "2026-10-21",
+  "updated": "2026-10-23",
   "run": {
-    "scanned": 20,
+    "scanned": 16,
     "candidates": 4
   },
   "cases": [
+    {
+      "title": "Wingify 重做免費試用「開始使用」分頁:試用轉付費轉換 +127%",
+      "original_title": "How Wingify Drank Its Own Champagne and Improved Free Trial to Paid Conversions",
+      "url": "https://wingify.com/success-stories/vwo-get-started-tab/",
+      "source": "Wingify 案例・自家試用引導",
+      "tier": 2,
+      "date": "2026",
+      "author": "Wingify(VWO)發布,具名引述產品管理總監 Mahek Mahendra Shah",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "SaaS"
+      ],
+      "f_goal": [
+        "新手引導",
+        "升級"
+      ],
+      "why": "Wingify 想把既有的新手引導變成推動試用啟用與功能採用的引擎。表單分析顯示,舊版免費試用註冊表單的流失率達 62.77%,團隊也希望減輕客服在帳號設定上的負擔。",
+      "how": "產品團隊做了一個集中、可互動的「開始使用」分頁,把帳號設定(資料中心選擇、隱私設定)、產品設定(安裝 SmartCode、設定各產品)與進階功能探索收在同一處,用 Split test 對照新舊版,測試跑了 25 天。",
+      "result": "頁面宣稱免費試用轉付費的轉換率 +127%;舊註冊表單流失率為 62.77%。副作用也有交代:每週分析熱圖報告五次、或觀看五段工作階段錄影的用戶變少,代表新流程沒有把人有效帶回這些核心報告。",
+      "caveat": "廠商自述:單一來源、可能偏正面選樣、未經第三方驗證;firsthand 依 CRO／實驗平台案例規則封頂 1 分。+127% 是相對值,未揭露試用轉付費的基準轉換率;頁面也未揭露樣本數與統計顯著性。",
+      "takeaway": "新手引導不要散落在各處,把「設定、安裝、探索」收進單一可追蹤的清單;同時要盯副作用指標(核心功能的深度使用),因為轉換變好不代表用戶被帶到了價值所在。",
+      "blurb": "舊版試用註冊表單流失率 62.77%,產品團隊把資料中心選擇、隱私設定、安裝追蹤碼到進階功能探索,收進同一個互動式分頁,偏偏測試中重看熱圖報告的人變少了,引導把人推進設定,卻沒把人帶回核心功能。",
+      "metrics": [
+        [
+          "+127%",
+          "試用轉付費轉換"
+        ],
+        [
+          "62.77%",
+          "舊註冊表單流失率"
+        ],
+        [
+          "25 天",
+          "測試期間"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "score_notes": [
+        "有明確啟用目標與 62.77% 的表單流失基準,給 2 分。",
+        "有假設與副作用揭露,但無被推翻方案,給 1 分。",
+        "+127% 無基準轉換率與顯著性,給 1 分。",
+        "廠商自家案例,依規則封頂 1 分。",
+        "集中式引導加守門副作用指標可複用,但未提煉成框架,給 1 分。"
+      ]
+    },
     {
       "title": "電商 App 個人中心改版跑 AB 實驗:推薦位交易次數 +28%,信箱驗證數 +511%",
       "original_title": "用AB实验分析个人中心的首页改版",
@@ -16012,6 +16068,48 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Adore Beauty 與 Speero 的實驗計畫",
+      "url": "https://speero.com/case-studies/increasing-ecommerce-loyalty-and-conversion-rates",
+      "source": "Speero 案例・Adore Beauty",
+      "tier": 2,
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "顧問自述的方法論行銷稿,成果僅為年營收與忠誠方案占比,與實驗無因果連結,無 A/B 前後對照。gate:"
+    },
+    {
+      "title": "TAP Air Portugal 調整轉乘優惠橫幅位置,CTA 點擊 +44.62%",
+      "url": "https://wingify.com/success-stories/tap-air-portugal-cta-clicks/",
+      "source": "Wingify 案例・TAP Air Portugal",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "廠商自述,無樣本數、顯著性與 baseline,只有相對百分比,決策過程單薄。gate:min_total: 5.5 < 6"
+    },
+    {
+      "title": "Bionic Gloves 購物車移除優惠碼欄位,營收 +24.7%",
+      "url": "https://wingify.com/success-stories/bionic/",
+      "source": "Wingify 案例・Bionic Gloves",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "廠商自述,實驗僅約 1,400 位訪客,營收 +24.7% 無 baseline,假設單一、無失敗迭代。gate:min_total: 5.5 < 6"
+    },
     {
       "title": "增長實驗復盤:如何提升 164% 的同比營收",
       "url": "https://www.woshipm.com/operate/4012152.html",
