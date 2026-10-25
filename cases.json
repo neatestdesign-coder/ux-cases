@@ -1,10 +1,71 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-10-25",
   "run": {
-    "scanned": 16,
-    "candidates": 4
+    "scanned": 20,
+    "candidates": 3
   },
   "cases": [
+    {
+      "title": "AWIP 把實驗從每月 1 場拉到每週 1 場:三個月 16 場測試、最大勝利每訪客營收 +12%",
+      "original_title": "How Another Web is Possible took a leisure and tourism business from 12 tests a year to 16 in just three months",
+      "url": "https://www.convert.com/case-studies/awip-tourism-program/",
+      "source": "Convert 案例・AWIP 旅遊實驗計畫",
+      "tier": 2,
+      "date": "2026",
+      "author": "Convert 發布,具名引述 AWIP 創辦人 Jon Crowder",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "旅遊",
+      "f_industry": [
+        "旅遊"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "其他"
+      ],
+      "why": "一家全球休閒旅遊企業的前任代理商一年只跑約 12 場實驗,每場上線成本太高,團隊只好反覆篩選待辦清單、找「一定會贏」的點子,網站改動則繞過測試、憑直覺上線,無法證明對線上營收的貢獻。",
+      "how": "AWIP 認定根因是「把測試送出門太難」:每個點子都寫成可證偽的假設並公開在全公司可看的入口;點子盡量擴大到整個網站而非單一頁面,並預先寫好勝出後的推廣計畫;再用實驗申請表單讓各部門把想法導進測試流程。建置端用自家 CRO 工具透過 Convert MCP Server 串接 Convert Experiences,縮短建置、QA 與上線時間。前期做了完整的旅程分析,發現尚未購買的訪客大量落在原本為已購客設計的資訊與客服頁。",
+      "result": "前三個月上線 16 場 A/B 測試、4 個明確勝利,最大勝利為每訪客營收 +12%。勝率 25%,低於前任代理商的 33.33%,但勝利總數持平全年水準。一場失敗的測試也有收穫:導覽列中某些分頁其實是在扮演商品陳列功能,帶出一串後續測試。",
+      "caveat": "廠商與合作代理商自述:單一來源、可能偏正面選樣、未經第三方驗證;firsthand 依 CRO／實驗平台案例規則封頂 1 分。+12% 為單一最佳實驗的相對值,未揭露基準、樣本數與顯著性;前任代理商的勝利數是 Convert 自行以 12 場乘 33.33% 推算,並非原始數字。頁面同時在推廣 Convert MCP Server,屬產品行銷脈絡。",
+      "takeaway": "實驗計畫的瓶頸常在「上線成本」而非點子品質:把測試變便宜,單場失敗就不再是災難,勝率下降也能被總勝利數抵銷。假設公開化、點子擴到全站、勝出前先寫推廣計畫,是可直接複用的流程。",
+      "blurb": "前任代理商一個月才出一場測試,每場都被當成孤注一擲,於是大家拼命篩選「一定會贏」的點子,網站其他改動卻憑直覺繞過實驗。團隊先找到根因是上線太難,靠公開假設、全站擴點子與申請表單把流程變輕,勝率反而從 33.33% 降到 25%,客戶卻更滿意,因為低成本下一場沒贏只是「平常的一天」。",
+      "metrics": [
+        [
+          "16 場",
+          "三個月 A/B 測試"
+        ],
+        [
+          "4 個",
+          "明確勝利"
+        ],
+        [
+          "+12%",
+          "最佳實驗每訪客營收"
+        ],
+        [
+          "25%",
+          "勝率(前期 33.33%)"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "清楚交代前任計畫每月僅 1 場、決策靠直覺繞過測試的營運痛點,給 2 分。",
+        "寫出根因判斷、勝率下降的取捨與失敗測試帶出的新假設,給 2 分。",
+        "有 12→16 場與 +12% RPV,但無基準值與顯著性,給 1 分。",
+        "廠商與代理商自述案例,依規則封頂 1 分。",
+        "假設公開化、全站擴點、預寫推廣計畫與申請表單可直接複用,給 2 分。"
+      ]
+    },
     {
       "title": "Wingify 重做免費試用「開始使用」分頁:試用轉付費轉換 +127%",
       "original_title": "How Wingify Drank Its Own Champagne and Improved Free Trial to Paid Conversions",
@@ -16068,6 +16129,34 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Audi 用 Contentsquare 精簡產品頁:詢價轉換率 +7%",
+      "url": "https://contentsquare.com/customers/audi/",
+      "source": "Contentsquare 案例・Audi UK",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "廠商自述的平台導購稿,+7% 無基準值與樣本數,過程僅概述「精簡內容後 A/B 驗證」,無被推翻方案。gate: min_total: 5.5 < 6"
+    },
+    {
+      "title": "FIGS 用 Heap 與 Shopify 追蹤 A/B 測試長期影響",
+      "url": "https://contentsquare.com/customers/figs/",
+      "source": "Contentsquare 案例・FIGS",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "全文無任何前後對照數據,僅為工具使用訪談。gate: floor: quantified_outcome=0 < 1; min_total: 4.5 < 6"
+    },
     {
       "title": "Adore Beauty 與 Speero 的實驗計畫",
       "url": "https://speero.com/case-studies/increasing-ecommerce-loyalty-and-conversion-rates",
