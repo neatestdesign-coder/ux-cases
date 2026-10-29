@@ -16,7 +16,8 @@ const fs = require('fs');
 const path = process.argv[2] || 'cases.json';
 
 let spacer = null;
-try { spacer = require('pangu').pangu; } catch (e) { /* 無 pangu → 只做符號正規化，不中斷 */ }
+// pangu v4 匯出 .pangu.spacingText，v10 直接匯出實例且改名 spaceText，兩者都支援
+try { const m = require('pangu'); spacer = m.pangu || m; } catch (e) { /* 無 pangu → 只做符號正規化，不中斷 */ }
 
 function fixSymbols(s) {
   if (typeof s !== 'string') return s;
@@ -30,7 +31,7 @@ function fixSymbols(s) {
 function fixText(s) {
   if (typeof s !== 'string' || !s) return s;
   s = fixSymbols(s);
-  return spacer ? spacer.spacingText(s) : s;               // 規則2
+  return spacer ? (spacer.spacingText || spacer.spaceText).call(spacer, s) : s;               // 規則2
 }
 
 const d = JSON.parse(fs.readFileSync(path, 'utf8'));
