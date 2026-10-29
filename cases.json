@@ -1,10 +1,69 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-29",
   "run": {
-    "scanned": 20,
+    "scanned": 30,
     "candidates": 3
   },
   "cases": [
+    {
+      "title": "Lokalise 重做新手引導:啟用率從 3% 拉到 12.7%、註冊轉換 +37%",
+      "original_title": "Redesigning Lokalise User Onboarding",
+      "url": "https://www.benshih.design/case-study/onboarding",
+      "source": "Ben Shih 作品集・Lokalise 新手引導",
+      "tier": 0,
+      "date": "2024",
+      "author": "Ben Shih(Lokalise 成長團隊創始設計師,親撰)",
+      "cats": [
+        "更多案例"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "SaaS"
+      ],
+      "f_goal": [
+        "新手引導",
+        "註冊"
+      ],
+      "why": "Lokalise 在 2018 至 2022 年營收逐年翻倍，但 2022 年底起獲客與啟用率持續下滑。團隊判斷啟用率與留存高度連動，不處理就會流失未來營收。",
+      "how": "先請設計團隊親自走一遍舊流程（dogfooding），再用 Amplitude 漏斗找出流失最大的兩段（註冊到建專案、建專案到匯入檔案），並訪談 20 多位潛在客戶與現有用戶，歸納出三個摩擦：頂部橫幅被無視、阻斷式彈窗打斷操作、過多 CTA 造成認知負荷。接著與 PM、工程、數據、用研開設計衝刺工作坊排優先序，產出四個概念做原型測試：預覽翻譯結果、被動式清單、互動式註冊、以 JTBD 為主軸的首頁；測試後勝出的是 JTBD 首頁與被動式清單，經兩輪迭代才出 MVP。",
+      "result": "JTBD 首頁使註冊嘗試率 +36%、實際註冊率 +15%；一週輕量改版註冊頁後，註冊轉換 +37%；以不阻斷的清單取代彈窗後，建立專案 +18%、下載翻譯 +15%。整體註冊到「啊哈時刻」（首次下載翻譯）的啟用率從 3% 升到 12.7%，試用轉付費宣稱翻倍。",
+      "caveat": "作者個人作品集自述：單一來源、未經第三方驗證，數字無樣本數與顯著性。內部有不一致：成果段稱試用轉付費「+200%」結論又寫「翻倍」（即 +100%），本卡採保守說法；註冊轉換 +37% 與首頁帶來的 +15% 為不同層級指標，勿混用。頁面標註不授權複製其設計與文案，本卡僅摘述。",
+      "takeaway": "啟用問題常出在「擋路的東西」而非缺功能：先讓團隊自己走一遍流程、用漏斗定位流失段、再用訪談確認原因，並以原型測試淘汰不管用的概念（如預覽翻譯、互動註冊）。把阻斷式彈窗換成被動清單，是低成本、可直接複用的啟用率槓桿。",
+      "blurb": "啟用率從 2022 年起一路下滑，團隊先讓設計師自己把舊流程走一遍，再搭配漏斗與 20 多場訪談，揪出三個癥結：橫幅沒人看懂、彈窗打斷操作、CTA 堆太多造成認知負荷過重，最後的解法不是加功能，而是把擋路的彈窗換成不打擾的檢查清單。",
+      "metrics": [
+        [
+          "3% → 12.7%",
+          "註冊到啟用率"
+        ],
+        [
+          "+37%",
+          "註冊轉換"
+        ],
+        [
+          "+18%",
+          "建立專案數"
+        ],
+        [
+          "+15%",
+          "翻譯下載數"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "score_notes": [
+        "清楚交代營收翻倍後獲客與啟用下滑、威脅未來營收的商業壓力，給 2 分。",
+        "有 dogfooding、漏斗、訪談、四概念原型測試與取捨，部分概念被淘汰，給 2 分。",
+        "啟用率 3% → 12.7% 有 baseline 與成果，另有多項漸進指標，給 2 分。",
+        "作者為成長團隊創始設計師親撰，給 2 分。",
+        "dogfooding、漏斗定位、被動式清單取代彈窗等流程可直接複用，給 2 分。"
+      ]
+    },
     {
       "title": "AWIP 把實驗從每月 1 場拉到每週 1 場:三個月 16 場測試、最大勝利每訪客營收 +12%",
       "original_title": "How Another Web is Possible took a leisure and tourism business from 12 tests a year to 16 in just three months",
@@ -16129,6 +16188,34 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Cluse 優化產品列表頁 CTA:交易量 +1.12%",
+      "url": "https://www.abtasty.com/resources/cluse-optimizes-product-landing-page/",
+      "source": "AB Tasty 案例・Cluse",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "廠商自述的平台導購稿，+1.12% 無基準值與樣本數，僅單一 CTA 測試，無被推翻方案。 gate: min_total: 5.5 < 6"
+    },
+    {
+      "title": "iTokri 以 Wingify 與 ConvertPolo 策略改善加購:加購點擊 +221%",
+      "url": "https://wingify.com/success-stories/itokri-convertpolo-add-to-cart/",
+      "source": "Wingify 案例・iTokri",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "廠商自述的平台導購稿，各測試僅有相對百分比無 baseline 與樣本數，過程線性無被推翻方案，且測試一標題與內文不符。 gate: min_total: 5.5 < 6"
+    },
     {
       "title": "Audi 用 Contentsquare 精簡產品頁:詢價轉換率 +7%",
       "url": "https://contentsquare.com/customers/audi/",
