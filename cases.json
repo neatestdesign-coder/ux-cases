@@ -1,10 +1,67 @@
 {
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "run": {
-    "scanned": 44,
-    "candidates": 8
+    "scanned": 32,
+    "candidates": 5
   },
   "cases": [
+    {
+      "title": "Orange 用 AI 預測猶豫訪客才秀 €10 月費折扣:轉換率較無優惠版 +11.6%,含折扣碼的購買佔比從 68% 降到 25%",
+      "original_title": "How Orange delivers the right offer at the right time with AI",
+      "url": "https://www.kameleoon.com/customer/how-orange-delivers-the-right-offer-at-the-right-time-with-ai",
+      "source": "Kameleoon 案例・Orange France AI 個人化",
+      "tier": 2,
+      "date": "",
+      "author": "Kameleoon 官方發布;Orange France 設計思考與 CRO 專家中心主管 Véronique Lannuzel 具名受訪",
+      "cats": [
+        "更多案例"
+      ],
+      "industry": "電信",
+      "f_industry": [
+        "電信"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "個人化",
+        "結帳"
+      ],
+      "why": "Orange 對光纖方案「Livebox Fibre」提供每月 €10 折扣,但發給本來就打算買的人等於白送利潤。團隊想只把折扣留給猶豫的訪客,在拉高轉換的同時守住毛利。Orange France 站點每月約 2,300 萬訪客,過半來自手機,自 2017 年起設有專責 CRO 專家中心。",
+      "how": "先讓 Kameleoon 的 AI 分析數週的訪客行為,辨識出三種受眾並即時預測購買機率,再做三組分流測試:對照組不顯示折扣碼、變體 1 對所有人顯示、變體 2 只對 AI 判定為猶豫的訪客顯示。另一個例子是專屬優惠文案的 A/B 測試,團隊用 Contentsquare 深入分析,發現每 5 位訪客就有 1 位根本沒注意到優惠,於是新開一場測試把優惠往頁面上方移,並確認提高曝光不會排擠其他連結的互動。",
+      "result": "AI 組轉換率較無優惠版 +11.6%、較人人有碼版 +7.6%;含折扣碼的購買佔比由「人人有碼」情境的 68% 降到 25%,折扣只發給真正需要的人。專屬優惠上移的測試結果文中未揭露。",
+      "caveat": "Kameleoon(實驗平台廠商)官方發布的客戶案例,firsthand 封頂 1:單一來源、可能偏正面選樣、數字未經第三方驗證。+11.6% 與 +7.6% 為相對提升,未給基準轉換率、樣本量、測試期間與顯著性;68%→25% 比較的是「人人有碼」與「AI 定向」兩種情境,而非上線前後;文章無發布日期,且兼具產品導購性質(AI Predictive Targeting)。",
+      "takeaway": "折扣是有成本的槓桿,先判斷「誰需要被推一把」再發,比一律發放更能同時守毛利與拉轉換。測試設計值得抄:同時放「不給」「全給」「只給猶豫者」三組,才分得出是折扣本身有效,還是定向有效。",
+      "blurb": "已經想買的人拿到折扣,等於白送利潤,所以團隊讓預測模型即時判斷訪客是否猶豫,只對猶豫者亮出優惠碼,並與「人人有碼」「完全無碼」兩組對照。另一場測試用熱圖分析發現,每 5 位訪客就有 1 位沒看到專屬優惠,才決定把它往頁面上方移。",
+      "metrics": [
+        [
+          "+11.6%",
+          "對無優惠版轉換率"
+        ],
+        [
+          "+7.6%",
+          "對人人有碼版轉換率"
+        ],
+        [
+          "68%→25%",
+          "購買含折扣碼比例"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "明確的毛利與轉換雙目標:折扣只給猶豫者,給 2 分。",
+        "有三組對照與 Contentsquare 追查「1/5 訪客沒看到優惠」的迭代,但無失敗或被推翻的方案,給 1 分。",
+        "有相對提升與折扣碼佔比前後對照,但無基準轉換率與樣本量,給 1 分。",
+        "廠商發布、客戶主管具名引述,非當事團隊親撰,封頂 1 分。",
+        "三組對照設計與「定向發放折扣」原則可直接複用,給 2 分。"
+      ]
+    },
     {
       "title": "手機淘寶微淘新用戶留存:「一鍵關注」讓關注率 9% 升到 20%,留存卻不升反跌,改引導瀏覽後次月留存 +12%",
       "original_title": "新用户留存：别人踩过的这些“坑”，将为你提高留存提供思路",
@@ -16462,6 +16519,20 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Unbounce 彙整頁:12 個 CRO 案例與範例",
+      "url": "https://unbounce.com/conversion-rate-optimization/cro-case-studies/",
+      "source": "Unbounce 彙整頁",
+      "tier": 2,
+      "scores": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "reason": "純彙整清單,非單一案例。"
+    },
     {
       "title": "Indochino 用 Unbounce 落地頁放大廣告預算",
       "url": "https://unbounce.com/customer-case-study/indochino/",
