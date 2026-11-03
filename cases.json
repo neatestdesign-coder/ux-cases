@@ -1,10 +1,125 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "run": {
-    "scanned": 25,
-    "candidates": 3
+    "scanned": 33,
+    "candidates": 5
   },
   "cases": [
+    {
+      "title": "HubSpot Academy 用離開意圖問卷改版認證課程頁:註冊轉換 +10%",
+      "original_title": "How HubSpot Academy used Surveys to boost signups by +10%",
+      "url": "https://www.hotjar.com/customers/hubspot-academy/",
+      "source": "Hotjar 案例・HubSpot Academy",
+      "tier": 2,
+      "date": "2026",
+      "author": "Hotjar(Contentsquare)發布,具名訪談 Senior Growth Marketer Eric Peters",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "教育",
+      "f_industry": [
+        "教育"
+      ],
+      "f_product": [
+        "其他"
+      ],
+      "f_goal": [
+        "到達頁",
+        "註冊"
+      ],
+      "why": "HubSpot Academy 認證課程頁的訪客到註冊轉換率約 9%,但課程陸續開放更多語言後湧入不同目標的新訪客,導覽頁(splash page)想一次說太多、訊息混亂,視覺也顯老舊。",
+      "how": "團隊先鑽頁面與表單分析卻找不到規律,聽從 UX 設計師建議,在頁面放一份離開意圖問卷問「你為什麼要離開?」,當天就有回覆。他們把回覆整理成「離開原因、誤解、修正」對照:補上「Inbound Marketing 屬於數位行銷」的定義、加強利益導向文案、新增「誰適合取得認證」區塊並在表單加入求職者選項,再據此設計新頁面範本,兩個版本 A/B 測試後定案。",
+      "result": "新版英文認證課程頁轉換提升 10%,之後推廣到其他語言版本;頁首另外補上「需通過考試才能認證」的說明。改版前基準為訪客到註冊轉換率約 9%。",
+      "caveat": "廠商自述(Hotjar 客戶故事,現已搬到 Contentsquare 網站):單一來源、可能偏正面選樣、未經第三方驗證;受訪者為當事團隊但由廠商刊載,firsthand 依規則封頂 1 分。「10%」未說明是相對提升或百分點,也無樣本數與顯著性;文案修正與新版型同時改動,無法拆分問卷洞察各自貢獻。",
+      "takeaway": "改版前先放一份離開意圖問卷,把回覆整理成「離開原因、誤解、修正」對照表,先用文案小改驗證,再做版型與 A/B 測試;設計決策交給訪客資料,而不是內部偏好。",
+      "blurb": "團隊原本在頁面與表單分析裡挖不出規律，直到一位 UX 設計師建議直接問離開的人，問卷當天就冒出沒人料到的答案：有人以為課程不含數位行銷，有人是求職者，卻被表單的公司欄位勸退，團隊先把這些誤解逐條補進文案，才有信心做新版型並 A/B 測試。",
+      "metrics": [
+        [
+          "+10%",
+          "英文頁註冊轉換"
+        ],
+        [
+          "9%",
+          "改版前註冊率"
+        ],
+        [
+          "2 版",
+          "A/B 測試版本"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "有 9% 基準轉換率與多語系帶來的訊息混亂,商業脈絡清楚,給 2 分。",
+        "問卷→文案小改→新版型→兩版 A/B,且受訪者坦承要壓抑內部設計意見,給 2 分。",
+        "有 9% 基準與 +10% 但為相對值、無最終轉換率與顯著性,給 1 分。",
+        "具名訪談當事人,但為廠商刊載,依規則封頂 1 分。",
+        "離開原因、誤解、修正對照表是可直接複用的方法,給 2 分。"
+      ]
+    },
+    {
+      "title": "PriceCharting 把按鈕從「Download」改成「Price Guide」:點擊 +620.9%",
+      "original_title": "PriceCharting A/B Tested A More Relevant CTA To Increase Conversions",
+      "url": "https://vwo.com/success-stories/pricecharting/",
+      "source": "Wingify 案例・PriceCharting",
+      "tier": 2,
+      "date": "2019",
+      "author": "Wingify(VWO)發布,具名引述創辦人 JJ Hendricks",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "遊戲",
+      "f_industry": [
+        "遊戲"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "定價"
+      ],
+      "why": "創辦人想提高商品頁「下載價格指南」的點擊。他判斷緊貼按鈕的價格(例如「Sega Genesis Price List for $2」)讓按鈕長得像橫幅廣告,訪客產生廣告盲視而不點。",
+      "how": "用 Wingify 做 A/B 測試:變體把按鈕文字由「Download」改成「Price Guide」並拿掉價格,追蹤「CTA 點擊」。第二個測試以「Starts at $4」為對照組,對比 $2 與 $1 兩個起價,先在內部測價格敏感度,新價格並未反映到結帳頁。",
+      "result": "第一個測試一週內變體勝出,CTA 點擊 +620.9%,統計顯著度 99.9%,創辦人已上線。第二個測試沒有明確贏家(顯著度 91%),$4 版表現優於 $2 與 $1,且其轉換率 0.70% 仍低於第一個測試的勝版 1.03%,因此「Starts at $4」沒有上線,但訪客對價格似乎不敏感,創辦人打算日後測更高價位。",
+      "caveat": "廠商自述:單一來源、可能偏正面選樣、未經第三方驗證;firsthand 依 CRO／實驗平台案例規則封頂 1 分。+620.9% 是相對值,頁面未明列原版基準(由 1.03% 勝版反推約 0.14%,為推算值);點擊率不等於付費轉換,頁面也未揭露樣本數與營收影響。",
+      "takeaway": "改動貴重要素(如價格)前先跑內部 dummy test 探路;CTA 文字要讓人一眼知道點下去會得到什麼,具體與相關比「像廣告的按鈕」有效得多。",
+      "blurb": "創辦人懷疑緊貼按鈕的價格讓它長得像橫幅廣告，訪客因廣告盲視（ad blindness，對像廣告的元素視而不見）而不點，於是改成具體的「Price Guide」並拿掉價格；後續他又拿 $4、$2、$1 測價格敏感度，$4 表現最好卻沒上線，這個測試留給日後調高定價的底氣。",
+      "metrics": [
+        [
+          "+620.9%",
+          "按鈕點擊"
+        ],
+        [
+          "99.9%",
+          "統計顯著度"
+        ],
+        [
+          "1.03%",
+          "勝版點擊率"
+        ]
+      ],
+      "scores": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "score_notes": [
+        "有提升價格指南點擊的目標與廣告盲視假設,但商業背景(營收、流量)簡略,給 1 分。",
+        "有假設→驗證,第二個測試未達顯著、對照版沒上線,屬真實的未成功迭代,給 2 分。",
+        "+620.9% 且有顯著度,但無原版基準數字(僅能由 1.03% 反推),給 1 分。",
+        "廠商案例,引述創辦人,依規則封頂 1 分。",
+        "CTA 要具體相關、貴重要素先做內部測試,可複用但未提煉成框架,給 1 分。"
+      ]
+    },
     {
       "title": "教培 SaaS 用「排課點名比例」當北極星指標:觀察窗改抓到期前 1 個月後,與續約率的相關性從 70% 多升到 85% 以上",
       "original_title": "SaaS营收都几千万了，还没有北极星指标？（附实操案例）",
@@ -16573,6 +16688,48 @@
     }
   ],
   "rejected": [
+    {
+      "title": "CadoMaestro 用 Hotjar 驗證網站優化",
+      "url": "https://www.hotjar.com/customers/cadomaestro/",
+      "source": "Hotjar 案例・CadoMaestro",
+      "tier": 2,
+      "scores": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "reason": "無量化成果,廠商自述、無第三方驗證;gate: floor: decision_process=0 < 1; floor: quantified_outcome=0 < 1; floor: transferability=0 < 1; min_total: 2.5 < 6"
+    },
+    {
+      "title": "eShopWorld 用 Hotjar 檢視轉換波動",
+      "url": "https://www.hotjar.com/customers/eshopworld/",
+      "source": "Hotjar 案例・eShopWorld",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "無量化成果,廠商自述、無第三方驗證;gate: floor: quantified_outcome=0 < 1; min_total: 4.5 < 6"
+    },
+    {
+      "title": "Taloon 移除社群分享按鈕:加入購物車點擊 +11.9%",
+      "url": "https://vwo.com/success-stories/taloon/",
+      "source": "Wingify 案例・Taloon",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "廠商自述、無第三方驗證;gate: min_total: 5.5 < 6"
+    },
     {
       "title": "Built for Mars:讓人接受高價航班的 UX 技巧(航班系列第 1 章)",
       "url": "https://builtformars.com/case-studies/flights-chapter-1",
