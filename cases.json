@@ -1,10 +1,125 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-05",
   "run": {
-    "scanned": 33,
+    "scanned": 44,
     "candidates": 5
   },
   "cases": [
+    {
+      "title": "Michael Hill 用熱圖找出被藏住的結帳按鈕:購物車頁離開率 -18%、商品頁客單價 +64%",
+      "original_title": "Michael Hill made data everyone's business—and increased average transaction value by +64%",
+      "url": "https://contentsquare.com/customers/michael-hill/",
+      "source": "Contentsquare 案例・Michael Hill",
+      "tier": 2,
+      "date": "2026",
+      "author": "Contentsquare 發布,引述 Michael Hill 電商主管 Aaron Duxfield",
+      "cats": [
+        "國際品牌",
+        "顧問／商業視角"
+      ],
+      "industry": "時尚",
+      "f_industry": [
+        "時尚"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "結帳"
+      ],
+      "why": "Michael Hill 是澳紐加約 300 家門市的珠寶零售商,線上占比快速成長,但分析環境分散:只靠 GA 與 Looker Studio 看表層指標,知道發生什麼卻不知道為什麼,洞察被技術門檻擋住,優先順序常被客服一通抱怨或主管一句話左右。",
+      "how": "團隊導入 Contentsquare 後,用熱圖發現手機購物車頁的「安全結帳」按鈕藏在折線以下,改成黏性按鈕並用 Optimizely 測試;用區域熱圖與 session 重播看到結帳頁欄位散落、顧客上下來回跳,把取貨方式移到最上方並合併其餘欄位;商品頁則分析圖片互動,發現縮圖表現不佳,改成格狀版面並重訂攝影規範。另用影響量化工具估算每個問題波及多少顧客,再決定修復順序。",
+      "result": "手機購物車頁離開率 -18%;結帳頁調整後棄單率 -15%、年營收 +3%;商品頁改版後加入購物車率 +4%、平均交易金額 +64%。另一個發現:不少「棄單」顧客七天內改到門市購買,購物袋其實更像願望清單。",
+      "caveat": "廠商自述(Contentsquare 客戶故事):單一來源、可能偏正面選樣、未經第三方驗證;所有成果皆為相對變化,未給 baseline、樣本數與顯著性。+64% 平均交易金額發生在整站改版期間,難以單獨歸因於圖片版面,+3% 年營收的計算方式也未說明。",
+      "takeaway": "先用行為資料(熱圖、重播)找出具體摩擦點,再用「影響量化」估算波及人數來排優先順序,能把「客服一句抱怨」與「真正傷害轉換的問題」分開;同時要提醒自己,線上棄單未必是流失,可能轉到門市成交。",
+      "blurb": "過去客服進來一則抱怨、主管一句評論,團隊就得停下手邊的事去修,直到熱圖顯示手機購物車頁的「安全結帳」按鈕竟躺在折線以下,才有證據可以排序:現在每個問題先量化波及多少顧客,再決定修不修。更有意思的是,不少「棄單」顧客七天內其實去門市買了,購物袋更像願望清單。",
+      "metrics": [
+        [
+          "-18%",
+          "購物車頁離開率"
+        ],
+        [
+          "-15%",
+          "結帳棄單率"
+        ],
+        [
+          "+64%",
+          "平均交易金額"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "線上占比成長、分析分散導致決策被意見左右,商業脈絡清楚,給 2 分。",
+        "熱圖→假設→測試有交代,但多為線性成功敘事,幾乎沒有被推翻的方案,給 1 分。",
+        "皆為相對變化,沒有 baseline 與樣本數,給 1 分。",
+        "引述當事電商主管,但由廠商刊載,依規則封頂 1 分。",
+        "影響量化排序與「棄單不等於流失」可直接複用,給 2 分。"
+      ]
+    },
+    {
+      "title": "查爾斯史都華大學用熱圖發現 1.27% 的人看得到登入鈕:手機登入成功率 +58%",
+      "original_title": "How Contentsquare and Merkle helped Charles Sturt University achieve a $6.7M revenue boost",
+      "url": "https://contentsquare.com/customers/charles-sturt-university/",
+      "source": "Contentsquare 案例・查爾斯史都華大學",
+      "tier": 2,
+      "date": "2025",
+      "author": "Contentsquare 發布,引述該校數位客戶體驗經理 Vaughan Files 與 Merkle 優化主管 Lachlan Jacob",
+      "cats": [
+        "國際品牌",
+        "顧問／商業視角"
+      ],
+      "industry": "教育",
+      "f_industry": [
+        "教育"
+      ],
+      "f_product": [
+        "其他"
+      ],
+      "f_goal": [
+        "登入",
+        "註冊"
+      ],
+      "why": "查爾斯史都華大學是澳洲最大的線上就讀大學,入學申請的「訪客到完成申請」轉換率是核心指標,但不少手機申請者中途放棄;學校花大錢導流到申請登入頁,卻有近 30% 的人在這一頁離開。",
+      "how": "學校與長期合作的顧問公司 Merkle(過去已做約 60 次 A/B 測試)用旅程分析找到登入頁是高離開點,再用熱圖看曝光率與點擊率:只有 54% 的人滑到「註冊」按鈕,只有 1.27% 滑到「登入」按鈕,看到後的點擊率分別僅 7.4% 與 15.8%。團隊改採行動優先,重新安置並重設計按鈕、刪減文字、調整色彩與標題,按鈕文字由「Register」改為「Create an Account」,並以 A/B 測試驗證後才全站上線。",
+      "result": "登入成功率 +58%、手機版「建立帳號」點擊 +10.6%,據估年營收增加約 670 萬澳幣(預估值)。改版前基準:登入頁離開率近 30%,登入鈕曝光率 1.27%、點擊率 15.8%,註冊鈕曝光率 54%、點擊率 7.4%。",
+      "caveat": "廠商自述(Contentsquare 客戶故事,另有顧問 Merkle 參與):單一來源、可能偏正面選樣、未經第三方驗證。670 萬澳幣為「預估」年營收而非實測;+58% 登入成功率未給改版後絕對值與樣本數,A/B 測試顯著性亦未揭露;文案、版面、按鈕位置同時改動,無法拆分各自貢獻。",
+      "takeaway": "診斷按鈕問題可用「曝光率 × 點擊率」兩層拆解:先看有多少人根本沒看到,再看看到的人有多少點擊,就知道該修位置還是修文案;重大改版前先用 A/B 測試驗證,避免憑直覺全站上線。",
+      "blurb": "學校花了大錢把人導到申請登入頁,卻眼睜睜看近三成人在這一頁離開,直到熱圖攤出曝光率:登入按鈕只有 1.27% 的人滑得到,看到的人點擊率也只有 15.8%。團隊因此把問題拆成「看不看得到」與「點不點得下去」兩層,先搬位置、砍文字,再把「Register」改成「Create an Account」。",
+      "metrics": [
+        [
+          "+58%",
+          "登入成功率"
+        ],
+        [
+          "+10.6%",
+          "手機建立帳號點擊"
+        ],
+        [
+          "1.27%",
+          "改版前登入鈕曝光率"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "申請轉換是核心指標,且近 30% 在登入頁流失,商業脈絡清楚,給 2 分。",
+        "分析→改版→A/B 驗證有交代,但為線性成功敘事,給 1 分。",
+        "改版前基準齊全,但結果只有相對值與預估營收,給 1 分。",
+        "引述當事經理與顧問,但由廠商刊載,依規則封頂 1 分。",
+        "曝光率 × 點擊率的拆解診斷可直接複用,給 2 分。"
+      ]
+    },
     {
       "title": "HubSpot Academy 用離開意圖問卷改版認證課程頁:註冊轉換 +10%",
       "original_title": "How HubSpot Academy used Surveys to boost signups by +10%",
@@ -16688,6 +16803,48 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Tactiq 用 Mixpanel 從 1 萬用戶成長到 100 萬",
+      "url": "https://mixpanel.com/customers/how-tactiq-leveraged-mixpanel-to-scale-from-10000-to-1-million-users",
+      "source": "Mixpanel 案例・Tactiq",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "工具導購型客戶故事,成長歸因於分析工具、無具體 UX 決策與前後對照; gate: min_total: 5.5 < 6"
+    },
+    {
+      "title": "賽馬會以 Optimizely 優化結帳與個人化",
+      "url": "https://www.optimizely.com/field-notes/customer-stories/the-jockey-club",
+      "source": "Optimizely 案例・The Jockey Club",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "全文無任何量化成果,廠商自述; gate: floor: quantified_outcome=0 < 1; min_total: 4.5 < 6"
+    },
+    {
+      "title": "UTS 以 Optimizely 整併數位生態:開放日報名超標 20%",
+      "url": "https://www.optimizely.com/field-notes/customer-stories/university-of-technology-sydney2",
+      "source": "Optimizely 案例・UTS",
+      "tier": 2,
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        0
+      ],
+      "reason": "CMS／DXP 平台導入的產品宣傳稿,UX 決策與實驗過程不透明,成果無 baseline 且歸因於平台; gate: floor: transferability=0 < 1; min_total: 5.5 < 6"
+    },
     {
       "title": "CadoMaestro 用 Hotjar 驗證網站優化",
       "url": "https://www.hotjar.com/customers/cadomaestro/",
