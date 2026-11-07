@@ -1,10 +1,125 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-07",
   "run": {
-    "scanned": 44,
+    "scanned": 30,
     "candidates": 5
   },
   "cases": [
+    {
+      "title": "Harrods 用挫折訊號抓出結帳卡點:棄單率 -8%、誤點狂點減半",
+      "original_title": "How advanced customer behavior data helped Harrods reduce cart abandonment by -8%",
+      "url": "https://contentsquare.com/customers/harrods/",
+      "source": "Contentsquare 案例・Harrods",
+      "tier": 2,
+      "date": "2022",
+      "author": "Contentsquare 發布,引述 Harrods 資深數位分析經理 Nick Clews",
+      "cats": [
+        "國際品牌",
+        "顧問／商業視角"
+      ],
+      "industry": "其他",
+      "f_industry": [
+        "其他"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "結帳"
+      ],
+      "why": "疫情封店期間 harrods.com 成為與顧客最重要的接觸點,流量暴增,團隊資源有限,只靠 Google Analytics 難以找出痛點並排優先順序,需要降低結帳摩擦。",
+      "how": "用挫折分數(frustration scoring)標出問題,再用 session 重播看原因,共修三處:姓名欄位錯誤訊息只寫「請輸入有效名字」,使用者輸入特殊字元或多個名字卻不知為何出錯,影響逾 7,000 次桌機造訪,改為明確說明可用字元;「Click & Collect」配送頁載入過慢導致狂點,交給 IT 處理;付款頁錯誤訊息出現在首屏之外,顧客重複點擊卻看不到提示,約每月 1,000 筆轉換因此流失,UX 團隊隨即修正。",
+      "result": "結帳表單狂點減半(-50%),姓名欄位連續多次點擊的比例在約 2 個月內從 16% 降到 8%;整體結帳改善使棄單率 -8%;自取表單完成時間改善 10%、表單放棄率 -2%。",
+      "caveat": "廠商自述(Contentsquare 客戶故事):單一來源、可能偏正面選樣、未經第三方驗證;棄單率 -8% 未說明是相對或絕對變化、也無 baseline 與期間(頁面同時出現「+8% reduction」與「-8%」兩種寫法);三項修正各自的貢獻無法拆分,亦未做對照實驗。",
+      "takeaway": "把「狂點、重複點擊」當成可量化的挫折訊號,先用重播找原因,再用流失人次或轉換數換算影響,就能排出修復順序;錯誤訊息要寫具體原因並放在視線內,是成本最低的結帳修法。",
+      "blurb": "一個姓名欄位讓 7,000 多次桌機造訪狂點，重播一看才知道，錯誤訊息只寫「請輸入有效名字」沒說特殊字元或多個名字不行；付款頁更糟，錯誤被擠在首屏之外，顧客以為按鈕壞了，每月約 1,000 筆轉換就這樣流失，修法都很小：把提示寫具體，再把錯誤拉進視線。",
+      "metrics": [
+        [
+          "-8%",
+          "結帳棄單率"
+        ],
+        [
+          "-50%",
+          "結帳表單狂點"
+        ],
+        [
+          "16%→8%",
+          "姓名欄重複點擊"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "封店期間流量暴增、資源有限,需排優先順序,商業脈絡明確,給 2 分。",
+        "挫折訊號→重播→修正的流程清楚,但為線性成功敘事,無被推翻方案,給 1 分。",
+        "有 16%→8%、7,000 次造訪、每月 1,000 筆轉換等絕對數字,但棄單率缺 baseline,給 2 分。",
+        "引述當事分析經理,但由廠商刊載,依規則封頂 1 分。",
+        "挫折訊號當排序依據、錯誤訊息具體化的原則可直接複用,給 2 分。"
+      ]
+    },
+    {
+      "title": "Diptyque 用熱圖與重播重做結帳登入:新用戶離開率 -31%、手機轉換率 +9%",
+      "original_title": "Diptyque is transforming its website and business culture with Contentsquare",
+      "url": "https://contentsquare.com/customers/diptyque/",
+      "source": "Contentsquare 案例・Diptyque",
+      "tier": 2,
+      "date": "2025",
+      "author": "Contentsquare 發布,引述 Diptyque 美洲區數位績效經理 Emmanuel Göthe",
+      "cats": [
+        "國際品牌",
+        "顧問／商業視角"
+      ],
+      "industry": "時尚",
+      "f_industry": [
+        "時尚"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "登入",
+        "結帳"
+      ],
+      "why": "Diptyque 門市從 2018 年的 70 間擴張到 2025 年的 124 間,電商同步成長,但原本的分析工具看不到完整的使用者旅程。客服收到結帳登入體驗很痛苦的回饋,NPS 問卷也印證,而結帳頁正是不敢輕易動的關鍵頁面。",
+      "how": "團隊先用分群發現新用戶離開率高 25%、手機轉換率比桌機低 15%;旅程分析看到使用者在結帳頁折返,熱圖顯示大家狂點一個被認定「顯然不能點」的元素,再用 session 重播確認登入介面與 CTA 不夠清楚。接著參考競品的快速登入流程,請 UX 設計師做出 2 個版本,用 AB Tasty 做 A/B 測試,把原本 2 步驟的流程砍掉一步、重整資訊層級,最後定案為讓使用者在同一處選擇登入或建立帳號。",
+      "result": "結帳頁新用戶離開率 -31%,手機使用者轉換率 +9%(轉換定義為進到填寫運送地址的下一步),頁面載入時間 -50%。版本 1 在法國與美國站都勝出。",
+      "caveat": "廠商自述(Contentsquare 客戶故事):單一來源、可能偏正面選樣、未經第三方驗證;成果皆為相對變化,未提供 baseline、樣本數與顯著性;載入時間 -50% 與登入改版的因果關係未說明,且以「進入下一步」而非最終購買作為轉換定義。",
+      "takeaway": "客訴訊號→分群→旅程分析→熱圖→重播,逐層縮小到具體摩擦點,再以 A/B 測試驗證,是低風險改動關鍵頁面的做法;把「登入或建立帳號」併成一步,也是可直接複用的結帳登入原則。",
+      "blurb": "客服收到「結帳登入很痛苦」的抱怨，團隊沒急著改版，先用熱圖抓到使用者狂點一個自以為「明顯不能點」的元素，再靠 session 重播確認介面本身不夠清楚，於是把 2 步驟登入砍成 1 步，讓人在同處選擇登入或建立帳號，並拿競品的快速登入當參考，跑 2 個版本的 A/B 測試才定案。",
+      "metrics": [
+        [
+          "-31%",
+          "新用戶結帳離開率"
+        ],
+        [
+          "+9%",
+          "手機結帳轉換率"
+        ],
+        [
+          "-50%",
+          "結帳頁載入時間"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "門市擴張、電商成長、客訴與 NPS 都指向結帳登入,商業脈絡明確,給 2 分。",
+        "有分群→重播→假設→A/B 測試的流程,但為線性成功敘事,沒有被推翻的方案,給 1 分。",
+        "皆為相對變化,無 baseline 與樣本數,給 1 分。",
+        "引述當事數位績效經理,但由廠商刊載,依規則封頂 1 分。",
+        "客訴→分群→熱圖→重播→測試的診斷鏈與登入合併原則可直接複用,給 2 分。"
+      ]
+    },
     {
       "title": "Michael Hill 用熱圖找出被藏住的結帳按鈕:購物車頁離開率 -18%、商品頁客單價 +64%",
       "original_title": "Michael Hill made data everyone's business—and increased average transaction value by +64%",
@@ -16803,6 +16918,34 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Rakuten 把單頁結帳拆成 4 步:進入運送步驟轉換 +10%",
+      "url": "https://contentsquare.com/customers/rakuten-us/",
+      "source": "Contentsquare 案例・Rakuten",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "廠商自述,僅憑「直覺」改版,無實驗驗證與 baseline ; gate: min_total: 5.5 < 6"
+    },
+    {
+      "title": "Orvis 以熱圖與重播修復結帳空白頁:購物車轉換 +5%",
+      "url": "https://contentsquare.com/customers/orvis/",
+      "source": "Contentsquare 案例・Orvis",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "廠商自述,過程與數據極簡(僅修一個空白畫面),無 baseline、可遷移性有限 ; gate: min_total: 5.5 < 6"
+    },
     {
       "title": "Tactiq 用 Mixpanel 從 1 萬用戶成長到 100 萬",
       "url": "https://mixpanel.com/customers/how-tactiq-leveraged-mixpanel-to-scale-from-10000-to-1-million-users",
