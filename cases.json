@@ -1,10 +1,120 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "run": {
-    "scanned": 30,
-    "candidates": 5
+    "scanned": 34,
+    "candidates": 6
   },
   "cases": [
+    {
+      "title": "Hush Blankets 重做行動版購物車頁:營收 +23%,商品頁改版再 +51.32%",
+      "original_title": "Hush Blankets: On track to earn over $1M in additional revenue with increased A/B testing velocity",
+      "url": "https://vwo.com/success-stories/hush-blankets/",
+      "source": "Wingify 案例・Hush Blankets",
+      "tier": 2,
+      "date": "2020",
+      "author": "Wingify(VWO)服務團隊發布",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "結帳"
+      ],
+      "why": "加拿大加重毯品牌 Hush Blankets 自 2020 年 4 月起委託 Wingify 服務團隊優化官網。漏斗分析顯示商品頁流失率逾 70%,購物車頁則有導覽連結與差評分散結帳意圖。",
+      "how": "測試 1(行動版購物車頁,14 天,50/50 分流):移除漢堡選單與頁尾連結、拿掉差評、數量變更自動更新購物車。測試 2(加拿大桌機商品頁,15 天):左側圖片固定、縮圖改垂直排列、強調免息分期、縮小選項框讓 CTA 進首屏、描述與評論收進手風琴、評分上移到標題下。",
+      "result": "測試 1:結帳頁造訪 +10.52%,完成購買 +15.48%,淨營收 +23%,估年增約 33.7 萬美元。測試 2:到結帳頁轉換率 +5.67%,完成購買 +33.15%,營收 +51.32%,估年增約 72 萬美元。",
+      "caveat": "廠商自述:單一來源、可能偏正面選樣、未經第三方驗證;firsthand 依 CRO／實驗平台案例規則封頂 1 分。標題的「額外逾 100 萬美元」是把兩個測試的估算年增(約 33.7 萬加 72 萬美元)外推相加,並非實測;頁面未給原版轉換率與營收基準、樣本數與顯著度;兩次測試都是一次改動多個元素的整頁重設計,無法歸因到單一改動;受測流量僅限行動購物車與加拿大桌機商品頁。",
+      "takeaway": "先用漏斗、熱圖與行為紀錄找出每頁的具體病灶,再整頁針對性重設計;購物車頁移除出口與負面干擾,商品頁讓 CTA 進首屏並收攏冗長內容。",
+      "blurb": "團隊沒有憑感覺改版，而是先用漏斗分析與熱圖逐頁找病灶：購物車頁的連結把人拉回漏斗上層，商品頁的長篇描述把人留在閱讀而不是加入購物車。對症下藥是砍連結、撤差評、描述收進手風琴（點擊展開的摺疊區塊），兩個測試各自估出年增營收，但都屬廠商推算。",
+      "metrics": [
+        [
+          "+23%",
+          "行動購物車營收"
+        ],
+        [
+          "+51.32%",
+          "商品頁營收"
+        ],
+        [
+          "70%+",
+          "商品頁流失率"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "score_notes": [
+        "以漏斗數據指出商品頁流失逾 70% 與購物車干擾,商業痛點明確,給 2 分。",
+        "有觀察→假設→測試,但皆為獲勝敘事、無被推翻的方案,給 1 分。",
+        "有升幅與年增估算,但無原版基準,給 1 分。",
+        "廠商服務團隊自述,依規則封頂 1 分。",
+        "整頁診斷再針對性重設計的做法可複用,但未提煉成框架,給 1 分。"
+      ]
+    },
+    {
+      "title": "nameOn 把購物車頁 9 個 CTA 砍到剩 2 個:營收 +11.4%",
+      "original_title": "nameOn Removed CTAs To Increase Revenue Using Wingify",
+      "url": "https://vwo.com/success-stories/nameon/",
+      "source": "Wingify 案例・nameOn",
+      "tier": 2,
+      "date": "2019",
+      "author": "Wingify(VWO)發布,改寫自挪威代理商 KingsPoint 顧問 Steven Macdonald 的原文",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "結帳"
+      ],
+      "why": "北歐刺繡個人化禮品商 nameOn 想降低購物車放棄率,把「購物車到結帳頁的造訪」目標拉高 10%,估計可帶來每月逾 8,500 美元、一年約 10 萬美元的增量營收。",
+      "how": "團隊用 GA 看過去 12 個月表現挑高價值頁,並鬆散套用 PIE 框架排測試順序;檢視購物車頁發現有 9 個 CTA(含訂閱電子報、按讚 Facebook、回首頁)。假設是 CTA 太多分散注意力,於是變體只留「Welcome bonus」與「Continue to checkout」,結帳鈕由黃改藍,測約 6 週。",
+      "result": "整體營收 +11.4%,統計顯著度 99%,電商轉換率與平均訂單金額同步上升;結帳頁造訪明顯增加。nameOn 隨後把測試延伸到商品頁與分類頁。",
+      "caveat": "廠商自述:單一來源、可能偏正面選樣、未經第三方驗證;firsthand 依 CRO／實驗平台案例規則封頂 1 分。原文為 Wingify 改寫自代理商 KingsPoint 的文章,轉述鏈為 KingsPoint → Wingify;+11.4% 為相對值,頁面未給原版營收或轉換率基準與樣本數;同時改了 CTA 數量與按鈕顏色,無法拆出各自貢獻;年增 10 萬美元為依 10% 目標的事前估算,非實測營收。",
+      "takeaway": "用歷史流量資料決定先測哪一頁(PIE 思路),購物車這類高意圖頁應移除一切與結帳無關的出口,讓主 CTA 成為唯一視覺焦點。",
+      "blurb": "團隊先靠 PIE 框架（依潛力、重要性、容易度替測試頁面排序）鎖定高價值頁，才發現購物車頁連「按讚 Facebook」「回首頁」都擠在一起，與結帳鈕搶點擊；變體把出口全砍掉、結帳鈕換成藍色，賭的是高意圖頁上干擾越少，越多人走進下一步。",
+      "metrics": [
+        [
+          "+11.4%",
+          "整體營收"
+        ],
+        [
+          "99%",
+          "統計顯著度"
+        ],
+        [
+          "約 6 週",
+          "測試時間"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "score_notes": [
+        "目標(購物車→結帳 +10%)與每月 8,500 美元的商業估算明確,給 2 分。",
+        "有 GA 排序與假設驗證,但過程線性、無失敗迭代,給 1 分。",
+        "+11.4% 有顯著度但無 baseline,給 1 分。",
+        "廠商案例改寫自代理商顧問,依規則封頂 1 分。",
+        "移除干擾 CTA、PIE 排序可複用,但未提煉成框架,給 1 分。"
+      ]
+    },
     {
       "title": "Harrods 用挫折訊號抓出結帳卡點:棄單率 -8%、誤點狂點減半",
       "original_title": "How advanced customer behavior data helped Harrods reduce cart abandonment by -8%",
@@ -16918,6 +17028,20 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Theater 以三個行動版測試提升營收:每位訪客營收 +38.95%",
+      "url": "https://vwo.com/success-stories/theater-convertpolo-revenue/",
+      "source": "Wingify 案例・Theater",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "廠商自述,三個測試皆只給相對升幅、無 baseline 與樣本數,加總整體升幅疑為各測試簡單相加,商業背景無量化目標; gate: min_total: 5.5 < 6"
+    },
     {
       "title": "Rakuten 把單頁結帳拆成 4 步:進入運送步驟轉換 +10%",
       "url": "https://contentsquare.com/customers/rakuten-us/",
