@@ -1,10 +1,67 @@
 {
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "run": {
-    "scanned": 34,
-    "candidates": 6
+    "scanned": 46,
+    "candidates": 3
   },
   "cases": [
+    {
+      "title": "Sago Mini 靠漏斗實驗調整試用與新手流程:轉換率 +31%,海外訂閱戶成長 80%",
+      "original_title": "How Sago Mini uses Mixpanel to accelerate experimentation and drive 80% YoY subscription growth",
+      "url": "https://mixpanel.com/customers/how-sago-mini-uses-mixpanel-to-accelerate-experimentation",
+      "source": "Mixpanel 案例・Sago Mini",
+      "tier": 2,
+      "date": "2025",
+      "author": "Mixpanel 官方發布,具名引述 Sago Mini 產品總監 Brennan Clark",
+      "cats": [
+        "更多案例"
+      ],
+      "industry": "遊戲",
+      "f_industry": [
+        "遊戲"
+      ],
+      "f_product": [
+        "行動App"
+      ],
+      "f_goal": [
+        "升級",
+        "新手引導"
+      ],
+      "why": "兒童 App 開發商 Sago Mini 在 2017 年從單次買斷轉為訂閱、2023 年再推出七款 App 合售的 Piknik 套組,跨 App 的行為追蹤變複雜;產品經理需要不靠專職資料團隊、自己快速驗證假設並優化轉換漏斗。另外,海外市場的參與度與轉換落後北美。",
+      "how": "各 App 的產品經理自己維護 Mixpanel 設定,用漏斗(Funnels)找出購買流程中的摩擦點,逐一測試新手流程、方案頁與免費試用長度,依結果快速轉向。針對海外落後,2023 年推出農曆新年、排燈節(Diwali)、聖若望節(Festa Junina)等在地化內容。Piknik 套組則分析留存與使用 App 數量的關係,據此調整新手引導,鼓勵用戶訂閱初期就探索多款 App。",
+      "result": "一年內轉換率 +31%(原文稱試用長度與新手流程的測試影響最大);主要海外市場的訂閱戶年增 80%。留存「已見改善」但未提供數字。",
+      "caveat": "廠商自述:單一來源、可能偏正面選樣、未經第三方驗證;firsthand 依 CRO／實驗平台客戶案例規則封頂 1 分。+31% 與 +80% 皆無基準值、測試期間與樣本數;80% 成長歸因於在地化內容為受訪者說法,同期是否有其他因素未交代;並未揭露失敗或被推翻的實驗。",
+      "takeaway": "把免費試用長度與新手流程當成可量測的變數逐項實驗,並用地區別資料找出落後市場,再以在地化內容補強,比一體適用的流程更有機會撬動轉換。",
+      "blurb": "團隊把免費試用的天數本身當成變數,與新手流程、方案頁一起用漏斗找出購買路徑的卡點,逐項測試再快速轉向,另一條線則從數據看出海外用戶參與度落後北美,於是補上農曆新年、排燈節(Diwali)等在地節慶內容,兩條線的成績都是廠商自述,未給基準值。",
+      "metrics": [
+        [
+          "+31%",
+          "年度轉換率提升"
+        ],
+        [
+          "+80%",
+          "海外訂閱戶年增"
+        ],
+        [
+          "7 款",
+          "Piknik 套組 App 數"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "score_notes": [
+        "訂閱轉型後跨 App 追蹤複雜、海外轉換落後,商業痛點明確,給 2 分。",
+        "有漏斗找卡點、測試試用長度與新手流程、依結果轉向,但無被推翻的方案,給 1 分。",
+        "31%、80% 皆無基準值,給 1 分。",
+        "廠商客戶案例,具名產品總監引述,依規則封頂 1 分。",
+        "試用長度與在地化的做法可複用,但未提煉成框架,給 1 分。"
+      ]
+    },
     {
       "title": "Hush Blankets 重做行動版購物車頁:營收 +23%,商品頁改版再 +51.32%",
       "original_title": "Hush Blankets: On track to earn over $1M in additional revenue with increased A/B testing velocity",
@@ -17028,6 +17085,34 @@
     }
   ],
   "rejected": [
+    {
+      "title": "TapNow 導入 Mixpanel 半年:留存 +50%",
+      "url": "https://mixpanel.com/customers/how-tapnow-increased-rentention-with-mixpanel",
+      "source": "Mixpanel 案例・TapNow",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "廠商自述,留存 +50% 無 baseline 且歸因於工具而非具體設計改動,過程單薄,偏產品宣傳; gate: min_total: 5.5 < 6"
+    },
+    {
+      "title": "Gekko 以 A/B 測試改版註冊頁:註冊 +58%、付費轉換 +71%",
+      "url": "https://mixpanel.com/customers/gekko-uses-mixpanel-increase-conversions-across-platforms",
+      "source": "Mixpanel 案例・Gekko",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "廠商自述,註冊與付費轉換升幅皆無 baseline、樣本與顯著度,商業目標與決策過程單薄; gate: min_total: 5.5 < 6"
+    },
     {
       "title": "Theater 以三個行動版測試提升營收:每位訪客營收 +38.95%",
       "url": "https://vwo.com/success-stories/theater-convertpolo-revenue/",
