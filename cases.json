@@ -1,10 +1,126 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "run": {
-    "scanned": 45,
+    "scanned": 47,
     "candidates": 7
   },
   "cases": [
+    {
+      "title": "把首頁長文改成四點清單、加一顆購物鈕，生蜂蜜電商銷售 +24%",
+      "original_title": "Win Report: How a simpler homepage increased sales by 24%",
+      "url": "https://conversion-rate-experts.com/the-raw-honey-shop-simpler-homepage-win-report/",
+      "source": "CRE 案例・The Raw Honey Shop",
+      "tier": 2,
+      "date": "2026-10",
+      "author": "Conversion Rate Experts（顧問團隊），客戶具名 The Raw Honey Shop",
+      "cats": [
+        "顧問／商業視角",
+        "更多案例"
+      ],
+      "industry": "餐飲",
+      "f_industry": [
+        "餐飲"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "到達頁",
+        "第一印象"
+      ],
+      "why": "The Raw Honey Shop 販售 40 多種單一產地生蜂蜜，每罐由創辦人親選。可用性測試中，受測者把它評為三家專業競品裡資訊最豐富的一家，但「會不會再回來逛」排名第三（3.2/5，競品 4.8 與 4.0），可信度更是墊底，受測者說「大概可信，但一堆資訊很難判斷」。捲動熱圖顯示 50% 桌機訪客根本沒捲到商品區。",
+      "how": "原首頁以十幾段短文講品牌故事，把關鍵主張散落其中、商品被推到很下面。變體依「謹慎的蜂蜜買家心中的購物清單」重建首屏：是不是真貨？誰做的？憑什麼相信？去哪買？具體做法是把長文砍成標題＋摘要＋一小段，關鍵主張改成「每一罐都是」開頭的粗體清單（生、未加熱、無農藥環境、真實養蜂人、有機認證或依有機原則）；把首屏原本就有的養蜂人 Antonio 照片和「真實養蜂人」主張綁在一起；並在清單下方加一顆「Shop our honeys」按鈕。",
+      "result": "測試期間銷售 +24%，每位訪客營收的增幅更大（原文未給具體數字）。研究面的對照數據：受測者回訪意願 3.2/5 墊底、可信度最後一名，50% 桌機訪客沒看到商品區。",
+      "caveat": "廠商／顧問自述：單一來源、可能偏正面選樣、未經第三方驗證，文末為導購。顧問自述、客戶具名但數字無法另行查證；只有相對 +24%，無 baseline 轉換率、樣本數、測試期間與顯著性；每位訪客營收僅說「更大」未揭露數值。變體同時改了文案結構、照片與主張的綁定、新增購物按鈕，無法拆解各自貢獻；可用性測試受測人數未揭露。",
+      "takeaway": "內容豐富不等於好說服：先用可用性測試問「會不會再回來、可不可信」，再用捲動熱圖看真實訪客讀到哪，然後把散在長文裡的信任證據，依買家心中的檢核清單排成可一眼掃完的條列，並在清單旁直接給購買入口。",
+      "blurb": "受測者一致認為這家店資訊最完整，偏偏可信度排名墊底，原因出在挖：信任證據全埋在十幾段品牌故事裡，一半桌機訪客連商品區都沒捲到，團隊於是照買家心中的購物清單（是不是真貨、誰做的、憑什麼信）把長文改成粗體條列，再讓養蜂人 Antonio 的照片緊貼「真實養蜂人」那一條，降低認知負荷，說服才找得到人。",
+      "metrics": [
+        [
+          "+24%",
+          "測試期間銷售"
+        ],
+        [
+          "50%",
+          "桌機訪客沒看到商品"
+        ],
+        [
+          "3.2/5",
+          "回訪意願（墊底）"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "可用性測試與熱圖量化出「資訊最多卻最不可信、一半訪客看不到商品」的痛點，給 2 分。",
+        "研究→假設→單一變體，無失敗或被推翻方案，給 1 分。",
+        "只有相對 +24%，無 baseline 與樣本數，給 1 分。",
+        "顧問團隊自述，CRO 平台群組封頂 1 分。",
+        "提煉出「依買家心中檢核清單排列信任證據」的可複用準則，給 2 分。"
+      ]
+    },
+    {
+      "title": "AI 只對轉換機率逾 52% 的訪客彈出試駕邀請，Toyota 法國試駕名單翻倍",
+      "original_title": "Toyota turbocharges its lead generation with AI, doubling its success!",
+      "url": "https://www.kameleoon.com/customer/toyota-turbocharges-its-lead-generation-ai-doubling-its-success",
+      "source": "Kameleoon 案例・Toyota 法國",
+      "tier": 2,
+      "date": "",
+      "author": "Kameleoon 官方發布；Toyota 法國數位行銷與獲客主管 Caroline Josse 具名受訪",
+      "cats": [
+        "國際品牌",
+        "更多案例"
+      ],
+      "industry": "其他",
+      "f_industry": [
+        "其他"
+      ],
+      "f_product": [
+        "AI"
+      ],
+      "f_goal": [
+        "個人化",
+        "行銷導流"
+      ],
+      "why": "Toyota.fr 每月 140 萬造訪，到經銷商試駕是購車旅程的關鍵一步，試駕預約是網站頭號 KPI。過去用人工規則評分決定誰看到試駕彈窗，名單數量雖增加，卻有許多人預約後沒到場或沒買車，讓這個操作不划算。",
+      "how": "改用 Kameleoon 的 AI 預測鎖定：先依 Toyota 定義的品牌好感指標讓演算法在未上線狀態下學習訪客行為，約第 10 週趨於穩定才上線。上線後只對轉換機率高於 52% 的訪客即時顯示彈窗，內容個人化為該訪客最感興趣的車款圖片與依地理位置推薦的最近經銷商；瀏覽中意圖升高時彈窗也可動態出現，低意圖訪客則不被打擾。",
+      "result": "官方稱試駕名單數量翻倍。原本要解決的「名單品質低、到場率與成交率差」，文中沒有提供 AI 上線後的到場率或成交數據，僅以質性描述帶過。",
+      "caveat": "廠商／顧問自述：單一來源、可能偏正面選樣、未經第三方驗證，文末為導購。轉述鏈：Kameleoon 官網客戶故事，Toyota 主管具名引言。只有「名單翻倍」一個相對結果，無 baseline 數量、測試設計、對照組與期間；更關鍵的是，起因是名單品質問題，但結果只報數量、未報到場率或成交，無法判斷真正痛點是否解決；未註明發布日期。",
+      "takeaway": "彈窗打擾的成本由所有訪客分攤，收益卻只來自少數高意圖者：先定義「好名單」的下游指標（到場、成交），再用意圖分數設門檻，只打擾高意圖訪客，並把彈窗內容換成對方正在看的車款與最近據點。",
+      "blurb": "人工評分的試駕彈窗帶來更多名單，偏偏很多人預約後沒到場也沒買車，數量好看卻不划算，團隊於是讓 AI 預測鎖定先在背景學 10 週，上線後只對轉換機率逾 52% 的人彈窗，並換上對方最在意的車款與最近經銷商，值得追問的是：起因明明是品質，文中卻只交代了數量。",
+      "metrics": [
+        [
+          "2 倍",
+          "試駕預約名單"
+        ],
+        [
+          "52%",
+          "彈窗觸發門檻"
+        ],
+        [
+          "10 週",
+          "演算法學習期"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "score_notes": [
+        "點出名單品質低、預約不到場造成不划算的明確商業痛點，給 2 分。",
+        "有「人工評分→品質差→改 AI 鎖定」的修正，但過程由廠商線性敘述，給 1 分。",
+        "只有「翻倍」無 baseline，且未報原始痛點（品質）的結果，給 1 分。",
+        "廠商官網自述、客戶具名引言，CRO 平台群組封頂 1 分。",
+        "「只打擾高意圖訪客」有啟發，但綁定特定 AI 工具、未提煉成方法，給 1 分。"
+      ]
+    },
     {
       "title": "讓諮詢團隊成員露臉取代試算器標語，以房養老諮詢名單 +79%",
       "original_title": "Win Report: How showing a team member increased leads by 79%",
@@ -17651,6 +17767,76 @@
     }
   ],
   "rejected": [
+    {
+      "title": "How Papier built a high-impact experimentation program with Kameleoon",
+      "url": "https://www.kameleoon.com/customer/papier-built-a-high-impact-experimentation-program-with-kameleoon",
+      "source": "Kameleoon 案例・Papier",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "以工具導入為主軸的廠商宣傳，僅零星提到翻頁預覽 +8%、平均勝出實驗 +5–6%，無 baseline 與具體決策過程（gate: min_total: 5.5 < 6）"
+    },
+    {
+      "title": "Winona's success with Kameleoon and Mixpanel in optimizing women's healthcare",
+      "url": "https://www.kameleoon.com/customer/winona",
+      "source": "Kameleoon 案例・Winona",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "「稍後再傳」證件按鈕 +9% 僅一句帶過，無 baseline、無過程細節，主體為工具整合宣傳（gate: min_total: 5.5 < 6）"
+    },
+    {
+      "title": "Impact Dog Crates",
+      "url": "https://www.invespcro.com/case-studies/impact-dog-crates/",
+      "source": "Invesp 案例・Impact Dog Crates",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "成果寫成「delivered a 30% conversion rate」，語意不明疑誤植（應為增幅或絕對值不清），依規則跳過；過程僅概述（gate: min_total: 5.5 < 6）"
+    },
+    {
+      "title": "Company Sage",
+      "url": "https://www.invespcro.com/case-studies/company-sage-wyoming-llc-attorney/",
+      "source": "Invesp 案例・Company Sage",
+      "tier": 2,
+      "scores": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "reason": "僅「影響營收逾 100 萬美元」與合作流程，未說明任何設計改動或決策（gate: floor: decision_process=0 < 1; floor: transferability=0 < 1; min_total: 3.5 < 6）"
+    },
+    {
+      "title": "Campus Books",
+      "url": "https://www.invespcro.com/case-studies/campus-books/",
+      "source": "Invesp 案例・Campus Books",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "reason": "全文無任何成果數字，僅客戶引言稱轉換與營收提升（gate: floor: quantified_outcome=0 < 1; min_total: 4.5 < 6）"
+    },
     {
       "title": "A UX case study on YouTube Shorts",
       "url": "https://builtformars.com/case-studies/youtube-shorts",
