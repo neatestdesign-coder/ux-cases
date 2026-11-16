@@ -1,10 +1,189 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-16",
   "run": {
-    "scanned": 51,
-    "candidates": 3
+    "scanned": 30,
+    "candidates": 6
   },
   "cases": [
+    {
+      "title": "Smart Insights 重寫會員方案頁文案:首測輸 8.2% 對 4.9%,修正後代理商頁轉換翻倍",
+      "original_title": "CRO Case Study: How we increased our lead conversion quality with research and copywriting changes",
+      "url": "https://www.smartinsights.com/conversion-optimisation/conversion-optimisation-strategy/conversion-rate-optimization-case-study/",
+      "source": "Smart Insights・會員頁 CRO 自述",
+      "tier": 0,
+      "date": "2019-11-12",
+      "author": "Carolanne Mangles(時任 Smart Insights 數位行銷專員,當事人親撰)",
+      "cats": [
+        "更多案例"
+      ],
+      "f_industry": [
+        "教育"
+      ],
+      "f_product": [
+        "SaaS"
+      ],
+      "f_goal": [
+        "到達頁"
+      ],
+      "why": "Business Membership 有 1 個總覽頁加 3 個產業頁(新創、企業、代理商),文案 95% 雷同,既有 SEO 重複內容風險,也講不出各產業的痛點;企業版頁是轉換最低的一頁。團隊目標是同時提升名單數量與品質,並明說寧可犧牲一些名單量換品質。",
+      "how": "先和業務團隊訪談各產業痛點與成交原因,建立訊息矩陣,把文案分成「做決定必備資訊」「業務電話裡才會講的加分資訊」「建立信任的見證與案例」三層;每頁首屏放該產業最在意的賣點,見證穿插在文案之間,完整案例放到表單之後。用 Google Optimize 做 50/50 分流,總覽頁與產業頁綁成同一組。",
+      "result": "第一輪失敗:新版同時換了文案和全站導覽列,最高轉換 4.9%,原版 8.2%,跑兩週後判定落敗,且因同時改太多無法歸因。改回極簡頁首、只比文案後,新版勝出:總覽頁 0.1% → 0.6%、新創頁 5% → 6.3%、企業頁 1.4% → 2.8%、代理商頁 3.4% → 6.9%;作者另稱新名單帶來營收 +27%。",
+      "caveat": "當事人親撰,但為單一來源。第二輪測試的樣本數、測試時長與統計顯著性未揭露(僅附 Google Optimize 截圖);營收 +27% 未說明比較期間與計算口徑;第一輪「最高轉換 4.9%」指信賴區間上緣或某一頁,原文語意不完全清楚。",
+      "takeaway": "改版時一次只動一個變因,否則輸了也學不到東西;B2B 名單頁可以把文案按「決策必需／業務加分／社會證明」分層,表單放低一點反而篩出更有準備的名單。",
+      "blurb": "第一輪輸掉的原因不在文案,而是團隊順手加上的全站導覽列,選項一多,訪客就從頁面溜走。改回極簡頁首再測一次,才看清文案本身的效果。真正可帶走的是那套三層分法:決策必需、業務電話裡才講的加分資訊、見證,表單刻意壓到好幾屏之後,讀完才填的人,本來就是比較熟的名單。",
+      "metrics": [
+        [
+          "8.2% → 4.9%",
+          "首測原版對新版(新版落敗)"
+        ],
+        [
+          "3.4% → 6.9%",
+          "代理商頁轉換"
+        ],
+        [
+          "1.4% → 2.8%",
+          "企業頁轉換"
+        ],
+        [
+          "+27%",
+          "新名單帶來營收"
+        ]
+      ],
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "score_notes": [
+        "有重複內容 SEO 風險、企業頁轉換最低與「以量換質」的明確目標,給 2 分。",
+        "寫出首測失敗、同時改兩個變因的錯誤與修正後重測,給 2 分。",
+        "四個頁面皆有前後轉換率對照,給 2 分。",
+        "當事團隊成員親撰,給 2 分。",
+        "提煉出三層文案分法與單一變因原則,給 2 分。"
+      ],
+      "industry": "教育"
+    },
+    {
+      "title": "ŠKODA 法國用倒數計時橫幅推零利率優惠:試駕預約週增逾 2 倍",
+      "original_title": "ŠKODA Jump-Starts Test-Drive Bookings with Countdown Banner",
+      "url": "https://wingify.com/success-stories/skoda-jump-starts-test-drives/",
+      "source": "AB Tasty 案例・ŠKODA 法國",
+      "tier": 2,
+      "date": "2019",
+      "author": "AB Tasty(Wingify)發布,具名引述 ŠKODA 法國 Sebastien Toussaint 與 AB Tasty Laura Rérolle",
+      "cats": [
+        "國際品牌",
+        "更多案例"
+      ],
+      "f_industry": [
+        "其他"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "行銷導流"
+      ],
+      "why": "在汽車業,線上預約試駕是購買漏斗裡高意圖的關鍵一步,經銷商也偏好客戶事先預約以便排班。ŠKODA 法國分公司手上有一檔罕見、限時的零利率貸款優惠,想藉此拉高線上試駕預約,但不確定用哪種網站手法。",
+      "how": "與 AB Tasty 及代理商 Rosapark 討論後,選擇在首頁與車款頁放倒數計時橫幅,顯示零利率方案剩餘時間,讓優惠像一場活動;橫幅有兩個 CTA:「了解更多」導向說明頁、「預約試駕」直達預約頁。桌機與手機同步上線,跑滿優惠期 8 天。這是汽車業少用的手法,所以刻意只在這檔活動小範圍試。",
+      "result": "活動週的試駕預約數比前一週多出 1 倍以上,當週 13% 的名單直接來自倒數橫幅。AB Tasty 也提醒這招不宜濫用,建議一年只在 2 到 3 次門市開放日活動使用。",
+      "caveat": "廠商自述:單一來源、可能偏正面選樣、未經第三方驗證;firsthand 依 CRO／實驗平台案例規則封頂 1 分。轉述鏈:AB Tasty(現併入 Wingify)發布,具名引述客戶方人員,原始出處即本頁。「翻倍」是活動週對前一週的前後比較,非 A/B 對照,且同期有大規模媒體曝光,增量無法全歸功於橫幅;未揭露預約絕對數與流量基準。產業歸類:汽車不在現有產業清單,暫標「其他」。",
+      "takeaway": "限時優惠可以用倒數計時把它「活動化」,並把 CTA 直接接到高意圖動作(預約);但稀缺感要省著用,否則訪客很快免疫。",
+      "blurb": "緊迫感這招在汽車業很少人用,團隊乾脆只押在一檔 8 天的零利率優惠上試水溫,橫幅放兩個出口,一個解釋方案、一個直達試駕預約。當週 13% 名單來自這條橫幅,但同期還有媒體大檔期,翻倍不能全算它的。連顧問都提醒一年頂多用 2 到 3 次,稀缺感用多了就不靈。",
+      "metrics": [
+        [
+          "2 倍以上",
+          "試駕預約(對比前一週)"
+        ],
+        [
+          "13%",
+          "當週名單來自倒數橫幅"
+        ],
+        [
+          "8 天",
+          "活動期間"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "score_notes": [
+        "清楚交代試駕在汽車漏斗的價值與限時優惠背景,給 2 分。",
+        "有選手法的討論與小範圍試行的取捨,但過程線性,給 1 分。",
+        "僅前後週比較與占比,無對照組與絕對數,給 1 分。",
+        "廠商自家案例,依規則封頂 1 分。",
+        "有「稀缺感要節制」的提醒,但未提煉成方法,給 1 分。"
+      ],
+      "industry": "其他"
+    },
+    {
+      "title": "Fragrance Direct 用社會認同、送禮分眾與結帳優化三招:營收 +21%",
+      "original_title": "How a Dedicated Optimization Program Helped Fragrance Direct Delight Its Customers",
+      "url": "https://wingify.com/success-stories/fragrance-direct-optimization-program/",
+      "source": "AB Tasty 案例・Fragrance Direct",
+      "tier": 2,
+      "date": "2026",
+      "author": "AB Tasty(Wingify)發布,執行方為代理商 Endless Gain,具名引述 Fragrance Direct 電商總監 Julian Thompson",
+      "cats": [
+        "更多案例",
+        "顧問／商業視角"
+      ],
+      "f_industry": [
+        "時尚"
+      ],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "個人化",
+        "結帳"
+      ],
+      "why": "英國美妝電商 Fragrance Direct(賣 600 個品牌、逾 14,000 件商品)研究發現市場知名度偏低;三大送禮檔期(情人節、母親節、聖誕節)的「香水推薦」頁轉換高但流量低,問卷顯示訪客其實不知道要送什麼;結帳流程多個步驟與欄位造成摩擦。",
+      "how": "Endless Gain 用 AB Tasty 分三條線做:對新客顯示多種社會認同訊息補信任;用受眾功能辨識「在找禮物或還沒決定」的訪客,只對他們跳出「在找禮物嗎?」提示並導向香水推薦問答,不打擾其他人;重新設計結帳多個元素並逐一實驗。",
+      "result": "社會認同訊息使用者轉換率 +8% 以上;送禮分眾提示在檔期內使用者轉換率 +10%;結帳改版使用者轉換率 +2%。整體成果頁面宣稱交易數 +20%、營收 +21%。",
+      "caveat": "廠商自述:單一來源、可能偏正面選樣、未經第三方驗證;firsthand 依 CRO／實驗平台案例規則封頂 1 分。轉述鏈:AB Tasty(現併入 Wingify)發布,具名引述客戶方人員,原始出處即本頁。所有數字皆為相對提升,未揭露基準轉換率、樣本數、測試期間與顯著性;整體 +21% 營收是否為三項實驗加總、或含季節與自然成長,原文未說明。",
+      "takeaway": "個人化不一定要全面鋪開,先找出「意圖不明確」的那一群人,只對他們給引導,其他人照原路走,既能提升轉換也不增加干擾。",
+      "blurb": "推薦頁轉換很高,流量卻少得可憐,問卷才揭開原因:來送禮的人根本不知道要買什麼。團隊沒有把入口硬塞給所有人,只對判斷為「在找禮物」的訪客跳出一句提問,再帶進香水推薦問答,其餘訪客完全不受打擾。這是分眾個人化的基本功,先認出意圖模糊的那群人,再只對他們出手。",
+      "metrics": [
+        [
+          "+21%",
+          "營收"
+        ],
+        [
+          "+20%",
+          "交易數"
+        ],
+        [
+          "+10%",
+          "送禮檔期使用者轉換"
+        ],
+        [
+          "+8%",
+          "社會認同訊息使用者轉換"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "score_notes": [
+        "每條實驗都有研究依據(知名度低、推薦頁流量低、結帳摩擦),給 2 分。",
+        "有研究到假設的連結與不打擾非送禮客的取捨,但無失敗方案,給 1 分。",
+        "僅相對提升、無基準與樣本,給 1 分。",
+        "廠商自家案例,依規則封頂 1 分。",
+        "意圖分眾的思路可複用,但未提煉成框架,給 1 分。"
+      ],
+      "industry": "時尚"
+    },
     {
       "title": "Food on the Table 不再「用數據硬解」回頭觀察使用者，新手啟用率 +77%",
       "original_title": "Case Study: UX, Design, and Food on the Table",
@@ -17882,6 +18061,48 @@
     }
   ],
   "rejected": [
+    {
+      "title": "David Jones 帳號圖示加紅點提示:點擊 +81%",
+      "url": "https://wingify.com/success-stories/david-jones-accelerates-digital-transformation-with-ab-tastys-experimentation-and-personalization-solutions/",
+      "source": "AB Tasty 案例・David Jones",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "五維皆僅 1 分,單一微互動實驗、無基準轉換率;gate:min_total: 5.5 < 6"
+    },
+    {
+      "title": "Pets at Home 加入購物車後自動捲到推薦商品:客單價 +1.2%",
+      "url": "https://wingify.com/success-stories/how-pets-at-home-increased-their-average-order-value-by-1-2/",
+      "source": "AB Tasty 案例・Pets at Home",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "五維皆僅 1 分,單一 anchor link 實驗、提升幅度小且無基準;gate:min_total: 5.5 < 6"
+    },
+    {
+      "title": "Vestiaire Collective App 商品列表頁改版的 A/B 測試教訓",
+      "url": "https://medium.com/vestiaire-connected/what-we-have-learned-about-ab-testing-from-our-app-catalog-page-redesign-e069dfedfe69",
+      "source": "Vestiaire Connected・列表頁改版",
+      "tier": 0,
+      "scores": [
+        1,
+        2,
+        0,
+        2,
+        1
+      ],
+      "reason": "過程與失敗反思佳,但結果只以「+」「+++」符號表示,全文無任何數字(量化成果 0,auto-reject);gate:floor: quantified_outcome=0 < 1"
+    },
     {
       "title": "UI・UX改善により、半年で約10万CV向上に成功。ユーザー第一に「新時代のオリコ」を目指して",
       "url": "https://kaizenplatform.com/case/orico",
