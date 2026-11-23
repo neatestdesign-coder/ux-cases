@@ -1,10 +1,66 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "run": {
-    "scanned": 61,
-    "candidates": 7
+    "scanned": 56,
+    "candidates": 4
   },
   "cases": [
+    {
+      "title": "巴基斯坦 Telenor 自家 App 發現「每天來玩遊戲卻不買方案」的族群，把方案擺到遊戲旁，該處優惠營收最高翻倍",
+      "original_title": "How Mixpanel helped My Telenor App drive 29% growth in monthly active users",
+      "url": "https://mixpanel.com/customers/my-telenor-app-analytics-mixpanel",
+      "source": "Mixpanel 案例・My Telenor App",
+      "tier": 2,
+      "date": "2026",
+      "author": "Mixpanel 官方發布，具名引述 Telenor Pakistan 數位通路經理 Tehreem Misbah、數位通路與產品副總 Muhammad Shan ul Haq",
+      "cats": [
+        "更多案例"
+      ],
+      "industry": "電信",
+      "f_industry": [
+        "電信"
+      ],
+      "f_product": [
+        "行動App"
+      ],
+      "f_goal": [
+        "升級"
+      ],
+      "why": "My Telenor App（MTA）是巴基斯坦第一個破千萬用戶的電信 App，90% 的關鍵服務已可在 App 內完成、取代客服中心。但資料散在內部報表、資料倉儲、Firebase、BigQuery 等多處，團隊只看得到用戶最後買了什麼，看不到中間搜尋了什麼、在哪裡流失、花多久才走到目的地，難以把參與度和營收接起來。",
+      "how": "團隊先列出最重要的使用者旅程與營運 KPI，約一週內建好事件追蹤，再用漏斗、cohort、留存與行為路徑（Flows）分析。Flows 顯示一大群高參與用戶天天為了「每日獎勵」「Play & Win」小遊戲進站，卻幾週都沒看過任何方案頁就離開，團隊判斷問題不在需求不足，而是商業內容沒有出現在他們會經過的地方，於是把相關優惠直接擺到這些高參與功能旁邊。同時用「到達某頁要花多久」與流失率檢查低頻自助功能的位置與命名，首頁改版時依觀察到的行為重建導覽，並把功能名稱換成用戶自己會用的說法，事後再量測成效。",
+      "result": "三個月內，擺在遊戲與獎勵功能旁的優惠，營收最高增加 100%（原文用「up to」，為上限值）；首頁改版後核心用戶（每月活躍超過 20 天）立即增加 8 到 9 個百分點。整體面向，MAU 成長到 1,250 萬、年增 29%，每日參與度增加 5 個百分點，App 內高價值客戶占比從 55% 提升到 60%，App 獲客族群的 ARPU 比同期相似的網路用戶族群高出 26%。原文未揭露任何失敗或被推翻的方案。",
+      "caveat": "廠商自述：單一來源、可能偏正面選樣、未經第三方驗證；firsthand 依 CRO／實驗平台客戶案例規則封頂 1 分。轉述鏈：Mixpanel 官方客戶故事，引述 Telenor Pakistan 具名主管，數字已與原頁核對。「營收最高 +100%」只給上限且無絕對金額與基準值；核心用戶 +8 到 9 個百分點為改版前後比較，未說明有無對照組，可能混入季節或行銷因素；MAU 年增 29% 與高價值客戶占比上升屬整體營運成果，無法單獨歸因於分析工具或單一改版；ARPU +26% 是與「相似網路用戶族群」比較，選樣方式未揭露。",
+      "takeaway": "參與度高不等於會付費：先用行為路徑找出「常來卻從不經過商業頁面」的族群，再把轉換點放到他們本來就會經過的高參與功能旁，比硬拉他們去方案頁更有效；導覽與功能命名也可以用「到達時間＋流失率」排優先序，並改用用戶自己的語言命名。",
+      "blurb": "一群用戶幾乎天天打開 App，卻是為了領每日獎勵、玩小遊戲，好幾週都沒點開任何方案頁，行為路徑（Flows）分析把這個落差攤開：需求其實在，只是商業內容沒出現在他們會走過的地方，團隊於是把優惠直接擺到遊戲旁，首頁導覽也照實際動線重排、功能改用用戶的說法命名，參與度要變成營收，得先讓兩者出現在同一個畫面裡。",
+      "metrics": [
+        [
+          "+8–9 pp",
+          "首頁改版後核心用戶"
+        ],
+        [
+          "55%→60%",
+          "高價值客戶占比"
+        ],
+        [
+          "1,250 萬",
+          "MAU（年增 29%）"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "score_notes": [
+        "business_context=2：清楚交代資料分散、只看得到結果看不到過程，以及高參與卻不付費的營收缺口。",
+        "decision_process=1：有「Flows 發現落差→判斷不是需求問題→把優惠放到高參與功能旁」的推論，但過程線性，無被推翻方案或失敗迭代。",
+        "quantified_outcome=2：高價值客戶占比 55%→60%、MAU 1,250 萬年增 29% 有絕對數字；但優惠營收僅給上限值。",
+        "firsthand=1：廠商客戶故事，CRO／實驗平台群組封頂 1 分。",
+        "transferability=1：「參與≠付費、把轉換點放到高參與動線上」有啟發，但未提煉成完整方法。"
+      ]
+    },
     {
       "title": "京東商家後台「商品發布頁」改版：商家滿意度 72%→87%，但發布時長只從 10 分鐘以上降到 8 到 10 分鐘",
       "original_title": "【复盘V1-V1.5项目】电商平台B端商家系统“商品发布”场景体验升级",
@@ -18822,6 +18878,48 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Tata 1mg 導入自助分析：洞察產出時間縮短 90%、不再依賴 SQL",
+      "url": "https://mixpanel.com/customers/tata-1mg-product-led-growth-self-serve-analytics",
+      "source": "Mixpanel 案例・Tata 1mg",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "gate: min_total 5.5 < 6。廠商自述，內容為分析工具導入與組織文化轉變，無任何 UX 改動與商業成果數據，90% 為「分析時間」且無基準值，偏產品宣傳。"
+    },
+    {
+      "title": "內部復盤：產品增長策略方法論的思考（從 0 到 1 產品策略之三）",
+      "url": "https://www.woshipm.com/operate/5194383.html",
+      "source": "人人都是產品經理・增長方法論",
+      "tier": 4,
+      "scores": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "reason": "gate: floor decision_process=0、quantified_outcome=0，min_total 3 < 6。屬北極星指標、目標拆解等方法論彙整，非單一案例，無數據（auto-reject：建議清單）。"
+    },
+    {
+      "title": "LeanGo 自家 LPO 工具 dejam 付費方案受注率突破 40% 的服務開發反思",
+      "url": "https://note.com/leango_official/n/n1a0d0bf6a0bc",
+      "source": "note・LeanGo dejam",
+      "tier": 4,
+      "scores": [
+        1,
+        0,
+        1,
+        2,
+        1
+      ],
+      "reason": "gate: floor decision_process=0，min_total 5 < 6。自家工具宣傳性質（auto-reject：產品宣傳稿），僅有受注率 40% 單一數字，無 UX 改動與前後對照。"
+    },
     {
       "title": "LUISAVIAROMA 個人化推薦：加購推薦 ARPU +15%、感謝頁 +14%",
       "url": "https://www.dynamicyield.com/case-studies/luisaviaroma/",
