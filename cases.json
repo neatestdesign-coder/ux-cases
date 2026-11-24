@@ -1,10 +1,121 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "run": {
     "scanned": 56,
     "candidates": 4
   },
   "cases": [
+    {
+      "title": "Sky 新訂戶驗證信改導向直接看片，當月退訂減少 39%",
+      "original_title": "Sky (NowTV, WOW, Sky X): Personalized subscription management for millions of viewers",
+      "url": "https://www.mastercard.com/us/en/news-and-trends/Insights/2024/sky.html",
+      "source": "Dynamic Yield 案例・Sky",
+      "tier": 2,
+      "date": "2024",
+      "author": "Mastercard Dynamic Yield 官方發布，引述 Sky 電商最佳化與個人化負責人（未具名）",
+      "cats": [
+        "國際品牌"
+      ],
+      "industry": "媒體",
+      "f_industry": [
+        "媒體"
+      ],
+      "f_product": [
+        "SaaS"
+      ],
+      "f_goal": [
+        "新手引導",
+        "再互動"
+      ],
+      "why": "Sky 旗下 NowTV、WOW、Sky X 在英國、愛爾蘭、義大利、德國、奧地利 5 個市場經營訂閱帳戶網站。串流競爭靠急迫感拉新、靠持續互動留人，而最新訂戶最容易流失，有些甚至在註冊 24 小時內就取消；團隊也想把只訂娛樂方案的用戶升級到承諾期更長的組合方案。",
+      "how": "117 人跨職能團隊每年跑超過 150 個 A/B 測試，並把受眾拆成潛在客、現有訂戶、近期流失三群，各自對應不同目標。新訂戶：測試驗證信點擊後該導向哪一頁，發現直接導到 Web Watch 看片頁的人更快開始看內容；接著再移除新手引導頁的「略過」按鈕，強迫至少選一部片加入片單。潛在客：奧地利體育方案頁加上即將開打的足球賽倒數提示。升級：德國 WOW 把會員 CTA 從直接結帳改導向「導購頁」，說明長約方案省多少；之後在義大利加入單選按鈕、在英國把電影方案點擊全部導向升級頁。流失客：依是否近期購買分群，推不同的限時優惠。",
+      "result": "驗證信改導向看片頁，新訂戶當月退訂減少 39%；移除「略過」後，點擊觀看英國 +33%、愛爾蘭 +138%，新訂戶進入「訂閱管理頁」的流量平均減少 63.3%（團隊視為流失前兆）。德國導購頁讓方案續訂時長 +4.8%、升級組合方案 +13%；義大利單選按鈕版長約購買 +6%，英國導購頁點擊 +4%、組合方案購買 +3%。奧地利賽事倒數提示轉換率 6%，比對照組高 3.1%。流失客限時優惠：從媒體活動直接進站者轉換率 23%，對照組 4%。原文未揭露任何失敗的測試。",
+      "caveat": "廠商自述：單一來源、可能偏正面選樣、未經第三方驗證；firsthand 依 CRO／實驗平台客戶案例規則封頂 1 分。轉述鏈：Mastercard（Dynamic Yield 母公司）官方客戶案例，引述 Sky 內部主管但未具名，數字已與原頁核對。限時優惠一段寫「轉換率 23% 對 4%」卻稱「約 +140% 訂單提升」，兩者口徑不一（23% 對 4% 換算應遠高於 140%），可能是不同分母或指標，故不採用 140% 這個數字。「退訂 -39%」只計測試期間有互動過該頁的新用戶，有選樣偏差疑慮；多數數字僅給相對提升、未揭露樣本數與顯著性。",
+      "takeaway": "把受眾拆成「潛在客／現有訂戶／近期流失」三群、各自配一個主要 KPI，再針對每群設計測試，比用一個總轉換率指揮所有實驗更聚焦。對訂閱產品而言，新用戶付費後的第一個落地頁與新手引導要盡快把人推進「實際使用內容」，減少「略過」這類逃生口，往往比挽留話術更能壓低早期退訂。",
+      "blurb": "最容易流失的是剛付費的人，有些 24 小時內就取消，團隊於是盯住付費後的第一步：驗證信點完直接送進看片頁，新手引導也拿掉「略過」、逼人至少挑一部片進片單，早期退訂要壓下來，靠的是讓人盡快嘗到內容，比任何挽留話術都早一步。",
+      "metrics": [
+        [
+          "-39%",
+          "新訂戶當月退訂"
+        ],
+        [
+          "-63.3%",
+          "新訂戶進訂閱管理頁"
+        ],
+        [
+          "+13%",
+          "升級組合方案"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "score_notes": [
+        "business_context=2：明確指出新訂戶 24 小時內就可能取消、需要升級長約方案等商業壓力。",
+        "decision_process=1：有假設（提高內容互動可降低早期流失）與跨市場逐步擴測，但過程線性，未揭露失敗方案。",
+        "quantified_outcome=2：有 6% 對照、23% 對 4% 等絕對轉換率，也有多項相對變化；但部分數字口徑不一。",
+        "firsthand=1：廠商客戶案例，CRO／實驗平台群組封頂 1 分，且 Sky 引述者未具名。",
+        "transferability=2：「三群受眾各配 KPI」與「付費後第一步導向實際使用」皆可直接套用到其他訂閱產品。"
+      ]
+    },
+    {
+      "title": "Electrolux 2 人中央團隊把個人化做進 21 國、63 個網域，D2C 營收 +16%",
+      "original_title": "Personalized journeys, global gains: Electrolux's 21-market success story",
+      "url": "https://www.mastercard.com/us/en/news-and-trends/Insights/2024/personalized-journeys-global-gains-electroluxs-21-market-success-story.html",
+      "source": "Dynamic Yield 案例・Electrolux",
+      "tier": 2,
+      "date": "2024",
+      "author": "Mastercard Dynamic Yield 官方發布，具名引述 Electrolux 電商個人化與成長經理 Marienza Benedetti",
+      "cats": [
+        "國際品牌"
+      ],
+      "industry": "",
+      "f_industry": [],
+      "f_product": [
+        "電商"
+      ],
+      "f_goal": [
+        "個人化"
+      ],
+      "why": "Electrolux 旗下 Electrolux、AEG、Zanussi 等品牌各有獨立官網，過去個人化只停在手動管理推薦、語言、幣別與在地庫存的基本功。各地的價格敏感度、文化行為與對服務的期待都不同，但要在 21 個市場維持在地化，靠人工根本撐不起來，團隊也不打算為此加人。",
+      "how": "團隊拆成兩層：2 人中央團隊訂全球 KPI，用「一個活動、多個語言／幣別變體」同時投放到 63 個網域（每月主打商品彈窗、會員招募 CTA、首頁熱門推薦）；各地小團隊則負責發現在地痛點、提案在地活動。背後是一份含上百個屬性、多語系的商品資料，讓推薦能依各地庫存與價格調整，購物車頁還用自訂邏輯只推與車內商品相容的配件。英國團隊發現顧客對快遞送達時間很不安，就依地點與下單時間顯示個人化的預計到貨日；義大利團隊觀察到高單價家電買家重視真人服務，就在高價商品頁推電話訂購。",
+      "result": "接觸到個人化體驗的用戶，D2C 營收增量 +16%。英國個人化到貨日相較原版營收 +8%；義大利在高價商品頁推電話訂購後，電話銷售比未上線的月份 +70%。全部由 2 人中央團隊維運 63 個網域，未增加人力。原文未揭露任何失敗或被推翻的活動。",
+      "caveat": "廠商自述：單一來源、可能偏正面選樣、未經第三方驗證；firsthand 依 CRO／實驗平台客戶案例規則封頂 1 分。轉述鏈：Mastercard（Dynamic Yield 母公司）官方客戶案例，具名引述 Electrolux 經理，數字已與原頁核對。+16%、+8% 都只有相對值、沒有基準營收與樣本數；義大利 +70% 是與「前幾個月」比較，非同期對照，可能混入季節與廣告投放因素。",
+      "takeaway": "跨國個人化可以用「中央定 KPI 與活動骨架、在地團隊找痛點」的雙層分工：全球共用一個活動、用變體處理語言與幣別，維運成本不隨市場數線性增加；真正帶來增量的在地點子（到貨日、電話訂購）往往來自在地團隊對顧客不安的觀察。",
+      "blurb": "英國顧客最摸不清的是快遞何時會到，在地團隊就依地點與下單時間秀出預計到貨日，營收 +8%，這正是分工的用意：中央只定 KPI 與活動骨架、用一個活動的多語系變體跑遍各國網域，在地團隊專心找讓顧客不安的地方，市場再多也不必跟著加人。",
+      "metrics": [
+        [
+          "+8%",
+          "英國到貨日提示營收"
+        ],
+        [
+          "+70%",
+          "義大利電話銷售"
+        ],
+        [
+          "2 人",
+          "中央團隊管 63 個網域"
+        ]
+      ],
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "score_notes": [
+        "business_context=2：說清楚多品牌多市場、在地化靠人工無法擴張且不想加人的營運痛點。",
+        "decision_process=1：有中央與在地分工的設計邏輯與在地觀察，但無假設驗證循環或失敗方案。",
+        "quantified_outcome=1：+16%、+8%、+70% 均只有相對值，無基準營收，且 +70% 為前後期比較。",
+        "firsthand=1：廠商客戶案例，CRO／實驗平台群組封頂 1 分。",
+        "transferability=2：「中央定骨架＋在地找痛點」的雙層分工與單一活動多變體做法可直接套用到其他跨國電商。"
+      ]
+    },
     {
       "title": "巴基斯坦 Telenor 自家 App 發現「每天來玩遊戲卻不買方案」的族群，把方案擺到遊戲旁，該處優惠營收最高翻倍",
       "original_title": "How Mixpanel helped My Telenor App drive 29% growth in monthly active users",
@@ -18878,6 +18989,34 @@
     }
   ],
   "rejected": [
+    {
+      "title": "Paulmann Licht 語意搜尋六週對照測試，測試組營收 +26%",
+      "url": "https://www.mastercard.com/us/en/news-and-trends/Insights/2026/paulmann-licht-drives-26-revenue-uplift.html",
+      "source": "Dynamic Yield 案例・Paulmann Licht",
+      "tier": 2,
+      "scores": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "auto_reject：內容為產品宣傳稿或工具導購。gate 數字上 6.5 可過，但本文主體是廠商自家搜尋產品與客戶原方案的 bake-off，以預設設定跑 50/50 測試，無任何 UX 設計決策；+26% 營收無基準值與絕對數字，「98% Probability to Be Best」為廠商自家統計指標。"
+    },
+    {
+      "title": "NatureBox 改用 Heap 自動擷取事件，六週轉換率 5 倍",
+      "url": "https://contentsquare.com/customers/naturebox/",
+      "source": "Contentsquare 案例・NatureBox",
+      "tier": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reason": "gate: min_total 5.5 < 6。廠商自述，內容幾乎都是從 Google Analytics、Splunk 換到 Heap 的工具導入史；「六週轉換率 5 倍」無基準值，也未交代是哪些實驗或介面改動帶來成果。"
+    },
     {
       "title": "Tata 1mg 導入自助分析：洞察產出時間縮短 90%、不再依賴 SQL",
       "url": "https://mixpanel.com/customers/tata-1mg-product-led-growth-self-serve-analytics",
